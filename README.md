@@ -9,7 +9,7 @@ This is a single-file HTML campaign site built as a volunteer contribution. No s
 ## 🚀 Quick Start
 
 1. Download or clone this repo
-2. Open `cortney-for-congress.html` in any browser
+2. Open `index.html` in any browser
 3. That's it. No build tools, no dependencies, no frameworks to install.
 
 ## ✏️ What Needs to Be Customized
