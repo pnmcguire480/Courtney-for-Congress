@@ -1,0 +1,59 @@
+# Cortney for Congress — Netlify Configuration
+# This file controls deployment, headers, and redirects
+
+[build]
+  # No build command needed — static HTML files
+  publish = "."
+
+# Security Headers — Applied to ALL responses
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+
+    # HTTPS enforcement (1 year, include subdomains, preload eligible)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+    # Don't leak full URLs to third parties
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Disable dangerous browser APIs
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+
+    # Content Security Policy
+    # - default-src 'self': only load resources from our domain
+    # - script-src: our scripts + inline (for scroll animations)
+    # - style-src: our styles + inline + Google Fonts
+    # - font-src: only Google Fonts
+    # - img-src: our images + data URIs + any HTTPS (for social previews)
+    # - connect-src: our domain + Netlify Forms API
+    # - frame-src: Anedot donation widget only
+    # - frame-ancestors 'none': nobody can iframe us
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.netlify.com; frame-src https://secure.anedot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+
+    # Cross-origin policies
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects
+[[redirects]]
+  from = "https://www.cortneyforcongress.org/*"
+  to = "https://cortneyforcongress.org/:splat"
+  status = 301
+  force = true
+
+# Custom 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<title>Events | Cortney Peterson for Congress — OH-11</title>
+<meta name="description" content="Upcoming campaign events for Cortney Peterson for Congress — town halls, canvasses, phone banks, and community gatherings in Ohio's 11th Congressional District.">
+<meta property="og:title" content="Events | Cortney Peterson for Congress">
+<meta property="og:description" content="Town halls, canvasses, phone banks, and community gatherings for Cortney Peterson's campaign in Ohio's 11th District.">
+<meta property="og:image" content="https://cortneyforcongress.org/assets/og-image.png">
+<meta property="og:url" content="https://cortneyforcongress.org/events.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cortneyforcongress.org/events.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --plum:#3d1952;--plum-deep:#2a0e3a;--plum-light:#5c2d82;
+  --coral:#e8845c;--coral-light:#f4a882;
+  --cream:#faf6f0;--cream-dark:#f0e8dc;
+  --slate:#2c2c3a;--white:#ffffff;
+  --text:#1a1a2e;--text-light:#555566;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(61,25,82,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all 0.4s ease;border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav.scrolled{background:rgba(42,14,58,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.5rem}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:var(--white)}
+.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.12em;line-height:1.1}
+.nav-logo-sub{font-size:0.65rem;letter-spacing:0.2em;color:var(--coral-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
+.ohio-icon{width:32px;height:32px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%)}
+.nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px;transition:all 0.3s ease;text-transform:uppercase}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-donate{background:var(--coral)!important;color:var(--white)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(232,132,92,0.3)}
+.nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--plum-deep);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:opacity 0.3s ease}
+.mobile-menu.open{display:flex;opacity:1}
+.mobile-menu a{color:var(--white);text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.15em;transition:color 0.3s}
+.mobile-menu a:hover{color:var(--coral)}
+.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
+
+/* PAGE HERO */
+.page-hero{
+  background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 50%,var(--plum-light) 100%);
+  padding:9rem 1.5rem 5rem;text-align:center;color:var(--white);position:relative;overflow:hidden;
+}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--cream),transparent);pointer-events:none}
+.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.page-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral-light);text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1.25rem}
+.page-hero h1 em{font-style:italic;color:var(--coral-light)}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* FILTER BAR */
+.filter-bar{background:var(--white);border-bottom:1px solid var(--cream-dark);padding:1rem 1.5rem;position:sticky;top:62px;z-index:100}
+.filter-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.filter-label{font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--text-light);text-transform:uppercase;margin-right:0.25rem}
+.filter-btn{padding:0.4rem 1rem;border-radius:50px;border:1.5px solid var(--cream-dark);background:transparent;color:var(--text-light);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Source Sans 3',sans-serif;letter-spacing:0.03em}
+.filter-btn:hover,.filter-btn.active{background:var(--plum);color:var(--white);border-color:var(--plum)}
+
+/* SECTIONS */
+.section{padding:4.5rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral);text-transform:uppercase;margin-bottom:0.6rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:var(--plum);margin-bottom:1.25rem;line-height:1.15}
+.section-title em{font-style:italic;color:var(--coral)}
+
+/* EVENT CARDS */
+.events-grid{display:grid;gap:1.25rem;margin-top:2rem}
+.event-card{background:var(--white);border-radius:16px;border:1.5px solid var(--cream-dark);overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:0;transition:border-color 0.3s,box-shadow 0.3s}
+.event-card:hover{border-color:var(--coral);box-shadow:0 6px 24px rgba(61,25,82,0.1)}
+.event-date-block{background:var(--plum);color:var(--white);padding:1.25rem 1.5rem;text-align:center;min-width:90px;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.event-month{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.2em;color:var(--coral-light);text-transform:uppercase}
+.event-day{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;color:var(--white)}
+.event-dow{font-size:0.7rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.1rem}
+.event-body{padding:1.25rem 1.5rem}
+.event-type-tag{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:0.7rem;letter-spacing:0.2em;padding:0.2rem 0.6rem;border-radius:4px;text-transform:uppercase;margin-bottom:0.5rem}
+.tag-town-hall{background:#e8f4e8;color:#2d6a2d}
+.tag-canvass{background:#fff3e0;color:#a05000}
+.tag-phone-bank{background:#e8eaf6;color:#3949ab}
+.tag-fundraiser{background:#fce4ec;color:#ad1457}
+.tag-community{background:#e0f7fa;color:#006064}
+.tag-rally{background:#f3e5f5;color:#6a1b9a}
+.event-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--plum);line-height:1.3;margin-bottom:0.4rem}
+.event-meta{display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.83rem;color:var(--text-light)}
+.event-meta span{display:flex;align-items:center;gap:0.3rem}
+.event-desc{font-size:0.9rem;color:var(--text-light);margin-top:0.6rem;line-height:1.6}
+.event-actions{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.6rem;min-width:130px}
+.btn-rsvp{display:inline-flex;align-items:center;justify-content:center;padding:0.6rem 1.25rem;background:var(--coral);color:var(--white);border-radius:8px;text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.25s;white-space:nowrap}
+.btn-rsvp:hover{background:var(--coral-light);transform:translateY(-1px)}
+.btn-details{display:inline-flex;align-items:center;justify-content:center;padding:0.6rem 1.25rem;background:transparent;color:var(--plum);border:1.5px solid var(--plum);border-radius:8px;text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.25s;white-space:nowrap}
+.btn-details:hover{background:var(--plum);color:var(--white)}
+
+/* NO EVENTS STATE */
+.no-events{text-align:center;padding:4rem 2rem;background:var(--white);border-radius:16px;border:2px dashed var(--cream-dark);margin-top:2rem}
+.no-events p{color:var(--text-light);font-size:1rem}
+
+/* PAST EVENTS */
+.past-section{background:var(--cream-dark)}
+.past-list{list-style:none;margin-top:1.75rem;display:flex;flex-direction:column;gap:0.75rem}
+.past-item{display:flex;align-items:baseline;gap:1rem;font-size:0.92rem;padding:0.6rem 0;border-bottom:1px solid rgba(0,0,0,0.06)}
+.past-item:last-child{border-bottom:none}
+.past-date{font-family:'Bebas Neue',sans-serif;font-size:0.78rem;letter-spacing:0.15em;color:var(--coral);white-space:nowrap;min-width:90px}
+.past-title{color:var(--text-light)}
+.past-location{color:var(--text-light);font-style:italic;font-size:0.85rem}
+
+/* HOST CTA */
+.host-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+.host-cta-inner{max-width:640px;margin:0 auto}
+.host-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+.host-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+.btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase}
+.btn-coral{background:var(--coral);color:var(--white);box-shadow:0 4px 20px rgba(232,132,92,0.35)}
+.btn-coral:hover{background:var(--coral-light);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,0.1);color:var(--white);border:2px solid rgba(255,255,255,0.3)}
+.btn-ghost:hover{background:rgba(255,255,255,0.18)}
+
+/* FOOTER */
+.connect{background:var(--slate);color:var(--white);padding:4rem 1.5rem 2rem}
+.connect-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
+.connect h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--white)}
+.connect p,.connect a{color:rgba(255,255,255,0.7);font-size:0.9rem}
+.connect a{text-decoration:none;transition:color 0.3s}
+.connect a:hover{color:var(--coral-light)}
+.social-links{display:flex;gap:1rem;margin-top:1rem}
+.social-link{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:1.1rem;transition:all 0.3s ease}
+.social-link:hover{background:var(--coral);transform:translateY(-2px)}
+.signup-form{margin-top:1rem}
+.signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:var(--white);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
+.signup-form input[type="email"]::placeholder{color:rgba(255,255,255,0.4)}
+.signup-form input[type="email"]:focus{border-color:var(--coral)}
+.signup-form button{width:100%;padding:0.75rem;background:var(--coral);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif}
+.signup-form button:hover{background:var(--coral-light)}
+.footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.4);font-size:0.8rem}
+.footer-bottom p{margin-bottom:0.3rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .connect-inner{grid-template-columns:1fr}
+  .event-card{grid-template-columns:auto 1fr;grid-template-rows:1fr auto}
+  .event-actions{grid-column:1/-1;flex-direction:row;padding:0 1.25rem 1.25rem;border-top:1px solid var(--cream-dark)}
+  .event-date-block{grid-row:1/2}
+}
+@media(max-width:480px){
+  .section{padding:3.5rem 1.25rem}
+  .event-card{grid-template-columns:1fr;grid-template-rows:auto}
+  .event-date-block{flex-direction:row;gap:0.5rem;align-items:baseline;padding:0.9rem 1.25rem;justify-content:flex-start}
+  .event-day{font-size:1.6rem}
+  .event-actions{flex-direction:column}
+  .filter-inner{gap:0.4rem}
+}
+@media(min-width:1024px){
+  .page-hero{padding:11rem 3rem 7rem}
+  .section{padding:6rem 3rem}
+  .host-cta{padding:7rem 3rem}
+  .events-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:44px;width:auto">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#meet">About</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="endorsements.html">Endorsements</a></li>
+      <li><a href="events.html" aria-current="page">Events</a></li>
+      <li><a href="news/">Updates</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate" target="_blank" rel="noopener noreferrer">Donate</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html#meet" onclick="closeMobile()">About</a>
+  <a href="issues.html" onclick="closeMobile()">Issues</a>
+  <a href="get-involved.html" onclick="closeMobile()">Get Involved</a>
+  <a href="endorsements.html" onclick="closeMobile()">Endorsements</a>
+  <a href="events.html" onclick="closeMobile()">Events</a>
+  <a href="news/" onclick="closeMobile()">Updates</a>
+  <a href="press.html" onclick="closeMobile()">Press</a>
+  <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" target="_blank" rel="noopener noreferrer">Donate</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero" role="banner">
+  <div class="page-hero-inner">
+    <p class="page-label">On the Ground</p>
+    <h1>Campaign <em>Events</em></h1>
+    <p>Town halls, canvasses, phone banks, and community gatherings across Ohio's 11th District. Show up. Make the difference.</p>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" role="search" aria-label="Filter events by type">
+  <div class="filter-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Events</button>
+    <button class="filter-btn" data-filter="town-hall" aria-pressed="false">Town Halls</button>
+    <button class="filter-btn" data-filter="canvass" aria-pressed="false">Canvasses</button>
+    <button class="filter-btn" data-filter="phone-bank" aria-pressed="false">Phone Banks</button>
+    <button class="filter-btn" data-filter="rally" aria-pressed="false">Rallies</button>
+    <button class="filter-btn" data-filter="community" aria-pressed="false">Community</button>
+  </div>
+</div>
+
+<!-- UPCOMING EVENTS -->
+<section class="section" aria-labelledby="upcoming-heading">
+  <div class="section-inner">
+    <p class="section-label">Don't Miss It</p>
+    <h2 class="section-title" id="upcoming-heading">Upcoming <em>Events</em></h2>
+
+    <div class="events-grid" id="eventsGrid" aria-live="polite">
+
+      <!-- ============================================================
+           HOW TO ADD AN EVENT:
+           1. Copy one <article class="event-card"> block below
+           2. Update the date, type tag, title, time, location, and description
+           3. Set data-type to: town-hall | canvass | phone-bank | rally | community | fundraiser
+           4. Update or remove the RSVP link
+           ============================================================ -->
+
+      <article class="event-card reveal" data-type="town-hall">
+        <div class="event-date-block" aria-hidden="true">
+          <div class="event-month">Apr</div>
+          <div class="event-day">12</div>
+          <div class="event-dow">Sat</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-town-hall">Town Hall</span>
+          <h3 class="event-title">Community Town Hall — Cleveland East Side</h3>
+          <div class="event-meta">
+            <span>&#128336; 2:00 PM – 4:00 PM</span>
+            <span>&#128205; Glenville Community Center, Cleveland</span>
+          </div>
+          <p class="event-desc">Join Cortney for an open conversation about healthcare, housing, and what working families in OH-11 need from their representative. Q&amp;A included — bring your questions.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp" aria-label="RSVP for Community Town Hall on April 12">RSVP</a>
+          <a href="get-involved.html" class="btn-details">Details</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal" data-type="canvass">
+        <div class="event-date-block" aria-hidden="true">
+          <div class="event-month">Apr</div>
+          <div class="event-day">19</div>
+          <div class="event-dow">Sat</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-canvass">Canvass</span>
+          <h3 class="event-title">Door-Knock Canvass — Shaker Heights</h3>
+          <div class="event-meta">
+            <span>&#128336; 10:00 AM – 1:00 PM</span>
+            <span>&#128205; Meet at Van Aken District, Shaker Heights</span>
+          </div>
+          <p class="event-desc">Hit the doors with us. We'll provide talking points, clipboards, and snacks. No experience needed — just bring your voice and your walking shoes.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp" aria-label="RSVP for Shaker Heights canvass on April 19">RSVP</a>
+          <a href="get-involved.html" class="btn-details">Details</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal" data-type="phone-bank">
+        <div class="event-date-block" aria-hidden="true">
+          <div class="event-month">Apr</div>
+          <div class="event-day">22</div>
+          <div class="event-dow">Tue</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-phone-bank">Phone Bank</span>
+          <h3 class="event-title">Virtual Phone Bank — Evenings for Cortney</h3>
+          <div class="event-meta">
+            <span>&#128336; 6:00 PM – 8:30 PM</span>
+            <span>&#128187; Virtual — link sent on signup</span>
+          </div>
+          <p class="event-desc">Call voters across the district from your own home. We'll train you, give you a script, and you work at your own pace. Perfect for people who can't make it to in-person events.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp" aria-label="RSVP for virtual phone bank on April 22">RSVP</a>
+          <a href="get-involved.html" class="btn-details">Details</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal" data-type="rally">
+        <div class="event-date-block" aria-hidden="true">
+          <div class="event-month">Apr</div>
+          <div class="event-day">26</div>
+          <div class="event-dow">Sat</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-rally">Rally</span>
+          <h3 class="event-title">Working Families Rally — Downtown Cleveland</h3>
+          <div class="event-meta">
+            <span>&#128336; 12:00 PM – 2:00 PM</span>
+            <span>&#128205; Public Square, Cleveland</span>
+          </div>
+          <p class="event-desc">Our biggest public event before the primary. Speakers, music, and a message for every working family in OH-11. Bring your neighbors — this is what people power looks like.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp" aria-label="RSVP for Working Families Rally on April 26">RSVP</a>
+          <a href="get-involved.html" class="btn-details">Details</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal" data-type="canvass">
+        <div class="event-date-block" aria-hidden="true">
+          <div class="event-month">May</div>
+          <div class="event-day">3</div>
+          <div class="event-dow">Sun</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-canvass">Canvass</span>
+          <h3 class="event-title">Final Weekend Push — Multiple Locations</h3>
+          <div class="event-meta">
+            <span>&#128336; 9:00 AM – 3:00 PM</span>
+            <span>&#128205; Cleveland, Garfield Heights, Warrensville Heights</span>
+          </div>
+          <p class="event-desc">Two days before the primary. Every door matters. We'll have multiple launch sites across the district — sign up and we'll place you at the closest location.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp" aria-label="RSVP for Final Weekend Push on May 3">RSVP</a>
+          <a href="get-involved.html" class="btn-details">Details</a>
+        </div>
+      </article>
+
+    </div><!-- end eventsGrid -->
+  </div>
+</section>
+
+<!-- PAST EVENTS -->
+<section class="section past-section" aria-labelledby="past-heading">
+  <div class="section-inner">
+    <p class="section-label">We Were There</p>
+    <h2 class="section-title" id="past-heading">Past <em>Events</em></h2>
+    <ul class="past-list" aria-label="Past campaign events">
+      <li class="past-item">
+        <span class="past-date">Mar 15, 2026</span>
+        <span class="past-title">Campaign Kickoff — Glenville Community Center &nbsp;<span class="past-location">Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 22, 2026</span>
+        <span class="past-title">Ward 7 Town Hall &nbsp;<span class="past-location">Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 29, 2026</span>
+        <span class="past-title">Canvass — Buckeye-Woodhill neighborhood &nbsp;<span class="past-location">Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Apr 5, 2026</span>
+        <span class="past-title">Healthcare Forum — Garfield Heights &nbsp;<span class="past-location">Garfield Heights, OH</span></span>
+      </li>
+    </ul>
+    <p style="margin-top:1.5rem;font-size:0.85rem;color:var(--text-light);font-style:italic">* Events listed reflect placeholder data. Update with confirmed campaign events.</p>
+  </div>
+</section>
+
+<!-- HOST AN EVENT CTA -->
+<section class="host-cta" aria-labelledby="host-heading">
+  <div class="host-cta-inner">
+    <p class="page-label" style="color:var(--coral-light)">Make It Happen</p>
+    <h2 id="host-heading">Host an Event for Cortney</h2>
+    <p>Have space, a neighborhood, a union hall, or a backyard? We'll come to you. House parties and community events are how grassroots campaigns win.</p>
+    <div class="btn-group">
+      <a href="get-involved.html" class="btn btn-coral">Sign Up to Host</a>
+      <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Support the Campaign</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="connect" id="connect">
+  <div class="connect-inner">
+    <div>
+      <h3>Connect</h3>
+      <p>Join us to fight for the working class.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/cortneyforcongress" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://instagram.com/cortneyforcongress" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+        <a href="https://tiktok.com/@cortneyforcongress" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">♪</a>
+        <a href="https://threads.net/@cortneyforcongress" class="social-link" aria-label="Threads" target="_blank" rel="noopener noreferrer">@</a>
+        <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" class="social-link" aria-label="Bluesky" target="_blank" rel="noopener noreferrer">🦋</a>
+      </div>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-bottom:0.5rem"><a href="mailto:cortneyforcongress@gmail.com">cortneyforcongress@gmail.com</a></p>
+      <p>Ohio's 11th Congressional District</p>
+    </div>
+    <div>
+      <h3>Stay Updated</h3>
+      <p>Get campaign updates in your inbox.</p>
+      <form class="signup-form" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="email-signup">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Paid for by Cortney Peterson For Congress</p>
+    <p>© 2026 Cortney Peterson For Congress. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+// Scroll reveals
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Filter buttons
+const filterBtns = document.querySelectorAll('.filter-btn');
+const eventCards = document.querySelectorAll('.event-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    const filter = btn.dataset.filter;
+    let visibleCount = 0;
+
+    eventCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.type === filter;
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    // Show/hide empty state
+    let noEvents = document.getElementById('noEventsMsg');
+    if (visibleCount === 0) {
+      if (!noEvents) {
+        noEvents = document.createElement('div');
+        noEvents.id = 'noEventsMsg';
+        noEvents.className = 'no-events';
+        noEvents.innerHTML = '<p>No upcoming events in this category right now.<br>Check back soon or <a href="get-involved.html" style="color:var(--coral);font-weight:700">sign up to host one</a>.</p>';
+        document.getElementById('eventsGrid').appendChild(noEvents);
+      }
+    } else if (noEvents) {
+      noEvents.remove();
+    }
+  });
+});
+</script>
+</body>
+</html>

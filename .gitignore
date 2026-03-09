@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Netlify local
+.netlify/
+
+# Node (shouldn't exist, but just in case)
+node_modules/
+
+# Environment files (shouldn't exist for static site, but safety net)
+.env
+.env.local
+.env.production
+
+# Archive / reference files (screenshots, originals, old HTML)
+_archive/
+
+# Development docs (project context, not needed in production)
+markdown/
+
+# Holdout evaluation scenarios (never committed)
+scenarios/
+
+# Backup/draft files
+*.bak
+*.draft
+*.old
+
+# Image originals (full-res before compression)
+assets/originals/

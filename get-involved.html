@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<title>Get Involved | Cortney Peterson for Congress — OH-11</title>
+<meta name="description" content="Volunteer, canvass, phone bank, and support Cortney Peterson's grassroots campaign for Ohio's 11th Congressional District. No PAC money — people-powered.">
+<meta property="og:title" content="Get Involved | Cortney Peterson for Congress">
+<meta property="og:description" content="Volunteer, canvass, phone bank, and support Cortney Peterson's grassroots campaign for Ohio's 11th District. People-powered.">
+<meta property="og:image" content="https://cortneyforcongress.org/assets/og-image.png">
+<meta property="og:url" content="https://cortneyforcongress.org/get-involved.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cortneyforcongress.org/get-involved.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --plum:#3d1952;--plum-deep:#2a0e3a;--plum-light:#5c2d82;
+  --coral:#e8845c;--coral-light:#f4a882;
+  --cream:#faf6f0;--cream-dark:#f0e8dc;
+  --slate:#2c2c3a;--white:#ffffff;
+  --text:#1a1a2e;--text-light:#555566;
+  --green:#2d6a4f;--green-light:#d8f3dc;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(61,25,82,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all 0.4s ease;border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav.scrolled{background:rgba(42,14,58,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.5rem}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:var(--white)}
+.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.12em;line-height:1.1}
+.nav-logo-sub{font-size:0.65rem;letter-spacing:0.2em;color:var(--coral-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
+.ohio-icon{width:32px;height:32px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%)}
+.nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px;transition:all 0.3s ease;text-transform:uppercase}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-donate{background:var(--coral)!important;color:var(--white)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(232,132,92,0.3)}
+.nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--plum-deep);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:opacity 0.3s ease}
+.mobile-menu.open{display:flex;opacity:1}
+.mobile-menu a{color:var(--white);text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.15em;transition:color 0.3s}
+.mobile-menu a:hover{color:var(--coral)}
+.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 50%,var(--plum-light) 100%);padding:9rem 1.5rem 5rem;text-align:center;color:var(--white);position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--cream),transparent);pointer-events:none}
+.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.page-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral-light);text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1.25rem}
+.page-hero h1 em{font-style:italic;color:var(--coral-light)}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* WAYS TO HELP */
+.ways{padding:5rem 1.5rem}
+.ways-inner{max-width:1000px;margin:0 auto}
+.section-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.25em;color:var(--coral);text-transform:uppercase;margin-bottom:0.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--plum);line-height:1.15;margin-bottom:1rem}
+.section-title em{font-style:italic;color:var(--coral)}
+.section-intro{font-size:1.05rem;color:var(--text-light);max-width:640px;line-height:1.8;margin-bottom:3rem}
+.ways-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.way-card{background:var(--white);border-radius:20px;padding:2rem 1.75rem;border:1px solid rgba(0,0,0,0.05);transition:all 0.3s ease;text-decoration:none;color:inherit;display:block}
+.way-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(61,25,82,0.1);border-color:var(--plum-light)}
+.way-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
+.way-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--plum);margin-bottom:0.5rem}
+.way-card p{font-size:0.9rem;color:var(--text-light);line-height:1.7}
+.way-card .way-cta{display:inline-block;margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--coral);letter-spacing:0.05em;text-transform:uppercase}
+
+/* VOLUNTEER FORM */
+.volunteer-section{background:var(--white);padding:5rem 1.5rem;border-top:1px solid rgba(0,0,0,0.05)}
+.volunteer-inner{max-width:700px;margin:0 auto}
+.volunteer-intro-aside{display:none}
+.form-card{background:var(--cream);border-radius:24px;padding:3rem;border:1px solid rgba(0,0,0,0.05)}
+.field-group{margin-bottom:1.5rem}
+.field-group label{display:block;font-size:0.85rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;letter-spacing:0.01em}
+.field-group label .req{color:var(--coral);font-weight:700}
+.field-group input,.field-group select,.field-group textarea{
+  width:100%;padding:0.75rem 1rem;
+  background:var(--white);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;
+  font-size:0.95rem;font-family:'Source Sans 3',sans-serif;color:var(--text);
+  transition:border-color 0.2s,box-shadow 0.2s;outline:none;
+}
+.field-group input:focus,.field-group select:focus,.field-group textarea:focus{
+  border-color:var(--plum);box-shadow:0 0 0 3px rgba(61,25,82,0.08)
+}
+.field-group textarea{resize:vertical;min-height:80px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.checkbox-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.checkbox-list li label{display:flex;align-items:flex-start;gap:0.5rem;font-weight:400;cursor:pointer;font-size:0.9rem;color:var(--text-light);padding:0.35rem 0.5rem;border-radius:8px;transition:background 0.15s}
+.checkbox-list li label:hover{background:var(--cream-dark)}
+.checkbox-list input[type="checkbox"]{margin-top:0.2rem;width:16px;height:16px;accent-color:var(--plum);flex-shrink:0}
+.submit-btn{
+  width:100%;padding:1rem;margin-top:0.5rem;
+  background:linear-gradient(135deg,var(--plum),var(--plum-light));
+  color:var(--white);border:none;border-radius:12px;
+  font-size:1rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+  cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif;
+  box-shadow:0 4px 20px rgba(61,25,82,0.25);
+}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(61,25,82,0.35)}
+.form-note{font-size:0.8rem;color:var(--text-light);margin-top:1rem;text-align:center;line-height:1.6}
+
+/* SUCCESS MESSAGE */
+.form-success{display:none;background:var(--green-light);border:1.5px solid var(--green);border-radius:16px;padding:2.5rem;text-align:center}
+.form-success h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green);margin-bottom:0.75rem}
+.form-success p{color:#2d6a4f;font-size:0.95rem;line-height:1.7}
+
+/* YARD SIGN SECTION */
+.yard-section{background:var(--cream-dark);padding:5rem 1.5rem}
+.yard-inner{max-width:1100px;margin:0 auto}
+.yard-grid{display:grid;gap:3rem;margin-top:2rem}
+.yard-intro p{font-size:1.02rem;color:var(--text-light);line-height:1.8;margin-bottom:1rem}
+.yard-intro strong{color:var(--text)}
+.yard-perks{list-style:none;margin-top:1.25rem;display:flex;flex-direction:column;gap:0.6rem}
+.yard-perks li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.95rem;color:var(--text-light)}
+.yard-perks li::before{content:'✔';color:var(--coral);font-weight:700;flex-shrink:0;margin-top:0.1rem}
+.yard-form-wrap{background:var(--white);border-radius:20px;padding:2.5rem;box-shadow:0 4px 24px rgba(61,25,82,0.07)}
+.yard-form-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--plum);margin-bottom:0.4rem}
+.yard-form-note{font-size:0.85rem;color:var(--text-light);margin-bottom:1.5rem;line-height:1.5}
+.yard-success{display:none;background:#d8f3dc;border-radius:12px;padding:1.5rem;text-align:center;margin-bottom:1.5rem}
+.yard-success h3{font-family:'Playfair Display',serif;color:var(--green);font-size:1.3rem;margin-bottom:0.4rem}
+.yard-success p{color:#2d6a4f;font-size:0.92rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+.form-group label{font-size:0.82rem;font-weight:700;letter-spacing:0.05em;color:var(--text);text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid var(--cream-dark);background:var(--cream);color:var(--text);font-size:0.95rem;font-family:'Source Sans 3',sans-serif;transition:border-color 0.3s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--coral);background:var(--white)}
+.form-group select option{background:var(--white)}
+.yard-submit{width:100%;padding:0.95rem;background:var(--coral);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.95rem;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Source Sans 3',sans-serif;margin-top:0.5rem}
+.yard-submit:hover{background:var(--coral-light);transform:translateY(-1px)}
+
+/* DONATE CTA */
+.donate-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+.donate-cta-inner{max-width:600px;margin:0 auto}
+.donate-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+.donate-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase}
+.btn-primary{background:var(--coral);color:var(--white);box-shadow:0 4px 20px rgba(232,132,92,0.35)}
+.btn-primary:hover{background:var(--coral-light);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+.btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
+.btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.connect{background:var(--slate);color:var(--white);padding:4rem 1.5rem 2rem}
+.connect-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
+.connect h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--white)}
+.connect p,.connect a{color:rgba(255,255,255,0.7);font-size:0.9rem}
+.connect a{text-decoration:none;transition:color 0.3s}
+.connect a:hover{color:var(--coral-light)}
+.social-links{display:flex;gap:1rem;margin-top:1rem}
+.social-link{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:1.1rem;transition:all 0.3s ease}
+.social-link:hover{background:var(--coral);transform:translateY(-2px)}
+.signup-form{margin-top:1rem}
+.signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:var(--white);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
+.signup-form input[type="email"]::placeholder{color:rgba(255,255,255,0.4)}
+.signup-form input[type="email"]:focus{border-color:var(--coral)}
+.signup-form button{width:100%;padding:0.75rem;background:var(--coral);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif}
+.signup-form button:hover{background:var(--coral-light)}
+.footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.4);font-size:0.8rem}
+.footer-bottom p{margin-bottom:0.3rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .field-row{grid-template-columns:1fr}
+  .checkbox-list{grid-template-columns:1fr}
+  .connect-inner{grid-template-columns:1fr}
+  .form-card{padding:2rem 1.5rem}
+}
+@media(max-width:480px){
+  .ways-grid{grid-template-columns:1fr}
+}
+@media(min-width:1024px){
+  .page-hero{padding:11rem 3rem 7rem}
+  .ways{padding:7rem 3rem}
+  .ways-inner{max-width:1200px}
+  .volunteer-section{padding:7rem 3rem}
+  .volunteer-inner{max-width:1200px;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+  .volunteer-intro-aside{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:6rem}
+  .volunteer-aside-stat{background:var(--cream);border-radius:16px;padding:1.75rem 2rem;border-left:4px solid var(--coral)}
+  .volunteer-aside-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--coral);line-height:1;margin-bottom:0.25rem}
+  .volunteer-aside-stat-label{font-size:0.85rem;font-weight:700;color:var(--plum);letter-spacing:0.05em;text-transform:uppercase}
+  .donate-cta{padding:7rem 3rem}
+  .volunteer-form-heading,.volunteer-form-intro,.volunteer-form-col>.section-label{display:none}
+  .yard-section{padding:7rem 3rem}
+  .yard-grid{grid-template-columns:1fr 1fr;align-items:start}
+  .form-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:44px;width:auto">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#meet">About</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="get-involved.html" aria-current="page">Get Involved</a></li>
+      <li><a href="endorsements.html">Endorsements</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="news/">Updates</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate">Donate</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a href="index.html#meet" onclick="closeMobile()">About</a>
+  <a href="issues.html" onclick="closeMobile()">Issues</a>
+  <a href="get-involved.html" onclick="closeMobile()">Get Involved</a>
+  <a href="endorsements.html" onclick="closeMobile()">Endorsements</a>
+  <a href="events.html" onclick="closeMobile()">Events</a>
+  <a href="news/" onclick="closeMobile()">Updates</a>
+  <a href="press.html" onclick="closeMobile()">Press</a>
+  <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" onclick="closeMobile()">Donate</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Join the Movement</div>
+    <h1>Get <em>Involved</em></h1>
+    <p>This campaign runs on grassroots power. No corporate money, no PAC funding — just working people fighting for working people. We need you.</p>
+  </div>
+</header>
+
+<!-- WAYS TO HELP -->
+<section class="ways">
+  <div class="ways-inner">
+    <div class="section-label reveal">How You Can Help</div>
+    <h2 class="section-title reveal">Every Action <em>Matters</em></h2>
+    <p class="section-intro reveal">Change doesn't come from Washington — it comes from communities like ours deciding enough is enough. Here's how you can be part of this movement.</p>
+
+    <div class="ways-grid">
+      <div class="way-card reveal">
+        <span class="way-icon">🚪</span>
+        <h3>Canvass</h3>
+        <p>Go door-to-door in your neighborhood talking to voters. Face-to-face contact is the most powerful tool in any campaign. We'll train you — no experience needed.</p>
+        <span class="way-cta">Sign up below →</span>
+      </div>
+      <div class="way-card reveal reveal-delay-1">
+        <span class="way-icon">📞</span>
+        <h3>Phone Bank</h3>
+        <p>Call voters from your home. We provide the script, the list, and the support. If you can make calls, you can phone bank — it's that simple.</p>
+        <span class="way-cta">Sign up below →</span>
+      </div>
+      <div class="way-card reveal reveal-delay-2">
+        <span class="way-icon">📱</span>
+        <h3>Digital Organizing</h3>
+        <p>Share Cortney's message on social media, write letters to the editor, post in community groups. Digital organizing amplifies our grassroots voice at zero cost.</p>
+        <span class="way-cta">Sign up below →</span>
+      </div>
+      <div class="way-card reveal reveal-delay-3">
+        <span class="way-icon">🪧</span>
+        <h3>Yard Signs</h3>
+        <p>Put a yard sign in your yard or window. Visibility matters — every sign tells your neighbors that real people in their community are behind this campaign.</p>
+        <span class="way-cta">Request one below →</span>
+      </div>
+      <div class="way-card reveal">
+        <span class="way-icon">🗓️</span>
+        <h3>Attend Events</h3>
+        <p>Join us at town halls, rallies, and community events across OH-11. Meet Cortney, meet fellow supporters, and make your voice heard in person.</p>
+        <span class="way-cta">Sign up to stay informed →</span>
+      </div>
+      <div class="way-card reveal reveal-delay-1" style="background:linear-gradient(135deg,var(--plum),var(--plum-light));color:white">
+        <span class="way-icon">💰</span>
+        <h3 style="color:white">Donate</h3>
+        <p style="color:rgba(255,255,255,0.8)">Every dollar from a working person counts more than a corporate PAC check. Small donations power this campaign and send a message that we don't owe anyone anything.</p>
+        <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="way-cta" style="color:var(--coral-light)">Donate now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER FORM -->
+<section class="volunteer-section" id="volunteer">
+  <div class="volunteer-inner">
+    <div class="volunteer-intro-aside" aria-hidden="true">
+      <div>
+        <div class="section-label">Volunteer Sign-Up</div>
+        <h2 class="section-title" style="margin-bottom:1rem">Join the <em>Team</em></h2>
+        <p style="color:var(--text-light);font-size:1rem;line-height:1.8">Fill out the form and we'll reach out with the right opportunities for you. No commitment required.</p>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">100%</div>
+        <div class="volunteer-aside-stat-label">Grassroots — no PAC money</div>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">OH-11</div>
+        <div class="volunteer-aside-stat-label">Communities we're fighting for</div>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">$0</div>
+        <div class="volunteer-aside-stat-label">Corporate donations accepted</div>
+      </div>
+    </div>
+    <div class="volunteer-form-col">
+    <div class="section-label" style="display:block" aria-hidden="false">Volunteer Sign-Up</div>
+    <h2 class="section-title volunteer-form-heading" style="margin-bottom:0.5rem">Join the <em>Team</em></h2>
+    <p class="volunteer-form-intro" style="color:var(--text-light);margin-bottom:2.5rem;font-size:1rem">Fill out the form below and we'll reach out with opportunities to get involved. No commitment required — just let us know you're interested.</p>
+
+    <div class="form-card">
+      <form name="volunteer" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="volunteerForm">
+        <input type="hidden" name="form-name" value="volunteer">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="firstName">First Name <span class="req">*</span></label>
+            <input type="text" id="firstName" name="first_name" required autocomplete="given-name">
+          </div>
+          <div class="field-group">
+            <label for="lastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastName" name="last_name" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="field-group">
+          <label for="phone">Phone Number <span style="font-weight:400;color:var(--text-light)">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="field-group">
+          <label for="zip">ZIP Code <span class="req">*</span></label>
+          <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" maxlength="5" inputmode="numeric" autocomplete="postal-code">
+        </div>
+
+        <div class="field-group">
+          <label>How would you like to help? <span style="font-weight:400;color:var(--text-light)">(check all that apply)</span></label>
+          <ul class="checkbox-list">
+            <li><label><input type="checkbox" name="help[]" value="Canvassing"> Canvassing</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Phone Banking"> Phone Banking</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Digital / Social Media"> Digital / Social Media</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Yard Sign"> Yard Sign</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Event Volunteer"> Event Volunteer</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Donate"> Donate</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Data Entry / Admin"> Data Entry / Admin</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Other"> Other</label></li>
+          </ul>
+        </div>
+
+        <div class="field-group">
+          <label for="message">Anything else you'd like us to know? <span style="font-weight:400;color:var(--text-light)">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Skills, availability, questions — whatever you want to share."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Count Me In →</button>
+        <p class="form-note">We will never sell or share your information. You can unsubscribe at any time.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="alert">
+        <h3>You're in! Thank you.</h3>
+        <p>We'll be in touch soon with ways to get involved. Keep an eye on your inbox — and in the meantime, spread the word. The more people who know about this campaign, the stronger we get.</p>
+        <p style="margin-top:1rem"><strong>Want to do something right now?</strong> Share this page with someone who cares about Ohio's 11th.</p>
+      </div>
+    </div><!-- end form-card -->
+    </div><!-- end volunteer-form-col -->
+  </div><!-- end volunteer-inner -->
+</section>
+
+<!-- YARD SIGNS & MERCH REQUEST -->
+<section class="yard-section" id="yard-signs" aria-labelledby="yard-heading">
+  <div class="yard-inner">
+    <p class="section-label">Put It in Your Yard</p>
+    <h2 class="section-title" id="yard-heading" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:900;color:var(--plum);margin-bottom:1.25rem;line-height:1.15">Yard Signs &amp; <em style="font-style:italic;color:var(--coral)">Stickers</em></h2>
+    <div class="yard-grid">
+      <div class="yard-intro reveal">
+        <p>A yard sign in your yard tells your neighbors something a TV ad never can: a real person in your neighborhood — someone who lives where you live — believes in this campaign.</p>
+        <p><strong>We'll deliver signs directly to you.</strong> Fill out the form and we'll be in touch to coordinate. It takes 30 seconds to request one, and the visibility lasts through Election Day.</p>
+        <ul class="yard-perks">
+          <li>Yard signs — 18" × 24", full color, weather-resistant</li>
+          <li>Bumper stickers — show support on the go</li>
+          <li>Window signs — apartment-friendly visibility</li>
+          <li>Free of charge — this campaign runs on people power, not merch markups</li>
+          <li>We'll contact you to arrange a drop-off or pickup</li>
+        </ul>
+      </div>
+      <div class="yard-form-wrap reveal">
+        <div class="yard-success" id="yardSuccess" role="alert">
+          <h3>Request Received!</h3>
+          <p>We'll reach out soon to coordinate delivery. Thank you for putting your name in your yard — it means everything to this campaign.</p>
+        </div>
+        <form id="yardForm" name="yard-sign-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="yard-sign-request">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+          <h3 class="yard-form-title">Request Your Sign</h3>
+          <p class="yard-form-note">We'll contact you within 2–3 days to arrange delivery. No cost to you — ever.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ys-first">First Name *</label>
+              <input type="text" id="ys-first" name="firstName" required placeholder="First">
+            </div>
+            <div class="form-group">
+              <label for="ys-last">Last Name *</label>
+              <input type="text" id="ys-last" name="lastName" required placeholder="Last">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ys-email">Email Address *</label>
+            <input type="email" id="ys-email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="ys-phone">Phone Number</label>
+            <input type="tel" id="ys-phone" name="phone" placeholder="(216) 555-0100">
+          </div>
+          <div class="form-group">
+            <label for="ys-address">Delivery Address *</label>
+            <input type="text" id="ys-address" name="address" required placeholder="Street address, City, ZIP">
+          </div>
+          <div class="form-group">
+            <label for="ys-items">What do you need? *</label>
+            <select id="ys-items" name="items" required>
+              <option value="" disabled selected>Select items…</option>
+              <option value="yard-sign">Yard Sign (18"×24")</option>
+              <option value="yard-sign-sticker">Yard Sign + Bumper Sticker</option>
+              <option value="window-sign">Window Sign (apartment-friendly)</option>
+              <option value="sticker-only">Bumper Sticker Only</option>
+              <option value="multiple">Multiple Signs (3+) — for a block or event</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ys-notes">Notes (optional)</label>
+            <textarea id="ys-notes" name="notes" rows="2" placeholder="Best time to contact, quantity needed, anything else…"></textarea>
+          </div>
+          <button type="submit" class="yard-submit">Request My Sign →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE CTA -->
+<section class="donate-cta">
+  <div class="donate-cta-inner">
+    <h2>Can't Volunteer Right Now?</h2>
+    <p>A donation — even $5 or $10 — directly powers this grassroots campaign. No corporate strings attached. Every dollar comes from real people who want real change.</p>
+    <div class="btn-group">
+      <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="btn btn-primary">Donate Now →</a>
+      <a href="issues.html" class="btn btn-outline-white">Read the Platform</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="connect" id="connect">
+  <div class="connect-inner">
+    <div>
+      <h3>Connect</h3>
+      <p>Join us to fight for the working class.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/cortneyforcongress" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://instagram.com/cortneyforcongress" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+        <a href="https://tiktok.com/@cortneyforcongress" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">♪</a>
+        <a href="https://threads.net/@cortneyforcongress" class="social-link" aria-label="Threads" target="_blank" rel="noopener noreferrer">@</a>
+        <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" class="social-link" aria-label="Bluesky" target="_blank" rel="noopener noreferrer">🦋</a>
+      </div>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-bottom:0.5rem"><a href="mailto:cortneyforcongress@gmail.com">cortneyforcongress@gmail.com</a></p>
+      <p>Ohio's 11th Congressional District</p>
+    </div>
+    <div>
+      <h3>Stay Updated</h3>
+      <p>Get campaign updates in your inbox.</p>
+      <form class="signup-form" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="email-signup">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Paid for by Cortney Peterson For Congress</p>
+    <p>© 2026 Cortney Peterson For Congress. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Form submit — show success message (Netlify handles the actual submission)
+document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+  // Let Netlify handle the POST; show success after a short delay
+  const form = this;
+  const success = document.getElementById('formSuccess');
+  // For Netlify Forms, the page reloads on success unless we intercept
+  // Use fetch for AJAX submission so we can show the success state
+  e.preventDefault();
+  const data = new FormData(form);
+  fetch('/', { method: 'POST', body: data })
+    .then(() => {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+    .catch(() => {
+      // Fallback: submit normally
+      form.submit();
+    });
+});
+
+// Yard sign form AJAX submit
+document.getElementById('yardForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const success = document.getElementById('yardSuccess');
+  fetch('/', { method: 'POST', body: new FormData(form) })
+    .then(() => {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+    .catch(() => { form.submit(); });
+});
+</script>
+</body>
+</html>

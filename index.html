@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 <title>Cortney Peterson | Independent for Congress — OH-11</title>
 <meta name="description" content="Cortney Peterson is a nurse, mom, and independent candidate fighting for working families in Ohio's 11th Congressional District. Grassroots. No PAC money. People-powered.">
+<meta property="og:title" content="Cortney Peterson | Independent for Congress — OH-11">
+<meta property="og:description" content="Nurse, mom, and independent candidate fighting for working families in Ohio's 11th Congressional District. Grassroots. No PAC money. People-powered.">
+<meta property="og:image" content="https://cortneyforcongress.org/assets/og-image.png">
+<meta property="og:url" content="https://cortneyforcongress.org/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cortneyforcongress.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -238,6 +246,7 @@ section{padding:5rem 1.5rem}
   font-size:1.05rem;color:var(--text-light);margin-bottom:1.25rem;
   line-height:1.8;
 }
+.meet-sidebar{display:flex;flex-direction:column;gap:1.5rem}
 .meet-text p:first-of-type::first-letter{
   font-family:'Playfair Display',serif;
   font-size:3.5rem;font-weight:900;color:var(--plum);
@@ -406,7 +415,7 @@ section{padding:5rem 1.5rem}
 .connect a:hover{color:var(--coral-light)}
 .social-links{display:flex;gap:1rem;margin-top:1rem}
 .social-link{
-  width:40px;height:40px;border-radius:10px;
+  width:44px;height:44px;border-radius:10px;
   background:rgba(255,255,255,0.08);
   display:flex;align-items:center;justify-content:center;
   color:var(--white);text-decoration:none;font-size:1.1rem;
@@ -472,6 +481,16 @@ section{padding:5rem 1.5rem}
   .pledge-box{padding:2.5rem 1.5rem}
   .acc-cards{grid-template-columns:1fr}
 }
+@media(min-width:1024px){
+  .hero{padding:8rem 3rem 5rem}
+  section{padding:6.5rem 3rem}
+  .meet-grid{grid-template-columns:3fr 2fr;gap:3.5rem;align-items:start}
+  .meet-sidebar{position:sticky;top:6rem}
+  .acc-cards{grid-template-columns:repeat(2,1fr)}
+  .vision .section-inner{max-width:1100px}
+  .priorities-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .connect-inner{gap:4rem}
+}
 @media(max-width:480px){
   .hero{min-height:auto;padding:5.5rem 1.25rem 3rem}
   .hero-name{font-size:2.4rem}
@@ -492,32 +511,34 @@ section{padding:5rem 1.5rem}
 <!-- ===== NAVIGATION ===== -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="ohio-icon"></div>
-      <div>
-        <div class="nav-logo-text">CORTNEY PETERSON</div>
-        <div class="nav-logo-sub">Independent · OH-11</div>
-      </div>
+    <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:44px;width:auto">
     </a>
     <ul class="nav-links">
       <li><a href="#meet">About</a></li>
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#priorities">Issues</a></li>
-      <li><a href="#pledge">Grassroots</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="endorsements.html">Endorsements</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="news/">Updates</a></li>
+      <li><a href="press.html">Press</a></li>
       <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate">Donate</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
   <a href="#meet" onclick="closeMobile()">About</a>
-  <a href="#vision" onclick="closeMobile()">Vision</a>
-  <a href="#priorities" onclick="closeMobile()">Issues</a>
-  <a href="#pledge" onclick="closeMobile()">Grassroots</a>
+  <a href="issues.html" onclick="closeMobile()">Issues</a>
+  <a href="get-involved.html" onclick="closeMobile()">Get Involved</a>
+  <a href="endorsements.html" onclick="closeMobile()">Endorsements</a>
+  <a href="events.html" onclick="closeMobile()">Events</a>
+  <a href="news/" onclick="closeMobile()">Updates</a>
+  <a href="press.html" onclick="closeMobile()">Press</a>
   <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" onclick="closeMobile()">Donate</a>
 </div>
 
@@ -538,12 +559,7 @@ section{padding:5rem 1.5rem}
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-frame">
-        <!-- Replace src with Cortney's actual headshot -->
-        <div class="hero-image-placeholder">
-          <span>📸</span>
-          Replace with Cortney's headshot<br>
-          <small style="margin-top:0.5rem;opacity:0.6">Use: &lt;img src="photo.jpg" alt="Cortney Peterson"&gt;</small>
-        </div>
+        <img src="assets/images/cortney-headshot.jpeg" alt="Cortney Peterson, Independent candidate for Ohio's 11th Congressional District" width="480" height="640" loading="eager">
       </div>
       <div class="hero-badge">Mom · Nurse · Fighter</div>
     </div>
@@ -558,22 +574,24 @@ section{padding:5rem 1.5rem}
     
     <div class="meet-grid">
       <div class="meet-text">
-        <p class="reveal">A nurse and mom fighting for working families in Ohio's 11th district. Cortney grew up downtown Ashtabula, Ohio in a hardworking family. She's spent the last 12 years working as a licensed practical nurse, with a diverse career including work as an Anesthesia Technician, Pediatric Outpatient Nurse, and Cardiac Data Abstractor for the National Cardiovascular Data Registry CathPCI Program.</p>
-        
-        <p class="reveal">A rare condition required a stent to be placed in her brain to restore normal pressure and blood flow. After her procedure in October 2025, she's feeling better than she has in years — and that radical change fueled her passion to help people on a larger scale.</p>
+        <p class="reveal">A nurse and mom fighting for working families in Ohio's 11th district. Cortney grew up downtown Ashtabula, Ohio in a hardworking family. She's spent the last 12 years working as a licensed practical nurse — caring for patients, fighting for the vulnerable, and learning firsthand what it looks like when a system fails the people it's supposed to serve.</p>
 
+        <p class="reveal">A rare condition required a stent to be placed in her brain to restore normal pressure and blood flow. After her procedure in October 2025, she's feeling better than she has in years — and that radical change in her life fueled her passion to help people on a larger scale.</p>
+
+        <p class="reveal">A natural helper and fierce protector, Cortney once believed nursing was her true calling. But as national crises deepen, she's come to realize her lifelong defense of the "little guy" has been preparing her for public service all along.</p>
+      </div>
+
+      <aside class="meet-sidebar">
         <div class="golden-rule reveal">
           <h3>My Guiding Principle: The Golden Rule</h3>
           <p>Living by the golden rule, I treat others with the same respect I seek, uphold others' dignity, live my life with integrity, speak out against injustice, and protect those who cannot defend themselves.</p>
         </div>
 
-        <p class="reveal">A natural helper and fierce protector, Cortney once believed nursing was her true calling. But as national crises deepen, she's come to realize her lifelong defense of the "little guy" has been preparing her for public service all along.</p>
-        
         <div class="not-a-politician reveal">
           <strong>"I am NOT a politician."</strong>
-          <p>Instead, I want to be a POLICYMAKER and someone who fights for fairness and equity for the working class. I have had seasons of feast and seasons of famine. I have two wonderful sons, and I am a proud pet parent to 4 rescues. I am joining the fight to eliminate corruption in DC and to champion Quality of Life for all Americans.</p>
+          <p>Instead, I want to be a POLICYMAKER and someone who fights for fairness and equity for the working class. I have had seasons of feast and seasons of famine. I have two wonderful sons — one very bright teenager and one very bright little guy who receives therapies for his autism spectrum disorder. I am also a proud pet parent to 4 rescues — 2 dogs, 2 cats. I am joining the fight to eliminate corruption in DC and to end America's complicity in genocide.</p>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -667,26 +685,27 @@ section{padding:5rem 1.5rem}
       <h3>Connect</h3>
       <p>Join us to fight for the working class.</p>
       <div class="social-links">
-        <a href="#" class="social-link" title="Facebook" aria-label="Facebook">f</a>
-        <a href="#" class="social-link" title="Instagram" aria-label="Instagram">📷</a>
-        <a href="#" class="social-link" title="TikTok" aria-label="TikTok">♪</a>
-        <a href="#" class="social-link" title="Threads" aria-label="Threads">@</a>
-        <a href="#" class="social-link" title="Bluesky" aria-label="Bluesky">🦋</a>
+        <a href="https://facebook.com/cortneyforcongress" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://instagram.com/cortneyforcongress" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+        <a href="https://tiktok.com/@cortneyforcongress" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">♪</a>
+        <a href="https://threads.net/@cortneyforcongress" class="social-link" aria-label="Threads" target="_blank" rel="noopener noreferrer">@</a>
+        <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" class="social-link" aria-label="Bluesky" target="_blank" rel="noopener noreferrer">🦋</a>
       </div>
     </div>
     <div>
       <h3>Contact</h3>
-      <p style="margin-bottom:0.5rem"><a href="mailto:info@cortneyforcongress.org">info@cortneyforcongress.org</a></p>
+      <p style="margin-bottom:0.5rem"><a href="mailto:cortneyforcongress@gmail.com">cortneyforcongress@gmail.com</a></p>
       <p>Ohio's 11th Congressional District</p>
     </div>
     <div>
       <h3>Stay Updated</h3>
       <p>Get campaign updates in your inbox.</p>
-      <!-- Email signup - placeholder for integration -->
-      <div class="signup-form">
-        <input type="email" placeholder="Your email address" aria-label="Email address">
-        <button type="button">Sign Up</button>
-      </div>
+      <form class="signup-form" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="email-signup">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
     </div>
   </div>
   <div class="footer-bottom">
