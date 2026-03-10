@@ -118,10 +118,14 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.4);font-size:0.8rem}
 .footer-bottom p{margin-bottom:0.3rem}
 
-/* CITE BLOCK */
-.cite-block{background:#f4eef8;border-left:3px solid var(--plum-light);border-radius:0 8px 8px 0;padding:0.85rem 1.2rem;margin:1.2rem 0}
-.cite-label{display:block;font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.15em;color:var(--plum-light);text-transform:uppercase;margin-bottom:0.35rem}
-.cite-block p{font-size:0.88rem;font-style:italic;color:var(--text-light);margin:0}
+/* CITE BLOCK — collapsible deeper dive */
+.cite-block{background:#f4eef8;border-left:3px solid var(--plum-light);border-radius:0 8px 8px 0;padding:0.6rem 1.2rem;margin:1.2rem 0;cursor:pointer;user-select:none;transition:background 0.2s}
+.cite-block:hover{background:#ede4f6}
+.cite-label{display:flex;align-items:center;justify-content:space-between;font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.15em;color:var(--plum-light);text-transform:uppercase;margin:0;padding:0.25rem 0}
+.cite-label::after{content:'▼';font-size:0.55rem;transition:transform 0.25s;display:inline-block;margin-left:0.5rem;flex-shrink:0}
+.cite-block.open .cite-label::after{transform:rotate(180deg)}
+.cite-block p{font-size:0.88rem;font-style:italic;color:var(--text-light);margin:0.5rem 0 0;display:none;cursor:default}
+.cite-block.open p{display:block}
 
 /* HERO SOCIALS */
 .hero-socials{display:flex;justify-content:center;gap:0.75rem;margin-top:1.75rem}
@@ -557,7 +561,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
     </div>
   </div>
   <div class="footer-bottom">
-    <p>Paid for by Cortney Peterson For Congress</p>
+    <p>Paid for by Cortney Peterson For Congress &nbsp;&middot;&nbsp; FEC #H6OH11186</p>
     <p>© 2026 Cortney Peterson For Congress. All rights reserved.</p>
   </div>
 </footer>
@@ -584,6 +588,11 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 reveals.forEach(el => observer.observe(el));
+
+// Collapsible cite blocks (deeper dive)
+document.querySelectorAll('.cite-block').forEach(block => {
+  block.addEventListener('click', () => block.classList.toggle('open'));
+});
 </script>
 </body>
 </html>
