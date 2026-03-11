@@ -47,6 +47,29 @@
 /* Theme toggle */
 .theme-toggle{background:none;border:2px solid rgba(255,255,255,0.3);cursor:pointer;font-size:1.1rem;padding:0.35rem 0.5rem;color:var(--white);border-radius:8px;transition:all 0.3s;line-height:1;display:flex;align-items:center}
 .theme-toggle:hover{border-color:var(--sky);background:rgba(102,183,218,0.15)}
+/* Light mode overrides */
+[data-theme="light"] nav{background:rgba(252,240,225,0.92)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 8px rgba(71,13,68,0.06)}
+[data-theme="light"] nav.scrolled{background:rgba(252,240,225,0.97)!important}
+[data-theme="light"] .nav-links a{color:var(--plum)!important}
+[data-theme="light"] .nav-links a:hover{background:rgba(71,13,68,0.06)!important}
+[data-theme="light"] .nav-logo-text,[data-theme="light"] .nav-logo-sub{color:var(--plum)}
+[data-theme="light"] .hamburger span{background:var(--plum)}
+[data-theme="light"] .mobile-menu{background:var(--cream)}
+[data-theme="light"] .mobile-menu a{color:var(--plum)}
+[data-theme="light"] .hero,[data-theme="light"] .page-hero{background:linear-gradient(165deg,#8a3580 0%,#a84c9a 40%,#c474bb 100%)!important}
+[data-theme="light"] footer{background:var(--cream-dark)!important;color:var(--text)!important}
+[data-theme="light"] footer h3{color:var(--plum)!important}
+[data-theme="light"] footer p,[data-theme="light"] footer a{color:var(--text)!important}
+[data-theme="light"] footer a:hover{color:var(--sky-deep)!important}
+[data-theme="light"] .social-link{border-color:var(--plum)!important;color:var(--plum)!important}
+[data-theme="light"] .social-link:hover{background:var(--plum)!important;color:var(--cream)!important}
+[data-theme="light"] .footer-bottom{background:var(--cream)!important;border-top:1px solid rgba(71,13,68,0.1)!important}
+[data-theme="light"] .footer-bottom p{color:var(--text-light)!important}
+[data-theme="light"] .theme-toggle{border-color:rgba(71,13,68,0.3)!important;color:var(--plum)!important}
+[data-theme="light"] .theme-toggle:hover{border-color:var(--plum)!important;background:rgba(71,13,68,0.06)!important}
+[data-theme="light"] .signup-form input[type="email"]{background:var(--white);border-color:rgba(71,13,68,0.2);color:var(--text)}
+[data-theme="light"] .signup-form input[type="email"]::placeholder{color:var(--text-light)}
+[data-theme="light"] .press-contact-bar{background:var(--cream-dark)!important;color:var(--text)!important}
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7}
 
@@ -235,7 +258,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
-      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:44px;width:auto">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:52px;width:auto">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#meet">About</a></li>
@@ -273,6 +296,15 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
     <p>This campaign runs on grassroots power. No corporate money, no PAC funding — just working people fighting for working people. We need you.</p>
   </div>
 </header>
+
+<!-- SIGNATURE COLLECTION URGENCY -->
+<section style="background:var(--sky);padding:2rem 1.5rem;text-align:center">
+  <div style="max-width:800px;margin:0 auto">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.1em;color:var(--white);margin-bottom:0.5rem">Priority: Ballot Signatures</h2>
+    <p style="color:rgba(255,255,255,0.95);font-size:1.05rem;line-height:1.7;margin-bottom:0.5rem">As an independent candidate, Cortney isn't in the primary. To get on the <strong>November general election ballot</strong>, we need to collect <strong>2,200 valid signatures</strong> and submit them to the Board of Elections by <strong>May 4th, 2026</strong>.</p>
+    <p style="color:rgba(255,255,255,0.85);font-size:0.95rem">If you live in Ohio's 11th Congressional District, your signature gets Cortney on the ballot. Volunteer to help canvass for signatures in your neighborhood.</p>
+  </div>
+</section>
 
 <!-- WAYS TO HELP -->
 <section class="ways">
@@ -601,6 +633,33 @@ document.getElementById('yardForm').addEventListener('submit', function(e) {
   setIcon();
   toggle.addEventListener("click",function(){var c=html.getAttribute("data-theme");var n=c==="dark"?"light":"dark";html.setAttribute("data-theme",n);localStorage.setItem("theme",n);setIcon()});
 })();
+</script>
+<script>
+// Signup form AJAX handling
+document.querySelectorAll(".signup-form").forEach(function(form){
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var btn=form.querySelector("button");
+    var orig=btn.textContent;
+    btn.textContent="Sending...";
+    btn.disabled=true;
+    fetch("/",{
+      method:"POST",
+      headers:{"Content-Type":"application/x-www-form-urlencoded"},
+      body:new URLSearchParams(new FormData(form)).toString()
+    }).then(function(r){
+      if(r.ok){
+        form.innerHTML="<p style=\"color:var(--sky);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
+      }else{
+        btn.textContent="Try again";
+        btn.disabled=false;
+      }
+    }).catch(function(){
+      btn.textContent="Try again";
+      btn.disabled=false;
+    });
+  });
+});
 </script>
 </body>
 </html>
