@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice #001 — McGuire Digital</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f4f4f4;
+      color: #1a1a2e;
+      padding: 40px 20px;
+    }
+
+    .page {
+      background: #ffffff;
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 60px 64px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    /* Header */
+    .invoice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 3px solid #521a4c;
+    }
+
+    .from-block h1 {
+      font-family: 'Georgia', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #521a4c;
+      letter-spacing: -0.5px;
+    }
+
+    .from-block .tagline {
+      font-family: sans-serif;
+      font-size: 0.78rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .from-block .contact {
+      margin-top: 10px;
+      font-family: sans-serif;
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .invoice-meta {
+      text-align: right;
+      font-family: sans-serif;
+    }
+
+    .invoice-meta .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+    }
+
+    .invoice-meta .invoice-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #521a4c;
+      margin: 2px 0 12px;
+    }
+
+    .invoice-meta table {
+      font-size: 0.82rem;
+      color: #555;
+      border-collapse: collapse;
+      margin-left: auto;
+    }
+
+    .invoice-meta table td {
+      padding: 2px 0 2px 12px;
+    }
+
+    .invoice-meta table td:first-child {
+      color: #999;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-left: 0;
+      text-align: right;
+    }
+
+    /* Bill To */
+    .bill-to {
+      margin-bottom: 40px;
+    }
+
+    .bill-to .section-label {
+      font-family: sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #e8845c;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .bill-to .client-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .bill-to .client-details {
+      font-family: sans-serif;
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.8;
+      margin-top: 4px;
+    }
+
+    /* Line Items */
+    table.line-items {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+      font-family: sans-serif;
+    }
+
+    table.line-items thead tr {
+      background: #521a4c;
+      color: #fff;
+    }
+
+    table.line-items thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    table.line-items thead th:last-child {
+      text-align: right;
+    }
+
+    table.line-items tbody tr {
+      border-bottom: 1px solid #eee;
+    }
+
+    table.line-items tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    table.line-items tbody td {
+      padding: 14px 14px;
+      font-size: 0.88rem;
+      color: #333;
+      vertical-align: top;
+    }
+
+    table.line-items tbody td:last-child {
+      text-align: right;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    table.line-items tbody td .item-desc {
+      font-weight: 600;
+      color: #1a1a2e;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    table.line-items tbody td .item-sub {
+      font-size: 0.80rem;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* Totals */
+    .totals-block {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 40px;
+    }
+
+    .totals-table {
+      font-family: sans-serif;
+      font-size: 0.88rem;
+      border-collapse: collapse;
+      min-width: 260px;
+    }
+
+    .totals-table td {
+      padding: 7px 0;
+    }
+
+    .totals-table td:first-child {
+      color: #777;
+      padding-right: 32px;
+    }
+
+    .totals-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .totals-table tr.total-due td {
+      border-top: 2px solid #521a4c;
+      padding-top: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #521a4c;
+    }
+
+    /* Payment */
+    .payment-section {
+      background: #fdfaf8;
+      border-left: 4px solid #e8845c;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-family: sans-serif;
+    }
+
+    .payment-section h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      color: #521a4c;
+      margin-bottom: 10px;
+    }
+
+    .payment-section p {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .payment-section p strong {
+      color: #1a1a2e;
+    }
+
+    /* Notes */
+    .notes {
+      font-family: sans-serif;
+      font-size: 0.82rem;
+      color: #777;
+      line-height: 1.7;
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+    }
+
+    .notes strong {
+      color: #555;
+    }
+
+    /* Footer */
+    .invoice-footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; padding: 40px; }
+    }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="invoice-header">
+    <div class="from-block">
+      <h1>McGuire Digital</h1>
+      <div class="tagline">Web Design &amp; Development</div>
+      <div class="contact">
+        Patrick McGuire<br>
+        4889 W McElroy Ave<br>
+        Tampa, FL 33611<br>
+        pnmcguire4@gmail.com<br>
+        (813) 940-0111
+      </div>
+    </div>
+
+    <div class="invoice-meta">
+      <div class="label">Invoice</div>
+      <div class="invoice-number">#001</div>
+      <table>
+        <tr>
+          <td>Date</td>
+          <td>March 9, 2026</td>
+        </tr>
+        <tr>
+          <td>Due</td>
+          <td>Upon Receipt</td>
+        </tr>
+        <tr>
+          <td>Agreement</td>
+          <td>March 9, 2026</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bill To -->
+  <div class="bill-to">
+    <div class="section-label">Bill To</div>
+    <div class="client-name">Cortney Peterson For Congress</div>
+    <div class="client-details">
+      Cortney Peterson, Treasurer<br>
+      cortneyforcongress@gmail.com<br>
+      FEC Committee ID: H6OH11186
+    </div>
+  </div>
+
+  <!-- Line Items -->
+  <table class="line-items">
+    <thead>
+      <tr>
+        <th style="width:60%">Description</th>
+        <th style="width:20%">Installment</th>
+        <th style="width:20%">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="item-desc">Website Design &amp; Development</span>
+          <span class="item-sub">
+            Full campaign website for cortneyforcongress.org — design system,
+            homepage, issues page, get involved, endorsements, press kit, events,
+            gallery, and blog. Hosted on Netlify with custom domain, SSL, and
+            Netlify Forms integration. Includes FEC compliance, WCAG accessibility,
+            and mobile-first responsive design.
+          </span>
+        </td>
+        <td style="text-align:center; vertical-align:top; padding-top:14px; color:#777; font-size:0.85rem;">1 of 3</td>
+        <td>$325.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Totals -->
+  <div class="totals-block">
+    <table class="totals-table">
+      <tr>
+        <td>Subtotal</td>
+        <td>$325.00</td>
+      </tr>
+      <tr>
+        <td>Tax</td>
+        <td>$0.00</td>
+      </tr>
+      <tr class="total-due">
+        <td>Amount Due</td>
+        <td>$325.00</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Payment Instructions -->
+  <div class="payment-section">
+    <h3>Payment Instructions</h3>
+    <p><strong>Zelle:</strong> (813) 940-0111 — preferred</p>
+    <p><strong>Cash App:</strong> $PNMcGuire4</p>
+    <p><strong>Check:</strong> Payable to <em>Patrick McGuire</em> — 4889 W McElroy Ave, Tampa, FL 33611</p>
+    <p style="margin-top:10px; color:#aaa;">Payment due upon receipt. Per the website agreement dated March 9, 2026, the total project fee is $900, payable in three monthly installments of $325. This is installment 1 of 3.</p>
+  </div>
+
+  <!-- Notes -->
+  <div class="notes">
+    <strong>Notes:</strong> This invoice is issued by Patrick McGuire operating as McGuire Digital, an unincorporated sole proprietorship. Per the executed Website Design &amp; Development Agreement dated March 9, 2026, all work described is provided on a volunteer/pro-bono basis with a reduced administrative fee as noted above. Campaign expenditures should be reported to the FEC as required.
+  </div>
+
+  <!-- Footer -->
+  <div class="invoice-footer">
+    McGuire Digital &nbsp;·&nbsp; Patrick McGuire &nbsp;·&nbsp; pnmcguire4@gmail.com &nbsp;·&nbsp; (813) 940-0111
+  </div>
+
+</div>
+</body>
+</html>

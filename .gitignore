@@ -30,6 +30,9 @@ markdown/
 # Holdout evaluation scenarios (never committed)
 scenarios/
 
+# Intake data (contains personal info)
+Campaign-Intake-Results.txt
+
 # Backup/draft files
 *.bak
 *.draft

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Design &amp; Development Agreement — McGuire / Peterson for Congress</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --rule: #c5c5d6;
+    --field-bg: #f4f3f0;
+    --accent: #2c4a7c;
+    --accent-light: #e8edf4;
+    --paper: #fdfcfa;
+    --red: #8b2020;
+    --green: #1e6b45;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 15px; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    background: #e8e6e1;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .contract-wrapper {
+    max-width: 780px;
+    margin: 2rem auto;
+    background: var(--paper);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+    border-radius: 2px;
+  }
+
+  .contract-header {
+    text-align: center;
+    padding: 2.8rem 3rem 2rem;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .contract-header h1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .contract-header .subtitle {
+    font-style: italic;
+    color: var(--ink-light);
+    font-size: 0.95rem;
+  }
+
+  .contract-body { padding: 2rem 3rem 2.5rem; }
+
+  .preamble {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ---- Parties Block ---- */
+  .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .party-block { padding: 1.2rem; border: 1px solid var(--rule); border-radius: 4px; background: var(--field-bg); }
+  .party-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .party-name { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.4rem; }
+
+  /* ---- Form Inputs ---- */
+  .field-row { margin-bottom: 0.6rem; display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+  .field-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+    min-width: 70px;
+  }
+  .field-input {
+    flex: 1;
+    min-width: 140px;
+    border: none;
+    border-bottom: 1.5px solid var(--rule);
+    background: transparent;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    padding: 2px 4px;
+    transition: border-color 0.2s;
+  }
+  .field-input:focus { outline: none; border-bottom-color: var(--accent); }
+  .field-input::placeholder { color: #aaa; font-style: italic; font-size: 0.85rem; }
+
+  /* ---- Sections ---- */
+  .section { margin-bottom: 1.8rem; }
+  .section-heading {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--accent-light);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section p { margin-bottom: 0.7rem; font-size: 0.95rem; }
+  .section ul { margin: 0.4rem 0 0.8rem 1.6rem; font-size: 0.95rem; }
+  .section li { margin-bottom: 0.25rem; }
+
+  .highlight-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 0.8rem 1rem;
+    border-radius: 0 4px 4px 0;
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+  }
+  .highlight-box strong { font-weight: 600; }
+
+  .note-box {
+    background: #fdf6ec;
+    border-left: 3px solid #c49530;
+    padding: 0.7rem 1rem;
+    border-radius: 0 4px 4px 0;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--ink-light);
+  }
+
+  /* ---- Signature Area ---- */
+  .signatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--ink);
+  }
+  .sig-block { }
+  .sig-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .sig-canvas-wrap {
+    border: 1.5px dashed var(--rule);
+    border-radius: 4px;
+    background: #fff;
+    position: relative;
+    height: 100px;
+    margin-bottom: 0.5rem;
+    cursor: crosshair;
+  }
+  .sig-canvas-wrap canvas { display: block; width: 100%; height: 100%; border-radius: 4px; }
+  .sig-canvas-wrap .sig-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.75rem;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .sig-canvas-wrap.has-sig .sig-placeholder { opacity: 0; }
+  .sig-actions { display: flex; gap: 0.5rem; margin-bottom: 0.6rem; }
+  .sig-actions button {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--rule);
+    background: var(--field-bg);
+    color: var(--ink-light);
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .sig-actions button:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+
+  /* ---- Footer Bar ---- */
+  .contract-footer {
+    padding: 1.5rem 3rem;
+    background: var(--field-bg);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .e-sign-notice {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    max-width: 400px;
+    line-height: 1.5;
+  }
+  .footer-actions { display: flex; gap: 0.6rem; }
+  .btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    border: none;
+    padding: 0.55rem 1.3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #1e3a66; }
+  .btn-outline { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); }
+  .btn-outline:hover { background: var(--accent-light); }
+
+
+  /* ---- Print ---- */
+  @media print {
+    body { background: #fff; }
+    .contract-wrapper { box-shadow: none; margin: 0; max-width: 100%; }
+    .contract-footer { display: none; }
+    .sig-actions { display: none; }
+    .field-input { border-bottom-style: solid; }
+    .note-box { break-inside: avoid; }
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 640px) {
+    .contract-body, .contract-header, .contract-footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .parties, .signatures { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="contract-wrapper" id="contract">
+
+  <!-- HEADER -->
+  <div class="contract-header">
+    <h1>Website Design &amp; Development Agreement</h1>
+    <p class="subtitle">
+      Entered into on
+      <input type="text" class="field-input" id="effectiveDate" value="March 9, 2026" style="width:160px; text-align:center; font-style:italic; border-bottom-color:var(--ink-light);">
+    </p>
+  </div>
+
+  <!-- BODY -->
+  <div class="contract-body">
+
+    <!-- Parties -->
+    <div class="parties">
+      <div class="party-block">
+        <div class="party-label">Developer</div>
+        <div class="party-name">Patrick Nicholas McGuire</div>
+        <div class="field-row">
+          <span class="field-label">Address</span>
+          <input type="text" class="field-input" value="4889 W McElroy Ave, Tampa, FL 33611">
+        </div>
+        <div class="field-row">
+          <span class="field-label">Email</span>
+          <input type="text" class="field-input" value="pnmcguire4@gmail.com">
+        </div>
+        <div class="field-row">
+          <span class="field-label">Phone</span>
+          <input type="text" class="field-input" value="(813) 940-0111">
+        </div>
+      </div>
+
+      <div class="party-block">
+        <div class="party-label">Client — Candidate &amp; Treasurer</div>
+        <div class="field-row">
+          <span class="field-label">Committee</span>
+          <input type="text" class="field-input" id="committeeName" placeholder="Cortney Peterson for Congress" value="Cortney Peterson for Congress">
+        </div>
+        <div class="field-row">
+          <span class="field-label">Name</span>
+          <span style="font-weight:600;">Cortney Peterson</span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Role</span>
+          <span style="font-size:0.9rem;">Candidate &amp; Treasurer</span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Address</span>
+          <input type="text" class="field-input" placeholder="Committee mailing address">
+        </div>
+        <div class="field-row">
+          <span class="field-label">Email</span>
+          <input type="text" class="field-input" placeholder="campaign@example.com">
+        </div>
+      </div>
+    </div>
+
+    <div class="preamble">
+      This Agreement is between Patrick Nicholas McGuire ("Developer") and Cortney Peterson, acting as both candidate and treasurer of the authorized campaign committee identified above ("Client"), for website design and development services in connection with the Client's congressional campaign.
+    </div>
+
+    <!-- 1. Scope -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">1</span> Scope of Work</div>
+      <p>Developer will provide website-related services for the Client's campaign, including:</p>
+      <ul>
+        <li>Website design and layout</li>
+        <li>Website development and setup</li>
+        <li>Integration of campaign-provided content, links, and media</li>
+        <li>Reasonable launch support for the initial deployment</li>
+      </ul>
+      <p>This Agreement covers the current website build and launch only, unless the parties later agree in writing to additional work.</p>
+    </div>
+
+    <!-- 2. Fee -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">2</span> Fee and Payment</div>
+      <div class="highlight-box">
+        <strong>Project Fee:</strong> $900.00 total &nbsp;·&nbsp; <strong>Payable in monthly installments of $325.00</strong>
+      </div>
+      <p>The total fee for the website design, development, and launch described in this Agreement is <strong>$900.00</strong>. Client agrees to pay this amount in monthly installments of <strong>$325.00</strong>, beginning on the date agreed by the parties, until the total project fee of $900.00 has been met or surpassed.</p>
+      <p>Client may cancel this Agreement at any time before the full project fee has been paid. If Client cancels early, Client owes nothing beyond the installments already paid as of the cancellation date. Developer accepts the risk that the full project fee may not be reached.</p>
+      <p>Payment shall be made by the campaign committee. Developer will provide an invoice or receipt for each installment describing the services as <em>website design and development</em>, <em>web services</em>, or similar campaign-related vendor work.</p>
+    </div>
+
+    <!-- 3. Ownership -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">3</span> Ownership and Rights</div>
+      <p>The campaign shall retain ownership and control of its domain name, campaign branding, campaign text, campaign images, and other campaign-specific materials supplied by or approved by the Client.</p>
+      <p>Upon payment of the full $900.00 project fee, Client shall have the right to continue using the finished website deliverables created for the campaign, including the deployed site files and campaign-specific design work prepared under this Agreement, subject to any third-party services or licenses used in the build. If Client cancels before the project fee is fully paid, Client retains the right to use the website as delivered up to that point.</p>
+      <p>Developer retains ownership of any pre-existing tools, code libraries, templates, workflows, or general-purpose design and development methods used to create the site, but grants Client a perpetual license to use them as incorporated into the campaign website delivered under this Agreement.</p>
+    </div>
+
+    <!-- 4. Hosting -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">4</span> Hosting, Third-Party Services, and Accounts</div>
+      <p>If hosting, domain registration, form handling, analytics, fonts, or other third-party tools are used, those services may be subject to separate terms and costs charged by the relevant provider.</p>
+      <p>If reasonably possible, campaign-owned accounts, domain access, and essential credentials should be maintained in the campaign's name or under campaign control.</p>
+    </div>
+
+    <!-- 5. Maintenance -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">5</span> Post-Launch Updates and Maintenance</div>
+      <p>This Agreement does not include ongoing maintenance beyond the initial build and launch.</p>
+      <p>Once the full project fee of $900.00 has been paid, Client may elect to continue receiving website maintenance services from Developer. Maintenance includes routine edits, content updates, troubleshooting, and minor additions as reasonably needed to keep the campaign website current.</p>
+      <div class="highlight-box">
+        <strong>Maintenance Rate:</strong> $75.00 per month &nbsp;·&nbsp; <strong>Begins only after the $900 project fee is fully paid</strong>
+      </div>
+      <p>Client may cancel maintenance at any time with written notice and owes nothing further beyond the current billing period.</p>
+      <p>Upon cancellation or termination of maintenance, Developer will reasonably cooperate in transferring the site and related access back to the campaign or its designated representative.</p>
+    </div>
+
+    <!-- 6. Compliance -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">6</span> Campaign Approval and Compliance</div>
+      <p>Client is responsible for reviewing and approving all final website content before launch, including factual content, issue statements, endorsements, donation language, and any legally required disclaimer language.</p>
+      <div class="note-box">
+        Developer is not serving as campaign counsel and is not providing legal advice. Client is solely responsible for confirming that all disclaimers, reporting, and campaign-finance requirements are satisfied before launch and during use of the website, and is encouraged to consult legal counsel if needed.
+      </div>
+    </div>
+
+    <!-- 7. Recordkeeping -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">7</span> Recordkeeping</div>
+      <p>The parties intend for this arrangement to be documented as a normal campaign vendor transaction. Developer will provide reasonable documentation of the services performed and amounts charged. Client is responsible for its own reporting, bookkeeping, and compliance obligations.</p>
+    </div>
+
+    <!-- 8. Termination -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">8</span> Termination</div>
+      <p>Either party may terminate this Agreement at any time upon written notice.</p>
+      <p>If Client terminates before the full project fee has been paid, Client owes nothing beyond installments already paid as of the termination date. No early-termination penalty or remaining-balance obligation applies.</p>
+      <p>If the project fee has been paid in full, Developer will provide the Client with the then-current website files and reasonable handoff information necessary for continued campaign use, excluding Developer's separate internal tools or unrelated proprietary materials.</p>
+      <p>Termination of maintenance services follows the same process: Client may cancel at any time with written notice, owing nothing beyond the current billing period.</p>
+    </div>
+
+    <!-- 9. Entire Agreement -->
+    <div class="section">
+      <div class="section-heading"><span class="section-num">9</span> Entire Agreement</div>
+      <p>This Agreement is the entire agreement between the parties for this project and may be amended only in writing.</p>
+    </div>
+
+    <!-- SIGNATURES -->
+    <div class="signatures">
+      <!-- Developer -->
+      <div class="sig-block">
+        <div class="sig-label">Developer</div>
+        <div class="sig-canvas-wrap" id="sigWrapDev">
+          <canvas id="sigDev"></canvas>
+          <span class="sig-placeholder">Sign here</span>
+        </div>
+        <div class="sig-actions">
+          <button onclick="clearSig('sigDev')">Clear</button>
+        </div>
+        <div class="field-row" style="margin-bottom:0.3rem;">
+          <span class="field-label" style="min-width:50px;">Name</span>
+          <span style="font-weight:600;">Patrick Nicholas McGuire</span>
+        </div>
+        <div class="field-row">
+          <span class="field-label" style="min-width:50px;">Date</span>
+          <input type="text" class="field-input" id="dateDev" value="March 9, 2026" style="max-width:180px;">
+        </div>
+      </div>
+
+      <!-- Client -->
+      <div class="sig-block">
+        <div class="sig-label">Client — <span id="sigCommitteeLabel">Cortney Peterson for Congress</span></div>
+        <div class="sig-canvas-wrap" id="sigWrapClient">
+          <canvas id="sigClient"></canvas>
+          <span class="sig-placeholder">Sign here</span>
+        </div>
+        <div class="sig-actions">
+          <button onclick="clearSig('sigClient')">Clear</button>
+        </div>
+        <div class="field-row" style="margin-bottom:0.3rem;">
+          <span class="field-label" style="min-width:50px;">Name</span>
+          <span style="font-weight:600;">Cortney Peterson</span>
+        </div>
+        <div class="field-row" style="margin-bottom:0.3rem;">
+          <span class="field-label" style="min-width:50px;">Title</span>
+          <span style="font-size:0.9rem;">Candidate &amp; Treasurer</span>
+        </div>
+        <div class="field-row">
+          <span class="field-label" style="min-width:50px;">Date</span>
+          <input type="text" class="field-input" id="dateClient" value="March 9, 2026" style="max-width:180px;">
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /contract-body -->
+
+  <!-- FOOTER -->
+  <div class="contract-footer">
+    <div class="e-sign-notice">
+      Electronic signatures are intended to have the same legal effect as handwritten signatures under applicable federal and state law, including the E-SIGN Act (15 U.S.C. § 7001) and UETA.
+      Both parties consent to conducting this transaction by electronic means.
+    </div>
+    <div class="footer-actions">
+      <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ---- Signature Pad Logic ----
+function initSigPad(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  const wrap = canvas.parentElement;
+  const ctx = canvas.getContext('2d');
+  let drawing = false;
+  let hasSig = false;
+
+  function resize() {
+    const rect = wrap.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+    ctx.strokeStyle = '#1a1a2e';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function getPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches ? e.touches[0] : e;
+    return { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
+  }
+
+  function start(e) {
+    e.preventDefault();
+    drawing = true;
+    const p = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+  }
+
+  function move(e) {
+    if (!drawing) return;
+    e.preventDefault();
+    const p = getPos(e);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+    if (!hasSig) { hasSig = true; wrap.classList.add('has-sig'); }
+  }
+
+  function end(e) {
+    if (drawing) { e.preventDefault(); drawing = false; }
+  }
+
+  canvas.addEventListener('mousedown', start);
+  canvas.addEventListener('mousemove', move);
+  canvas.addEventListener('mouseup', end);
+  canvas.addEventListener('mouseleave', end);
+  canvas.addEventListener('touchstart', start, { passive: false });
+  canvas.addEventListener('touchmove', move, { passive: false });
+  canvas.addEventListener('touchend', end, { passive: false });
+
+  return {
+    clear() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hasSig = false;
+      wrap.classList.remove('has-sig');
+    },
+    hasSignature() { return hasSig; }
+  };
+}
+
+const pads = {};
+pads.sigDev = initSigPad('sigDev');
+pads.sigClient = initSigPad('sigClient');
+
+function clearSig(id) { pads[id].clear(); }
+
+// Sync committee name into sig label
+const committeeInput = document.getElementById('committeeName');
+const sigLabel = document.getElementById('sigCommitteeLabel');
+committeeInput.addEventListener('input', () => {
+  sigLabel.textContent = committeeInput.value || 'Committee';
+});
+</script>
+
+</body>
+</html>
