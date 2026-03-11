@@ -43,8 +43,9 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .nav-logo-sub{font-size:0.65rem;letter-spacing:0.2em;color:var(--plum-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
 .ohio-icon{width:32px;height:32px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%)}
 .nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
-.nav-links a{color:var(--plum);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px;transition:all 0.3s ease;text-transform:uppercase}
-.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-links a{color:var(--plum);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px 6px 0 0;transition:all 0.3s ease;text-transform:uppercase}
+.nav-links a:hover{color:var(--plum);background:rgba(71,13,68,0.06)}
+.nav-links a.active{background:var(--plum);color:var(--cream);padding-bottom:calc(0.5rem + 4px);margin-bottom:-4px;border-radius:6px 6px 0 0}
 .nav-donate{background:var(--coral)!important;color:var(--plum)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(253,180,155,0.3)}
 .nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
@@ -135,7 +136,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       <li><a href="../get-involved.html">Get Involved</a></li>
       <li><a href="../endorsements.html">Endorsements</a></li>
       <li><a href="../events.html">Events</a></li>
-      <li><a href="../news/" aria-current="page">Updates</a></li>
+      <li><a href="../news/" aria-current="page" class="active">Updates</a></li>
       <li><a href="../press.html">Press</a></li>
       <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate" target="_blank" rel="noopener noreferrer">Donate</a></li>
     </ul>
