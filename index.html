@@ -37,7 +37,7 @@
   --white:#ffffff;
   --text:#1a1a2e;
   --text-light:#555566;
-  --sky:#66b7da;--sky-deep:#4a9bc2;--grey:#e1dfe2;
+  
   --ohio-peach:#fdb49b;
 }
 /* Dark mode overrides */
@@ -47,13 +47,13 @@
 }
 [data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4,[data-theme="dark"] .section-label{color:var(--coral)}
 [data-theme="dark"] .endorsement-quote,[data-theme="dark"] .issue-title{color:var(--coral)}
-[data-theme="dark"] a:not([class]):not(.nav-links a){color:var(--sky)}
+[data-theme="dark"] a:not([class]):not(.nav-links a){color:var(--coral)}
 [data-theme="dark"] input,[data-theme="dark"] textarea,[data-theme="dark"] select{background:var(--cream-dark);border-color:rgba(253,180,155,0.15);color:var(--text)}
 [data-theme="dark"] .card,[data-theme="dark"] .endorsement-card,[data-theme="dark"] .event-card,[data-theme="dark"] .fact-card{box-shadow:0 2px 16px rgba(0,0,0,0.4)}
 [data-theme="dark"] img{opacity:0.92}
-/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--sky)}[data-theme="light"] .nav-socials a{color:var(--plum)}[data-theme="light"] .nav-socials a:hover{color:var(--sky)}@media(max-width:768px){.nav-socials{display:none}}/* Theme toggle */
+/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--coral)}[data-theme="light"] .nav-socials a{color:var(--plum)}[data-theme="light"] .nav-socials a:hover{color:var(--coral)}@media(max-width:768px){.nav-socials{display:none}}/* Theme toggle */
 .theme-toggle{background:none;border:2px solid rgba(255,255,255,0.3);cursor:pointer;font-size:1.1rem;padding:0.35rem 0.5rem;color:var(--white);border-radius:8px;transition:all 0.3s;line-height:1;display:flex;align-items:center}
-.theme-toggle:hover{border-color:var(--sky);background:rgba(102,183,218,0.15)}
+.theme-toggle:hover{border-color:var(--coral);background:rgba(253,180,155,0.15)}
 /* Light mode overrides */
 [data-theme="light"] nav{background:rgba(252,240,225,0.92)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 8px rgba(71,13,68,0.06)}
 [data-theme="light"] nav.scrolled{background:rgba(252,240,225,0.97)!important}
@@ -67,7 +67,7 @@
 [data-theme="light"] footer{background:var(--cream-dark)!important;color:var(--text)!important}
 [data-theme="light"] footer h3{color:var(--plum)!important}
 [data-theme="light"] footer p,[data-theme="light"] footer a{color:var(--text)!important}
-[data-theme="light"] footer a:hover{color:var(--sky-deep)!important}
+[data-theme="light"] footer a:hover{color:var(--coral)!important}
 [data-theme="light"] .social-link{border-color:var(--plum)!important;color:var(--plum)!important}
 [data-theme="light"] .social-link:hover{background:var(--plum)!important;color:var(--cream)!important}
 [data-theme="light"] .footer-bottom{background:var(--cream)!important;border-top:1px solid rgba(71,13,68,0.1)!important}
@@ -124,13 +124,13 @@ body{
 }
 .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.1)}
 .nav-donate{
-  background:var(--sky)!important;color:var(--white)!important;
+  background:var(--coral)!important;color:var(--plum)!important;
   font-weight:700!important;border-radius:8px!important;
   padding:0.6rem 1.3rem!important;
   transition:all 0.3s ease!important;
-  box-shadow:0 2px 12px rgba(102,183,218,0.3);
+  box-shadow:0 2px 12px rgba(253,180,155,0.3);
 }
-.nav-donate:hover{background:var(--sky-deep)!important;transform:translateY(-1px);box-shadow:0 4px 20px rgba(102,183,218,0.4)!important}
+.nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px);box-shadow:0 4px 20px rgba(253,180,155,0.4)!important}
 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
@@ -151,7 +151,7 @@ body{
 }
 .mobile-menu a:hover{color:var(--coral)}
 .mobile-menu .mobile-donate{
-  margin-top:1rem;background:var(--sky);padding:0.8rem 2.5rem;
+  margin-top:1rem;background:var(--coral);padding:0.8rem 2.5rem;
   border-radius:10px;font-size:1.5rem;
 }
 
@@ -166,7 +166,7 @@ body{
 .hero::before{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 50% at 70% 60%, rgba(102,183,218,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 70% 60%, rgba(253,180,155,0.08) 0%, transparent 60%),
     radial-gradient(ellipse 60% 40% at 20% 30%, rgba(92,45,130,0.3) 0%, transparent 50%);
   pointer-events:none;
 }
@@ -223,9 +223,9 @@ body{
 }
 .btn-primary{
   background:var(--plum);color:var(--white);
-  box-shadow:0 4px 20px rgba(102,183,218,0.35);
+  box-shadow:0 4px 20px rgba(253,180,155,0.35);
 }
-.btn-primary:hover{background:var(--sky);transform:translateY(-2px);box-shadow:0 8px 30px rgba(102,183,218,0.4)}
+.btn-primary:hover{background:var(--coral-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(253,180,155,0.4)}
 .btn-outline{
   background:transparent;color:var(--white);
   border:2px solid rgba(255,255,255,0.3);
@@ -258,7 +258,7 @@ body{
   padding:1rem 1.5rem;border-radius:16px;
   font-family:'Bebas Neue',sans-serif;
   font-size:1.3rem;letter-spacing:0.1em;
-  box-shadow:0 8px 30px rgba(102,183,218,0.4);
+  box-shadow:0 8px 30px rgba(253,180,155,0.4);
   transform:rotate(-3deg);
   z-index:2;
 }
@@ -354,7 +354,7 @@ section{padding:5rem 1.5rem}
 }
 .vision::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 80% 20%, rgba(102,183,218,0.1), transparent 50%);
+  background:radial-gradient(circle at 80% 20%, rgba(253,180,155,0.1), transparent 50%);
 }
 .vision .section-inner{position:relative;z-index:1}
 .vision .section-label{color:var(--coral-light)}
@@ -416,7 +416,7 @@ section{padding:5rem 1.5rem}
 }
 .pledge-box::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 0%, rgba(102,183,218,0.12), transparent 60%);
+  background:radial-gradient(circle at 50% 0%, rgba(253,180,155,0.12), transparent 60%);
 }
 .pledge-box>*{position:relative;z-index:1}
 .pledge-stars{font-size:1.5rem;letter-spacing:0.5rem;margin-bottom:1.5rem;opacity:0.6}
@@ -465,7 +465,7 @@ section{padding:5rem 1.5rem}
   color:var(--white);text-decoration:none;font-size:1.1rem;
   transition:all 0.3s ease;
 }
-.social-link:hover{background:var(--sky);transform:translateY(-2px)}
+.social-link:hover{background:var(--coral);transform:translateY(-2px)}
 
 /* Email signup placeholder */
 .signup-form{margin-top:1rem}
@@ -485,7 +485,7 @@ section{padding:5rem 1.5rem}
   letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;
   transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif;
 }
-.signup-form button:hover{background:var(--sky)}
+.signup-form button:hover{background:var(--coral-light)}
 
 .footer-bottom{
   max-width:1000px;margin:3rem auto 0;
@@ -652,7 +652,7 @@ section{padding:5rem 1.5rem}
 </section>
 
 <!-- ===== SIGNATURE BANNER ===== -->
-<section class="sig-banner" style="background:var(--sky);padding:1.5rem 2rem;text-align:center">
+<section class="sig-banner" style="background:var(--plum);padding:1.5rem 2rem;text-align:center">
   <div style="max-width:900px;margin:0 auto">
     <p style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.1em;color:var(--white);margin-bottom:0.25rem">We Need 2,200 Signatures by May 4th to Get on the Ballot</p>
     <p style="color:rgba(255,255,255,0.9);font-size:0.95rem;margin-bottom:0.75rem">As an independent candidate, Cortney isn't in the primary. She needs YOUR signature to earn a spot on the November general election ballot.</p>
@@ -844,7 +844,7 @@ document.querySelectorAll(".signup-form").forEach(function(form){
       body:new URLSearchParams(new FormData(form)).toString()
     }).then(function(r){
       if(r.ok){
-        form.innerHTML="<p style=\"color:var(--sky);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
+        form.innerHTML="<p style=\"color:var(--coral);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
       }else{
         btn.textContent="Try again";
         btn.disabled=false;

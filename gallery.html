@@ -30,7 +30,7 @@
   --cream:#fcf0e1;--cream-dark:#f5e4cf;
   --slate:#2c2c3a;--white:#ffffff;
   --text:#1a1a2e;--text-light:#555566;
-  --sky:#66b7da;--sky-deep:#4a9bc2;--grey:#e1dfe2;
+  
 }
 /* Dark mode overrides */
 [data-theme="dark"]{
@@ -39,13 +39,13 @@
 }
 [data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4,[data-theme="dark"] .section-label{color:var(--coral)}
 [data-theme="dark"] .endorsement-quote,[data-theme="dark"] .issue-title{color:var(--coral)}
-[data-theme="dark"] a:not([class]):not(.nav-links a){color:var(--sky)}
+[data-theme="dark"] a:not([class]):not(.nav-links a){color:var(--coral)}
 [data-theme="dark"] input,[data-theme="dark"] textarea,[data-theme="dark"] select{background:var(--cream-dark);border-color:rgba(253,180,155,0.15);color:var(--text)}
 [data-theme="dark"] .card,[data-theme="dark"] .endorsement-card,[data-theme="dark"] .event-card,[data-theme="dark"] .fact-card{box-shadow:0 2px 16px rgba(0,0,0,0.4)}
 [data-theme="dark"] img{opacity:0.92}
-/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--sky)}[data-theme="light"] .nav-socials a{color:var(--plum)}[data-theme="light"] .nav-socials a:hover{color:var(--sky)}@media(max-width:768px){.nav-socials{display:none}}/* Theme toggle */
+/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--coral)}[data-theme="light"] .nav-socials a{color:var(--plum)}[data-theme="light"] .nav-socials a:hover{color:var(--coral)}@media(max-width:768px){.nav-socials{display:none}}/* Theme toggle */
 .theme-toggle{background:none;border:2px solid rgba(255,255,255,0.3);cursor:pointer;font-size:1.1rem;padding:0.35rem 0.5rem;color:var(--white);border-radius:8px;transition:all 0.3s;line-height:1;display:flex;align-items:center}
-.theme-toggle:hover{border-color:var(--sky);background:rgba(102,183,218,0.15)}
+.theme-toggle:hover{border-color:var(--coral);background:rgba(253,180,155,0.15)}
 /* Light mode overrides */
 [data-theme="light"] nav{background:rgba(252,240,225,0.92)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 8px rgba(71,13,68,0.06)}
 [data-theme="light"] nav.scrolled{background:rgba(252,240,225,0.97)!important}
@@ -59,7 +59,7 @@
 [data-theme="light"] footer{background:var(--cream-dark)!important;color:var(--text)!important}
 [data-theme="light"] footer h3{color:var(--plum)!important}
 [data-theme="light"] footer p,[data-theme="light"] footer a{color:var(--text)!important}
-[data-theme="light"] footer a:hover{color:var(--sky-deep)!important}
+[data-theme="light"] footer a:hover{color:var(--coral)!important}
 [data-theme="light"] .social-link{border-color:var(--plum)!important;color:var(--plum)!important}
 [data-theme="light"] .social-link:hover{background:var(--plum)!important;color:var(--cream)!important}
 [data-theme="light"] .footer-bottom{background:var(--cream)!important;border-top:1px solid rgba(71,13,68,0.1)!important}
@@ -83,8 +83,8 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
 .nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px;transition:all 0.3s ease;text-transform:uppercase}
 .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--white);background:rgba(255,255,255,0.1)}
-.nav-donate{background:var(--sky)!important;color:var(--white)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(102,183,218,0.3)}
-.nav-donate:hover{background:var(--sky-deep)!important;transform:translateY(-1px)}
+.nav-donate{background:var(--coral)!important;color:var(--plum)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(253,180,155,0.3)}
+.nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -94,7 +94,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .mobile-menu.open{display:flex;opacity:1}
 .mobile-menu a{color:var(--white);text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.15em;transition:color 0.3s}
 .mobile-menu a:hover{color:var(--coral)}
-.mobile-menu .mobile-donate{margin-top:1rem;background:var(--sky);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
+.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
 
 /* PAGE HERO */
 .page-hero{
@@ -197,7 +197,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
   display:flex;align-items:center;justify-content:center;
   transition:background 0.2s;backdrop-filter:blur(4px);
 }
-.lightbox-nav:hover{background:var(--sky)}
+.lightbox-nav:hover{background:var(--coral)}
 .lightbox-prev{left:-3.5rem}
 .lightbox-next{right:-3.5rem}
 .lightbox-counter{
@@ -218,8 +218,8 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .submit-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:900;margin-bottom:1rem}
 .submit-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
 .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase}
-.btn-coral{background:var(--plum);color:var(--white);box-shadow:0 4px 20px rgba(102,183,218,0.35)}
-.btn-coral:hover{background:var(--sky);transform:translateY(-2px)}
+.btn-coral{background:var(--plum);color:var(--white);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+.btn-coral:hover{background:var(--coral-light);transform:translateY(-2px)}
 
 /* FOOTER */
 .connect{background:var(--slate);color:var(--white);padding:4rem 1.5rem 2rem}
@@ -230,13 +230,13 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .connect a:hover{color:var(--coral-light)}
 .social-links{display:flex;gap:1rem;margin-top:1rem}
 .social-link{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:1.1rem;transition:all 0.3s ease}
-.social-link:hover{background:var(--sky);transform:translateY(-2px)}
+.social-link:hover{background:var(--coral);transform:translateY(-2px)}
 .signup-form{margin-top:1rem}
 .signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:var(--white);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
 .signup-form input[type="email"]::placeholder{color:rgba(255,255,255,0.4)}
 .signup-form input[type="email"]:focus{border-color:var(--coral)}
 .signup-form button{width:100%;padding:0.75rem;background:var(--plum);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif}
-.signup-form button:hover{background:var(--sky)}
+.signup-form button:hover{background:var(--coral-light)}
 .footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.4);font-size:0.8rem}
 .footer-bottom p{margin-bottom:0.3rem}
 
@@ -598,7 +598,7 @@ document.querySelectorAll(".signup-form").forEach(function(form){
       body:new URLSearchParams(new FormData(form)).toString()
     }).then(function(r){
       if(r.ok){
-        form.innerHTML="<p style=\"color:var(--sky);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
+        form.innerHTML="<p style=\"color:var(--coral);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
       }else{
         btn.textContent="Try again";
         btn.disabled=false;
