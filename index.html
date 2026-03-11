@@ -259,22 +259,23 @@ section{padding:5rem 1.5rem}
   float:left;line-height:0.85;margin-right:0.5rem;margin-top:0.1rem;
 }
 .golden-rule{
-  background:linear-gradient(135deg, var(--plum), var(--plum-light));
+  background:var(--cream-dark);
   border-radius:20px;padding:2.5rem;
-  color:var(--white);margin:2.5rem 0;
+  color:var(--text);margin:2.5rem 0;
   position:relative;overflow:hidden;
+  border-left:4px solid var(--coral);
 }
 .golden-rule::before{
   content:'✦';position:absolute;top:1rem;right:1.5rem;
-  font-size:3rem;opacity:0.1;
+  font-size:3rem;opacity:0.08;color:var(--plum);
 }
 .golden-rule h3{
   font-family:'Playfair Display',serif;font-size:1.6rem;
-  margin-bottom:0.75rem;color:var(--coral-light);
+  margin-bottom:0.75rem;color:var(--plum);
 }
 .golden-rule p{
   font-size:1.05rem;line-height:1.7;
-  color:var(--plum);
+  color:var(--text);
   font-style:italic;
 }
 .not-a-politician{
