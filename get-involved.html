@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <script>
-(function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)})()
+(function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})()
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
@@ -44,7 +44,7 @@
 [data-theme="dark"] input,[data-theme="dark"] textarea,[data-theme="dark"] select{background:var(--cream-dark);border-color:rgba(253,180,155,0.15);color:var(--text)}
 [data-theme="dark"] .card,[data-theme="dark"] .endorsement-card,[data-theme="dark"] .event-card,[data-theme="dark"] .fact-card{box-shadow:0 2px 16px rgba(0,0,0,0.4)}
 [data-theme="dark"] img{opacity:0.92}
-/* Theme toggle */
+/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--sky)}[data-theme="light"] .nav-socials a{color:var(--plum)}[data-theme="light"] .nav-socials a:hover{color:var(--sky)}@media(max-width:768px){.nav-socials{display:none}}/* Theme toggle */
 .theme-toggle{background:none;border:2px solid rgba(255,255,255,0.3);cursor:pointer;font-size:1.1rem;padding:0.35rem 0.5rem;color:var(--white);border-radius:8px;transition:all 0.3s;line-height:1;display:flex;align-items:center}
 .theme-toggle:hover{border-color:var(--sky);background:rgba(102,183,218,0.15)}
 /* Light mode overrides */
@@ -260,6 +260,13 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
     <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
       <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:52px;width:auto">
     </a>
+    <div class="nav-socials">
+      <a href="https://facebook.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
+      <a href="https://instagram.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+      <a href="https://tiktok.com/@cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
+      <a href="https://threads.net/@cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Threads">TH</a>
+      <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">BS</a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html#meet">About</a></li>
       <li><a href="issues.html">Issues</a></li>
