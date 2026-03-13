@@ -11,7 +11,7 @@
 <meta name="description" content="Cortney Peterson's platform: end foreign and corporate influence, tax the rich, Medicare for All, reproductive freedom, and more. Fighting for Ohio's working families.">
 <meta property="og:title" content="Issues & Platform | Cortney Peterson for Congress">
 <meta property="og:description" content="Cortney Peterson's platform: end foreign and corporate influence, tax the rich, Medicare for All, reproductive freedom, and more.">
-<meta property="og:image" content="https://cortneyforcongress.org/assets/images/OG-image.png">
+<meta property="og:image" content="https://cortneyforcongress.org/assets/images/og-image.png">
 <meta property="og:url" content="https://cortneyforcongress.org/issues.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,12 +27,8 @@
   --cream:#fcf0e1;--cream-dark:#f5e4cf;
   --slate:#2c2c3a;--white:#ffffff;
   --text:#1a1a2e;--text-light:#555566;
-  
 }
-  --cream:#170a15;--cream-dark:#1e1020;--white:#231320;
-  --text:#e8ddd3;--text-light:#a89888;--slate:#0f070e;--grey:#2a1e28;
-}
-/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:1rem}.nav-socials a{color:var(--plum);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--coral)}@media(max-width:768px){.nav-socials{display:none}}
+/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.5rem;margin-left:auto;margin-right:auto}.nav-socials a{color:var(--plum);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--coral)}@media(max-width:768px){.nav-socials{margin-left:0;margin-right:auto;gap:0.6rem}.nav-socials a svg{width:20px;height:20px}}
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7}
 
@@ -59,7 +55,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .mobile-menu.open{display:flex;opacity:1}
 .mobile-menu a{color:var(--plum);text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.15em;transition:color 0.3s}
 .mobile-menu a:hover{color:var(--coral)}
-.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
+.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);color:var(--plum);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
 
 /* PAGE HERO */
 .page-hero{
@@ -68,7 +64,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 }
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--cream),transparent);pointer-events:none}
 .page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
-.page-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--plum-light);text-transform:uppercase;margin-bottom:1rem}
+.page-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral);text-transform:uppercase;margin-bottom:1rem}
 .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1.25rem}
 .page-hero h1 em{font-style:italic;color:var(--coral-light)}
 .page-hero p{font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto;line-height:1.7}
@@ -76,14 +72,14 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 /* ISSUE NAV PILLS */
 .issue-nav{background:var(--white);padding:1rem 1.5rem;border-bottom:1px solid rgba(0,0,0,0.06);position:sticky;top:62px;z-index:100}
 .issue-pills{display:grid;grid-template-columns:repeat(8,auto);gap:0.4rem;max-width:1100px;margin:0 auto;justify-content:center}
-.issue-pill{display:inline-block;padding:0.4rem 0.9rem;border-radius:50px;background:var(--cream);color:var(--text-light);font-size:0.78rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:all 0.2s ease;letter-spacing:0.02em}
-.issue-pill:hover{background:var(--plum);color:var(--white)}
+.issue-pill{display:inline-block;padding:0.4rem 0.9rem;border-radius:50px;background:#f4eef8;color:var(--plum);font-size:0.78rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:all 0.2s ease;letter-spacing:0.02em;border:1px solid rgba(71,13,68,0.08)}
+.issue-pill:hover{background:var(--plum);color:var(--white);border-color:var(--plum)}
 
 /* ISSUES CONTENT */
 .issues-body{max-width:800px;margin:0 auto;padding:3rem 1.5rem 5rem}
 
-.issue-block{padding:3rem 0;border-bottom:1px solid rgba(0,0,0,0.07)}
-.issue-block:last-child{border-bottom:none}
+.issue-block{padding:2.5rem 2rem;border-bottom:none;background:#f4eef8;border-radius:20px;margin-bottom:1.5rem}
+.issue-block:last-child{margin-bottom:0}
 .issue-icon-row{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
 .issue-emoji{font-size:2.5rem;line-height:1}
 .issue-num{font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.2em;color:var(--coral);text-transform:uppercase}
@@ -91,7 +87,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .issue-block h2 em{font-style:italic;color:var(--coral)}
 .issue-body p{font-size:1.02rem;color:var(--text-light);line-height:1.8;margin-bottom:1.1rem}
 .issue-body p strong{color:var(--text);font-weight:700}
-.issue-points{list-style:none;margin:1.25rem 0;background:var(--cream-dark);border-radius:14px;padding:1.5rem 1.75rem}
+.issue-points{list-style:none;margin:1.25rem 0;background:var(--white);border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 2px 8px rgba(71,13,68,0.05)}
 .issue-points li{font-size:0.95rem;color:var(--text);padding:0.4rem 0;border-bottom:1px solid rgba(0,0,0,0.06);display:flex;gap:0.75rem;align-items:flex-start}
 .issue-points li:last-child{border-bottom:none;padding-bottom:0}
 .issue-points li::before{content:'→';color:var(--coral);font-weight:700;flex-shrink:0;margin-top:0.05rem}
@@ -128,8 +124,8 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .footer-bottom p{margin-bottom:0.3rem}
 
 /* CITE BLOCK — collapsible deeper dive */
-.cite-block{background:#f4eef8;border-left:3px solid var(--plum-light);border-radius:0 8px 8px 0;padding:0.6rem 1.2rem;margin:1.2rem 0;cursor:pointer;user-select:none;transition:background 0.2s}
-.cite-block:hover{background:#ede4f6}
+.cite-block{background:var(--cream);border-left:3px solid var(--plum-light);border-radius:0 10px 10px 0;padding:0.7rem 1.3rem;margin:1.2rem 0;cursor:pointer;user-select:none;transition:background 0.2s}
+.cite-block:hover{background:var(--cream-dark)}
 .cite-label{display:flex;align-items:center;justify-content:space-between;font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.15em;color:var(--plum-light);text-transform:uppercase;margin:0;padding:0.25rem 0}
 .cite-label::after{content:'▼';font-size:0.55rem;transition:transform 0.25s;display:inline-block;margin-left:0.5rem;flex-shrink:0}
 .cite-block.open .cite-label::after{transform:rotate(180deg)}
@@ -138,7 +134,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 
 /* HERO SOCIALS */
 .hero-socials{display:flex;justify-content:center;gap:0.75rem;margin-top:1.75rem}
-.hero-social{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:var(--plum);text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:1px solid rgba(255,255,255,0.15)}
+.hero-social{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:1px solid rgba(255,255,255,0.35)}
 .hero-social:hover{background:var(--coral);border-color:var(--coral);color:var(--white);transform:translateY(-2px)}
 
 /* REVEAL */
@@ -150,17 +146,18 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
   .nav-links{display:none}
   .hamburger{display:flex}
   .connect-inner{grid-template-columns:1fr}
-  .issue-nav{padding:0.75rem 0.5rem}
-  .issue-pills{grid-template-columns:repeat(4,auto);gap:0.3rem}
+  .issue-nav{padding:0.75rem 0.5rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .issue-pills{display:flex;flex-wrap:nowrap;gap:0.3rem;overflow-x:auto;padding-bottom:0.5rem}
+  .issue-pill{flex-shrink:0}
 }
 @media(max-width:480px){
   .issues-body{padding:2rem 1.25rem 4rem}
-  .issue-block{padding:2rem 0}
+  .issue-block{padding:1.75rem 1.25rem;border-radius:16px}
 }
 @media(min-width:1024px){
   .page-hero{padding:11rem 3rem 7rem}
   .issues-body{padding:5rem 3rem 8rem;max-width:860px}
-  .issue-block{padding:4rem 0}
+  .issue-block{padding:3rem 2.5rem}
   .issue-block h2{font-size:2.2rem}
   .issue-points{padding:2rem 2.5rem}
   .issues-cta{padding:7rem 3rem}
@@ -263,10 +260,6 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
         <li>Mandatory conflict-of-interest reviews for any member who received foreign PAC money</li>
         <li>End American complicity in foreign atrocities — our tax dollars should not fund genocide</li>
       </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/3229" target="_blank" rel="noopener">H.R. 3229 — Foreign Agents Transparency Act</a> | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/981" target="_blank" rel="noopener">S. 981 — Foreign Agents Transparency Act</a> — Strengthens FARA enforcement and registration requirements for organizations acting on behalf of foreign principals.</p>
-      </div>
     </div>
   </div>
 
@@ -301,8 +294,8 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
         <li>Use the revenue to fund healthcare, education, housing, and infrastructure for working families</li>
       </ul>
       <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p>Cortney supports progressive tax reform legislation including raising the corporate tax rate to 40% and taxing capital gains and dividends as earned income. She opposes the corporate tax breaks in the "Big Beautiful Bill." Related legislation: <a href="https://www.congress.gov/bill/119th-congress/senate-bill/3050" target="_blank" rel="noopener">S. 3050 — PAID OFF Act of 2025</a> (closing lobbying loopholes).</p>
+        <span class="cite-label">Related Supporting Documentation</span>
+        <p><a href="https://www.sanders.senate.gov/wp-content/uploads/options-to-finance-medicare-for-all.pdf" target="_blank" rel="noopener">Options to Finance Medicare for All</a> — Sen. Bernie Sanders' analysis of revenue options to fund Medicare for All through progressive taxation.</p>
       </div>
     </div>
   </div>
@@ -357,7 +350,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       </ul>
       <div class="cite-block">
         <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/4418" target="_blank" rel="noopener">H.R. 4418 — Child Care for Working Families Act</a> | <a href="https://www.congress.gov/bill/119th-congress/house-bill/5658" target="_blank" rel="noopener">H.R. 5658 — Child Care for Every Community Act</a> | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/2939" target="_blank" rel="noopener">S. 2939 — Child Care for Every Community Act</a></p>
+        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/4418" target="_blank" rel="noopener">H.R. 4418 — Child Care for Working Families Act</a></p>
       </div>
     </div>
   </div>
@@ -395,10 +388,6 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
         <li>Protect workers from retaliation for taking leave</li>
         <li>Funded through a family leave insurance pool paid by employers, supplemented by a federal appropriation — the same model that makes Social Security work</li>
       </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/2823" target="_blank" rel="noopener">S. 2823 — FAMILY Act</a> (Sen. Gillibrand) | <a href="https://www.congress.gov/bill/119th-congress/house-bill/5390" target="_blank" rel="noopener">H.R. 5390 — FAMILY Act</a> (Rep. DeLauro) — Establishes an Office of Paid Family and Medical Leave within the SSA, funded by employer contributions.</p>
-      </div>
     </div>
   </div>
 
@@ -433,7 +422,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       </ul>
       <div class="cite-block">
         <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/788" target="_blank" rel="noopener">S. 788 — HOPE (Humans over Private Equity) for Homeownership Act</a> — Limits corporate/PE ownership of single-family homes. | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/967" target="_blank" rel="noopener">S. 967 — Downpayment Toward Equity Act</a></p>
+        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/788" target="_blank" rel="noopener">S. 788 — HOPE (Humans over Private Equity) for Homeownership Act</a> — Limits corporate/PE ownership of single-family homes. | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/967" target="_blank" rel="noopener">S. 967 — Downpayment Toward Equity Act</a> | <a href="https://www.merkley.senate.gov/wp-content/uploads/2023/12/End-Hedge-Fund-Control-of-American-Homes-Act-1-page-Summary.pdf" target="_blank" rel="noopener">End Hedge Fund Control of American Homes Act — Summary (Sen. Merkley)</a> | <a href="https://www.padilla.senate.gov/wp-content/uploads/Housing-for-All-Act-of-2025_Section-by-Section_Final_4.3.25.pdf" target="_blank" rel="noopener">Housing for All Act of 2025 — Section by Section (Sen. Padilla)</a></p>
       </div>
     </div>
   </div>
@@ -453,7 +442,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       </ul>
       <div class="cite-block">
         <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1332" target="_blank" rel="noopener">S. 1332 — Raise the Wage Act of 2025</a> (Sen. Sanders) | <a href="https://www.congress.gov/bill/119th-congress/house-bill/2743" target="_blank" rel="noopener">H.R. 2743 — Raise the Wage Act of 2025</a> — Raises federal minimum wage to $17/hr over 5 years, indexed to median wage thereafter. Ends subminimum tipped wage.</p>
+        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1332" target="_blank" rel="noopener">S. 1332 — Raise the Wage Act of 2025</a> (Sen. Sanders) | <a href="https://www.congress.gov/bill/119th-congress/house-bill/2743" target="_blank" rel="noopener">H.R. 2743 — Raise the Wage Act of 2025</a> — Raises federal minimum wage to $17/hr over 5 years, indexed to median wage thereafter. Ends subminimum tipped wage. | <a href="https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis" target="_blank" rel="noopener">Rep. Tlaib — Economic Dignity for All Agenda</a></p>
       </div>
     </div>
   </div>
@@ -473,7 +462,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       </ul>
       <div class="cite-block">
         <span class="cite-label">Studies &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1531" target="_blank" rel="noopener">S. 1531 — Assault Weapons Ban of 2025</a> | <a href="https://www.congress.gov/bill/119th-congress/house-bill/3115" target="_blank" rel="noopener">H.R. 3115 — Assault Weapons Ban of 2025</a> — Bans semiautomatic assault weapons and high-capacity magazines. Requires safe storage.</p>
+        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1531" target="_blank" rel="noopener">S. 1531 — Assault Weapons Ban of 2025</a> | <a href="https://www.congress.gov/bill/119th-congress/house-bill/3115" target="_blank" rel="noopener">H.R. 3115 — Assault Weapons Ban of 2025</a> — Bans semiautomatic assault weapons and high-capacity magazines. Requires safe storage. | <a href="https://publichealth.jhu.edu/sites/default/files/2025-03/FPL-research-evidence-to-inform-state-policy.pdf" target="_blank" rel="noopener">Johns Hopkins — Research Evidence to Inform State Gun Policy (2025)</a></p>
       </div>
     </div>
   </div>
@@ -511,7 +500,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       </ul>
       <div class="cite-block">
         <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/7123" target="_blank" rel="noopener">H.R. 7123 — Abolish ICE Act</a> (119th Congress) — Abolishes U.S. Immigration and Customs Enforcement. | <a href="https://www.congress.gov/bill/119th-congress/house-bill/3229" target="_blank" rel="noopener">H.R. 3229 — Foreign Agents Transparency Act</a></p>
+        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/7123" target="_blank" rel="noopener">H.R. 7123 — Abolish ICE Act</a> (119th Congress) — Abolishes U.S. Immigration and Customs Enforcement.</p>
       </div>
     </div>
   </div>
@@ -530,10 +519,6 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
         <li>Restore voting rights for formerly incarcerated people</li>
         <li>End the school-to-prison pipeline through community investment and restorative justice programs</li>
       </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/3612" target="_blank" rel="noopener">H.R. 3612 — End For-Profit Prisons Act of 2025</a> — Requires all federal correctional facilities to be operated by government employees within 6 years. Ends contracts with for-profit prison operators.</p>
-      </div>
     </div>
   </div>
 
