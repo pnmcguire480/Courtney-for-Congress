@@ -293,7 +293,7 @@ footer a:hover{color:var(--coral)}
       <h3>Thank you for your support!</h3>
       <p>We'll reach out to confirm your endorsement. Your name matters — and it helps other voters know they're not alone.</p>
     </div>
-    <form id="endorseForm" name="endorsement" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form id="endorseForm" name="endorsement" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="endorsement">
       <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="form-row">
@@ -348,7 +348,7 @@ footer a:hover{color:var(--coral)}
     <div>
       <h3>Stay Updated</h3>
       <p>Get campaign updates in your inbox.</p>
-      <form class="signup-form" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="signup-form" name="email-signup" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="email-signup">
         <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
         <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>

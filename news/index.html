@@ -259,7 +259,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
     <p style="font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--plum-light);text-transform:uppercase;margin-bottom:0.75rem">Never Miss an Update</p>
     <h2 id="news-cta-heading">Get Updates in Your Inbox</h2>
     <p>Campaign news, event announcements, and statements — delivered directly to you. No spam. Unsubscribe any time.</p>
-    <form class="signup-inline" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="signup-inline" name="email-signup" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="email-signup">
       <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
       <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
@@ -290,7 +290,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
     <div>
       <h3>Stay Updated</h3>
       <p>Get campaign updates in your inbox.</p>
-      <form class="signup-form" name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="signup-form" name="email-signup" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="email-signup">
         <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
         <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
