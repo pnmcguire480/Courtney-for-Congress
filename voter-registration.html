@@ -115,13 +115,13 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .directory-inner{max-width:1000px;margin:0 auto}
 .directory-search{width:100%;max-width:400px;padding:0.85rem 1rem 0.85rem 2.75rem;background:var(--white);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;font-size:1rem;font-family:'Source Sans 3',sans-serif;color:var(--text);outline:none;transition:border-color 0.2s;margin-bottom:2rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555566' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:0.85rem center}
 .directory-search:focus{border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)}
-.state-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-.state-item{background:var(--white);border-radius:14px;padding:1.25rem 1.5rem;border:1px solid rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:space-between;transition:all 0.3s ease}
+.state-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+.state-item{background:var(--white);border-radius:14px;padding:1.25rem 1.5rem;border:1px solid rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:space-between;gap:0.75rem;transition:all 0.3s ease}
 .state-item:hover{border-color:var(--plum-light);box-shadow:0 4px 16px rgba(71,13,68,0.08)}
 .state-item.hidden{display:none}
-.state-name{font-family:'Playfair Display',serif;font-weight:700;color:var(--plum);font-size:1rem}
-.state-links{display:flex;gap:0.5rem}
-.state-links a{font-size:0.72rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;transition:all 0.2s}
+.state-name{font-family:'Playfair Display',serif;font-weight:700;color:var(--plum);font-size:1rem;flex-shrink:1;min-width:0}
+.state-links{display:flex;gap:0.5rem;flex-shrink:0}
+.state-links a{font-size:0.72rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;transition:all 0.2s;white-space:nowrap}
 .state-links .link-register{background:var(--plum);color:var(--white)}
 .state-links .link-register:hover{background:var(--plum-light)}
 .state-links .link-check{background:var(--coral);color:var(--plum)}
