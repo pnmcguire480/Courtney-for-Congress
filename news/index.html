@@ -42,7 +42,8 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .ohio-icon{width:32px;height:32px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%)}
 .nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
 .nav-links a{color:var(--plum);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px;transition:all 0.3s ease;text-transform:uppercase}
-.nav-links a:hover,.nav-links a[aria-current="page" class="active"]{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-links a:hover{color:var(--plum);background:rgba(71,13,68,0.08)}
+.nav-links a.active{background:var(--plum);color:var(--cream);padding-bottom:calc(0.5rem + 4px);margin-bottom:-4px}
 .nav-donate{background:var(--coral)!important;color:var(--plum)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(253,180,155,0.3)}
 .nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
@@ -112,22 +113,22 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
 .signup-inline button:hover{background:var(--coral-light)}
 
 /* FOOTER */
-.connect{background:var(--cream-dark);color:var(--white);padding:4rem 1.5rem 2rem}
+.connect{background:var(--cream-dark);color:var(--plum);padding:4rem 1.5rem 2rem}
 .connect-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
-.connect h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--white)}
-.connect p,.connect a{color:rgba(255,255,255,0.7);font-size:0.9rem}
+.connect h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--plum)}
+.connect p,.connect a{color:var(--plum-light);font-size:0.9rem}
 .connect a{text-decoration:none;transition:color 0.3s}
-.connect a:hover{color:var(--coral-light)}
+.connect a:hover{color:var(--coral)}
 .social-links{display:flex;gap:1rem;margin-top:1rem}
-.social-link{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:1.1rem;transition:all 0.3s ease}
-.social-link:hover{background:var(--coral);transform:translateY(-2px)}
+.social-link{width:44px;height:44px;border-radius:10px;background:rgba(71,13,68,0.08);display:flex;align-items:center;justify-content:center;color:var(--plum);text-decoration:none;font-size:1.1rem;transition:all 0.3s ease}
+.social-link:hover{background:var(--coral);color:var(--white);transform:translateY(-2px)}
 .signup-form{margin-top:1rem}
-.signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:var(--white);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
-.signup-form input[type="email"]::placeholder{color:rgba(255,255,255,0.4)}
+.signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;background:var(--white);border:1px solid rgba(71,13,68,0.15);border-radius:10px;color:var(--plum);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
+.signup-form input[type="email"]::placeholder{color:rgba(71,13,68,0.4)}
 .signup-form input[type="email"]:focus{border-color:var(--coral)}
 .signup-form button{width:100%;padding:0.75rem;background:var(--plum);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif}
-.signup-form button:hover{background:var(--coral-light)}
-.footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.4);font-size:0.8rem}
+.signup-form button:hover{background:var(--coral-light);color:var(--plum)}
+.footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(71,13,68,0.1);text-align:center;color:var(--plum-light);font-size:0.8rem}
 .footer-bottom p{margin-bottom:0.3rem}
 
 /* REVEAL */
@@ -175,6 +176,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
       <li><a href="../events.html">Events</a></li>
       <li><a href="../news/" aria-current="page" class="active">Updates</a></li>
       <li><a href="../press.html">Press</a></li>
+      <li><a href="../voter-registration.html">Vote</a></li>
       <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate" target="_blank" rel="noopener noreferrer">Donate</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -192,6 +194,7 @@ body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--c
   <a href="../events.html" onclick="closeMobile()">Events</a>
   <a href="../news/" onclick="closeMobile()">Updates</a>
   <a href="../press.html" onclick="closeMobile()">Press</a>
+  <a href="../voter-registration.html" onclick="closeMobile()">Vote</a>
   <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" target="_blank" rel="noopener noreferrer">Donate</a>
 </div>
 

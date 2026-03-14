@@ -40,3 +40,9 @@ Campaign-Intake-Results.txt
 
 # Image originals (full-res before compression)
 assets/originals/
+
+# Photoshop source files
+*.psd
+
+# Claude Code local config
+.claude/

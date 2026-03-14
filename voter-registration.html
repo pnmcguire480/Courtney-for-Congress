@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<title>Voter Registration | Cortney Peterson for Congress — OH-11</title>
+<meta name="description" content="Register to vote or check your voter registration status in any U.S. state. Find your state's official voter registration portal, deadlines, and requirements.">
+<meta property="og:title" content="Voter Registration | Cortney Peterson for Congress">
+<meta property="og:description" content="Register to vote or check your registration status. Every vote matters — make sure yours counts.">
+<meta property="og:image" content="https://cortneyforcongress.org/assets/images/og-image.png">
+<meta property="og:url" content="https://cortneyforcongress.org/voter-registration.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cortneyforcongress.org/voter-registration.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --plum:#470d44;--plum-deep:#2e0829;--plum-light:#611a5c;
+  --coral:#fdb49b;--coral-light:#fdd0c2;
+  --cream:#fcf0e1;--cream-dark:#f5e4cf;
+  --slate:#2c2c3a;--white:#ffffff;
+  --text:#1a1a2e;--text-light:#555566;
+  --green:#2d6a4f;--green-light:#d8f3dc;
+}
+/* Nav socials */.nav-socials{display:flex;align-items:center;gap:0.5rem;margin-left:auto;margin-right:auto}.nav-socials a{color:var(--plum);font-size:0.85rem;text-decoration:none;transition:color 0.2s}.nav-socials a:hover{color:var(--coral)}@media(max-width:768px){.nav-socials{margin-left:0;margin-right:auto;gap:0.6rem}.nav-socials a svg{width:20px;height:20px}}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(252,240,225,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all 0.4s ease;border-bottom:1px solid rgba(71,13,68,0.08)}
+.nav.scrolled{background:rgba(252,240,225,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.5rem}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:var(--plum)}
+.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.12em;line-height:1.1}
+.nav-logo-sub{font-size:0.65rem;letter-spacing:0.2em;color:var(--plum-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
+.ohio-icon{width:32px;height:32px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%)}
+.nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-links a{color:var(--plum);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;padding:0.5rem 0.9rem;border-radius:6px 6px 0 0;transition:all 0.3s ease;text-transform:uppercase}
+.nav-links a:hover{color:var(--plum);background:rgba(71,13,68,0.06)}
+.nav-links a.active{background:var(--plum);color:var(--cream);padding-bottom:calc(0.5rem + 4px);margin-bottom:-4px;border-radius:6px 6px 0 0}
+.nav-donate{background:var(--coral)!important;color:var(--plum)!important;font-weight:700!important;border-radius:8px!important;padding:0.6rem 1.3rem!important;box-shadow:0 2px 12px rgba(253,180,155,0.3)}
+.nav-donate:hover{background:var(--coral-light)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--plum);border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--cream);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:opacity 0.3s ease}
+.mobile-menu.open{display:flex;opacity:1}
+.mobile-menu a{color:var(--plum);text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.15em;transition:color 0.3s}
+.mobile-menu a:hover{color:var(--coral)}
+.mobile-menu .mobile-donate{margin-top:1rem;background:var(--coral);color:var(--plum);padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 50%,var(--plum-light) 100%);padding:9rem 1.5rem 5rem;text-align:center;color:var(--white);position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--cream),transparent);pointer-events:none}
+.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.page-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral);text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1.25rem}
+.page-hero h1 em{font-style:italic;color:var(--coral-light)}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* SECTIONS */
+.section-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.25em;color:var(--coral);text-transform:uppercase;margin-bottom:0.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--plum);line-height:1.15;margin-bottom:1rem}
+.section-title em{font-style:italic;color:var(--coral)}
+.section-intro{font-size:1.05rem;color:var(--text-light);max-width:640px;line-height:1.8;margin-bottom:3rem}
+
+/* QUICK ACTIONS */
+.quick-actions{padding:5rem 1.5rem}
+.quick-actions-inner{max-width:1000px;margin:0 auto}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}
+.quick-card{background:var(--white);border-radius:24px;padding:2.5rem 2rem;border:1px solid rgba(0,0,0,0.05);text-align:center;transition:all 0.3s ease}
+.quick-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(71,13,68,0.1)}
+.quick-card-icon{font-size:3rem;margin-bottom:1rem;display:block}
+.quick-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--plum);margin-bottom:0.75rem}
+.quick-card p{font-size:0.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem}
+.quick-card .state-select{width:100%;padding:0.85rem 1rem;background:var(--cream);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;font-size:1rem;font-family:'Source Sans 3',sans-serif;color:var(--text);cursor:pointer;transition:border-color 0.2s;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23470d44' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.quick-card .state-select:focus{border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)}
+.action-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.95rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase;border:none;cursor:pointer;font-family:'Source Sans 3',sans-serif;margin-top:1rem;width:100%;justify-content:center}
+.btn-register{background:linear-gradient(135deg,var(--plum),var(--plum-light));color:var(--white);box-shadow:0 4px 20px rgba(71,13,68,0.25)}
+.btn-register:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(71,13,68,0.35)}
+.btn-check{background:var(--coral);color:var(--plum);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+.btn-check:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(253,180,155,0.5)}
+.action-btn.disabled{opacity:0.5;cursor:not-allowed;pointer-events:none}
+
+/* NATIONAL LINK */
+.national-banner{background:var(--plum);padding:2.5rem 1.5rem;text-align:center}
+.national-banner-inner{max-width:800px;margin:0 auto}
+.national-banner h2{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.1em;color:var(--white);margin-bottom:0.5rem}
+.national-banner p{color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.7;margin-bottom:1.25rem}
+.national-banner a{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 2rem;background:var(--coral);color:var(--plum);border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;transition:all 0.3s ease}
+.national-banner a:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* INFO CARDS */
+.info-section{padding:5rem 1.5rem;background:var(--white);border-top:1px solid rgba(0,0,0,0.05)}
+.info-inner{max-width:1000px;margin:0 auto}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.info-card{background:var(--cream);border-radius:20px;padding:2rem 1.75rem;border:1px solid rgba(0,0,0,0.05)}
+.info-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--plum);margin-bottom:0.75rem}
+.info-card p,.info-card li{font-size:0.92rem;color:var(--text-light);line-height:1.7}
+.info-card ul{list-style:none;padding:0}
+.info-card ul li{padding:0.3rem 0;padding-left:1.2rem;position:relative}
+.info-card ul li::before{content:'';position:absolute;left:0;top:0.65rem;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+
+/* STATE DIRECTORY */
+.directory-section{padding:5rem 1.5rem}
+.directory-inner{max-width:1000px;margin:0 auto}
+.directory-search{width:100%;max-width:400px;padding:0.85rem 1rem 0.85rem 2.75rem;background:var(--white);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;font-size:1rem;font-family:'Source Sans 3',sans-serif;color:var(--text);outline:none;transition:border-color 0.2s;margin-bottom:2rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555566' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:0.85rem center}
+.directory-search:focus{border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)}
+.state-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.state-item{background:var(--white);border-radius:14px;padding:1.25rem 1.5rem;border:1px solid rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:space-between;transition:all 0.3s ease}
+.state-item:hover{border-color:var(--plum-light);box-shadow:0 4px 16px rgba(71,13,68,0.08)}
+.state-item.hidden{display:none}
+.state-name{font-family:'Playfair Display',serif;font-weight:700;color:var(--plum);font-size:1rem}
+.state-links{display:flex;gap:0.5rem}
+.state-links a{font-size:0.72rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;transition:all 0.2s}
+.state-links .link-register{background:var(--plum);color:var(--white)}
+.state-links .link-register:hover{background:var(--plum-light)}
+.state-links .link-check{background:var(--coral);color:var(--plum)}
+.state-links .link-check:hover{background:var(--coral-light)}
+
+/* DONATE CTA */
+.donate-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+.donate-cta-inner{max-width:600px;margin:0 auto}
+.donate-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+.donate-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase}
+.btn-primary{background:var(--coral);color:var(--plum);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+.btn-primary:hover{background:var(--coral-light);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+.btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
+.btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.connect{background:var(--cream-dark);color:var(--white);padding:4rem 1.5rem 2rem}
+.connect-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
+.connect h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--plum)}
+.connect p,.connect a{color:var(--text);font-size:0.9rem}
+.connect a{text-decoration:none;transition:color 0.3s}
+.connect a:hover{color:var(--coral)}
+.social-links{display:flex;gap:1rem;margin-top:1rem}
+.social-link{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--plum);text-decoration:none;font-size:0.85rem;transition:all 0.3s ease}
+.social-link:hover{color:var(--coral);transform:translateY(-2px)}
+.signup-form{margin-top:1rem}
+.signup-form input[type="email"]{width:100%;padding:0.75rem 1rem;border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:var(--text);font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'Source Sans 3',sans-serif}
+.signup-form input[type="email"]::placeholder{color:var(--text-light)}
+.signup-form input[type="email"]:focus{border-color:var(--plum)}
+.signup-form button{width:100%;padding:0.75rem;background:var(--plum);border:none;border-radius:10px;color:var(--white);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif}
+.signup-form button:hover{background:var(--plum-light)}
+.footer-bottom{max-width:1000px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(71,13,68,0.1);text-align:center;color:var(--text-light);font-size:0.8rem}
+.footer-bottom p{margin-bottom:0.3rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .connect-inner{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:1fr}
+  .state-list{grid-template-columns:1fr}
+  .state-item{flex-direction:column;align-items:flex-start;gap:0.75rem}
+  .state-links{width:100%}
+  .state-links a{flex:1;text-align:center}
+}
+@media(min-width:1024px){
+  .page-hero{padding:11rem 3rem 7rem}
+  .quick-actions{padding:7rem 3rem}
+  .info-section{padding:7rem 3rem}
+  .directory-section{padding:7rem 3rem}
+  .donate-cta{padding:7rem 3rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:52px;width:auto">
+    </a>
+    <div class="nav-socials">
+      <a href="https://facebook.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://instagram.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://tiktok.com/@cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://threads.net/@cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Threads"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.017 4.048-.59 5.413-1.703 1.492-1.217 2.094-2.89 2.094-4.178h-.002c0-1.535-.614-2.716-1.824-3.511-1.073-.704-2.476-1.098-4.164-1.17-.12.012-.235.023-.355.032-1.728.14-3.12.671-3.903 1.49-.636.665-.953 1.487-.944 2.443.02 1.956 1.58 3.282 3.88 3.282 1.595 0 2.98-.515 3.793-1.41.552-.608.834-1.377.82-2.236-.009-.595-.188-1.073-.532-1.42-.619-.624-1.776-.93-3.443-.911l-.067-2.12c2.171-.035 3.833.45 4.942 1.44.86.768 1.336 1.79 1.376 2.956.048 1.476-.476 2.83-1.517 3.921-1.2 1.26-2.98 1.97-5.15 2.06l-.32.005c-1.2-.01-2.296-.202-3.276-.572-1.218-.46-2.188-1.19-2.876-2.165-.832-1.178-1.262-2.636-1.28-4.332-.024-1.56.477-2.94 1.49-4.1 1.273-1.46 3.26-2.381 5.59-2.592.22-.02.44-.034.66-.04 2.157-.003 4.047.496 5.617 1.486 1.85 1.165 2.872 2.95 2.872 5.022 0 2.018-.94 4.28-3.072 5.896-1.738 1.318-3.976 2.04-6.656 2.144z"/></svg></a>
+      <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.476 6.158 3.228-4.296.678-8.712 2.708-4.87 8.23 4.291 5.395 5.988-1.715 6.088-3.705.1 1.99 1.797 9.1 6.088 3.705 3.842-5.522-.574-7.552-4.87-8.23 2.558.248 5.373-.601 6.158-3.228.246-.828.624-5.788.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.621-4.3 1.24C8.046 4.747 5.087 8.686 4 10.8"/></svg></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#meet">About</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="endorsements.html">Endorsements</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="news/">Updates</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="voter-registration.html" class="active">Vote</a></li>
+      <li><a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="nav-donate">Donate</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a href="index.html#meet" onclick="closeMobile()">About</a>
+  <a href="issues.html" onclick="closeMobile()">Issues</a>
+  <a href="get-involved.html" onclick="closeMobile()">Get Involved</a>
+  <a href="endorsements.html" onclick="closeMobile()">Endorsements</a>
+  <a href="events.html" onclick="closeMobile()">Events</a>
+  <a href="news/" onclick="closeMobile()">Updates</a>
+  <a href="press.html" onclick="closeMobile()">Press</a>
+  <a href="voter-registration.html" onclick="closeMobile()">Vote</a>
+  <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" onclick="closeMobile()">Donate</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Your Voice Matters</div>
+    <h1>Voter <em>Registration</em></h1>
+    <p>Democracy only works when people show up. Register to vote, check your registration status, and make sure your voice is heard — no matter what state you're in.</p>
+  </div>
+</header>
+
+<!-- QUICK ACTIONS -->
+<section class="quick-actions" id="register">
+  <div class="quick-actions-inner">
+    <div class="section-label reveal">Take Action</div>
+    <h2 class="section-title reveal">Register or <em>Verify</em></h2>
+    <p class="section-intro reveal">Select your state below to go directly to your state's official voter registration portal or registration lookup tool.</p>
+
+    <div class="quick-grid">
+      <div class="quick-card reveal">
+        <span class="quick-card-icon">📝</span>
+        <h3>Register to Vote</h3>
+        <p>New voter or moved recently? Register online through your state's official portal. Most states allow online registration — it takes just a few minutes.</p>
+        <select class="state-select" id="registerSelect" aria-label="Select your state to register">
+          <option value="">Select your state...</option>
+        </select>
+        <a href="#" class="action-btn btn-register disabled" id="registerBtn" target="_blank" rel="noopener noreferrer">Go to Registration Portal →</a>
+      </div>
+      <div class="quick-card reveal reveal-delay-1">
+        <span class="quick-card-icon">🔍</span>
+        <h3>Check Your Registration</h3>
+        <p>Already registered? Verify your status, confirm your polling place, and make sure your information is up to date before election day.</p>
+        <select class="state-select" id="checkSelect" aria-label="Select your state to check registration">
+          <option value="">Select your state...</option>
+        </select>
+        <a href="#" class="action-btn btn-check disabled" id="checkBtn" target="_blank" rel="noopener noreferrer">Check Registration Status →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL PORTAL -->
+<section class="national-banner">
+  <div class="national-banner-inner">
+    <h2>National Voter Registration</h2>
+    <p>Vote.gov is the U.S. government's official voter registration resource. It provides state-by-state guidance and can help you register regardless of where you live.</p>
+    <a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Visit Vote.gov →</a>
+  </div>
+</section>
+
+<!-- WHAT YOU NEED TO KNOW -->
+<section class="info-section">
+  <div class="info-inner">
+    <div class="section-label reveal">Know Before You Go</div>
+    <h2 class="section-title reveal">Registration <em>Essentials</em></h2>
+    <p class="section-intro reveal">Every state has different rules. Here's what you should know.</p>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <h3>Eligibility Requirements</h3>
+        <ul>
+          <li>You must be a U.S. citizen</li>
+          <li>You must be 18 years old on or before Election Day (some states let you register at 16 or 17)</li>
+          <li>You must be a resident of the state where you register</li>
+          <li>You must not be serving a sentence for a felony conviction (rules vary by state)</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <h3>What You'll Need</h3>
+        <ul>
+          <li>Your full legal name and date of birth</li>
+          <li>Your residential address (where you live, not a P.O. box)</li>
+          <li>Your state-issued ID number or driver's license number</li>
+          <li>Last 4 digits of your Social Security number</li>
+          <li>Some states require proof of citizenship</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <h3>Important Deadlines</h3>
+        <ul>
+          <li>Most states require registration 15–30 days before an election</li>
+          <li>21 states + D.C. offer same-day registration</li>
+          <li>North Dakota does not require voter registration</li>
+          <li>Check your state's specific deadline — they vary significantly</li>
+          <li>Register early to avoid any issues</li>
+        </ul>
+      </div>
+      <div class="info-card reveal">
+        <h3>Online vs. Mail vs. In-Person</h3>
+        <ul>
+          <li>41 states + D.C. offer online voter registration</li>
+          <li>All states accept mail-in registration (use the National Mail Voter Registration Form)</li>
+          <li>You can always register in person at your county election office or DMV</li>
+          <li>Some states allow registration at the polls on Election Day</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <h3>Recently Moved?</h3>
+        <ul>
+          <li>If you moved within your state, update your registration with your new address</li>
+          <li>If you moved to a new state, you must register in your new state</li>
+          <li>Update your registration as soon as possible — don't wait until election season</li>
+          <li>You may also need to update your name if it has changed</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <h3>Student Voters</h3>
+        <ul>
+          <li>You can register at either your home address or your school address</li>
+          <li>You can only be registered in one state at a time</li>
+          <li>Check which location gives you more impact in upcoming elections</li>
+          <li>Your college or university may host registration drives</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL STATE DIRECTORY -->
+<section class="directory-section" id="directory">
+  <div class="directory-inner">
+    <div class="section-label reveal">All 50 States, D.C. &amp; Territories</div>
+    <h2 class="section-title reveal">State <em>Directory</em></h2>
+    <p class="section-intro reveal">Quick links to every state and territory's official voter registration and registration lookup pages. Territories marked with * have limited federal voting rights — see each territory's election office for details.</p>
+
+    <input type="text" class="directory-search" id="stateSearch" placeholder="Search for your state..." aria-label="Search states">
+
+    <div class="state-list" id="stateList"></div>
+  </div>
+</section>
+
+<!-- DONATE CTA -->
+<section class="donate-cta">
+  <div class="donate-cta-inner">
+    <h2>Your Vote Is Your Power</h2>
+    <p>Registering to vote is the first step. The next step is making sure candidates like Cortney — who fight for working people, not corporate donors — have the resources to win.</p>
+    <div class="btn-group">
+      <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="btn btn-primary">Donate Now →</a>
+      <a href="get-involved.html" class="btn btn-outline-white">Get Involved</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="connect" id="connect">
+  <div class="connect-inner">
+    <div>
+      <h3>Connect</h3>
+      <p>Join us to fight for the working class.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/cortneyforcongress" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/cortneyforcongress" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://tiktok.com/@cortneyforcongress" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        <a href="https://threads.net/@cortneyforcongress" class="social-link" aria-label="Threads" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.017 4.048-.59 5.413-1.703 1.492-1.217 2.094-2.89 2.094-4.178h-.002c0-1.535-.614-2.716-1.824-3.511-1.073-.704-2.476-1.098-4.164-1.17-.12.012-.235.023-.355.032-1.728.14-3.12.671-3.903 1.49-.636.665-.953 1.487-.944 2.443.02 1.956 1.58 3.282 3.88 3.282 1.595 0 2.98-.515 3.793-1.41.552-.608.834-1.377.82-2.236-.009-.595-.188-1.073-.532-1.42-.619-.624-1.776-.93-3.443-.911l-.067-2.12c2.171-.035 3.833.45 4.942 1.44.86.768 1.336 1.79 1.376 2.956.048 1.476-.476 2.83-1.517 3.921-1.2 1.26-2.98 1.97-5.15 2.06l-.32.005c-1.2-.01-2.296-.202-3.276-.572-1.218-.46-2.188-1.19-2.876-2.165-.832-1.178-1.262-2.636-1.28-4.332-.024-1.56.477-2.94 1.49-4.1 1.273-1.46 3.26-2.381 5.59-2.592.22-.02.44-.034.66-.04 2.157-.003 4.047.496 5.617 1.486 1.85 1.165 2.872 2.95 2.872 5.022 0 2.018-.94 4.28-3.072 5.896-1.738 1.318-3.976 2.04-6.656 2.144z"/></svg></a>
+        <a href="https://bsky.app/profile/cortneyforcongress.bsky.social" class="social-link" aria-label="Bluesky" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.476 6.158 3.228-4.296.678-8.712 2.708-4.87 8.23 4.291 5.395 5.988-1.715 6.088-3.705.1 1.99 1.797 9.1 6.088 3.705 3.842-5.522-.574-7.552-4.87-8.23 2.558.248 5.373-.601 6.158-3.228.246-.828.624-5.788.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.621-4.3 1.24C8.046 4.747 5.087 8.686 4 10.8"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-bottom:0.5rem"><a href="mailto:cortneyforcongress@gmail.com">cortneyforcongress@gmail.com</a></p>
+      <p>Ohio's 11th Congressional District</p>
+    </div>
+    <div>
+      <h3>Stay Updated</h3>
+      <p>Get campaign updates in your inbox.</p>
+      <form class="signup-form" name="email-signup" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="email-signup">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Paid for by Cortney Peterson For Congress &nbsp;&middot;&nbsp; FEC #H6OH11186</p>
+    <p>&copy; 2026 Cortney Peterson For Congress. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// State data: registration URLs and check-status URLs
+// All links point to official state Secretary of State / election authority portals
+var states = [
+  {name:"Alabama",reg:"https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",check:"https://myinfo.alabamavotes.gov/voterview"},
+  {name:"Alaska",reg:"https://voterregistration.alaska.gov/",check:"https://myvoterinformation.alaska.gov/"},
+  {name:"Arizona",reg:"https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",check:"https://my.arizona.vote/WhereAmIRegistered.aspx"},
+  {name:"Arkansas",reg:"https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information",check:"https://www.voterview.ar-nova.org/voterview"},
+  {name:"California",reg:"https://registertovote.ca.gov/",check:"https://voterstatus.sos.ca.gov/"},
+  {name:"Colorado",reg:"https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml",check:"https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml"},
+  {name:"Connecticut",reg:"https://voterregistration.ct.gov/OLVR/welcome.do",check:"https://portaldir.ct.gov/sots/LookUp.aspx"},
+  {name:"Delaware",reg:"https://ivote.de.gov/voterlogin.aspx",check:"https://ivote.de.gov/voterlogin.aspx"},
+  {name:"District of Columbia",reg:"https://www.vote4dc.com/ApplyInstructions/Register",check:"https://www.dcboe.org/voters/register-to-vote/check-voter-registration-status"},
+  {name:"Florida",reg:"https://registertovoteflorida.gov/",check:"https://registration.elections.myflorida.com/CheckVoterStatus"},
+  {name:"Georgia",reg:"https://registertovote.sos.ga.gov/GAOLVR/welcome.do",check:"https://mvp.sos.ga.gov/s/"},
+  {name:"Hawaii",reg:"https://olvr.hawaii.gov/",check:"https://olvr.hawaii.gov/"},
+  {name:"Idaho",reg:"https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx",check:"https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ViewPollingPlace.aspx"},
+  {name:"Illinois",reg:"https://ova.elections.il.gov/",check:"https://www.elections.il.gov/VotingInformation/RegistrationLookup.aspx"},
+  {name:"Indiana",reg:"https://indianavoters.in.gov/",check:"https://indianavoters.in.gov/"},
+  {name:"Iowa",reg:"https://sos.iowa.gov/elections/voterinformation/voterregistration.html",check:"https://sos.iowa.gov/elections/voterreg/regtovote/search.aspx"},
+  {name:"Kansas",reg:"https://www.kdor.ks.gov/Apps/VoterReg/default.aspx",check:"https://myvoteinfo.voteks.org/voterview"},
+  {name:"Kentucky",reg:"https://vrsws.sos.ky.gov/ovrweb/",check:"https://vrsws.sos.ky.gov/VIC/"},
+  {name:"Louisiana",reg:"https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",check:"https://voterportal.sos.la.gov/Home/VoterLogin"},
+  {name:"Maine",reg:"https://www.maine.gov/sos/cec/elec/voter-info/voterreginst.html",check:"https://www.maine.gov/sos/cec/elec/data/index.html"},
+  {name:"Maryland",reg:"https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",check:"https://voterservices.elections.maryland.gov/VoterSearch"},
+  {name:"Massachusetts",reg:"https://www.sec.state.ma.us/ovr/",check:"https://www.sec.state.ma.us/VoterRegistrationSearch/MyVoterRegStatus.aspx"},
+  {name:"Michigan",reg:"https://mvic.sos.state.mi.us/RegisterVoter",check:"https://mvic.sos.state.mi.us/Voter/Index"},
+  {name:"Minnesota",reg:"https://www.sos.state.mn.us/elections-voting/register-to-vote/",check:"https://mnvotes.sos.mn.gov/VoterStatus.aspx"},
+  {name:"Mississippi",reg:"https://www.sos.ms.gov/elections-voting/voter-registration-information",check:"https://www.msegov.com/sos/voter_registration/amiregistered/Search"},
+  {name:"Missouri",reg:"https://www.sos.mo.gov/elections/goVoteMissouri/register",check:"https://voteroutreach.sos.mo.gov/portal/"},
+  {name:"Montana",reg:"https://sosmt.gov/elections/vote/",check:"https://app.mt.gov/voterinfo/"},
+  {name:"Nebraska",reg:"https://www.nebraska.gov/apps-sos-voter-registration/",check:"https://www.votercheck.necvr.ne.gov/voterview"},
+  {name:"Nevada",reg:"https://www.registertovotenv.gov/",check:"https://www.nvsos.gov/sosvoterservices/Registration/step0.aspx"},
+  {name:"New Hampshire",reg:"https://sos.nh.gov/elections/voters/register-to-vote/",check:"https://app.sos.nh.gov/viphome"},
+  {name:"New Jersey",reg:"https://voter.svrs.nj.gov/register",check:"https://voter.svrs.nj.gov/registration-check"},
+  {name:"New Mexico",reg:"https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",check:"https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx"},
+  {name:"New York",reg:"https://voterreg.dmv.ny.gov/MotorVoter/",check:"https://voterlookup.elections.ny.gov/"},
+  {name:"North Carolina",reg:"https://www.ncsbe.gov/registering/how-register",check:"https://vt.ncsbe.gov/RegLkup/"},
+  {name:"North Dakota",reg:"https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=79&ptlPKID=7",check:"https://vip.sos.nd.gov/WhereToVote.aspx",note:"North Dakota does not require voter registration. Bring a valid ID to vote."},
+  {name:"Ohio",reg:"https://olvr.ohiosos.gov/",check:"https://voterlookup.ohiosos.gov/voterlookup.aspx"},
+  {name:"Oklahoma",reg:"https://oklahoma.gov/elections/voter-registration/register-to-vote.html",check:"https://okvoterportal.okelections.us/"},
+  {name:"Oregon",reg:"https://sos.oregon.gov/voting/Pages/registration.aspx",check:"https://sos.oregon.gov/voting/Pages/mysecretaryofstate.aspx"},
+  {name:"Pennsylvania",reg:"https://www.pavoterservices.pa.gov/pages/VoterRegistrationApplication.aspx",check:"https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx"},
+  {name:"Rhode Island",reg:"https://vote.sos.ri.gov/",check:"https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0"},
+  {name:"South Carolina",reg:"https://info.scvotes.sc.gov/eng/ovr/start.aspx",check:"https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo"},
+  {name:"South Dakota",reg:"https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",check:"https://vip.sdsos.gov/VIPLogin.aspx"},
+  {name:"Tennessee",reg:"https://ovr.govote.tn.gov/",check:"https://tnmap.tn.gov/voterlookup/"},
+  {name:"Texas",reg:"https://www.votetexas.gov/register-to-vote/",check:"https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"},
+  {name:"Utah",reg:"https://secure.utah.gov/voterreg/index.html",check:"https://votesearch.utah.gov/voter-search/search/search-by-voter/voter-info"},
+  {name:"Vermont",reg:"https://olvr.vermont.gov/",check:"https://mvp.vermont.gov/"},
+  {name:"Virginia",reg:"https://www.elections.virginia.gov/citizen-portal/",check:"https://www.elections.virginia.gov/citizen-portal/"},
+  {name:"Washington",reg:"https://voter.votewa.gov/WhereToVote.aspx",check:"https://voter.votewa.gov/WhereToVote.aspx"},
+  {name:"West Virginia",reg:"https://ovr.sos.wv.gov/Register/Landing",check:"https://apps.sos.wv.gov/Elections/voter/amiregisteredtovote"},
+  {name:"Wisconsin",reg:"https://myvote.wi.gov/en-us/Register-To-Vote",check:"https://myvote.wi.gov/en-us/My-Voter-Info"},
+  {name:"Wyoming",reg:"https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",check:"https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx"},
+  {name:"American Samoa",reg:"https://aselectionoffice.gov/",check:"https://aselectionoffice.gov/",note:"American Samoa residents vote in local elections and presidential primaries but not in the general presidential election."},
+  {name:"Guam",reg:"https://gec.guam.gov/register/",check:"https://gec.guam.gov/validate/",note:"Guam residents vote in local elections and presidential primaries but not in the general presidential election."},
+  {name:"Northern Mariana Islands",reg:"https://www.votecnmi.gov.mp/",check:"https://www.votecnmi.gov.mp/",note:"CNMI residents vote in local elections and presidential primaries but not in the general presidential election."},
+  {name:"Puerto Rico",reg:"https://ww2.ceepur.org/",check:"https://consulta.ceepur.org/",note:"Puerto Rico residents vote in presidential primaries but not in the general presidential election."},
+  {name:"U.S. Virgin Islands",reg:"https://www.vivote.gov/",check:"https://www.vivote.gov/",note:"USVI residents vote in local elections and presidential primaries but not in the general presidential election."}
+];
+
+// Populate dropdowns
+var regSelect = document.getElementById('registerSelect');
+var checkSelect = document.getElementById('checkSelect');
+states.forEach(function(s) {
+  var o1 = document.createElement('option');
+  o1.value = s.reg;
+  o1.textContent = s.name;
+  regSelect.appendChild(o1);
+  var o2 = document.createElement('option');
+  o2.value = s.check;
+  o2.textContent = s.name;
+  checkSelect.appendChild(o2);
+});
+
+// Handle dropdown changes
+var regBtn = document.getElementById('registerBtn');
+var checkBtn = document.getElementById('checkBtn');
+
+regSelect.addEventListener('change', function() {
+  if (this.value) {
+    regBtn.href = this.value;
+    regBtn.classList.remove('disabled');
+  } else {
+    regBtn.href = '#';
+    regBtn.classList.add('disabled');
+  }
+});
+
+checkSelect.addEventListener('change', function() {
+  if (this.value) {
+    checkBtn.href = this.value;
+    checkBtn.classList.remove('disabled');
+  } else {
+    checkBtn.href = '#';
+    checkBtn.classList.add('disabled');
+  }
+});
+
+// Build state directory
+var stateList = document.getElementById('stateList');
+states.forEach(function(s) {
+  var div = document.createElement('div');
+  div.className = 'state-item';
+  div.setAttribute('data-name', s.name.toLowerCase());
+  div.innerHTML =
+    '<span class="state-name">' + s.name + (s.note ? ' *' : '') + '</span>' +
+    '<div class="state-links">' +
+      '<a href="' + s.reg + '" class="link-register" target="_blank" rel="noopener noreferrer">Register</a>' +
+      '<a href="' + s.check + '" class="link-check" target="_blank" rel="noopener noreferrer">Check Status</a>' +
+    '</div>';
+  stateList.appendChild(div);
+});
+
+// Search filter
+document.getElementById('stateSearch').addEventListener('input', function() {
+  var query = this.value.toLowerCase().trim();
+  var items = stateList.querySelectorAll('.state-item');
+  items.forEach(function(item) {
+    if (item.getAttribute('data-name').indexOf(query) !== -1) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+});
+
+// Nav scroll
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 50); });
+
+// Hamburger
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Reveal animations
+var reveals = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+reveals.forEach(function(el) { observer.observe(el); });
+
+// Signup form AJAX
+document.querySelectorAll(".signup-form").forEach(function(form){
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var btn=form.querySelector("button");
+    var orig=btn.textContent;
+    btn.textContent="Sending...";
+    btn.disabled=true;
+    fetch("/",{
+      method:"POST",
+      headers:{"Content-Type":"application/x-www-form-urlencoded"},
+      body:new URLSearchParams(new FormData(form)).toString()
+    }).then(function(r){
+      if(r.ok){
+        form.innerHTML="<p style=\"color:var(--coral);font-weight:700;padding:0.5rem 0\">You are signed up!</p>";
+      }else{
+        btn.textContent="Try again";
+        btn.disabled=false;
+      }
+    }).catch(function(){
+      btn.textContent="Try again";
+      btn.disabled=false;
+    });
+  });
+});
+</script>
+</body>
+</html>
