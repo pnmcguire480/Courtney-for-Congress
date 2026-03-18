@@ -14,18 +14,13 @@
 <meta property="og:image" content="https://cortneyforcongress.org/assets/images/og-image.png">
 <meta property="og:url" content="https://cortneyforcongress.org/success.html">
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/css/a11y.css">
+<link rel="stylesheet" href="/assets/css/core.css">
+<link rel="stylesheet" href="/assets/css/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --plum:#470d44;--plum-deep:#2e0829;--plum-light:#611a5c;
-  --coral:#fdb49b;--coral-light:#fdd0c2;
-  --cream:#fcf0e1;--cream-dark:#f5e4cf;
-  --slate:#2c2c3a;--white:#ffffff;
-  --text:#1a1a2e;--text-light:#555566;
-}
 html{font-size:16px}
 body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--plum-deep);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;overflow-x:hidden}
 
@@ -65,9 +60,20 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-
   .nav-buttons{flex-direction:column;align-items:center}
   .btn{width:100%;text-align:center}
 }
+@media(max-height:500px) and (orientation:landscape){
+  body{padding:1rem;justify-content:flex-start}
+  .back-home{margin-bottom:1.5rem}
+  .check-icon{font-size:3rem;margin-bottom:0.5rem}
+  h1{font-size:1.4rem}
+  .subtext{margin-bottom:1.5rem}
+  .nav-buttons{margin-bottom:1.5rem}
+  .quick-links{margin-bottom:1.5rem}
+}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<main id="main-content">
 <div class="wrap">
 
   <a href="/" class="back-home" aria-label="Back to homepage">
@@ -91,6 +97,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-
 
   <nav class="quick-links" aria-label="Quick links">
     <a href="issues.html" class="quick-link">Issues</a>
+    <a href="follow-the-money.html" class="quick-link">Follow the Money</a>
     <a href="get-involved.html" class="quick-link">Get Involved</a>
     <a href="endorsements.html" class="quick-link">Endorsements</a>
     <a href="events.html" class="quick-link">Events</a>
@@ -103,5 +110,6 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-
   <p class="disclaimer">Paid for by Cortney Peterson For Congress &nbsp;&middot;&nbsp; FEC #H6OH11186</p>
 
 </div>
+</main>
 </body>
 </html>

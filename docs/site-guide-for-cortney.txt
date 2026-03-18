@@ -1,0 +1,648 @@
+=========================================================
+CORTNEY FOR CONGRESS — YOUR CAMPAIGN WEBSITE GUIDE
+cortneyforcongress.org
+=========================================================
+
+Last updated: March 17, 2026
+Prepared by Patrick McGuire, Web Developer
+
+
+---------------------------------------------------------
+1. WELCOME — WHAT THIS IS
+---------------------------------------------------------
+
+Hey Cortney,
+
+This is your plain-language guide to your campaign website. No
+tech jargon, no code — just a walkthrough of what you have,
+what visitors see, and what you need to send me to keep the
+site alive and growing.
+
+Your site is live at cortneyforcongress.org. It runs on
+Netlify (free hosting), auto-updates whenever I push changes
+from GitHub, and has zero tracking or surveillance. No Google
+Analytics, no Facebook Pixel, no cookies following people
+around. That is on purpose. We built this site to match your
+values — privacy-first, people-powered, no corporate junk.
+
+The site works on phones, tablets, and desktops. It has a dark
+mode toggle (the little sun/moon icon in the top-right corner)
+and a Spanish-language homepage. Every page has your "Paid for
+by Cortney Peterson For Congress" FEC disclaimer in the footer.
+
+Bookmark this guide. When you need something changed on the
+site, this will tell you what to send me and how.
+
+
+---------------------------------------------------------
+2. YOUR PAGES — WHAT VISITORS SEE
+---------------------------------------------------------
+
+Here is every page on your site and what it does:
+
+
+HOMEPAGE (cortneyforcongress.org)
+---------------------------------
+This is your front door. Visitors see:
+  - Your photo and campaign tagline
+  - Your quote: "I am not a politician. I want to be a
+    policymaker..."
+  - Donate and "Meet Cortney" buttons
+  - Your bio — the "Meet Cortney" section with your story
+    about nursing, your family, your brain procedure, and
+    why you are running
+  - The SIGNATURE PROGRESS BAR showing how many petition
+    signatures you have collected out of the 2,200 needed
+    by May 4th (currently showing 487)
+  - Your accomplishments — 15 years as a mom, 12 years as
+    a nurse
+  - Your campaign vision — "We're Taking Back the American
+    Dream"
+  - A grid of all 16 policy priorities that link to the
+    Issues page
+  - Your grassroots pledge — no foreign PACs, no corporate
+    PACs
+  - Footer with social links, email signup, and FEC info
+
+The homepage is designed to do one thing: make someone care
+enough to take the next step — donate, volunteer, or keep
+reading.
+
+
+ISSUES (cortneyforcongress.org/issues.html)
+--------------------------------------------
+Your full platform — all 16 policy positions laid out:
+  - End Foreign Influence in Politics
+  - End Corporate Influence in Politics
+  - Tax the Rich and Corporations
+  - Medicare for All
+  - Reproductive Freedom
+  - Affordable and Accessible Daycare
+  - Free Pre-K through College
+  - Paid Family Leave
+  - Green New Deal and Data Center Threats
+  - Affordable Housing
+  - Livable Wages and UBI
+  - Common Sense Gun Laws
+  - Human Rights for All
+  - Abolish ICE
+  - End the Prison Industrial Complex
+  - End the Military Industrial Complex
+
+Each issue has its own section with your voice and reasoning.
+Visitors can jump straight to any issue from the homepage grid.
+
+
+FOLLOW THE MONEY (cortneyforcongress.org/follow-the-money.html)
+----------------------------------------------------------------
+This page uses real FEC data to show where your opponent's
+money comes from — PACs, corporations, lobbyists — versus
+your grassroots approach. It is one of the most powerful pages
+on the site because it makes the case without you having to
+say a word. The numbers speak for themselves.
+
+
+GET INVOLVED (cortneyforcongress.org/get-involved.html)
+--------------------------------------------------------
+This is your volunteer hub. Visitors can:
+  - Sign up to volunteer using a form (name, email, zip,
+    what they want to help with)
+  - See signature collection as the #1 priority
+  - Learn about all the ways to help — canvassing, phone
+    banking, hosting events, spreading the word
+
+Every form submission goes straight to your Netlify dashboard.
+I can set up email notifications so you get an alert every
+time someone signs up. Just say the word.
+
+
+ENDORSEMENTS (cortneyforcongress.org/endorsements.html)
+--------------------------------------------------------
+Shows community endorsements with people's names, titles, and
+quotes about why they support you. There is also a form where
+supporters can submit their own endorsement. When someone
+fills it out, the submission goes to Netlify — I will add
+approved endorsements to the page.
+
+
+EVENTS (cortneyforcongress.org/events.html)
+--------------------------------------------
+Lists your upcoming campaign events with:
+  - Event name
+  - Date and time
+  - Location (with enough detail for people to find it)
+  - A short description
+  - Filter buttons so visitors can see all events, or just
+    community events, canvasses, etc.
+
+Past events are listed at the bottom so people can see you
+have been active and out in the community.
+
+There is also a "Host an Event" section encouraging supporters
+to organize their own house parties or signature drives.
+
+
+UPDATES / NEWS (cortneyforcongress.org/news/)
+----------------------------------------------
+Your blog. This is where campaign updates, policy explainers,
+event recaps, endorsement announcements, and personal messages
+go. Right now there is one post — your launch announcement
+from March 8: "We're Running — and We're Running to Win."
+
+Each post has a clean layout with your campaign branding, a
+call-to-action at the bottom, and sharing tools. Posts also
+show up in Google search results with proper formatting.
+
+
+GALLERY (cortneyforcongress.org/gallery.html)
+----------------------------------------------
+A photo gallery page with a lightbox (click any photo to see
+it full-size) and filter buttons. Right now it needs content —
+this is where campaign photos, event photos, and community
+photos will go once you start sending them over.
+
+
+PRESS / MEDIA (cortneyforcongress.org/press.html)
+---------------------------------------------------
+A page for journalists and media outlets. It includes:
+  - Your campaign contact info for press inquiries
+  - Space for a downloadable press kit (bio, high-res
+    headshot, logo)
+  - Key campaign facts and talking points
+
+Once you have professional headshots and a finalized one-page
+bio, we will add downloadable files here.
+
+
+VOTER REGISTRATION (cortneyforcongress.org/voter-registration.html)
+--------------------------------------------------------------------
+Helps visitors register to vote or check their registration
+status. Uses official state resources — no data collected by
+the campaign. This is a public service page that also keeps
+people on your site.
+
+
+SPANISH HOMEPAGE (cortneyforcongress.org/es/)
+----------------------------------------------
+A Spanish-language version of your homepage for the
+Spanish-speaking communities in OH-11. Same content, same
+calls to action, translated.
+
+
+DONATE
+-------
+The "Donate" button in the navigation links to your Anedot
+page (secure.anedot.com/cortney-peterson-for-congress/donate).
+Donations are handled entirely by Anedot — we do not process
+any money through the website.
+
+
+404 PAGE
+---------
+If someone types a wrong URL or follows a broken link, they
+see a friendly "page not found" screen with your campaign
+branding and links to get where they need to go. Small detail,
+but it keeps people on your site instead of losing them.
+
+
+SUCCESS / THANK YOU PAGE
+-------------------------
+After someone submits a volunteer form, endorsement, or email
+signup, they land on a thank-you page that confirms their
+submission went through and gives them next steps.
+
+
+---------------------------------------------------------
+3. WHAT WE NEED FROM YOU
+---------------------------------------------------------
+
+Everything below is organized by how urgent it is.
+
+
+*** URGENT — BEFORE MAY 4 BALLOT DEADLINE ***
+
+These directly affect whether you get on the ballot and
+whether your site supports that effort:
+
+[ ] SIGNATURE COUNT UPDATES
+    Send me your current petition signature count at least
+    once a week (more often is better). Just text or email me
+    the number and I will update the progress bar on the
+    homepage. This is one of the most compelling things on
+    your site right now — people want to watch that bar move.
+
+[ ] EVENT DETAILS
+    For every event you plan, send me:
+      - Event name
+      - Date and time
+      - Location (name of venue + street address + city)
+      - A 1-2 sentence description
+      - Event type (community, canvass, town hall, coffee
+        and conversation, signature drive, etc.)
+    I will add it to the events page within 24 hours.
+
+[ ] VOLUNTEER CONTENT
+    Any updates to the Get Involved page — new ways people
+    can help, specific volunteer shifts you need filled,
+    signature collection locations and times.
+
+[ ] EVENT PHOTOS
+    Have someone snap photos at every event — even phone
+    photos. Action shots of you talking to people, volunteers
+    with clipboards, the crowd. These go on the site and
+    social media. (See Section 7 for photo tips.)
+
+
+*** IMPORTANT — FOR CAMPAIGN GROWTH ***
+
+These make your site stronger and help build momentum:
+
+[ ] BLOG POSTS / CAMPAIGN UPDATES
+    You do not have to write polished essays. Send me a few
+    paragraphs in your own words — a voice memo transcript
+    works too — and I will format it for the site. Aim for
+    one post every 1-2 weeks. (See Section 8 for topic ideas.)
+
+[ ] CAMPAIGN PHOTOS
+    We need real photos of you — at events, with your family,
+    at work, in the community. The site has placeholder spaces
+    waiting for these. A professional photo session for your
+    headshot and a few portraits would be ideal, but phone
+    photos from events are valuable too. We have a detailed
+    photo shot list (I can send it if you want to share it
+    with a photographer).
+
+[ ] ENDORSEMENTS
+    When someone important endorses you — a community leader,
+    an organization, a local business owner — send me:
+      - Their full name
+      - Their title or how they want to be identified
+      - A 1-3 sentence quote about why they support you
+      - A headshot (optional but makes the page stronger)
+
+[ ] SIGNATURE DRIVE STORIES
+    When something interesting happens while collecting
+    signatures — a great conversation, a surprising supporter,
+    a packed event — write it down or record a voice memo.
+    Those stories make incredible blog posts and social
+    content.
+
+
+*** NICE TO HAVE — AS TIME ALLOWS ***
+
+[ ] PRESS KIT MATERIALS
+    - A high-resolution professional headshot (the studio
+      kind — for newspapers and TV)
+    - Your campaign logo in high resolution (I have the file
+      already, so this is covered)
+    - A one-page campaign bio written for media
+
+[ ] GALLERY PHOTOS
+    The gallery page is built and working but needs photos.
+    As events happen and you collect images, send them over
+    in batches. The gallery has filter categories: Cortney,
+    Campaign Trail, Community, Events.
+
+[ ] SPANISH TRANSLATION UPDATES
+    If anything major changes on the homepage, the Spanish
+    version should match. If you have a Spanish speaker on
+    your team or in your volunteer base, they can review
+    the translation for accuracy.
+
+[ ] VIDEO CONTENT
+    Short videos of you talking directly to camera — 30 to
+    90 seconds — about why you are running, a specific issue,
+    a response to something happening in the news. These are
+    gold for social media and can also be embedded on the site.
+
+
+---------------------------------------------------------
+4. HOW TO ADD A BLOG POST
+---------------------------------------------------------
+
+You have two options:
+
+OPTION A — SEND IT TO ME (easiest)
+  1. Write your post in any format — email, text message,
+     Google Doc, voice memo, handwritten note, whatever.
+  2. Include:
+       - A title (short and punchy)
+       - The content (a few paragraphs in your own voice)
+       - What category it is: Campaign Update, Statement,
+         Event Recap, Press Release, or Endorsement
+  3. Send it to pnmcguire4@gmail.com or text 813-940-0111
+  4. I will format it, add it to the site, and let you know
+     when it is live. Usually within 24 hours.
+
+OPTION B — DO IT YOURSELF (if you are feeling adventurous)
+  If you have access to the GitHub repository and want to
+  add a post directly:
+
+  1. Go to the news/ folder in the project files
+  2. Find the file called _template.html — this is your
+     blank blog post template
+  3. Make a copy of it
+  4. Rename the copy using this format:
+       YYYY-MM-DD-short-description.html
+     For example:
+       2026-03-25-signature-milestone.html
+       2026-04-01-town-hall-recap.html
+  5. Open the file and replace these placeholders:
+       - "POST TITLE" with your actual title
+       - "POST DESCRIPTION" with a 1-2 sentence summary
+       - "YYYY-MM-DD" with the date (e.g., 2026-03-25)
+       - "Month DD, YYYY" with the readable date
+         (e.g., March 25, 2026)
+       - "X min read" with an estimate (count your
+         paragraphs — 3-4 paragraphs is about 2 min)
+       - "Campaign Update" with the post category
+       - The template body text with your actual content
+  6. Use simple HTML for your content:
+       <p>Your paragraph here.</p>
+       <h2>A Section Heading</h2>
+       <ul><li>A bullet point</li></ul>
+       <blockquote>"A strong quote."</blockquote>
+  7. Save the file, commit it, and push to GitHub. Netlify
+     will auto-deploy it within about 30 seconds.
+
+  NOTE: You also need to add a link to the new post on the
+  news listing page (news/index.html). If that part feels
+  complicated, just do steps 1-6 and I will handle the rest.
+
+Honestly? Option A is the move. Just send me your words and
+I will make it look great. Your time is better spent knocking
+doors and collecting signatures.
+
+
+---------------------------------------------------------
+5. HOW TO UPDATE THE SIGNATURE COUNTER
+---------------------------------------------------------
+
+The signature progress bar on your homepage currently shows
+487 out of 2,200.
+
+TO UPDATE IT — just send me the new number. Text, email,
+however. I will change it on the site in minutes.
+
+If you want to know the technical detail: on the homepage
+(index.html), there is a line that looks like this:
+
+    data-collected="487"
+
+I change that number and also update the text that says
+"487 signatures collected." That is it. The progress bar
+recalculates automatically.
+
+The best rhythm: send me your updated count every Monday
+morning (or whenever you do your weekly tally). That way
+the site always reflects reality and visitors can see the
+momentum building week over week.
+
+
+---------------------------------------------------------
+6. HOW TO ADD EVENTS
+---------------------------------------------------------
+
+You do not need to touch any code for this. Just send me the
+details and I will add the event to the site:
+
+WHAT TO SEND:
+  - Event name (e.g., "Coffee and Conversation — Phoenix
+    Coffee")
+  - Date (e.g., Saturday, March 22, 2026)
+  - Time (e.g., 12:00 PM - 4:00 PM)
+  - Location name (e.g., "Phoenix Coffee")
+  - Street address (e.g., 1793 Coventry Rd, Cleveland
+    Heights, OH 44118)
+  - 1-2 sentence description (e.g., "Pull up a chair and
+    meet Cortney over coffee. Ask questions, share your
+    concerns, and learn how you can get involved.")
+  - Event type — pick one:
+      Community
+      Canvass / Signature Drive
+      Town Hall
+      Coffee and Conversation
+      Phone Bank
+      Rally
+      Fundraiser
+      (or suggest your own)
+
+TIMING: Try to send me event details at least 3-5 days
+before the event so we have time to promote it on the site
+and social media. Same-day additions work in a pinch, but
+more lead time means more attendees.
+
+AFTER THE EVENT: Send me a 2-3 sentence recap and any photos.
+I will move the event to the "Past Events" section and we can
+turn it into a blog post if it went well.
+
+
+---------------------------------------------------------
+7. PHOTO GUIDELINES
+---------------------------------------------------------
+
+Photos are the single biggest thing your site needs right now.
+The design is ready — it just needs YOUR face and YOUR story
+in it.
+
+WHAT MAKES A GOOD CAMPAIGN PHOTO:
+
+  DO:
+  - Show you talking to real people (not posing)
+  - Capture candid moments — laughing, listening, gesturing
+  - Include Ohio settings people recognize — neighborhoods,
+    coffee shops, community centers, downtown Cleveland
+  - Shoot in natural light when possible (near windows,
+    outdoors)
+  - Get a mix of close-ups (face and shoulders) and wider
+    shots (full body with environment)
+  - Include volunteers, supporters, and community members
+
+  DO NOT:
+  - No stiff posed photos where everyone is standing in a
+    line staring at the camera (group photos are fine if
+    people look natural)
+  - No American-flag-draped politician poses — your visual
+    identity is "Ohio working class," not "generic candidate"
+  - No stock photo energy — documentary, not corporate
+  - No AI-generated images
+
+FILE FORMAT AND SIZE:
+  - Phone photos are fine. Just make sure they are not blurry.
+  - Shoot at the highest quality your phone allows.
+  - Landscape orientation (horizontal) is more versatile for
+    the website, but portrait (vertical) works too.
+  - Send me the original files — do not resize or compress
+    them. I will optimize for the web.
+  - If you can, take photos with your phone's regular camera
+    (not Instagram or Snapchat, which compress the image).
+
+THE MUST-HAVE SHOTS (in priority order):
+  1. Professional headshot — for press, yard signs, everywhere
+  2. Full-body environmental portrait — for the homepage hero
+  3. Family photo — with your sons, authentic not posed
+  4. At-work / nursing photo — your credibility on healthcare
+  5. Speaking at an event — authority, passion
+  6. Talking one-on-one with a voter — connection
+  7. Canvassing / door knocking — grassroots proof
+  8. Volunteer team photo — campaign crew
+  9. Ohio neighborhood / landscape shots — atmosphere
+
+PRO TIP FOR EVENTS:
+Assign one person at every event to be the "photo person."
+Their only job for 10 minutes is to walk around and snap
+20-30 photos. You will use maybe 5 of them, but you need
+the volume to get the good ones.
+
+We have a more detailed photo shot list on file. If you
+are booking a photographer or want to share specific shot
+ideas with your team, let me know and I will send it over.
+
+
+---------------------------------------------------------
+8. BLOG POST IDEAS
+---------------------------------------------------------
+
+You do not need to write long essays. A few paragraphs in
+your own voice is all it takes. Here are topics ready to go:
+
+1. "WHY I AM RUNNING AS AN INDEPENDENT"
+   Your philosophy on breaking free from the two-party
+   system. Why you chose this harder path. What it means
+   for the voters of OH-11.
+
+2. "SIGNATURE DRIVE UPDATE — WHERE WE STAND"
+   A weekly or biweekly update on signature collection.
+   How many you have, stories from the trail, where people
+   can find you to sign. Great for building urgency as
+   May 4th approaches.
+
+3. "WHAT I LEARNED KNOCKING DOORS THIS WEEK"
+   Pick the most interesting conversation you had while
+   canvassing. What did voters tell you? What surprised you?
+   What broke your heart? What gave you hope?
+
+4. "FOLLOW THE MONEY — HOW YOUR OPPONENT IS FUNDED"
+   Walk people through the FEC data on your own terms. Who
+   is writing checks to your opponent? What do those donors
+   want? How does that compare to your grassroots funding?
+
+5. "A NURSE'S CASE FOR MEDICARE FOR ALL"
+   You have 12 years of firsthand experience watching the
+   healthcare system fail patients. Tell that story. No
+   policy paper — just what you have seen with your own eyes.
+
+6. "[EVENT NAME] RECAP — WHAT HAPPENED AND WHAT IS NEXT"
+   After any major event, write a quick recap. What happened,
+   who showed up, what you heard, and what is coming next.
+   Include photos.
+
+7. "MY SONS ARE THE REASON I AM IN THIS FIGHT"
+   Your story as a mom, raising a teenager and a young son
+   with autism. What kind of country do you want them to
+   grow up in? What keeps you up at night?
+
+8. "THE GOLDEN RULE IN POLITICS"
+   Your guiding principle — treating people the way you want
+   to be treated — and how that applies to policymaking.
+   What would Congress look like if every member lived by
+   this rule?
+
+9. "WHAT 'UNBOUGHT' ACTUALLY MEANS"
+   Explain what it is like to run a campaign with zero
+   corporate money. What you have to do differently. Why
+   it is harder — and why it is worth it.
+
+10. "ENDORSEMENT SPOTLIGHT: [NAME]"
+    When you get an endorsement, write a short post about
+    who they are, why their support matters, and what it
+    says about the coalition you are building.
+
+11. "HOUSING IN OH-11 — THE NUMBERS ARE BRUTAL"
+    Pick one issue from your platform and make it local.
+    What does the housing crisis look like in your specific
+    neighborhoods? Use real numbers, real stories.
+
+12. "I TESTIFIED AT THE OHIO STATEHOUSE — HERE IS WHAT I SAID"
+    You spoke against Senate Bill 87. Write about what that
+    experience was like. What you said. How it felt. What
+    the legislators' reactions were.
+
+13. "HOW TO HELP RIGHT NOW (EVEN IF YOU HAVE 10 MINUTES)"
+    A practical post listing 5-10 things supporters can do
+    right now — share a post, sign the petition, bring a
+    friend, donate $5, put up a yard sign.
+
+14. "WHAT 'PEOPLE-POWERED' LOOKS LIKE IN REAL LIFE"
+    Show people the behind-the-scenes of a grassroots
+    campaign. The kitchen-table strategy sessions. The
+    hand-addressed envelopes. The volunteer who drove 45
+    minutes to help canvass.
+
+15. "FROM POLITICAL COMA TO RUNNING FOR CONGRESS"
+    The full version of your awakening story — the brain
+    procedure, the moment of clarity, the decision to run.
+    This is your most powerful narrative. Tell it fully.
+
+
+---------------------------------------------------------
+9. CONTACT FOR SITE CHANGES
+---------------------------------------------------------
+
+For anything related to the website — updates, new content,
+broken links, questions, ideas — contact:
+
+  Patrick McGuire
+  Web Developer
+
+  Email:  pnmcguire4@gmail.com
+  Phone:  (813) 940-0111
+  Text:   (813) 940-0111
+
+  Turnaround time:
+    - Signature counter updates: same day, usually minutes
+    - Event additions: within 24 hours
+    - Blog posts: within 24 hours (send me the content)
+    - Photo additions: within 24-48 hours
+    - Bigger changes: let's talk about it first
+
+The fastest way to get a quick update done (like a signature
+count) is a text message. For anything longer — like blog
+post content or a batch of photos — email works best.
+
+
+---------------------------------------------------------
+QUICK REFERENCE — YOUR SITE AT A GLANCE
+---------------------------------------------------------
+
+Website:        cortneyforcongress.org
+Donate link:    secure.anedot.com/cortney-peterson-for-congress/donate
+Campaign email: cortneyforcongress@gmail.com
+FEC number:     H6OH11186
+
+Social accounts on the site:
+  Facebook:     facebook.com/cortneyforcongress
+  Instagram:    instagram.com/cortneyforcongress
+  TikTok:       tiktok.com/@cortneyforcongress
+  Threads:      threads.net/@cortneyforcongress
+  Bluesky:      bsky.app/profile/cortneyforcongress.bsky.social
+
+Key dates:
+  May 4, 2026 — Petition signature deadline (2,200 needed)
+
+Form submissions (volunteer signups, endorsements, email
+signups) all go to your Netlify dashboard. If you need access
+to see those submissions, let me know and I will set it up.
+
+
+---------------------------------------------------------
+
+That is your site. It is built. It is live. It is yours.
+
+Now let's fill it with your story, your photos, and your
+people. Every update we make, every post we publish, every
+photo we add — it all builds toward May 4th and beyond.
+
+Send me that signature count. Let's watch that bar move.
+
+— Patrick

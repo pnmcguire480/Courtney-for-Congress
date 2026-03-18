@@ -1,0 +1,11 @@
+# Don't deploy private documents (invoices, agreements, internal docs)
+docs/
+
+# Don't deploy markdown planning files
+markdown/
+
+# Don't deploy archive
+_archive/
+
+# Don't deploy Claude Code project files
+.claude/
