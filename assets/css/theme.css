@@ -1,0 +1,351 @@
+/* Theme — light/dark mode system
+   Overrides :root palette variables defined inline in each page.
+   Uses [data-theme="dark"] (manual toggle) and @media prefers-color-scheme (auto-detect).
+   Higher specificity than bare :root ensures these win over inline <style> blocks. */
+
+/* ===== DARK MODE VARIABLE OVERRIDES ===== */
+
+/* Manual toggle */
+[data-theme="dark"] {
+  --cream: #0f0a14;
+  --cream-dark: #150e1b;
+  --white: #1a1220;
+  --text: #ece4f2;
+  --text-light: #a89bb3;
+  --slate: #ece4f2;
+  --plum-light: #c98ec6;
+  --green: #5aad82;
+  --green-light: #1a3a28;
+  --text-accent: #d4957e;
+  color-scheme: dark;
+}
+
+/* Auto-detect system preference (only when user hasn't manually toggled) */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --cream: #0f0a14;
+    --cream-dark: #150e1b;
+    --white: #1a1220;
+    --text: #ece4f2;
+    --text-light: #a89bb3;
+    --slate: #ece4f2;
+    --plum-light: #c98ec6;
+    --green: #5aad82;
+    --green-light: #1a3a28;
+    --text-accent: #d4957e;
+    color-scheme: dark;
+  }
+}
+
+/* ===== PLUM-AS-TEXT OVERRIDES =====
+   --plum stays unchanged (used as dark background in hero/CTA/footer).
+   These selectors use plum as text on light surfaces — must lighten in dark mode. */
+
+[data-theme="dark"] .nav-logo,
+[data-theme="dark"] .nav-socials a,
+[data-theme="dark"] .nav-links a,
+[data-theme="dark"] .mobile-menu a,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .connect h3,
+[data-theme="dark"] .social-link,
+[data-theme="dark"] .quick-card h3,
+[data-theme="dark"] .state-name,
+[data-theme="dark"] .endorser-name,
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] .asset-name,
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .way-card h3,
+[data-theme="dark"] .drop-cap,
+[data-theme="dark"] .timeline-role,
+[data-theme="dark"] .signup-label,
+[data-theme="dark"] .issue-title {
+  color: #c98ec6;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .nav-logo,
+  html:not([data-theme="light"]) .nav-socials a,
+  html:not([data-theme="light"]) .nav-links a,
+  html:not([data-theme="light"]) .mobile-menu a,
+  html:not([data-theme="light"]) .section-title,
+  html:not([data-theme="light"]) .connect h3,
+  html:not([data-theme="light"]) .social-link,
+  html:not([data-theme="light"]) .quick-card h3,
+  html:not([data-theme="light"]) .state-name,
+  html:not([data-theme="light"]) .endorser-name,
+  html:not([data-theme="light"]) .form-group label,
+  html:not([data-theme="light"]) .asset-name,
+  html:not([data-theme="light"]) .post-title,
+  html:not([data-theme="light"]) .way-card h3,
+  html:not([data-theme="light"]) .drop-cap,
+  html:not([data-theme="light"]) .timeline-role,
+  html:not([data-theme="light"]) .signup-label,
+  html:not([data-theme="light"]) .issue-title {
+    color: #c98ec6;
+  }
+}
+
+/* ===== HARDCODED COLOR OVERRIDES ===== */
+
+/* Section label — #a0604a hardcoded in inline styles */
+html .section-label,
+html .category-label,
+html .post-date {
+  color: var(--text-accent, #a0604a);
+}
+
+/* Hamburger bars use background:var(--plum) */
+[data-theme="dark"] .hamburger span {
+  background: #c98ec6;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .hamburger span {
+    background: #c98ec6;
+  }
+}
+
+/* ===== NAV — HARDCODED RGBA OVERRIDES ===== */
+
+[data-theme="dark"] .nav {
+  background: rgba(15, 10, 20, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+[data-theme="dark"] .nav.scrolled {
+  background: rgba(15, 10, 20, 0.98);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .mobile-menu {
+  background: #0f0a14;
+}
+[data-theme="dark"] .nav-links a:hover {
+  color: #c98ec6;
+  background: rgba(201, 142, 198, 0.1);
+}
+[data-theme="dark"] .nav-links a.active {
+  background: var(--plum);
+  color: #ece4f2;
+}
+[data-theme="dark"] .nav-dropdown-menu {
+  background: #150e1b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+[data-theme="dark"] .nav-dropdown-menu a:hover {
+  background: rgba(201, 142, 198, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .nav {
+    background: rgba(15, 10, 20, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+  }
+  html:not([data-theme="light"]) .nav.scrolled {
+    background: rgba(15, 10, 20, 0.98);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  html:not([data-theme="light"]) .mobile-menu {
+    background: #0f0a14;
+  }
+  html:not([data-theme="light"]) .nav-links a:hover {
+    color: #c98ec6;
+    background: rgba(201, 142, 198, 0.1);
+  }
+  html:not([data-theme="light"]) .nav-links a.active {
+    background: var(--plum);
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) .nav-dropdown-menu {
+    background: #150e1b;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  html:not([data-theme="light"]) .nav-dropdown-menu a:hover {
+    background: rgba(201, 142, 198, 0.1);
+  }
+}
+
+/* ===== FORM INPUTS ===== */
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ece4f2;
+}
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 3px rgba(253, 180, 155, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) input,
+  html:not([data-theme="light"]) select,
+  html:not([data-theme="light"]) textarea {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) input:focus,
+  html:not([data-theme="light"]) select:focus,
+  html:not([data-theme="light"]) textarea:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(253, 180, 155, 0.15);
+  }
+}
+
+/* ===== CARD & SURFACE BORDERS ===== */
+
+[data-theme="dark"] .event-card,
+[data-theme="dark"] .quick-card,
+[data-theme="dark"] .endorsement-card,
+[data-theme="dark"] .org-card,
+[data-theme="dark"] .way-card,
+[data-theme="dark"] .form-card,
+[data-theme="dark"] .acc-card,
+[data-theme="dark"] .endorse-form-wrap,
+[data-theme="dark"] .issue-points,
+[data-theme="dark"] .cite-block,
+[data-theme="dark"] .state-item,
+[data-theme="dark"] .gallery-coming-soon,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .post-card {
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .event-card,
+  html:not([data-theme="light"]) .quick-card,
+  html:not([data-theme="light"]) .endorsement-card,
+  html:not([data-theme="light"]) .org-card,
+  html:not([data-theme="light"]) .way-card,
+  html:not([data-theme="light"]) .form-card,
+  html:not([data-theme="light"]) .acc-card,
+  html:not([data-theme="light"]) .endorse-form-wrap,
+  html:not([data-theme="light"]) .issue-points,
+  html:not([data-theme="light"]) .cite-block,
+  html:not([data-theme="light"]) .state-item,
+  html:not([data-theme="light"]) .gallery-coming-soon,
+  html:not([data-theme="light"]) .testimonial-card,
+  html:not([data-theme="light"]) .post-card {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ===== FOOTER BORDERS ===== */
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--plum);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  transition: color 0.2s, background 0.2s;
+}
+.theme-toggle:hover {
+  background: rgba(71, 13, 68, 0.06);
+}
+[data-theme="dark"] .theme-toggle {
+  color: #ece4f2;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle {
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Show sun in light, moon in dark */
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle .icon-sun { display: none; }
+  html:not([data-theme="light"]) .theme-toggle .icon-moon { display: block; }
+  html[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+}
+
+/* Mobile toggle in mobile menu */
+.mobile-theme-toggle {
+  background: none;
+  border: 1px solid rgba(71, 13, 68, 0.15);
+  cursor: pointer;
+  color: var(--plum);
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  min-height: 44px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.mobile-theme-toggle:hover {
+  background: rgba(71, 13, 68, 0.06);
+}
+[data-theme="dark"] .mobile-theme-toggle {
+  color: #ece4f2;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+[data-theme="dark"] .mobile-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.mobile-theme-toggle .icon-moon { display: none; }
+.mobile-theme-toggle .label-dark { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .icon-moon { display: inline; }
+[data-theme="dark"] .mobile-theme-toggle .label-light { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .label-dark { display: inline; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .mobile-theme-toggle {
+    color: #ece4f2;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  html:not([data-theme="light"]) .mobile-theme-toggle .icon-sun { display: none; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .icon-moon { display: inline; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .label-light { display: none; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .label-dark { display: inline; }
+}
+
+/* ===== INLINE STYLE OVERRIDES =====
+   Some elements use inline style="..." with var(--plum) text colors.
+   These need !important in dark mode to override inline specificity. */
+
+[data-theme="dark"] [style*="color:var(--plum)"],
+[data-theme="dark"] [style*="color: var(--plum)"] {
+  color: #c98ec6 !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) [style*="color:var(--plum)"],
+  html:not([data-theme="light"]) [style*="color: var(--plum)"] {
+    color: #c98ec6 !important;
+  }
+}
