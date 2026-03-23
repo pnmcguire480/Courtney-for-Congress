@@ -35,13 +35,13 @@ function openLightbox(idx) {
   lbText.textContent = item.dataset.caption || '';
   lbCounter.textContent = (idx + 1) + ' / ' + clickablePhotos.length;
   lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  lockScroll();
   lbImg.focus();
 }
 
 function closeLightbox() {
   lightbox.classList.remove('open');
-  document.body.style.overflow = '';
+  unlockScroll();
   clickablePhotos[currentIdx].focus();
 }
 
@@ -56,9 +56,30 @@ document.getElementById('lightboxNext').addEventListener('click', function() { o
 
 lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
 
+// Keyboard navigation
 document.addEventListener('keydown', function(e) {
   if (!lightbox.classList.contains('open')) return;
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') openLightbox((currentIdx - 1 + clickablePhotos.length) % clickablePhotos.length);
   if (e.key === 'ArrowRight') openLightbox((currentIdx + 1) % clickablePhotos.length);
 });
+
+// Touch swipe support for mobile
+(function() {
+  var touchStartX = 0;
+  var touchEndX = 0;
+  lightbox.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    var diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        openLightbox((currentIdx + 1) % clickablePhotos.length);
+      } else {
+        openLightbox((currentIdx - 1 + clickablePhotos.length) % clickablePhotos.length);
+      }
+    }
+  });
+})();

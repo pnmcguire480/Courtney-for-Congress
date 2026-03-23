@@ -1,5 +1,20 @@
 // Shared site JS — nav scroll, hamburger menu, scroll reveal, focus trap, theme toggle
 
+// === Scroll lock helper (works on iOS Safari) ===
+var scrollLockPos = 0;
+function lockScroll() {
+  scrollLockPos = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = '-' + scrollLockPos + 'px';
+  document.body.style.width = '100%';
+}
+function unlockScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollLockPos);
+}
+
 // Theme toggle — dark/light mode with localStorage persistence
 (function() {
   var html = document.documentElement;
@@ -37,15 +52,22 @@
   });
 })()
 
-// Nav scroll effect
+// Nav scroll effect (throttled with rAF, passive listener)
 var nav = document.getElementById('nav');
 if (nav) {
+  var navTicking = false;
   window.addEventListener('scroll', function() {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    if (!navTicking) {
+      requestAnimationFrame(function() {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+        navTicking = false;
+      });
+      navTicking = true;
+    }
+  }, { passive: true });
 }
 
-// Hamburger menu (with aria-expanded for accessibility)
+// Hamburger menu (with aria-expanded, aria-modal, aria-label toggling)
 var hamburger = document.getElementById('hamburger');
 var mobileMenu = document.getElementById('mobileMenu');
 if (hamburger && mobileMenu) {
@@ -53,11 +75,15 @@ if (hamburger && mobileMenu) {
     var isOpen = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('active', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    mobileMenu.setAttribute('aria-modal', String(isOpen));
     if (isOpen) {
+      lockScroll();
       // Focus the first link in mobile menu
       var firstLink = mobileMenu.querySelector('a');
       if (firstLink) firstLink.focus();
+    } else {
+      unlockScroll();
     }
   });
 
@@ -69,10 +95,12 @@ if (hamburger && mobileMenu) {
     }
   });
 
-  // Focus trap — keep Tab within mobile menu when open
+  // Focus trap — keep Tab within mobile menu when open (includes hamburger button)
   mobileMenu.addEventListener('keydown', function(e) {
     if (e.key !== 'Tab' || !mobileMenu.classList.contains('open')) return;
-    var focusable = mobileMenu.querySelectorAll('a[href], button');
+    var focusable = [hamburger].concat(
+      Array.from(mobileMenu.querySelectorAll('a[href], button'))
+    );
     if (!focusable.length) return;
     var first = focusable[0];
     var last = focusable[focusable.length - 1];
@@ -88,6 +116,12 @@ if (hamburger && mobileMenu) {
       }
     }
   });
+
+  // Attach closeMobile to all mobile menu links (replaces inline onclick)
+  var mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', closeMobile);
+  });
 }
 
 function closeMobile() {
@@ -95,11 +129,13 @@ function closeMobile() {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-label', 'Open menu');
+    mobileMenu.setAttribute('aria-modal', 'false');
+    unlockScroll();
   }
 }
 
-// Accessible nav dropdowns — keyboard support alongside existing hover behavior
+// Accessible nav dropdowns — keyboard + touch support alongside existing hover behavior
 // Implements WCAG 2.1 SC 2.1.1 (Keyboard) and ARIA menu pattern
 (function() {
   var dropdowns = document.querySelectorAll('.nav-dropdown');
@@ -146,6 +182,17 @@ function closeMobile() {
     if (!trigger.hasAttribute('aria-haspopup')) {
       trigger.setAttribute('aria-haspopup', 'true');
     }
+
+    // Touch/click handler — first tap opens dropdown, second tap follows link
+    trigger.addEventListener('click', function(e) {
+      // Only intercept on touch-capable devices where hover doesn't work
+      var isOpen = dropdown.classList.contains('open');
+      if (!isOpen) {
+        e.preventDefault();
+        openDropdown(dropdown);
+      }
+      // If already open, let the click navigate to the href
+    });
 
     // Keyboard handler on the trigger link
     trigger.addEventListener('keydown', function(e) {

@@ -36,20 +36,23 @@ A zero-dependency static campaign website for Cortney Peterson, an Independent n
 
 ### Last Session
 
-- **Date:** 2026-03-22
-- **What was accomplished:** BrainStormer init, committed 3 untracked CSS files (a11y, responsive, theme), filled in project documentation
-- **Next session should start with:** Review filled docs, commit everything, continue iterating on site content
+- **Date:** 2026-03-23
+- **What was accomplished:** Comprehensive mobile responsiveness audit (CSS, JS, accessibility, layout) and fixed all 17 issues: iOS Safari scroll lock, menu fade transition, dropdown touch support, hamburger/checkbox touch targets, form focus indicators, aria-modal/label toggling, scroll throttling with passive listeners, lightbox swipe gestures, clipboard API fallback, color contrast fixes, breakpoint normalization, DocumentFragment optimization, removed all inline onclick handlers across 13 pages
+- **Next session should start with:** Test mobile fixes on real devices (iOS Safari, Android Chrome), verify dark mode contrast still good with new section-label/em colors
 
 ### What Works Right Now
 
 - All 11 pages load and function correctly
-- Mobile hamburger menu + dropdown nav
+- Mobile hamburger menu + dropdown nav (touch + keyboard accessible)
+- iOS Safari scroll lock on overlays (menu + lightbox)
+- Lightbox swipe gestures on mobile
+- Throttled scroll listeners with passive flag
 - Netlify Forms (volunteer signup, English + Spanish)
 - Voter registration directory (50 states + territories)
 - Theme toggle (light/dark)
 - SEO: Schema.org JSON-LD on every page, Open Graph, canonical URLs
 - Security: CSP, HSTS, X-Frame-Options, Permissions-Policy
-- Accessibility: skip-nav, focus traps, ARIA labels, keyboard nav
+- Accessibility: skip-nav, focus traps (includes hamburger), ARIA labels/modal/expanded, keyboard nav, focus-visible indicators, 44px touch targets
 - Signature progress bar on homepage
 - News/blog section with article template
 

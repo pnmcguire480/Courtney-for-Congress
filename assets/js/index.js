@@ -2,6 +2,7 @@
 (function() {
   var sections = document.querySelectorAll('section[id], .meet[id]');
   var navLinks = document.querySelectorAll('.nav-links a:not(.nav-donate)');
+  var ticking = false;
   function setActive() {
     var scrollY = window.scrollY + 120;
     var current = '';
@@ -14,7 +15,15 @@
       if (href && href.indexOf('#') !== -1 && href.split('#')[1] === current) a.classList.add('active');
     });
   }
-  window.addEventListener('scroll', setActive);
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        setActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
   setActive();
 })();
 
@@ -28,15 +37,13 @@
   var bar = document.getElementById('sig-bar');
   var count = document.getElementById('sig-count');
   if (count) count.textContent = collected.toLocaleString();
-  var fired = false;
-  function animateBar() {
-    if (fired) return;
-    var rect = wrap.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      fired = true;
+
+  // Use IntersectionObserver instead of scroll listener (fire-once)
+  var observer = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
       if (bar) bar.style.width = pct + '%';
+      observer.disconnect();
     }
-  }
-  window.addEventListener('scroll', animateBar);
-  setTimeout(animateBar, 300);
+  }, { threshold: 0 });
+  observer.observe(wrap);
 })();

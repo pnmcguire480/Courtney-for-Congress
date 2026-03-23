@@ -83,7 +83,8 @@
 .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
 .form-group label{font-size:0.82rem;font-weight:700;letter-spacing:0.05em;color:var(--text);text-transform:uppercase}
 .form-group input,.form-group textarea,.form-group select{width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid var(--cream-dark);background:var(--cream);color:var(--text);font-size:0.95rem;font-family:'Source Sans 3',sans-serif;transition:border-color 0.3s}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--coral);background:var(--white)}
+.form-group input:focus-visible,.form-group textarea:focus-visible,.form-group select:focus-visible{border-color:var(--coral);background:var(--white);outline:3px solid var(--coral);outline-offset:2px}
+.form-group input:focus:not(:focus-visible),.form-group textarea:focus:not(:focus-visible),.form-group select:focus:not(:focus-visible){outline:none;border-color:var(--coral);background:var(--white)}
 .form-group select option{background:var(--white)}
 
 /* DONATE CTA */
@@ -355,18 +356,18 @@
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
-  <a href="index.html#meet" onclick="closeMobile()">About</a>
-  <a href="issues.html" onclick="closeMobile()">Issues</a>
-  <a href="follow-the-money.html" onclick="closeMobile()">Follow the Money</a>
-  <a href="get-involved.html" onclick="closeMobile()">Get Involved</a>
-  <a href="endorsements.html" onclick="closeMobile()">Endorsements</a>
-  <a href="events.html" onclick="closeMobile()">Events</a>
-  <a href="news/" onclick="closeMobile()">Updates</a>
-  <a href="gallery.html" onclick="closeMobile()">Gallery</a>
-  <a href="press.html" onclick="closeMobile()">Press</a>
-  <a href="voter-registration.html" onclick="closeMobile()">Vote</a>
-  <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" target="_blank" rel="noopener noreferrer" onclick="closeMobile()">Donate</a>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="false">
+  <a href="index.html#meet">About</a>
+  <a href="issues.html">Issues</a>
+  <a href="follow-the-money.html">Follow the Money</a>
+  <a href="get-involved.html">Get Involved</a>
+  <a href="endorsements.html">Endorsements</a>
+  <a href="events.html">Events</a>
+  <a href="news/">Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="press.html">Press</a>
+  <a href="voter-registration.html">Vote</a>
+  <a href="https://secure.anedot.com/cortney-peterson-for-congress/donate" class="mobile-donate" target="_blank" rel="noopener noreferrer">Donate</a>
   <button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle dark mode">
     <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
     <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>

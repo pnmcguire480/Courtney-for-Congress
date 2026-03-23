@@ -55,10 +55,31 @@
     grid-template-columns: 1fr !important;
   }
 
+  /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px) */
+  .field-group input,
+  .field-group select,
+  .field-group textarea,
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .signup-form input[type="email"] {
+    font-size: 1rem !important;
+  }
+
+  /* Checkbox touch targets */
+  .checkbox-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  .checkbox-list li label {
+    padding: 0.6rem 0.75rem;
+    min-height: 44px;
+  }
+
   /* Tables - force mobile scroll */
   .compare-table,
   .outside-table {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .compare-table thead th,

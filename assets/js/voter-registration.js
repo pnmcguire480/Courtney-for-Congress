@@ -96,8 +96,9 @@ checkSelect.addEventListener('change', function() {
   }
 });
 
-// Build state directory
+// Build state directory (batched with DocumentFragment for mobile perf)
 var stateList = document.getElementById('stateList');
+var fragment = document.createDocumentFragment();
 states.forEach(function(s) {
   var div = document.createElement('div');
   div.className = 'state-item';
@@ -108,8 +109,9 @@ states.forEach(function(s) {
       '<a href="' + s.reg + '" class="link-register" target="_blank" rel="noopener noreferrer">Register</a>' +
       '<a href="' + s.check + '" class="link-check" target="_blank" rel="noopener noreferrer">Check Status</a>' +
     '</div>';
-  stateList.appendChild(div);
+  fragment.appendChild(div);
 });
+stateList.appendChild(fragment);
 
 // Search filter
 document.getElementById('stateSearch').addEventListener('input', function() {
