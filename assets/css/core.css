@@ -100,7 +100,7 @@ body{
 .nav-links .nav-donate:hover{background:var(--coral-light);box-shadow:0 3px 14px rgba(253,180,155,0.35)}
 
 /* ===== HAMBURGER & MOBILE MENU ===== */
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;background:none;border:none}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;background:none;border:none;position:relative;z-index:1002}
 .hamburger span{display:block;width:24px;height:2px;background:var(--plum);border-radius:2px;transition:all 0.3s ease}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.active span:nth-child(2){opacity:0}
@@ -108,7 +108,8 @@ body{
 .mobile-menu{
   position:fixed;top:0;left:0;right:0;bottom:0;
   background:var(--cream);z-index:1001;
-  flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+  flex-direction:column;align-items:center;justify-content:flex-start;gap:1.5rem;
+  padding:5rem 1.5rem 2rem;overflow-y:auto;-webkit-overflow-scrolling:touch;
   opacity:0;visibility:hidden;
   display:flex;
   transition:opacity 0.3s ease,visibility 0.3s ease;
