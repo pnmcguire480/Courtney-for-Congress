@@ -47,6 +47,7 @@
 [data-theme="dark"] .mobile-menu a,
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .connect h3,
+[data-theme="dark"] .connect a,
 [data-theme="dark"] .social-link,
 [data-theme="dark"] .quick-card h3,
 [data-theme="dark"] .state-name,
@@ -54,11 +55,30 @@
 [data-theme="dark"] .form-group label,
 [data-theme="dark"] .asset-name,
 [data-theme="dark"] .post-title,
+[data-theme="dark"] .post-read-more,
+[data-theme="dark"] .post-byline strong,
+[data-theme="dark"] .post-body h2,
+[data-theme="dark"] .post-body h3,
+[data-theme="dark"] .post-body blockquote,
+[data-theme="dark"] .post-body a:hover,
+[data-theme="dark"] .post-nav a,
 [data-theme="dark"] .way-card h3,
 [data-theme="dark"] .drop-cap,
 [data-theme="dark"] .timeline-role,
 [data-theme="dark"] .signup-label,
-[data-theme="dark"] .issue-title {
+[data-theme="dark"] .issue-title,
+[data-theme="dark"] .org-name,
+[data-theme="dark"] .org-name a,
+[data-theme="dark"] .endorse-cta h2,
+[data-theme="dark"] .endorse-success h3,
+[data-theme="dark"] .fact-value,
+[data-theme="dark"] .copy-btn,
+[data-theme="dark"] .news-headline a,
+[data-theme="dark"] .press-cta h2,
+[data-theme="dark"] .event-title,
+[data-theme="dark"] .priority-card h4,
+[data-theme="dark"] .footer-inner h3,
+[data-theme="dark"] .footer-inner a {
   color: #c98ec6;
 }
 
@@ -69,6 +89,7 @@
   html:not([data-theme="light"]) .mobile-menu a,
   html:not([data-theme="light"]) .section-title,
   html:not([data-theme="light"]) .connect h3,
+  html:not([data-theme="light"]) .connect a,
   html:not([data-theme="light"]) .social-link,
   html:not([data-theme="light"]) .quick-card h3,
   html:not([data-theme="light"]) .state-name,
@@ -76,11 +97,30 @@
   html:not([data-theme="light"]) .form-group label,
   html:not([data-theme="light"]) .asset-name,
   html:not([data-theme="light"]) .post-title,
+  html:not([data-theme="light"]) .post-read-more,
+  html:not([data-theme="light"]) .post-byline strong,
+  html:not([data-theme="light"]) .post-body h2,
+  html:not([data-theme="light"]) .post-body h3,
+  html:not([data-theme="light"]) .post-body blockquote,
+  html:not([data-theme="light"]) .post-body a:hover,
+  html:not([data-theme="light"]) .post-nav a,
   html:not([data-theme="light"]) .way-card h3,
   html:not([data-theme="light"]) .drop-cap,
   html:not([data-theme="light"]) .timeline-role,
   html:not([data-theme="light"]) .signup-label,
-  html:not([data-theme="light"]) .issue-title {
+  html:not([data-theme="light"]) .issue-title,
+  html:not([data-theme="light"]) .org-name,
+  html:not([data-theme="light"]) .org-name a,
+  html:not([data-theme="light"]) .endorse-cta h2,
+  html:not([data-theme="light"]) .endorse-success h3,
+  html:not([data-theme="light"]) .fact-value,
+  html:not([data-theme="light"]) .copy-btn,
+  html:not([data-theme="light"]) .news-headline a,
+  html:not([data-theme="light"]) .press-cta h2,
+  html:not([data-theme="light"]) .event-title,
+  html:not([data-theme="light"]) .priority-card h4,
+  html:not([data-theme="light"]) .footer-inner h3,
+  html:not([data-theme="light"]) .footer-inner a {
     color: #c98ec6;
   }
 }
@@ -347,5 +387,99 @@ html .post-date {
   html:not([data-theme="light"]) [style*="color:var(--plum)"],
   html:not([data-theme="light"]) [style*="color: var(--plum)"] {
     color: #c98ec6 !important;
+  }
+}
+
+/* ===== HARDCODED BACKGROUND OVERRIDES ===== */
+
+/* #f4eef8 light purple surfaces — dark mode equivalent */
+[data-theme="dark"] .issue-pill,
+[data-theme="dark"] .issue-block,
+[data-theme="dark"] .data-card,
+[data-theme="dark"] .outside-table thead th {
+  background: #1e1528 !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .issue-pill,
+  html:not([data-theme="light"]) .issue-block,
+  html:not([data-theme="light"]) .data-card,
+  html:not([data-theme="light"]) .outside-table thead th {
+    background: #1e1528 !important;
+  }
+}
+
+/* #a0604a section labels — override inline styles */
+[data-theme="dark"] .section-label,
+[data-theme="dark"] .category-label,
+[data-theme="dark"] [style*="color:#a0604a"] {
+  color: #d4957e !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .section-label,
+  html:not([data-theme="light"]) .category-label,
+  html:not([data-theme="light"]) [style*="color:#a0604a"] {
+    color: #d4957e !important;
+  }
+}
+
+/* Form success message — hardcoded dark green on dark green */
+[data-theme="dark"] .form-success p {
+  color: #5aad82;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .form-success p {
+    color: #5aad82;
+  }
+}
+
+/* Copy button border in dark mode */
+[data-theme="dark"] .copy-btn {
+  border-color: rgba(201, 142, 198, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .copy-btn {
+    border-color: rgba(201, 142, 198, 0.3);
+  }
+}
+
+/* Event type tags — softer backgrounds in dark mode */
+[data-theme="dark"] .tag-town-hall { background:#1a2e1a; color:#6dbf6d }
+[data-theme="dark"] .tag-canvass { background:#2e2210; color:#d4935a }
+[data-theme="dark"] .tag-phone-bank { background:#1a1d2e; color:#7b8fd4 }
+[data-theme="dark"] .tag-fundraiser { background:#2e1520; color:#d46b8e }
+[data-theme="dark"] .tag-community { background:#102e2e; color:#5abfbf }
+[data-theme="dark"] .tag-rally { background:#251530; color:#b87fd4 }
+[data-theme="dark"] .tag-update { background:#1e1528; color:#c98ec6 }
+[data-theme="dark"] .tag-statement { background:#2e2210; color:#d4935a }
+[data-theme="dark"] .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
+[data-theme="dark"] .tag-press { background:#1a1d2e; color:#7b8fd4 }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .tag-town-hall { background:#1a2e1a; color:#6dbf6d }
+  html:not([data-theme="light"]) .tag-canvass { background:#2e2210; color:#d4935a }
+  html:not([data-theme="light"]) .tag-phone-bank { background:#1a1d2e; color:#7b8fd4 }
+  html:not([data-theme="light"]) .tag-fundraiser { background:#2e1520; color:#d46b8e }
+  html:not([data-theme="light"]) .tag-community { background:#102e2e; color:#5abfbf }
+  html:not([data-theme="light"]) .tag-rally { background:#251530; color:#b87fd4 }
+  html:not([data-theme="light"]) .tag-update { background:#1e1528; color:#c98ec6 }
+  html:not([data-theme="light"]) .tag-statement { background:#2e2210; color:#d4935a }
+  html:not([data-theme="light"]) .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
+  html:not([data-theme="light"]) .tag-press { background:#1a1d2e; color:#7b8fd4 }
+}
+
+/* Decorative borders — white-based in dark mode */
+[data-theme="dark"] .issue-nav,
+[data-theme="dark"] .issue-points li,
+[data-theme="dark"] .past-item,
+[data-theme="dark"] .donor-list li,
+[data-theme="dark"] .filter-bar {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .issue-nav,
+  html:not([data-theme="light"]) .issue-points li,
+  html:not([data-theme="light"]) .past-item,
+  html:not([data-theme="light"]) .donor-list li,
+  html:not([data-theme="light"]) .filter-bar {
+    border-color: rgba(255, 255, 255, 0.06);
   }
 }
