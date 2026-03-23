@@ -17,11 +17,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://cortneyforcongress.org/get-involved.html">
 <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/a11y.css">
-<link rel="stylesheet" href="/assets/css/core.css">
-<link rel="stylesheet" href="/assets/css/theme.css">
-<link rel="stylesheet" href="/assets/css/responsive.css">
+<link rel="preload" href="/assets/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/playfair-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/a11y.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/core.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/theme.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/responsive.css?v=20260322">
 <style>
 :root{--green:#2d6a4f;--green-light:#d8f3dc}
 
@@ -49,7 +52,7 @@
   width:100%;padding:0.75rem 1rem;
   background:var(--white);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;
   font-size:0.95rem;font-family:'Source Sans 3',sans-serif;color:var(--text);
-  transition:border-color 0.2s,box-shadow 0.2s;outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;
 }
 .field-group input:focus,.field-group select:focus,.field-group textarea:focus{
   border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)
@@ -102,40 +105,210 @@
 .btn-register-vote{background:var(--coral);color:var(--plum);font-weight:700;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.3s ease}
 
 /* RESPONSIVE */
-@media(max-width:768px){
-  .field-row{grid-template-columns:1fr}
-  .checkbox-list{grid-template-columns:1fr}
-  .form-card{padding:2rem 1.5rem}
+
+/* Mobile: 0-767px */
+@media(max-width:767px){
+  /* Form layouts: single column */
+  .field-row,
+  .form-row{
+    grid-template-columns:1fr !important;
+  }
+
+  .checkbox-list{
+    grid-template-columns:1fr;
+  }
+
+  /* Ways grid: single column on mobile */
+  .ways-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Form card adjustments */
+  .form-card,
+  .endorse-form-wrap{
+    padding:2rem 1.5rem;
+    border-radius:16px;
+  }
+
+  /* Volunteer section adjustments */
+  .volunteer-section{
+    padding:4rem 1.25rem;
+  }
+
+  /* Button improvements */
+  .submit-btn,
+  .btn-submit{
+    font-size:0.95rem;
+    padding:0.9rem;
+  }
+
+  /* Signature banner */
+  .sig-banner{
+    padding:2rem 1.25rem;
+  }
+
+  .sig-banner h2{
+    font-size:1.4rem;
+  }
 }
+
+/* Small Mobile: 0-480px */
 @media(max-width:480px){
-  .ways-grid{grid-template-columns:1fr}
+  .ways-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ways{
+    padding:3rem 1rem;
+  }
+
+  .way-card{
+    padding:1.75rem 1.5rem;
+  }
+
+  .volunteer-section{
+    padding:3rem 1rem;
+  }
+
+  .form-card{
+    padding:1.75rem 1.25rem;
+  }
+
+  .checkbox-list li label{
+    padding:0.5rem;
+    font-size:0.85rem;
+  }
+
+  .sig-banner{
+    padding:1.5rem 1rem;
+  }
 }
+
+/* Tablet: 768-1023px */
+@media(min-width:768px) and (max-width:1023px){
+  .ways{
+    padding:5rem 2rem;
+  }
+
+  .volunteer-section{
+    padding:5rem 2rem;
+  }
+
+  .ways-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .form-row{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .checkbox-list{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* Large screens: 1024px+ */
 @media(min-width:1024px){
-  .ways{padding:7rem 3rem}
-  .ways-inner{max-width:1200px}
-  .volunteer-section{padding:7rem 3rem}
-  .volunteer-inner{max-width:1200px;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
-  .volunteer-intro-aside{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:6rem}
-  .volunteer-aside-stat{background:var(--cream);border-radius:16px;padding:1.75rem 2rem;border-left:4px solid var(--coral)}
-  .volunteer-aside-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--coral);line-height:1;margin-bottom:0.25rem}
-  .volunteer-aside-stat-label{font-size:0.85rem;font-weight:700;color:var(--plum);letter-spacing:0.05em;text-transform:uppercase}
-  .donate-cta{padding:7rem 3rem}
-  .volunteer-form-heading,.volunteer-form-intro,.volunteer-form-col>.section-label{display:none}
-  .form-row{grid-template-columns:1fr 1fr}
+  .ways{
+    padding:7rem 3rem;
+  }
+
+  .ways-inner{
+    max-width:1200px;
+  }
+
+  .volunteer-section{
+    padding:7rem 3rem;
+  }
+
+  .volunteer-inner{
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:5rem;
+    align-items:start;
+  }
+
+  .volunteer-intro-aside{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    position:sticky;
+    top:6rem;
+  }
+
+  .volunteer-aside-stat{
+    background:var(--cream);
+    border-radius:16px;
+    padding:1.75rem 2rem;
+    border-left:4px solid var(--coral);
+  }
+
+  .volunteer-aside-stat-num{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:2.5rem;
+    color:var(--coral);
+    line-height:1;
+    margin-bottom:0.25rem;
+  }
+
+  .volunteer-aside-stat-label{
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--plum);
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+  }
+
+  .donate-cta{
+    padding:7rem 3rem;
+  }
+
+  .volunteer-form-heading,
+  .volunteer-form-intro,
+  .volunteer-form-col>.section-label{
+    display:none;
+  }
+
+  .form-row{
+    grid-template-columns:1fr 1fr;
+  }
 }
+
+/* Landscape mobile */
 @media(max-height:500px) and (orientation:landscape){
-  .sig-banner{padding:1.25rem 1.5rem}
+  .sig-banner{
+    padding:1.25rem 1.5rem;
+  }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JoinAction",
+  "target": {
+    "@type": "EntryPoint",
+    "name": "Volunteer for Cortney Peterson for Congress",
+    "url": "https://cortneyforcongress.org/get-involved.html"
+  },
+  "agent": {
+    "@type": "Organization",
+    "name": "Cortney Peterson For Congress",
+    "url": "https://cortneyforcongress.org/"
+  },
+  "description": "Join Cortney Peterson's grassroots campaign. Volunteer to canvass, phone bank, host events, or help in other ways. No PAC money — people-powered.",
+  "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+}
+</script>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <!-- NAV -->
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+<nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
-      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:52px;width:auto">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" width="171" height="104" loading="eager" style="height:52px;width:auto">
     </a>
     <div class="nav-socials">
       <a href="https://facebook.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -182,7 +355,7 @@
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
   <a href="index.html#meet" onclick="closeMobile()">About</a>
   <a href="issues.html" onclick="closeMobile()">Issues</a>
   <a href="follow-the-money.html" onclick="closeMobile()">Follow the Money</a>
@@ -303,21 +476,22 @@
       <form name="volunteer" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" id="volunteerForm">
         <input type="hidden" name="form-name" value="volunteer">
         <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <p class="form-required-note" style="font-size:0.85rem;color:var(--text-light);margin-bottom:1.5rem">Fields marked with <span class="req" aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.</p>
 
         <div class="field-row">
           <div class="field-group">
-            <label for="firstName">First Name <span class="req">*</span></label>
-            <input type="text" id="firstName" name="first_name" required autocomplete="given-name">
+            <label for="firstName">First Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="firstName" name="first_name" required aria-required="true" autocomplete="given-name">
           </div>
           <div class="field-group">
-            <label for="lastName">Last Name <span class="req">*</span></label>
-            <input type="text" id="lastName" name="last_name" required autocomplete="family-name">
+            <label for="lastName">Last Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="lastName" name="last_name" required aria-required="true" autocomplete="family-name">
           </div>
         </div>
 
         <div class="field-group">
-          <label for="email">Email Address <span class="req">*</span></label>
-          <input type="email" id="email" name="email" required autocomplete="email">
+          <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
         </div>
 
         <div class="field-group">
@@ -326,8 +500,8 @@
         </div>
 
         <div class="field-group">
-          <label for="zip">ZIP Code <span class="req">*</span></label>
-          <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" maxlength="5" inputmode="numeric" autocomplete="postal-code">
+          <label for="zip">ZIP Code <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="zip" name="zip" required aria-required="true" pattern="[0-9]{5}" maxlength="5" inputmode="numeric" autocomplete="postal-code">
         </div>
 
         <div class="field-group">
@@ -414,8 +588,8 @@
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
-<script src="/assets/js/get-involved.js"></script>
-<script src="/assets/js/signup.js"></script>
+<script src="/assets/js/site.js?v=20260322" defer></script>
+<script src="/assets/js/get-involved.js?v=20260322" defer></script>
+<script src="/assets/js/signup.js?v=20260322" defer></script>
 </body>
 </html>

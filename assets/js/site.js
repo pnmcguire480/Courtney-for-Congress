@@ -99,6 +99,167 @@ function closeMobile() {
   }
 }
 
+// Accessible nav dropdowns — keyboard support alongside existing hover behavior
+// Implements WCAG 2.1 SC 2.1.1 (Keyboard) and ARIA menu pattern
+(function() {
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  if (!dropdowns.length) return;
+
+  // Close a single dropdown and update ARIA state
+  function closeDropdown(dropdown) {
+    dropdown.classList.remove('open');
+    var trigger = dropdown.querySelector(':scope > a');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  }
+
+  // Open a single dropdown, close siblings, and update ARIA state
+  function openDropdown(dropdown) {
+    // Close all other dropdowns first
+    dropdowns.forEach(function(d) {
+      if (d !== dropdown) closeDropdown(d);
+    });
+    dropdown.classList.add('open');
+    var trigger = dropdown.querySelector(':scope > a');
+    if (trigger) trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  // Close all dropdowns
+  function closeAllDropdowns() {
+    dropdowns.forEach(function(d) { closeDropdown(d); });
+  }
+
+  // Get focusable menu items within a dropdown menu
+  function getMenuItems(dropdown) {
+    var menu = dropdown.querySelector('.nav-dropdown-menu');
+    return menu ? menu.querySelectorAll('a[href]') : [];
+  }
+
+  // Set up each dropdown
+  dropdowns.forEach(function(dropdown) {
+    var trigger = dropdown.querySelector(':scope > a');
+    if (!trigger) return;
+
+    // Initialize ARIA attributes via JS (HTML attrs added separately)
+    if (!trigger.hasAttribute('aria-expanded')) {
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    if (!trigger.hasAttribute('aria-haspopup')) {
+      trigger.setAttribute('aria-haspopup', 'true');
+    }
+
+    // Keyboard handler on the trigger link
+    trigger.addEventListener('keydown', function(e) {
+      var isOpen = dropdown.classList.contains('open');
+      var items = getMenuItems(dropdown);
+
+      switch (e.key) {
+        case 'Enter':
+        case ' ':
+          // Toggle dropdown open/closed
+          e.preventDefault();
+          if (isOpen) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+            // Focus the first menu item
+            if (items.length) items[0].focus();
+          }
+          break;
+
+        case 'ArrowDown':
+          // Open and focus first item (or focus first item if already open)
+          e.preventDefault();
+          if (!isOpen) openDropdown(dropdown);
+          items = getMenuItems(dropdown); // re-query after open
+          if (items.length) items[0].focus();
+          break;
+
+        case 'ArrowUp':
+          // Open and focus last item
+          e.preventDefault();
+          if (!isOpen) openDropdown(dropdown);
+          items = getMenuItems(dropdown);
+          if (items.length) items[items.length - 1].focus();
+          break;
+
+        case 'Escape':
+          if (isOpen) {
+            e.preventDefault();
+            closeDropdown(dropdown);
+            trigger.focus();
+          }
+          break;
+      }
+    });
+
+    // Keyboard handler on menu items inside the dropdown
+    var menu = dropdown.querySelector('.nav-dropdown-menu');
+    if (menu) {
+      menu.addEventListener('keydown', function(e) {
+        var items = getMenuItems(dropdown);
+        if (!items.length) return;
+
+        // Find current index
+        var currentIndex = -1;
+        for (var i = 0; i < items.length; i++) {
+          if (items[i] === document.activeElement) { currentIndex = i; break; }
+        }
+
+        switch (e.key) {
+          case 'ArrowDown':
+            e.preventDefault();
+            // Move to next item, wrap to first
+            var nextIndex = (currentIndex + 1) % items.length;
+            items[nextIndex].focus();
+            break;
+
+          case 'ArrowUp':
+            e.preventDefault();
+            // Move to previous item, wrap to last
+            var prevIndex = (currentIndex - 1 + items.length) % items.length;
+            items[prevIndex].focus();
+            break;
+
+          case 'Escape':
+            e.preventDefault();
+            closeDropdown(dropdown);
+            trigger.focus();
+            break;
+
+          case 'Tab':
+            // Let Tab move naturally but close the dropdown
+            closeDropdown(dropdown);
+            break;
+
+          case 'Home':
+            e.preventDefault();
+            items[0].focus();
+            break;
+
+          case 'End':
+            e.preventDefault();
+            items[items.length - 1].focus();
+            break;
+        }
+      });
+    }
+  });
+
+  // Click outside closes all dropdowns
+  document.addEventListener('click', function(e) {
+    var insideDropdown = false;
+    dropdowns.forEach(function(d) {
+      if (d.contains(e.target)) insideDropdown = true;
+    });
+    if (!insideDropdown) closeAllDropdowns();
+  });
+
+  // Global Escape key closes any open dropdown (when focus is elsewhere)
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAllDropdowns();
+  });
+})();
+
 // Scroll reveal animations (respects prefers-reduced-motion via CSS)
 var reveals = document.querySelectorAll('.reveal');
 if (reveals.length) {

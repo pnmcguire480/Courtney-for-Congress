@@ -17,11 +17,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://cortneyforcongress.org/endorsements.html">
 <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/a11y.css">
-<link rel="stylesheet" href="/assets/css/core.css">
-<link rel="stylesheet" href="/assets/css/theme.css">
-<link rel="stylesheet" href="/assets/css/responsive.css">
+<link rel="preload" href="/assets/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/playfair-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/a11y.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/core.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/theme.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/responsive.css?v=20260322">
 <style>
 /* HERO */
 .hero-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral-light);margin-bottom:1rem;text-transform:uppercase}
@@ -75,7 +78,7 @@
 .form-group label{font-size:0.85rem;font-weight:600;letter-spacing:0.05em;color:var(--plum);text-transform:uppercase}
 .form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border-radius:8px;border:1.5px solid rgba(71,13,68,0.15);background:var(--cream);color:var(--text);font-size:1rem;font-family:'Source Sans 3',sans-serif;transition:border-color 0.3s}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-light)}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--plum)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--plum)}
 .form-group select option{color:var(--text);background:var(--cream)}
 .form-group textarea{resize:vertical;min-height:110px}
 .btn-submit{width:100%;padding:1rem;background:var(--plum);color:var(--cream);font-size:1.05rem;font-weight:700;letter-spacing:0.06em;border:none;border-radius:10px;cursor:pointer;transition:background 0.3s,transform 0.2s;font-family:'Source Sans 3',sans-serif;margin-top:0.5rem}
@@ -100,39 +103,197 @@ footer .signup-form button:hover{background:var(--plum-light)}
 footer .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(71,13,68,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;font-size:0.8rem;color:var(--text-light)}
 
 /* RESPONSIVE */
-@media(max-width:768px){
-  .footer-inner{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
+
+/* Mobile: 0-767px */
+@media(max-width:767px){
+  /* Grids: single column */
+  .endorsement-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .org-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  /* Forms: single column */
+  .form-row{
+    grid-template-columns:1fr !important;
+  }
+
+  .endorse-cta-inner{
+    grid-template-columns:1fr !important;
+    gap:2rem;
+  }
+
+  /* Featured org: single column */
+  .org-featured{
+    grid-template-columns:1fr !important;
+  }
+
+  .org-featured-body{
+    padding:1.5rem !important;
+  }
+
+  /* Section padding */
+  .section{
+    padding:4rem 1.25rem;
+  }
+
+  /* Form wrapper */
+  .endorse-form-wrap{
+    padding:2rem 1.5rem;
+    border-radius:12px;
+  }
+
+  /* Endorse CTA */
+  .endorse-cta{
+    padding:4rem 1.25rem;
+    text-align:center;
+  }
+
+  .endorse-cta h2{
+    font-size:clamp(1.6rem,5vw,2.2rem);
+  }
 }
+
+/* Small Mobile: 0-480px */
 @media(max-width:480px){
-  .endorsement-grid{grid-template-columns:1fr}
-  .org-grid{grid-template-columns:1fr}
-  .endorse-form-wrap{padding:1.75rem 1.25rem}
+  .section{
+    padding:3rem 1rem;
+  }
+
+  .endorsement-card{
+    padding:1.75rem 1.5rem;
+  }
+
+  .org-card{
+    padding:1.25rem 1.5rem;
+  }
+
+  .endorse-form-wrap{
+    padding:1.75rem 1.25rem;
+  }
+
+  .endorse-cta{
+    padding:3rem 1rem;
+  }
+
+  .endorse-pull{
+    padding:1rem 0 1rem 1.25rem;
+    font-size:1.1rem;
+  }
+
+  /* Footer adjustments */
+  footer .signup-form{
+    flex-direction:column;
+    gap:0.75rem;
+  }
+
+  footer .signup-form input[type="email"]{
+    min-width:auto;
+  }
 }
+
+/* Tablet: 768-1023px */
+@media(min-width:768px) and (max-width:1023px){
+  .section{
+    padding:5rem 2rem;
+  }
+
+  .endorsement-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .org-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .endorse-cta{
+    padding:5rem 2rem;
+  }
+
+  .form-row{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* Large screens: 1024px+ */
 @media(min-width:1024px){
-  .section{padding:6.5rem 3rem}
-  .endorsement-grid{grid-template-columns:repeat(3,1fr)}
-  .org-grid{grid-template-columns:repeat(3,1fr)}
-  .endorse-cta{padding:7rem 3rem;text-align:left}
-  .endorse-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-  .endorse-cta h2{font-size:3rem}
-  .endorse-cta p{margin:0 0 0;text-align:left;max-width:none}
-  .endorse-pull{display:block}
-  .endorse-form-wrap{max-width:none;margin:0}
+  .section{
+    padding:6.5rem 3rem;
+  }
+
+  .endorsement-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .org-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .endorse-cta{
+    padding:7rem 3rem;
+    text-align:left;
+  }
+
+  .endorse-cta-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5rem;
+    align-items:start;
+  }
+
+  .endorse-cta h2{
+    font-size:3rem;
+  }
+
+  .endorse-cta p{
+    margin:0 0 0;
+    text-align:left;
+    max-width:none;
+  }
+
+  .endorse-pull{
+    display:block;
+  }
+
+  .endorse-form-wrap{
+    max-width:none;
+    margin:0;
+  }
 }
+
+/* Landscape mobile */
 @media(max-height:500px) and (orientation:landscape){
-  .endorse-cta{padding:2.5rem 1.5rem}
+  .endorse-cta{
+    padding:2.5rem 1.5rem;
+  }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cortney Peterson For Congress",
+  "url": "https://cortneyforcongress.org/",
+  "description": "Endorsements for Cortney Peterson, Independent candidate for Ohio's 11th Congressional District.",
+  "areaServed": "OH-11",
+  "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+}
+</script>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <!-- NAV -->
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+<nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Cortney Peterson — Independent for Congress, OH-11">
-      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" style="height:52px;width:auto">
+      <img src="assets/images/campaign-logo.png" alt="Cortney Peterson — Independent for Congress, OH-11" width="171" height="104" loading="eager" style="height:52px;width:auto">
     </a>
     <div class="nav-socials">
       <a href="https://facebook.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -180,7 +341,7 @@ footer .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(7
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
   <a href="index.html#meet" onclick="closeMobile()">About</a>
   <a href="issues.html" onclick="closeMobile()">Issues</a>
   <a href="follow-the-money.html" onclick="closeMobile()">Follow the Money</a>
@@ -249,7 +410,10 @@ footer .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(7
 
     <div class="org-grid">
       <div class="org-card org-featured reveal">
-        <img src="assets/images/CI-CC-1080x1080-Peterson-OH11.jpeg" alt="Cortney Peterson — Courage Candidate, Citizens' Impeachment — Courage for Democracy" class="org-featured-img" width="1080" height="1080" loading="lazy">
+        <picture>
+          <source srcset="assets/images/CI-CC-1080x1080-Peterson-OH11.webp" type="image/webp">
+          <img src="assets/images/CI-CC-1080x1080-Peterson-OH11.jpeg" alt="Cortney Peterson — Courage Candidate, Citizens' Impeachment — Courage for Democracy" class="org-featured-img" width="1080" height="1080" loading="lazy">
+        </picture>
         <div class="org-featured-body">
           <div class="org-name" style="font-size:1.2rem;margin-bottom:0.4rem"><a href="https://couragefordemocracy.com/candidate/cortney-peterson/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--coral)">Citizens' Impeachment — Courage for Democracy</a></div>
           <div class="org-type" style="margin-bottom:1rem">Democracy &amp; Anti-Corruption — Courage Candidate</div>
@@ -360,8 +524,8 @@ footer .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(7
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
-<script src="/assets/js/endorsements.js"></script>
-<script src="/assets/js/signup.js"></script>
+<script src="/assets/js/site.js?v=20260322" defer></script>
+<script src="/assets/js/endorsements.js?v=20260322" defer></script>
+<script src="/assets/js/signup.js?v=20260322" defer></script>
 </body>
 </html>

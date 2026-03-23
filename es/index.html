@@ -20,11 +20,14 @@
 <link rel="alternate" hreflang="x-default" href="https://cortneyforcongress.org/">
 <link rel="canonical" href="https://cortneyforcongress.org/es/">
 <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/a11y.css">
-<link rel="stylesheet" href="/assets/css/core.css">
-<link rel="stylesheet" href="/assets/css/theme.css">
-<link rel="stylesheet" href="/assets/css/responsive.css">
+<link rel="preload" href="../assets/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/playfair-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/a11y.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/core.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/theme.css?v=20260322">
+<link rel="stylesheet" href="/assets/css/responsive.css?v=20260322">
 <style>
 /* NAV OVERRIDES (es) */
 .nav-links a{border-radius:6px}
@@ -56,7 +59,7 @@
 
 /* SECTIONS (es overrides) */
 section{padding:5rem 1.5rem}
-.section-inner{max-width:1000px;margin:0 auto}
+.section-inner{margin:0 auto}
 
 /* MEET */
 .meet{background:var(--cream)}
@@ -129,14 +132,167 @@ section{padding:5rem 1.5rem}
 .reveal{transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
 
 /* RESPONSIVE */
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero-quote{margin-left:auto;margin-right:auto;border-left:none;padding-left:0;border-bottom:3px solid var(--coral);padding-bottom:1rem}.hero-btns{justify-content:center}.hero-image-wrap{max-width:400px;margin:0 auto}}
-@media(max-width:768px){section{padding:3.5rem 1.25rem}.priorities-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}.pledge-box{padding:2.5rem 1.5rem}.acc-cards{grid-template-columns:1fr}}
-@media(min-width:1024px){.hero{padding:8rem 3rem 5rem}section{padding:6.5rem 3rem}.meet-grid{grid-template-columns:3fr 2fr;gap:3.5rem;align-items:start}.meet-sidebar{position:sticky;top:6rem}.acc-cards{grid-template-columns:repeat(2,1fr)}.vision .section-inner{max-width:1100px}.priorities-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}.connect-inner{gap:4rem}}
-@media(max-width:480px){.hero{min-height:auto;padding:5.5rem 1.25rem 3rem}.btn{padding:0.75rem 1.5rem;font-size:0.8rem}.priorities-grid{grid-template-columns:1fr 1fr}}
+
+/* Mobile: 0-767px */
+@media(max-width:767px){
+  /* Hero: force single column */
+  .hero-inner{
+    grid-template-columns:1fr !important;
+    text-align:center;
+    gap:2rem;
+  }
+
+  .hero-quote{
+    margin-left:auto;
+    margin-right:auto;
+    border-left:none;
+    padding-left:0;
+    border-bottom:3px solid var(--coral);
+    padding-bottom:1rem;
+  }
+
+  .hero-btns{
+    justify-content:center;
+  }
+
+  .hero-image-wrap{
+    max-width:320px;
+    margin:0 auto;
+  }
+
+  /* Accomplishments: single column */
+  .acc-cards{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Priorities: responsive grid */
+  .priorities-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:1rem;
+  }
+
+  /* Pledge box */
+  .pledge-box{
+    padding:2rem 1.5rem;
+    border-radius:16px;
+  }
+
+  /* Section padding */
+  section{
+    padding:3.5rem 1.25rem;
+  }
+}
+
+/* Small Mobile: 0-480px */
+@media(max-width:480px){
+  .hero{
+    min-height:auto;
+    padding:5.5rem 1rem 3rem;
+  }
+
+  .hero-image-wrap{
+    max-width:280px;
+  }
+
+  .btn{
+    padding:0.85rem 1.5rem;
+    font-size:0.85rem;
+    width:100%;
+  }
+
+  .hero-btns{
+    flex-direction:column;
+    gap:0.75rem;
+  }
+
+  /* Priorities: single column on tiny screens */
+  .priorities-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Reduce padding in cards */
+  .golden-rule,
+  .not-a-politician{
+    padding:1.75rem;
+    border-radius:12px;
+  }
+
+  .acc-card{
+    padding:2rem 1.5rem;
+  }
+
+  section{
+    padding:3rem 1rem;
+  }
+}
+
+/* Tablet: 768-1023px */
+@media(min-width:768px) and (max-width:1023px){
+  .hero-inner{
+    gap:3rem;
+  }
+
+  .priorities-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .acc-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  section{
+    padding:4.5rem 2rem;
+  }
+}
+
+/* Large screens: 1024px+ */
+@media(min-width:1024px){
+  .hero{
+    padding:8rem 3rem 5rem;
+  }
+
+  section{
+    padding:6.5rem 3rem;
+  }
+
+  .meet-grid{
+    grid-template-columns:3fr 2fr;
+    gap:3.5rem;
+    align-items:start;
+  }
+
+  .meet-sidebar{
+    position:sticky;
+    top:6rem;
+  }
+
+  .acc-cards{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .priorities-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .connect-inner{
+    gap:4rem;
+  }
+}
+
+/* Landscape mobile */
 @media(max-height:500px) and (orientation:landscape){
-  .hero{min-height:auto;padding:5rem 1.5rem 2.5rem}
-  section{padding:3rem 1.5rem}
-  .pledge-box{padding:2rem 1.5rem}
+  .hero{
+    min-height:auto;
+    padding:5rem 1.5rem 2.5rem;
+  }
+
+  section{
+    padding:3rem 1.5rem;
+  }
+
+  .pledge-box{
+    padding:2rem 1.5rem;
+  }
 }
 </style>
 </head>
@@ -144,10 +300,10 @@ section{padding:5rem 1.5rem}
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <!-- NAV -->
-<nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+<nav class="nav" id="nav" aria-label="Navegación principal">
   <div class="nav-inner">
     <a href="/es/" class="nav-logo" aria-label="Cortney Peterson — Independiente para el Congreso, OH-11">
-      <img src="../assets/images/campaign-logo.png" alt="Cortney Peterson — Independiente para el Congreso, OH-11" style="height:52px;width:auto">
+      <img src="../assets/images/campaign-logo.png" alt="Cortney Peterson — Independiente para el Congreso, OH-11" width="171" height="104" loading="eager" style="height:52px;width:auto">
     </a>
     <div class="nav-socials">
       <a href="https://facebook.com/cortneyforcongress" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -196,7 +352,7 @@ section{padding:5rem 1.5rem}
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
   <a href="#conocela" onclick="closeMobile()">Sobre Ella</a>
   <a href="../issues.html" onclick="closeMobile()">Propuestas</a>
   <a href="../follow-the-money.html" onclick="closeMobile()">Sigue el Dinero</a>
@@ -234,7 +390,10 @@ section{padding:5rem 1.5rem}
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-frame">
-        <img src="../assets/images/cortney-headshot.jpeg" alt="Cortney Peterson, candidata independiente para el 11.º Distrito Congresional de Ohio" width="480" height="640" loading="eager">
+        <picture>
+          <source srcset="../assets/images/cortney-headshot.webp" type="image/webp">
+          <img src="../assets/images/cortney-headshot.jpeg" alt="Cortney Peterson, candidata independiente para el 11.º Distrito Congresional de Ohio" width="480" height="640" loading="eager">
+        </picture>
       </div>
       <div class="hero-badge">Madre · Enfermera · Luchadora</div>
     </div>
@@ -390,7 +549,7 @@ section{padding:5rem 1.5rem}
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
-<script src="/assets/js/signup-es.js"></script>
+<script src="/assets/js/site.js?v=20260322" defer></script>
+<script src="/assets/js/signup-es.js?v=20260322" defer></script>
 </body>
 </html>
