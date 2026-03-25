@@ -177,6 +177,20 @@
     padding:7rem 3rem;
   }
 }
+
+/* TIER HEADERS */
+.tier-header{text-align:center;padding:2.5rem 1rem 1rem;margin-top:1rem}
+.tier-label{font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.25em;color:var(--coral);text-transform:uppercase;display:block;margin-bottom:0.25rem}
+.tier-header .tier-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,1.8rem);color:var(--plum);font-weight:900;margin:0}
+.tier-header .tier-title em{color:var(--coral);font-style:italic}
+
+/* TOP PRIORITY BLOCKS */
+.issue-block.top-priority{background:linear-gradient(135deg,#f4eef8 0%,#fef0e8 100%);border:2px solid var(--coral);position:relative}
+.issue-block.top-priority::before{content:'★';position:absolute;top:1rem;right:1.25rem;font-size:1.5rem;color:var(--coral);opacity:0.4}
+
+@media(max-width:767px){
+  .tier-header{padding:2rem 0.5rem 0.75rem}
+}
 </style>
 </head>
 <body>
@@ -274,21 +288,21 @@
 <!-- QUICK NAV PILLS -->
 <nav class="issue-nav" aria-label="Jump to issue">
   <div class="issue-pills">
-    <a href="#foreign-influence" class="issue-pill">🏛️ Foreign Influence</a>
     <a href="#corporate-influence" class="issue-pill">💼 Corporate Influence</a>
-    <a href="#tax-the-rich" class="issue-pill">💰 Tax the Rich</a>
+    <a href="#housing" class="issue-pill">🏠 Housing</a>
     <a href="#medicare" class="issue-pill">🏥 Medicare for All</a>
-    <a href="#reproductive-freedom" class="issue-pill">❤️ Reproductive Freedom</a>
+    <a href="#green-new-deal" class="issue-pill">🌿 Green New Deal</a>
+    <a href="#tax-the-rich" class="issue-pill">💰 Tax the Rich</a>
     <a href="#childcare" class="issue-pill">🏡 Childcare</a>
+    <a href="#wages" class="issue-pill">📈 Wages & UBI</a>
     <a href="#education" class="issue-pill">🎓 Education</a>
     <a href="#family-leave" class="issue-pill">👨‍👩‍👧 Family Leave</a>
-    <a href="#green-new-deal" class="issue-pill">🌿 Green New Deal</a>
-    <a href="#housing" class="issue-pill">🏠 Housing</a>
-    <a href="#wages" class="issue-pill">📈 Wages & UBI</a>
+    <a href="#reproductive-freedom" class="issue-pill">❤️ Reproductive Freedom</a>
     <a href="#gun-laws" class="issue-pill">🔫 Gun Laws</a>
+    <a href="#foreign-influence" class="issue-pill">🏛️ Foreign Influence</a>
     <a href="#human-rights" class="issue-pill">🌈 Human Rights</a>
-    <a href="#abolish-ice" class="issue-pill">✊ Abolish ICE</a>
     <a href="#prison-industrial-complex" class="issue-pill">⚖️ Prison Industrial Complex</a>
+    <a href="#abolish-ice" class="issue-pill">✊ Abolish ICE</a>
     <a href="#military-industrial-complex" class="issue-pill">🕊️ Military Industrial Complex</a>
   </div>
 </nav>
@@ -306,24 +320,14 @@
 
 <main id="main-content" class="issues-body">
 
-  <div class="issue-block reveal" id="foreign-influence">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏛️</span><span class="issue-num">Issue 01</span></div>
-    <h2>End <em>Foreign Influence</em> in American Politics</h2>
-    <div class="issue-body">
-      <p>Our representatives are supposed to work for us — the people of Ohio's 11th. But when foreign nations funnel millions into our political system through PACs, they're buying votes that should belong to you. <strong>No foreign government should have a say in American policy.</strong> Period.</p>
-      <p>I will never accept donations from foreign PACs — not AIPAC, not any pro-Israel or pro-any-foreign-government PAC. Our foreign policy must be driven by what's good for the American people, not what benefits foreign lobbies who've purchased our representatives' loyalties.</p>
-      <ul class="issue-points" role="list">
-        <li>Make AIPAC register under the Foreign Agents Registration Act (FARA) — this is the first priority</li>
-        <li>Ban all foreign PAC contributions to federal campaigns and enforce existing laws with real penalties</li>
-        <li>Full transparency and disclosure for all foreign lobbying activity</li>
-        <li>Mandatory conflict-of-interest reviews for any member who received foreign PAC money</li>
-        <li>End American complicity in foreign atrocities — our tax dollars should not fund genocide</li>
-      </ul>
-    </div>
+  <!-- TIER 1: FIGHTING FOR OH-11 -->
+  <div class="tier-header">
+    <span class="tier-label">TOP PRIORITIES</span>
+    <h2 class="tier-title">Fighting for <em>OH-11</em></h2>
   </div>
 
-  <div class="issue-block reveal" id="corporate-influence">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">💼</span><span class="issue-num">Issue 02</span></div>
+  <div class="issue-block top-priority reveal" id="corporate-influence">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">💼</span><span class="issue-num">Priority 01</span></div>
     <h2>End <em>Corporate Influence</em> in American Politics</h2>
     <div class="issue-body">
       <p>Big Tech, Big Oil, Big Pharma, and Wall Street have turned Congress into their personal lobbying shop. They write the laws that govern them, set the prices you pay, and then pocket billions while working families struggle to make rent. <strong>That ends with me.</strong></p>
@@ -337,8 +341,70 @@
     </div>
   </div>
 
+  <div class="issue-block top-priority reveal" id="housing">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏠</span><span class="issue-num">Priority 02</span></div>
+    <h2><em>Affordable Housing</em> — A Home Is Not a Luxury</h2>
+    <div class="issue-body">
+      <p>Nobody should be unhoused. Nobody. <strong>When hedge funds buy up neighborhoods and turn homes into financial instruments, ordinary people get squeezed out.</strong> Housing is a human right, not an investment vehicle for billionaires.</p>
+      <p>Ohio's 11th has communities that were once thriving working-class neighborhoods. We can rebuild that. But it requires fighting back against corporate landlords, investing in public housing, and making sure working families can afford to stay in the communities they built.</p>
+      <ul class="issue-points" role="list">
+        <li>Massive federal investment in affordable and public housing construction</li>
+        <li>Tax penalties for vacant properties owned by corporations</li>
+        <li>Limit corporate ownership of single-family homes</li>
+        <li>Expand and strengthen tenant protections and rent stabilization</li>
+        <li>End homelessness through Housing First programs — permanent housing is cheaper than emergency services</li>
+      </ul>
+      <div class="cite-block">
+        <span class="cite-label">Legislation &amp; Sources</span>
+        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/788" target="_blank" rel="noopener noreferrer">S. 788 — HOPE (Humans over Private Equity) for Homeownership Act</a> — Limits corporate/PE ownership of single-family homes. | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/967" target="_blank" rel="noopener noreferrer">S. 967 — Downpayment Toward Equity Act</a> | <a href="https://www.merkley.senate.gov/wp-content/uploads/2023/12/End-Hedge-Fund-Control-of-American-Homes-Act-1-page-Summary.pdf" target="_blank" rel="noopener noreferrer">End Hedge Fund Control of American Homes Act — Summary (Sen. Merkley)</a> | <a href="https://www.padilla.senate.gov/wp-content/uploads/Housing-for-All-Act-of-2025_Section-by-Section_Final_4.3.25.pdf" target="_blank" rel="noopener noreferrer">Housing for All Act of 2025 — Section by Section (Sen. Padilla)</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="issue-block top-priority reveal" id="medicare">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏥</span><span class="issue-num">Priority 03</span></div>
+    <h2><em>Medicare for All</em> — Healthcare Is a Human Right</h2>
+    <div class="issue-body">
+      <p>As a nurse, I've seen what happens when people can't afford care. I've watched patients delay treatment, ration insulin, and choose between rent and prescriptions. <strong>Healthcare is not a luxury. It is a basic human right.</strong></p>
+      <p>I know this system from the inside. I've spent 12 years as an LPN — including work as an Anesthesia Technician, Pediatric Outpatient Nurse, and Cardiac Data Abstractor. I've seen how a broken insurance system harms both patients and caregivers. And I've personally navigated it as someone who required a stent placed in my brain. The system failed people like me long before it was my turn to need it.</p>
+      <p><em>Healthy people keep people healthy. Sick people keep people sick.</em> Medicare for All is not just a healthcare policy — it is an economic policy, a workforce policy, and a moral statement about what kind of country we want to be.</p>
+      <ul class="issue-points" role="list">
+        <li>Expand Medicare to cover every American from birth — no premiums, no deductibles, no network restrictions</li>
+        <li>Include dental, vision, hearing, and mental health coverage</li>
+        <li>Negotiate drug prices directly — end the price-gouging that kills Americans</li>
+        <li>Eliminate medical debt — no American should go bankrupt for getting sick</li>
+      </ul>
+      <div class="cite-block">
+        <span class="cite-label">Legislation &amp; Sources</span>
+        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/3069" target="_blank" rel="noopener noreferrer">H.R. 3069 — Medicare for All Act</a> (Rep. Jayapal) | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/1506" target="_blank" rel="noopener noreferrer">S. 1506 — Medicare for All Act</a> — Establishes a national health insurance program covering all Americans. No premiums, no deductibles, no copays for covered services.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2: KITCHEN TABLE ISSUES -->
+  <div class="tier-header">
+    <span class="tier-label">BREAD & BUTTER</span>
+    <h2 class="tier-title">Kitchen Table <em>Issues</em></h2>
+  </div>
+
+  <div class="issue-block reveal" id="green-new-deal">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🌿</span><span class="issue-num">Priority 04</span></div>
+    <h2>Green New Deal &amp; <em>Data Center Threats</em> — Good Jobs, Livable Planet</h2>
+    <div class="issue-body">
+      <p>Climate change is not a future problem. It's here, it's happening, and communities across Ohio are already paying the price. <strong>A just transition to clean energy creates good union jobs</strong> while saving the planet our kids will inherit. That's not a contradiction — it's a blueprint.</p>
+      <p>And we need to talk about data centers. The explosion of AI and crypto infrastructure is consuming massive amounts of water and electricity in communities like ours — often without the jobs and tax revenue being promised. We need regulation that puts Ohio communities first.</p>
+      <ul class="issue-points" role="list">
+        <li>Pass the Green New Deal — invest in clean energy, manufacturing, and infrastructure</li>
+        <li>Create union-wage green jobs in Ohio's 11th — retrofit buildings, build transit, modernize the grid</li>
+        <li>Hold data centers accountable for water usage, power consumption, and local impact</li>
+        <li>Rejoin and strengthen international climate agreements</li>
+        <li>Environmental justice — communities of color and working-class neighborhoods bear the brunt of pollution; that ends now</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="issue-block reveal" id="tax-the-rich">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">💰</span><span class="issue-num">Issue 03</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">💰</span><span class="issue-num">Priority 05</span></div>
     <h2>Tax the Rich <em>&amp; Corporations</em> — Make the System Work for Us</h2>
     <div class="issue-body">
       <p>The tax code is a map of who has power in this country — and right now, it's been rewritten by and for the ultra-wealthy and the corporations that lobby for them. The so-called "Big Beautiful Bill" is a perfect example: corporate tax breaks disguised as economic growth, while working families foot the bill. <strong>I'm here to say: enough.</strong></p>
@@ -359,44 +425,8 @@
     </div>
   </div>
 
-  <div class="issue-block reveal" id="medicare">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏥</span><span class="issue-num">Issue 04</span></div>
-    <h2><em>Medicare for All</em> — Healthcare Is a Human Right</h2>
-    <div class="issue-body">
-      <p>As a nurse, I've seen what happens when people can't afford care. I've watched patients delay treatment, ration insulin, and choose between rent and prescriptions. <strong>Healthcare is not a luxury. It is a basic human right.</strong></p>
-      <p>I know this system from the inside. I've spent 12 years as an LPN — including work as an Anesthesia Technician, Pediatric Outpatient Nurse, and Cardiac Data Abstractor. I've seen how a broken insurance system harms both patients and caregivers. And I've personally navigated it as someone who required a stent placed in my brain. The system failed people like me long before it was my turn to need it.</p>
-      <p><em>Healthy people keep people healthy. Sick people keep people sick.</em> Medicare for All is not just a healthcare policy — it is an economic policy, a workforce policy, and a moral statement about what kind of country we want to be.</p>
-      <ul class="issue-points" role="list">
-        <li>Expand Medicare to cover every American from birth — no premiums, no deductibles, no network restrictions</li>
-        <li>Include dental, vision, hearing, and mental health coverage</li>
-        <li>Negotiate drug prices directly — end the price-gouging that kills Americans</li>
-        <li>Eliminate medical debt — no American should go bankrupt for getting sick</li>
-      </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/house-bill/3069" target="_blank" rel="noopener noreferrer">H.R. 3069 — Medicare for All Act</a> (Rep. Jayapal) | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/1506" target="_blank" rel="noopener noreferrer">S. 1506 — Medicare for All Act</a> — Establishes a national health insurance program covering all Americans. No premiums, no deductibles, no copays for covered services.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="issue-block reveal" id="reproductive-freedom">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">❤️</span><span class="issue-num">Issue 05</span></div>
-    <h2><em>Reproductive Freedom</em> — Government Stays Out of Our Bodies</h2>
-    <div class="issue-body">
-      <p>Medical decisions belong to patients and their doctors — not politicians. <strong>Government has no place in the most personal decisions of our lives.</strong> And as a nurse, I can tell you with absolute certainty that restricting reproductive healthcare doesn't eliminate it — it just makes it dangerous.</p>
-      <p>Reproductive freedom isn't a partisan issue. It's a healthcare issue. It's a human rights issue. And it's an economic issue — when women can't control if and when they have children, it directly impacts their ability to work, build savings, and provide for their families.</p>
-      <ul class="issue-points" role="list">
-        <li>Codify Roe v. Wade into federal law — a woman's right to choose is non-negotiable</li>
-        <li>Protect access to contraception and family planning services</li>
-        <li>Fully fund Planned Parenthood and community health clinics</li>
-        <li>End restrictions on IVF and fertility treatments</li>
-        <li>Ensure abortion access in cases of rape, incest, and medical necessity — always</li>
-      </ul>
-    </div>
-  </div>
-
   <div class="issue-block reveal" id="childcare">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏡</span><span class="issue-num">Issue 06</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏡</span><span class="issue-num">Priority 06</span></div>
     <h2>Affordable &amp; Accessible <em>Childcare</em></h2>
     <div class="issue-body">
       <p>I am a single mom raising two boys. I know firsthand the impossible math of childcare costs. When you earn a working-class wage and quality childcare costs more than your rent, <strong>something is deeply, fundamentally broken.</strong></p>
@@ -414,8 +444,28 @@
     </div>
   </div>
 
+  <div class="issue-block reveal" id="wages">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">📈</span><span class="issue-num">Priority 07</span></div>
+    <h2>Livable Wages &amp; <em>Universal Basic Income</em></h2>
+    <div class="issue-body">
+      <p>If your job doesn't pay enough for you to live, that's not a personal failing — that's exploitation. <strong>When CEOs earn 400 times what their workers make, that's not a free market — it's a rigged game.</strong> The minimum wage hasn't kept up with productivity or inflation in decades. We fix that now.</p>
+      <p>And we need to seriously talk about Universal Basic Income — a floor beneath which no American can fall. The wealth this country creates should be shared, not hoarded by the few who own everything.</p>
+      <ul class="issue-points" role="list">
+        <li>Federal minimum wage of at least $17/hour, as proposed by Senator Bernie Sanders — indexed to median wages thereafter</li>
+        <li>Strengthen unions — workers who organize have higher wages, better benefits, and more dignity</li>
+        <li>Explore and implement Universal Basic Income legislation — a floor beneath which no American can fall</li>
+        <li>End tipped wages — all workers deserve a full, living wage before tips</li>
+        <li>Worker representation on corporate boards — you build the company, you have a say in it</li>
+      </ul>
+      <div class="cite-block">
+        <span class="cite-label">Legislation &amp; Sources</span>
+        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1332" target="_blank" rel="noopener noreferrer">S. 1332 — Raise the Wage Act of 2025</a> (Sen. Sanders) | <a href="https://www.congress.gov/bill/119th-congress/house-bill/2743" target="_blank" rel="noopener noreferrer">H.R. 2743 — Raise the Wage Act of 2025</a> — Raises federal minimum wage to $17/hr over 5 years, indexed to median wage thereafter. Ends subminimum tipped wage. | <a href="https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis" target="_blank" rel="noopener noreferrer">Rep. Tlaib — Economic Dignity for All Agenda</a></p>
+      </div>
+    </div>
+  </div>
+
   <div class="issue-block reveal" id="education">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🎓</span><span class="issue-num">Issue 07</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🎓</span><span class="issue-num">Priority 08</span></div>
     <h2>Free Education — <em>Pre-K Through College</em> (Including Trade Schools)</h2>
     <div class="issue-body">
       <p>Education is the foundation of the American Dream. But we've let it become a debt trap. <strong>No young person should start their adult life tens of thousands of dollars in the hole</strong> just for trying to build a better future. And trade skills are just as valuable as a four-year degree — our policies should reflect that.</p>
@@ -435,7 +485,7 @@
   </div>
 
   <div class="issue-block reveal" id="family-leave">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">👨‍👩‍👧</span><span class="issue-num">Issue 08</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">👨‍👩‍👧</span><span class="issue-num">Priority 09</span></div>
     <h2>Paid <em>Family Leave</em> — Basic Human Dignity</h2>
     <div class="issue-body">
       <p>The United States is the only wealthy nation in the world without guaranteed paid family leave. Let that sink in. <strong>Every other developed nation has figured this out. We haven't — because corporate lobbyists don't want to pay for it.</strong></p>
@@ -450,64 +500,30 @@
     </div>
   </div>
 
-  <div class="issue-block reveal" id="green-new-deal">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🌿</span><span class="issue-num">Issue 09</span></div>
-    <h2>Green New Deal &amp; <em>Data Center Threats</em> — Good Jobs, Livable Planet</h2>
-    <div class="issue-body">
-      <p>Climate change is not a future problem. It's here, it's happening, and communities across Ohio are already paying the price. <strong>A just transition to clean energy creates good union jobs</strong> while saving the planet our kids will inherit. That's not a contradiction — it's a blueprint.</p>
-      <p>And we need to talk about data centers. The explosion of AI and crypto infrastructure is consuming massive amounts of water and electricity in communities like ours — often without the jobs and tax revenue being promised. We need regulation that puts Ohio communities first.</p>
-      <ul class="issue-points" role="list">
-        <li>Pass the Green New Deal — invest in clean energy, manufacturing, and infrastructure</li>
-        <li>Create union-wage green jobs in Ohio's 11th — retrofit buildings, build transit, modernize the grid</li>
-        <li>Hold data centers accountable for water usage, power consumption, and local impact</li>
-        <li>Rejoin and strengthen international climate agreements</li>
-        <li>Environmental justice — communities of color and working-class neighborhoods bear the brunt of pollution; that ends now</li>
-      </ul>
-    </div>
+  <!-- TIER 3: STANDING OUR GROUND -->
+  <div class="tier-header">
+    <span class="tier-label">NON-NEGOTIABLE</span>
+    <h2 class="tier-title">Standing Our <em>Ground</em></h2>
   </div>
 
-  <div class="issue-block reveal" id="housing">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏠</span><span class="issue-num">Issue 10</span></div>
-    <h2><em>Affordable Housing</em> — A Home Is Not a Luxury</h2>
+  <div class="issue-block reveal" id="reproductive-freedom">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">❤️</span><span class="issue-num">Priority 10</span></div>
+    <h2><em>Reproductive Freedom</em> — Government Stays Out of Our Bodies</h2>
     <div class="issue-body">
-      <p>Nobody should be unhoused. Nobody. <strong>When hedge funds buy up neighborhoods and turn homes into financial instruments, ordinary people get squeezed out.</strong> Housing is a human right, not an investment vehicle for billionaires.</p>
-      <p>Ohio's 11th has communities that were once thriving working-class neighborhoods. We can rebuild that. But it requires fighting back against corporate landlords, investing in public housing, and making sure working families can afford to stay in the communities they built.</p>
+      <p>Medical decisions belong to patients and their doctors — not politicians. <strong>Government has no place in the most personal decisions of our lives.</strong> And as a nurse, I can tell you with absolute certainty that restricting reproductive healthcare doesn't eliminate it — it just makes it dangerous.</p>
+      <p>Reproductive freedom isn't a partisan issue. It's a healthcare issue. It's a human rights issue. And it's an economic issue — when women can't control if and when they have children, it directly impacts their ability to work, build savings, and provide for their families.</p>
       <ul class="issue-points" role="list">
-        <li>Massive federal investment in affordable and public housing construction</li>
-        <li>Tax penalties for vacant properties owned by corporations</li>
-        <li>Limit corporate ownership of single-family homes</li>
-        <li>Expand and strengthen tenant protections and rent stabilization</li>
-        <li>End homelessness through Housing First programs — permanent housing is cheaper than emergency services</li>
+        <li>Codify Roe v. Wade into federal law — a woman's right to choose is non-negotiable</li>
+        <li>Protect access to contraception and family planning services</li>
+        <li>Fully fund Planned Parenthood and community health clinics</li>
+        <li>End restrictions on IVF and fertility treatments</li>
+        <li>Ensure abortion access in cases of rape, incest, and medical necessity — always</li>
       </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/788" target="_blank" rel="noopener noreferrer">S. 788 — HOPE (Humans over Private Equity) for Homeownership Act</a> — Limits corporate/PE ownership of single-family homes. | <a href="https://www.congress.gov/bill/119th-congress/senate-bill/967" target="_blank" rel="noopener noreferrer">S. 967 — Downpayment Toward Equity Act</a> | <a href="https://www.merkley.senate.gov/wp-content/uploads/2023/12/End-Hedge-Fund-Control-of-American-Homes-Act-1-page-Summary.pdf" target="_blank" rel="noopener noreferrer">End Hedge Fund Control of American Homes Act — Summary (Sen. Merkley)</a> | <a href="https://www.padilla.senate.gov/wp-content/uploads/Housing-for-All-Act-of-2025_Section-by-Section_Final_4.3.25.pdf" target="_blank" rel="noopener noreferrer">Housing for All Act of 2025 — Section by Section (Sen. Padilla)</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="issue-block reveal" id="wages">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">📈</span><span class="issue-num">Issue 11</span></div>
-    <h2>Livable Wages &amp; <em>Universal Basic Income</em></h2>
-    <div class="issue-body">
-      <p>If your job doesn't pay enough for you to live, that's not a personal failing — that's exploitation. <strong>When CEOs earn 400 times what their workers make, that's not a free market — it's a rigged game.</strong> The minimum wage hasn't kept up with productivity or inflation in decades. We fix that now.</p>
-      <p>And we need to seriously talk about Universal Basic Income — a floor beneath which no American can fall. The wealth this country creates should be shared, not hoarded by the few who own everything.</p>
-      <ul class="issue-points" role="list">
-        <li>Federal minimum wage of at least $17/hour, as proposed by Senator Bernie Sanders — indexed to median wages thereafter</li>
-        <li>Strengthen unions — workers who organize have higher wages, better benefits, and more dignity</li>
-        <li>Explore and implement Universal Basic Income legislation — a floor beneath which no American can fall</li>
-        <li>End tipped wages — all workers deserve a full, living wage before tips</li>
-        <li>Worker representation on corporate boards — you build the company, you have a say in it</li>
-      </ul>
-      <div class="cite-block">
-        <span class="cite-label">Legislation &amp; Sources</span>
-        <p><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1332" target="_blank" rel="noopener noreferrer">S. 1332 — Raise the Wage Act of 2025</a> (Sen. Sanders) | <a href="https://www.congress.gov/bill/119th-congress/house-bill/2743" target="_blank" rel="noopener noreferrer">H.R. 2743 — Raise the Wage Act of 2025</a> — Raises federal minimum wage to $17/hr over 5 years, indexed to median wage thereafter. Ends subminimum tipped wage. | <a href="https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis" target="_blank" rel="noopener noreferrer">Rep. Tlaib — Economic Dignity for All Agenda</a></p>
-      </div>
     </div>
   </div>
 
   <div class="issue-block reveal" id="gun-laws">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🔫</span><span class="issue-num">Issue 12</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🔫</span><span class="issue-num">Priority 11</span></div>
     <h2>Common Sense <em>Gun Laws</em> — Protecting Kids Isn't Controversial</h2>
     <div class="issue-body">
       <p>As a mom, as a nurse, as someone who has cared for children — I am done with the cowardice in Washington on this issue. <strong>We can protect the Second Amendment and protect our kids at the same time.</strong> These are not mutually exclusive. Congress has just been too bought by the gun lobby to try.</p>
@@ -526,8 +542,30 @@
     </div>
   </div>
 
+  <!-- TIER 4: THE FULL VISION -->
+  <div class="tier-header">
+    <span class="tier-label">THE FULL PLATFORM</span>
+    <h2 class="tier-title">The Full <em>Vision</em></h2>
+  </div>
+
+  <div class="issue-block reveal" id="foreign-influence">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🏛️</span><span class="issue-num">Priority 12</span></div>
+    <h2>End <em>Foreign Influence</em> in American Politics</h2>
+    <div class="issue-body">
+      <p>Our representatives are supposed to work for us — the people of Ohio's 11th. But when foreign nations funnel millions into our political system through PACs, they're buying votes that should belong to you. <strong>No foreign government should have a say in American policy.</strong> Period.</p>
+      <p>I will never accept donations from foreign PACs — not AIPAC, not any pro-Israel or pro-any-foreign-government PAC. Our foreign policy must be driven by what's good for the American people, not what benefits foreign lobbies who've purchased our representatives' loyalties.</p>
+      <ul class="issue-points" role="list">
+        <li>Make AIPAC register under the Foreign Agents Registration Act (FARA) — this is the first priority</li>
+        <li>Ban all foreign PAC contributions to federal campaigns and enforce existing laws with real penalties</li>
+        <li>Full transparency and disclosure for all foreign lobbying activity</li>
+        <li>Mandatory conflict-of-interest reviews for any member who received foreign PAC money</li>
+        <li>End American complicity in foreign atrocities — our tax dollars should not fund genocide</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="issue-block reveal" id="human-rights">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🌈</span><span class="issue-num">Issue 13</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🌈</span><span class="issue-num">Priority 13</span></div>
     <h2>Human Rights <em>for All</em> — No Exceptions, No Asterisks</h2>
     <div class="issue-body">
       <p>The Golden Rule is simple: treat others the way you want to be treated. <strong>Human dignity is not a political position — it's a moral foundation.</strong> I will fight for the rights of every person in Ohio's 11th, regardless of race, gender, sexuality, religion, disability, or immigration status.</p>
@@ -542,8 +580,24 @@
     </div>
   </div>
 
+  <div class="issue-block reveal" id="prison-industrial-complex">
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">⚖️</span><span class="issue-num">Priority 14</span></div>
+    <h2>End the <em>Prison Industrial Complex</em> — Justice, Not Profit</h2>
+    <div class="issue-body">
+      <p>Prisons should be about justice and rehabilitation — not profit. The United States incarcerates more people per capita than any other nation on earth, and it is not an accident. <strong>Black and Brown Americans are disproportionately incarcerated, and their sentences are disproportionately harsh compared to their counterparts.</strong> This for-profit system targeting marginalized communities must end.</p>
+      <p>We cannot talk about human rights, equal justice, or the American Dream while we allow private companies to profit from locking people in cages. The incentive to incarcerate is an incentive to target — and that is exactly what has happened.</p>
+      <ul class="issue-points" role="list">
+        <li>End private, for-profit prisons — incarceration must never be a revenue stream</li>
+        <li>Reform mandatory minimum sentencing laws that disproportionately harm communities of color</li>
+        <li>Invest in rehabilitation, education, and mental health treatment inside prisons</li>
+        <li>Restore voting rights for formerly incarcerated people</li>
+        <li>End the school-to-prison pipeline through community investment and restorative justice programs</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="issue-block reveal" id="abolish-ice">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">✊</span><span class="issue-num">Issue 14</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">✊</span><span class="issue-num">Priority 15</span></div>
     <h2>Abolish ICE — <em>Cruelty Is Not a Border Policy</em></h2>
     <div class="issue-body">
       <p>ICE as it currently operates is not a law enforcement agency — it's a terror apparatus. It separates families. It detains children in inhumane conditions. It targets communities that have been here for decades. <strong>None of this makes us safer. All of it makes us less humane.</strong></p>
@@ -564,25 +618,8 @@
     </div>
   </div>
 
-
-  <div class="issue-block reveal" id="prison-industrial-complex">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">⚖️</span><span class="issue-num">Issue 15</span></div>
-    <h2>End the <em>Prison Industrial Complex</em> — Justice, Not Profit</h2>
-    <div class="issue-body">
-      <p>Prisons should be about justice and rehabilitation — not profit. The United States incarcerates more people per capita than any other nation on earth, and it is not an accident. <strong>Black and Brown Americans are disproportionately incarcerated, and their sentences are disproportionately harsh compared to their counterparts.</strong> This for-profit system targeting marginalized communities must end.</p>
-      <p>We cannot talk about human rights, equal justice, or the American Dream while we allow private companies to profit from locking people in cages. The incentive to incarcerate is an incentive to target — and that is exactly what has happened.</p>
-      <ul class="issue-points" role="list">
-        <li>End private, for-profit prisons — incarceration must never be a revenue stream</li>
-        <li>Reform mandatory minimum sentencing laws that disproportionately harm communities of color</li>
-        <li>Invest in rehabilitation, education, and mental health treatment inside prisons</li>
-        <li>Restore voting rights for formerly incarcerated people</li>
-        <li>End the school-to-prison pipeline through community investment and restorative justice programs</li>
-      </ul>
-    </div>
-  </div>
-
   <div class="issue-block reveal" id="military-industrial-complex">
-    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🕊️</span><span class="issue-num">Issue 16</span></div>
+    <div class="issue-icon-row"><span class="issue-emoji" aria-hidden="true">🕊️</span><span class="issue-num">Priority 16</span></div>
     <h2>End the <em>Military Industrial Complex</em> — Diplomacy First</h2>
     <div class="issue-body">
       <p>America is the most powerful nation on earth. That power should be used to lead with diplomacy and humanity — not to wage endless wars that enrich defense contractors while killing civilians abroad and gutting investment at home. <strong>We have to end our imperial approach and instead focus our efforts on repairing our own country.</strong></p>
