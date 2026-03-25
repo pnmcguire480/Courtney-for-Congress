@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAFT 2 — Cleveland's Kids Are in Crisis | Cortney Peterson for Congress</title>
+<style>
+  /* ============ BASE ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --plum: #470d44;
+    --coral: #fdb49b;
+    --cream: #fcf0e1;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --light-gray: #f5f5f5;
+    --mid-gray: #888;
+    --border: #ddd;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 850px;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; }
+
+  /* ============ DRAFT WATERMARK BANNER ============ */
+  .draft-banner {
+    background: var(--plum);
+    color: var(--white);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 -24px;
+  }
+
+  /* ============ CAMPAIGN HEADER ============ */
+  .campaign-header {
+    text-align: center;
+    padding: 20px 0 12px;
+    border-bottom: 2px solid var(--plum);
+    margin-bottom: 24px;
+  }
+  .campaign-header h2 {
+    color: var(--plum);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  /* ============ DRAFT INFO BOX ============ */
+  .draft-info {
+    background: var(--plum);
+    color: var(--white);
+    padding: 28px 32px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  .draft-info .label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+  .draft-info h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .draft-info .meta {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* ============ WHY THIS POST ============ */
+  .why-box {
+    background: var(--cream);
+    border-left: 4px solid var(--coral);
+    padding: 24px 28px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 32px;
+  }
+  .why-box h3 {
+    color: var(--plum);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .why-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  /* ============ META DESCRIPTION ============ */
+  .meta-desc {
+    background: var(--light-gray);
+    border: 1px dashed var(--border);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  .meta-desc strong {
+    color: var(--plum);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ ARTICLE CONTENT ============ */
+  .article-content {
+    margin-bottom: 40px;
+  }
+  .article-content p {
+    margin-bottom: 16px;
+  }
+  .article-content h2 {
+    color: var(--plum);
+    font-size: 22px;
+    margin: 36px 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--coral);
+  }
+  .article-content .source-link {
+    color: var(--plum);
+    font-weight: 700;
+    background: linear-gradient(to bottom, transparent 60%, var(--coral) 60%);
+    text-decoration: none;
+    padding: 0 2px;
+  }
+  .article-content .source-url {
+    display: block;
+    font-size: 12px;
+    color: var(--mid-gray);
+    word-break: break-all;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    line-height: 1.4;
+  }
+  .article-content ul {
+    margin: 16px 0 16px 24px;
+  }
+  .article-content li {
+    margin-bottom: 10px;
+  }
+
+  /* ============ INTERVIEW TIPS ============ */
+  .interview-tip {
+    float: right;
+    clear: right;
+    width: 220px;
+    margin: 0 -240px 20px 20px;
+    padding: 16px 18px;
+    background: var(--cream);
+    border-left: 3px solid var(--coral);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .interview-tip .tip-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 6px;
+  }
+  .interview-tip .tip-label::before { content: "\1F3A4  "; }
+  .interview-tip .soundbite {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--plum);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .interview-tip .tip-context { font-size: 11.5px; color: #666; }
+  @media (max-width: 1100px) {
+    .interview-tip { float: none; width: 100%; margin: 16px 0; }
+  }
+  @media print {
+    .interview-tip {
+      float: none; width: 100%; margin: 12px 0;
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      page-break-inside: avoid;
+    }
+  }
+
+  /* ============ REVIEW SECTION ============ */
+  .review-section {
+    border: 2px solid var(--plum);
+    border-radius: 10px;
+    padding: 32px;
+    margin: 48px 0 32px;
+    background: var(--light-gray);
+  }
+  .review-section h2 {
+    font-family: Georgia, serif;
+    color: var(--plum);
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .review-section .review-subtitle {
+    font-size: 14px;
+    color: var(--mid-gray);
+    margin-bottom: 24px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s;
+  }
+  .checkbox-group label:hover {
+    border-color: var(--plum);
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--plum);
+    flex-shrink: 0;
+  }
+
+  .notes-area {
+    margin-bottom: 28px;
+  }
+  .notes-area label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--plum);
+  }
+  .notes-area textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    background: var(--white);
+  }
+  .notes-area textarea:focus {
+    outline: 2px solid var(--plum);
+    border-color: var(--plum);
+  }
+
+  .signature-line {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+  .signature-line .field {
+    flex: 1;
+  }
+  .signature-line .field .line {
+    border-bottom: 1px solid var(--text);
+    height: 40px;
+    margin-bottom: 4px;
+  }
+  .signature-line .field .field-label {
+    font-size: 12px;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ============ FOOTER ============ */
+  .doc-footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--mid-gray);
+    margin-bottom: 32px;
+  }
+
+  /* ============ PRINT STYLES ============ */
+  @media print {
+    body {
+      font-size: 11pt;
+      max-width: 100%;
+      padding: 0;
+      color: #000;
+    }
+    .draft-banner {
+      background: #000 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0;
+    }
+    .draft-info {
+      background: #470d44 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .why-box {
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .article-content .source-link {
+      background: none;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .review-section {
+      break-inside: avoid;
+      background: #f5f5f5 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .checkbox-group label {
+      background: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .notes-area textarea {
+      border: 1px solid #999;
+      min-height: 120px;
+    }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">DRAFT &mdash; FOR REVIEW &mdash; NOT FOR PUBLICATION</div>
+
+<div class="campaign-header">
+  <h2>Cortney Peterson for Congress &mdash; OH-11</h2>
+</div>
+
+<div class="draft-info">
+  <div class="label">Blog Post Draft</div>
+  <h1>Cleveland's Kids Are in Crisis &mdash; The Numbers Don't Lie</h1>
+  <div class="meta">
+    <span>Draft #2</span>
+    <span>March 25, 2026</span>
+  </div>
+</div>
+
+<div class="why-box">
+  <h3>Why This Post</h3>
+  <p>This post positions you as the candidate who sees the children's crisis firsthand &mdash; not from a briefing book, but from the bedside. It connects your nursing experience and your life as an autism mom to a county-wide crisis that voters feel in their bones. The SEO targets help people searching for Cleveland children's issues find your campaign.</p>
+</div>
+
+<div class="meta-desc">
+  <strong>SEO Meta Description</strong>
+  A nurse and mom of two on Cleveland's child wellness crisis: rising infant mortality, overwhelmed families, and what federal investment could actually change.
+</div>
+
+<div class="article-content">
+
+<p>I need to tell you something that keeps me up at night.</p>
+
+<p>In 2022, <strong>91 families</strong> in Cuyahoga County lost a baby before that baby turned one. In 2023, that number climbed to <strong>112</strong>. That is not a statistic moving in the right direction. That is 112 families who planned a nursery and ended up planning a funeral. <span class="source-link">Source: PBS / City Club Forum, Dec 30, 2024</span><span class="source-url">https://www.pbs.org/video/healthy-beginnings-supporting-maternal-and-infant-vitality-lhqaqu/</span></p>
+
+<p>And if you are a Black family in this county, your baby is <strong>nearly three times more likely</strong> to die before their first birthday than a white baby. Three times. In 2026. In the city I work in, live near, and love. <span class="source-link">Source: PBS / City Club Forum</span></p>
+
+<p>I am a nurse. I have been a Licensed Practical Nurse for over 12 years. I have held babies who were too small. I have sat with mothers who were too tired, too scared, too unsupported to know where to turn. I have watched families fall through cracks that are wide enough to drive a truck through. This is not abstract to me. This is Tuesday.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"In 2023, 112 babies in Cuyahoga County died before their first birthday. Black babies are three times more likely to die than white babies. I'm a nurse — I've held these families. This is why I'm running."</span>
+  <span class="tip-context">Use when asked about healthcare or why you're qualified. The 112 number stops people cold.</span>
+</div>
+<h2>The County Is Trying. It Is Not Enough.</h2>
+
+<p>I want to be fair here. Cuyahoga County Executive Chris Ronayne launched a child wellness center that is now housing kids dealing with mental health challenges, substance abuse, homelessness, and trauma. His words: <em>"We needed to do better by our kids."</em> He is right. And I respect that he acted. <span class="source-link">Source: Cleveland 19, Feb 3, 2026</span><span class="source-url">https://www.cleveland19.com/2026/02/03/cuyahoga-county-executive-weighs-new-programs-children-senior-citizens/</span></p>
+
+<p>The state is stepping up too. Governor DeWine and the Ohio Department of Children and Youth are funding the H.O.P.E. Campus right here in Cuyahoga County &mdash; a 24/7 Child Wellness Welcome Center for kids referred through child services, hospitals, and law enforcement. It is a collaboration between the county, juvenile court, the Board of Developmental Disabilities, and the ADAMHS Board. It is expected to open by the end of November 2026. <span class="source-link">Source: Spectrum News 1, Feb 19, 2026</span><span class="source-url">https://spectrumnews1.com/oh/cleveland/news/2026/02/19/state-investments-continue-expanding-child-centered-care</span></p>
+
+<p>These are good things. I am not here to tear them down.</p>
+
+<p>But I am here to say: county programs and state grants cannot fix a crisis that was created by decades of federal neglect. A child wellness center is not a childcare system. A welcome center is not universal pre-K. Crisis response is not prevention.</p>
+
+<p><strong>We are putting bandages on wounds that need surgery.</strong></p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"I'm a mom of two. My youngest has autism. I've navigated every waiting list, every insurance fight. When I talk about childcare and services, I'm not reading a policy paper — I'm talking about my Tuesday."</span>
+  <span class="tip-context">Use when asked about childcare or family policy. The personal credibility is what separates you from every other candidate.</span>
+</div>
+<h2>What Federal Investment Actually Looks Like</h2>
+
+<p>Cleveland needs a representative who understands what happens when the federal government walks away from children and families. I have seen it from the exam room. And I have seen it from my own kitchen table.</p>
+
+<p>I am a mom of two. My youngest son has autism and receives therapies &mdash; speech, occupational, behavioral. I have navigated every waiting list, every insurance fight, every moment of wondering if the services will still be there next month. I know what it feels like to sit on hold for 45 minutes while your kid needs help <em>right now</em>. I know what it costs &mdash; not just in dollars, but in sleep, in worry, in the constant low hum of wondering if you are doing enough.</p>
+
+<p>So when I talk about federal investment in children, I am not reading from a policy paper. I am talking about what I need. What my neighbors need. What the families I have cared for need.</p>
+
+<p>Here is where Congress could actually make a difference:</p>
+
+<ul>
+  <li><strong>Fund universal childcare</strong> so parents do not have to choose between working and raising their kids</li>
+  <li><strong>Expand Medicaid coverage</strong> for maternal care &mdash; prenatal, postpartum, and mental health &mdash; to address infant mortality at the root</li>
+  <li><strong>Increase federal funding</strong> for community-based programs like First Year Cleveland that are already doing the work with shoestring budgets <span class="source-link">Source: PBS / City Club Forum</span></li>
+  <li><strong>Support research institutions</strong> like the Schubert Center for Child Studies at Case Western Reserve, which has spent over 25 years bridging research, policy, and practice for children in this region <span class="source-link">Source: CWRU Schubert Center</span><span class="source-url">https://case.edu/schubertcenter/</span></li>
+  <li><strong>Make developmental therapies</strong> &mdash; speech, OT, behavioral &mdash; accessible without a six-month waitlist and a billing nightmare</li>
+</ul>
+
+<p>None of this is radical. It is what every other wealthy country already does for its kids.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"We're building emergency centers for kids in crisis. That's a band-aid. We need federal investment in childcare, maternal health, and autism services so families never reach that point."</span>
+  <span class="tip-context">Use when asked what you'd do differently in Congress. Acknowledges local good work, then pivots to the federal gap.</span>
+</div>
+<h2>This Is Why I Am Running</h2>
+
+<p>One hundred and twelve babies. That number should make every person running for Congress in this district lose sleep. If it does not bother them, they should not have the job.</p>
+
+<p>It bothers me. It has bothered me for years. That is why I stopped waiting for someone else to fix it.</p>
+
+<p>I am not running with PAC money or party backing. I am running with you &mdash; with the nurses, the parents, the neighbors who know this crisis is real because they are living it. If that is you, I need your help.</p>
+
+<p>We need <strong>2,200 signatures</strong> to get on the ballot by May 4th. If Cleveland's kids matter to you, sign your name to this campaign. Volunteer. Tell your people. We do not have corporate money, but we have something they cannot buy: <strong>we actually give a damn.</strong></p>
+
+</div>
+
+<!-- ============ REVIEW SECTION ============ -->
+<div class="review-section">
+  <h2>Review Notes</h2>
+  <p class="review-subtitle">Please check one box below and add any notes or corrections.</p>
+
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="decision" value="approved"> Approved as-is</label>
+    <label><input type="checkbox" name="decision" value="corrections"> Approved with corrections</label>
+    <label><input type="checkbox" name="decision" value="revision"> Needs major revision</label>
+    <label><input type="checkbox" name="decision" value="kill"> Do not publish</label>
+  </div>
+
+  <div class="notes-area">
+    <label for="notes">Corrections &amp; Notes</label>
+    <textarea id="notes" placeholder="Write your corrections, changes, or notes here..."></textarea>
+  </div>
+
+  <div class="signature-line">
+    <div class="field">
+      <div class="line"></div>
+      <div class="field-label">Signature</div>
+    </div>
+    <div class="field" style="max-width: 200px;">
+      <div class="line"></div>
+      <div class="field-label">Date</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  Prepared by Patrick McGuire &nbsp;|&nbsp; Cortney Peterson for Congress
+</div>
+
+</body>
+</html>

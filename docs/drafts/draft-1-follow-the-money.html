@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAFT 1 — Follow the Money | Cortney Peterson for Congress</title>
+<style>
+  /* ============ BASE ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --plum: #470d44;
+    --coral: #fdb49b;
+    --cream: #fcf0e1;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --light-gray: #f5f5f5;
+    --mid-gray: #888;
+    --border: #ddd;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 24px 0 24px;
+    overflow: visible;
+  }
+
+  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; }
+
+  /* ============ DRAFT WATERMARK BANNER ============ */
+  .draft-banner {
+    background: var(--plum);
+    color: var(--white);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 -24px;
+  }
+
+  /* ============ CAMPAIGN HEADER ============ */
+  .campaign-header {
+    text-align: center;
+    padding: 20px 0 12px;
+    border-bottom: 2px solid var(--plum);
+    margin-bottom: 24px;
+  }
+  .campaign-header h2 {
+    color: var(--plum);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  /* ============ DRAFT INFO BOX ============ */
+  .draft-info {
+    background: var(--plum);
+    color: var(--white);
+    padding: 28px 32px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  .draft-info .label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+  .draft-info h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .draft-info .meta {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* ============ WHY THIS POST ============ */
+  .why-box {
+    background: var(--cream);
+    border-left: 4px solid var(--coral);
+    padding: 24px 28px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 32px;
+  }
+  .why-box h3 {
+    color: var(--plum);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .why-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  /* ============ META DESCRIPTION ============ */
+  .meta-desc {
+    background: var(--light-gray);
+    border: 1px dashed var(--border);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  .meta-desc strong {
+    color: var(--plum);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ ARTICLE CONTENT ============ */
+  .article-content {
+    margin-bottom: 40px;
+  }
+  .article-content p {
+    margin-bottom: 16px;
+  }
+  .article-content h2 {
+    color: var(--plum);
+    font-size: 22px;
+    margin: 36px 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--coral);
+  }
+  .article-content .source-link {
+    color: var(--plum);
+    font-weight: 700;
+    background: linear-gradient(to bottom, transparent 60%, var(--coral) 60%);
+    text-decoration: none;
+    padding: 0 2px;
+  }
+  .article-content .source-url {
+    display: block;
+    font-size: 12px;
+    color: var(--mid-gray);
+    word-break: break-all;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    line-height: 1.4;
+  }
+  .article-content ul {
+    margin: 16px 0 16px 24px;
+  }
+  .article-content li {
+    margin-bottom: 10px;
+  }
+
+  /* ============ INTERVIEW TIPS ============ */
+  .interview-tip {
+    float: right;
+    clear: right;
+    width: 220px;
+    margin: 0 -240px 20px 20px;
+    padding: 16px 18px;
+    background: var(--cream);
+    border-left: 3px solid var(--coral);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    line-height: 1.55;
+    position: relative;
+  }
+  .interview-tip .tip-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 6px;
+  }
+  .interview-tip .tip-label::before {
+    content: "\1F3A4  ";
+  }
+  .interview-tip .soundbite {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--plum);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .interview-tip .tip-context {
+    font-size: 11.5px;
+    color: #666;
+  }
+  @media (max-width: 1100px) {
+    .interview-tip {
+      float: none;
+      width: 100%;
+      margin: 16px 0;
+    }
+  }
+  @media print {
+    .interview-tip {
+      float: none;
+      width: 100%;
+      margin: 12px 0;
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      page-break-inside: avoid;
+    }
+  }
+
+  /* ============ REVIEW SECTION ============ */
+  .review-section {
+    border: 2px solid var(--plum);
+    border-radius: 10px;
+    padding: 32px;
+    margin: 48px 0 32px;
+    background: var(--light-gray);
+  }
+  .review-section h2 {
+    font-family: Georgia, serif;
+    color: var(--plum);
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .review-section .review-subtitle {
+    font-size: 14px;
+    color: var(--mid-gray);
+    margin-bottom: 24px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s;
+  }
+  .checkbox-group label:hover {
+    border-color: var(--plum);
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--plum);
+    flex-shrink: 0;
+  }
+
+  .notes-area {
+    margin-bottom: 28px;
+  }
+  .notes-area label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--plum);
+  }
+  .notes-area textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    background: var(--white);
+  }
+  .notes-area textarea:focus {
+    outline: 2px solid var(--plum);
+    border-color: var(--plum);
+  }
+
+  .signature-line {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+  .signature-line .field {
+    flex: 1;
+  }
+  .signature-line .field .line {
+    border-bottom: 1px solid var(--text);
+    height: 40px;
+    margin-bottom: 4px;
+  }
+  .signature-line .field .field-label {
+    font-size: 12px;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ============ FOOTER ============ */
+  .doc-footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--mid-gray);
+    margin-bottom: 32px;
+  }
+
+  /* ============ PRINT STYLES ============ */
+  @media print {
+    body {
+      font-size: 11pt;
+      max-width: 100%;
+      padding: 0;
+      color: #000;
+    }
+    .draft-banner {
+      background: #000 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0;
+    }
+    .draft-info {
+      background: #470d44 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .why-box {
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .article-content .source-link {
+      background: none;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .review-section {
+      break-inside: avoid;
+      background: #f5f5f5 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .checkbox-group label {
+      background: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .notes-area textarea {
+      border: 1px solid #999;
+      min-height: 120px;
+    }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">DRAFT &mdash; FOR REVIEW &mdash; NOT FOR PUBLICATION</div>
+
+<div class="campaign-header">
+  <h2>Cortney Peterson for Congress &mdash; OH-11</h2>
+</div>
+
+<div class="draft-info">
+  <div class="label">Blog Post Draft</div>
+  <h1>Follow the Money: How PAC Cash Bought Ohio's 11th District</h1>
+  <div class="meta">
+    <span>Draft #1</span>
+    <span>March 25, 2026</span>
+  </div>
+</div>
+
+<div class="why-box">
+  <h3>Why This Post</h3>
+  <p>This article turns your biggest strategic advantage &mdash; taking zero PAC money &mdash; into a sourced, factual story that names names and dollar amounts. Voters in OH-11 know something feels off about their representation. This post gives them the receipts. Every stat links to a published source, so nobody can call it conspiracy &mdash; it's public record.</p>
+</div>
+
+<div class="meta-desc">
+  <strong>SEO Meta Description</strong>
+  Outside PACs spent millions to buy Ohio's 11th District seat. Cortney Peterson takes zero PAC money. See the receipts and join a people-funded campaign.
+</div>
+
+<div class="article-content">
+
+<p>Let me tell you a story about your congressional seat.</p>
+
+<p>Not the one they tell at fundraisers. The real one &mdash; the one you can trace in FEC filings and public records. The one that explains why your representative votes the way she does, and why nothing in this district seems to change.</p>
+
+<p>In 2021, Ohio's 11th District had a special election. Nina Turner &mdash; a progressive from Cleveland, backed by working people and small-dollar donors &mdash; was running for Congress. She had grassroots energy, community support, and a real shot.</p>
+
+<p>Then the outside money showed up.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"My opponent took $68,000 from AIPAC in one year. Their Super PAC spent $200,000 to keep her in that seat. I take zero PAC money. You tell me — who's going to fight for Cleveland?"</span>
+  <span class="tip-context">Use when asked: "Why run as an Independent?" or "How are you different?"</span>
+</div>
+<h2>The Numbers</h2>
+
+<p>Democratic Majority for Israel's Super PAC, DMFI, poured over <strong>$1.9 million</strong> into the race to support Shontel Brown and attack Nina Turner. <span class="source-link">Source: Mondoweiss, Aug 3, 2021</span><span class="source-url">https://mondoweiss.net/2021/08/nina-turner-is-beaten-by-shontel-brown-and-pro-israel-forces-in-ohio-primary/</span> That is $1.9 million from a single outside group &mdash; in a special election for one congressional district.</p>
+
+<p>Where did that money come from? A big chunk came from <strong>Stacy Schusterman</strong>, the chair of Samson Energy, an oil and gas company. Schusterman gave <strong>$1.55 million</strong> to DMFI between 2019 and 2020, making her their largest individual donor. <span class="source-link">Source: The Intercept, Jul 16, 2021</span><span class="source-url">https://theintercept.com/2021/07/16/nina-turner-shontel-brown-dmfi/</span> A fossil fuel billionaire heir funding attack ads against a progressive candidate who signed the No Fossil Fuel Money pledge. You cannot make this up.</p>
+
+<p>DMFI spent over <strong>$660,000</strong> on ads in this race alone &mdash; ads attacking Turner and propping up Brown. <span class="source-link">Source: The Intercept</span> And this was the same PAC that had already spent $1.4 million attacking Bernie Sanders and $1.5 million going after Jamaal Bowman. There is a pattern here, and it is not subtle.</p>
+
+<p>Brown won by about 5 points. Nina Turner said it plainly that night: <em>"We didn't lose this race, evil money manipulated and maligned this election."</em> <span class="source-link">Source: Mondoweiss</span></p>
+
+<p>And the money did not stop. Between March and December 2023, AIPAC's PAC gave Shontel Brown <strong>$68,593</strong> &mdash; more than any other Ohio Democrat, and more than every Ohio Republican except Michael Turner. <span class="source-link">Source: Ohio Capital Journal, Mar 22, 2024</span><span class="source-url">https://ohiocapitaljournal.com/2024/03/22/aipac-spending-on-ohio-democratic-and-republican-candidates/</span> By then, AIPAC's war chest had grown to <strong>$90 million</strong>, and their Super PAC, the United Democracy Project, had raised $35 million in a single year. They also spent <strong>$198,877</strong> directly against Nina Turner in OH-11. <span class="source-link">Source: Ohio Capital Journal</span></p>
+
+<p>Read those numbers again. Millions of dollars from outside Ohio, from people who will never live in this district, deciding who represents you in Congress.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"A fossil fuel billionaire's heir wrote a $1.5 million check to a Super PAC that attacked the progressive candidate in our district. That's whose money is running this seat. Not anymore."</span>
+  <span class="tip-context">Use when asked about campaign finance or corporate influence. The Schusterman/Samson Energy connection is the receipts.</span>
+</div>
+<h2>This Is Not About One PAC</h2>
+
+<p>I want to be clear: this is not about one country's lobby or one organization. This is about a system where outside money &mdash; corporate PACs, Super PACs, billionaire donors &mdash; can flood a district and drown out the voices of the people who actually live there.</p>
+
+<p>When your representative's biggest donors are fossil fuel heirs and foreign policy PACs based in Washington, who do you think she is working for? When Republican strategist Bill Kristol endorses a Democrat &mdash; ask yourself what that tells you about who that Democrat is actually serving.</p>
+
+<p>The question is not left vs. right. The question is: <strong>whose money, whose power, whose voice?</strong></p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"Every dollar in this campaign comes from real people. When I get to Congress, I answer to you — not to the groups that wrote the checks. That's the difference."</span>
+  <span class="tip-context">Use as a closer. Simple, positive, forward-looking. Pivots from attack to aspiration.</span>
+</div>
+<h2>What I Am Doing Differently</h2>
+
+<p>I take <strong>zero</strong> corporate PAC money. Zero. I take zero foreign-interest PAC money. Every dollar that funds this campaign comes from real people making small donations &mdash; people who live in this district, or people across the country who believe working families deserve a voice.</p>
+
+<p>That is not a slogan. It is a structural decision. When I get to Congress, I answer to you &mdash; not to the groups that wrote the checks.</p>
+
+<p>I am a nurse. I am a mom. I have spent 12 years watching working families get squeezed by a system that was not built for them. I am not running to climb a ladder. I am running because this seat belongs to the people of OH-11, and it is time we took it back.</p>
+
+<h2>What You Can Do Right Now</h2>
+
+<p>We need <strong>2,200 signatures</strong> to get on the ballot. That is the first fight &mdash; before we can take on the PAC money machine, we have to earn our place on the ballot the old-fashioned way: one signature at a time.</p>
+
+<p>Sign up to volunteer. Help us collect signatures. And if you can, chip in $10 or $20 to keep this campaign running. No PAC is going to fund us. That is the point &mdash; we are funded by you.</p>
+
+<p><strong>This seat was bought once. We are going to take it back. But only if we do it together.</strong></p>
+
+</div>
+
+<!-- ============ REVIEW SECTION ============ -->
+<div class="review-section">
+  <h2>Review Notes</h2>
+  <p class="review-subtitle">Please check one box below and add any notes or corrections.</p>
+
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="decision" value="approved"> Approved as-is</label>
+    <label><input type="checkbox" name="decision" value="corrections"> Approved with corrections</label>
+    <label><input type="checkbox" name="decision" value="revision"> Needs major revision</label>
+    <label><input type="checkbox" name="decision" value="kill"> Do not publish</label>
+  </div>
+
+  <div class="notes-area">
+    <label for="notes">Corrections &amp; Notes</label>
+    <textarea id="notes" placeholder="Write your corrections, changes, or notes here..."></textarea>
+  </div>
+
+  <div class="signature-line">
+    <div class="field">
+      <div class="line"></div>
+      <div class="field-label">Signature</div>
+    </div>
+    <div class="field" style="max-width: 200px;">
+      <div class="line"></div>
+      <div class="field-label">Date</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  Prepared by Patrick McGuire &nbsp;|&nbsp; Cortney Peterson for Congress
+</div>
+
+</body>
+</html>

@@ -128,6 +128,22 @@ body{
   padding:0.8rem 2.5rem;border-radius:10px;font-size:1.5rem;
 }
 
+/* ===== SIGNATURE URGENCY BANNER ===== */
+.sig-urgency-banner{background:var(--plum);color:var(--white);padding:0.5rem 1.5rem;text-align:center;font-size:0.82rem;position:relative;z-index:999}
+.sig-urgency-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.sig-urgency-count{font-family:'Bebas Neue',sans-serif;letter-spacing:0.08em;font-size:0.9rem;white-space:nowrap}
+.sig-urgency-count strong{color:var(--coral);font-size:1.05rem}
+.sig-urgency-bar{width:80px;height:6px;background:rgba(255,255,255,0.15);border-radius:50px;overflow:hidden;flex-shrink:0}
+.sig-urgency-fill{height:100%;background:var(--coral);border-radius:50px;transition:width 0.8s ease-out}
+.sig-urgency-countdown{font-family:'Bebas Neue',sans-serif;letter-spacing:0.08em;font-size:0.9rem;white-space:nowrap}
+.sig-urgency-countdown strong{color:var(--coral-light)}
+.sig-urgency-cta{color:var(--white);text-decoration:none;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;background:var(--coral);padding:0.3rem 0.8rem;border-radius:6px;white-space:nowrap;transition:background 0.3s}
+.sig-urgency-cta:hover{background:var(--coral-light)}
+@media(max-width:767px){
+  .sig-urgency-inner{gap:0.5rem 0.75rem}
+  .sig-urgency-bar{width:60px}
+}
+
 /* ===== PAGE HERO (sub-pages) ===== */
 .page-hero{
   background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 50%,var(--plum-light) 100%);

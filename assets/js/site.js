@@ -327,6 +327,26 @@ function closeMobile() {
   });
 })();
 
+// Signature countdown timer (May 4, 2026 11:59 PM ET)
+var sigCountdownEl = document.getElementById('sigCountdown');
+if (sigCountdownEl) {
+  var sigDeadline = new Date('2026-05-04T23:59:59-04:00').getTime();
+  function updateSigCountdown() {
+    var now = Date.now();
+    var diff = sigDeadline - now;
+    if (diff <= 0) {
+      sigCountdownEl.innerHTML = '<strong>Deadline passed</strong>';
+      return;
+    }
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    sigCountdownEl.innerHTML = '<strong>' + days + '</strong>d <strong>' + hours + '</strong>h <strong>' + mins + '</strong>m left';
+  }
+  updateSigCountdown();
+  setInterval(updateSigCountdown, 60000);
+}
+
 // Scroll reveal animations (respects prefers-reduced-motion via CSS)
 var reveals = document.querySelectorAll('.reveal');
 if (reveals.length) {

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAFT 3 — Your Electric Bill Went Up 23% | Cortney Peterson for Congress</title>
+<style>
+  /* ============ BASE ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --plum: #470d44;
+    --coral: #fdb49b;
+    --cream: #fcf0e1;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --light-gray: #f5f5f5;
+    --mid-gray: #888;
+    --border: #ddd;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 850px;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; }
+
+  /* ============ DRAFT WATERMARK BANNER ============ */
+  .draft-banner {
+    background: var(--plum);
+    color: var(--white);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 -24px;
+  }
+
+  /* ============ CAMPAIGN HEADER ============ */
+  .campaign-header {
+    text-align: center;
+    padding: 20px 0 12px;
+    border-bottom: 2px solid var(--plum);
+    margin-bottom: 24px;
+  }
+  .campaign-header h2 {
+    color: var(--plum);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  /* ============ DRAFT INFO BOX ============ */
+  .draft-info {
+    background: var(--plum);
+    color: var(--white);
+    padding: 28px 32px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  .draft-info .label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+  .draft-info h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .draft-info .meta {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* ============ WHY THIS POST ============ */
+  .why-box {
+    background: var(--cream);
+    border-left: 4px solid var(--coral);
+    padding: 24px 28px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 32px;
+  }
+  .why-box h3 {
+    color: var(--plum);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .why-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  /* ============ META DESCRIPTION ============ */
+  .meta-desc {
+    background: var(--light-gray);
+    border: 1px dashed var(--border);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  .meta-desc strong {
+    color: var(--plum);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ ARTICLE CONTENT ============ */
+  .article-content {
+    margin-bottom: 40px;
+  }
+  .article-content p {
+    margin-bottom: 16px;
+  }
+  .article-content h2 {
+    color: var(--plum);
+    font-size: 22px;
+    margin: 36px 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--coral);
+  }
+  .article-content .source-link {
+    color: var(--plum);
+    font-weight: 700;
+    background: linear-gradient(to bottom, transparent 60%, var(--coral) 60%);
+    text-decoration: none;
+    padding: 0 2px;
+  }
+  .article-content .source-url {
+    display: block;
+    font-size: 12px;
+    color: var(--mid-gray);
+    word-break: break-all;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    line-height: 1.4;
+  }
+  .article-content ul {
+    margin: 16px 0 16px 24px;
+  }
+  .article-content li {
+    margin-bottom: 10px;
+  }
+
+  /* ============ INTERVIEW TIPS ============ */
+  .interview-tip {
+    float: right;
+    clear: right;
+    width: 220px;
+    margin: 0 -240px 20px 20px;
+    padding: 16px 18px;
+    background: var(--cream);
+    border-left: 3px solid var(--coral);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .interview-tip .tip-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 6px;
+  }
+  .interview-tip .tip-label::before { content: "\1F3A4  "; }
+  .interview-tip .soundbite {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--plum);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .interview-tip .tip-context { font-size: 11.5px; color: #666; }
+  @media (max-width: 1100px) {
+    .interview-tip { float: none; width: 100%; margin: 16px 0; }
+  }
+  @media print {
+    .interview-tip {
+      float: none; width: 100%; margin: 12px 0;
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      page-break-inside: avoid;
+    }
+  }
+
+  /* ============ REVIEW SECTION ============ */
+  .review-section {
+    border: 2px solid var(--plum);
+    border-radius: 10px;
+    padding: 32px;
+    margin: 48px 0 32px;
+    background: var(--light-gray);
+  }
+  .review-section h2 {
+    font-family: Georgia, serif;
+    color: var(--plum);
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .review-section .review-subtitle {
+    font-size: 14px;
+    color: var(--mid-gray);
+    margin-bottom: 24px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s;
+  }
+  .checkbox-group label:hover {
+    border-color: var(--plum);
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--plum);
+    flex-shrink: 0;
+  }
+
+  .notes-area {
+    margin-bottom: 28px;
+  }
+  .notes-area label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--plum);
+  }
+  .notes-area textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    background: var(--white);
+  }
+  .notes-area textarea:focus {
+    outline: 2px solid var(--plum);
+    border-color: var(--plum);
+  }
+
+  .signature-line {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+  .signature-line .field {
+    flex: 1;
+  }
+  .signature-line .field .line {
+    border-bottom: 1px solid var(--text);
+    height: 40px;
+    margin-bottom: 4px;
+  }
+  .signature-line .field .field-label {
+    font-size: 12px;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ============ FOOTER ============ */
+  .doc-footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--mid-gray);
+    margin-bottom: 32px;
+  }
+
+  /* ============ PRINT STYLES ============ */
+  @media print {
+    body {
+      font-size: 11pt;
+      max-width: 100%;
+      padding: 0;
+      color: #000;
+    }
+    .draft-banner {
+      background: #000 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0;
+    }
+    .draft-info {
+      background: #470d44 !important;
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .why-box {
+      background: #fcf0e1 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .article-content .source-link {
+      background: none;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .review-section {
+      break-inside: avoid;
+      background: #f5f5f5 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .checkbox-group label {
+      background: #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .notes-area textarea {
+      border: 1px solid #999;
+      min-height: 120px;
+    }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">DRAFT &mdash; FOR REVIEW &mdash; NOT FOR PUBLICATION</div>
+
+<div class="campaign-header">
+  <h2>Cortney Peterson for Congress &mdash; OH-11</h2>
+</div>
+
+<div class="draft-info">
+  <div class="label">Blog Post Draft</div>
+  <h1>Your Electric Bill Went Up 23%. Here's Who's Profiting.</h1>
+  <div class="meta">
+    <span>Draft #3</span>
+    <span>March 25, 2026</span>
+  </div>
+</div>
+
+<div class="why-box">
+  <h3>Why This Post</h3>
+  <p>This post connects the electric bill shock every family felt to a concrete, documented cause &mdash; corporate data centers getting sweetheart deals while residents absorb costs. It then pivots to housing (property taxes, rent, wages) to show this is a pattern. Positions you as the candidate who names names and shows receipts. Drives signature collection while kitchen-table anger is fresh.</p>
+</div>
+
+<div class="meta-desc">
+  <strong>SEO Meta Description</strong>
+  Ohio electric bills jumped 23% while corporations got sweetheart deals. Cortney Peterson breaks down who's profiting and what she'd fight for in Congress.
+</div>
+
+<div class="article-content">
+
+<p>You opened your electric bill last summer and thought there was a mistake.</p>
+
+<p>There wasn't. Ohio residential electricity bills rose <strong>23.3%</strong> year over year as of July 2025 &mdash; the third-largest increase in the entire country. <span class="source-link">Source: Cleveland Magazine, Dec 3, 2025</span><span class="source-url">https://clevelandmagazine.com/articles/data-centers-vs-green-energy-the-race-that-s-driving-clevelanders-electric-bill-up/</span> Not third in the Midwest. Third in the nation. If you felt like you were getting squeezed, it's because you were.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"Your electric bill went up 23% last year — third-largest spike in the country. Your property taxes went up 32%. Your rent went up. And your paycheck didn't. That's not bad luck — that's a system built for corporations, not for you."</span>
+  <span class="tip-context">Use as your opening when asked about the economy or cost of living. Hits three bills in one breath.</span>
+</div>
+<p>So where is all that electricity going?</p>
+
+<p>It's going to the <strong>24 data centers</strong> that have moved into Greater Cleveland. <span class="source-link">Source: Cleveland Magazine</span> These massive facilities consume staggering amounts of power, and they're straining the same regional grid that heats your home and keeps your lights on. The wholesale capacity prices in our energy market rose <strong>800%</strong> in 2024, then another 22% in July 2025. <span class="source-link">Source: Ohio Capital Journal, Dec 11, 2025</span><span class="source-url">https://ohiocapitaljournal.com/2025/12/11/energy-market-watchers-see-ohio-electric-bills-rising-as-data-center-demand-continues/</span> Energy market analysts project that data center demand could add up to <strong>$70 a month</strong> to residential bills. <span class="source-link">Source: Ohio Capital Journal</span></p>
+
+<p>Let me say that again. Seventy dollars a month. That's groceries for a week. That's a kid's school supplies. That's the difference between making rent and not making rent.</p>
+
+<p>I'm not against technology. I'm against a system where billion-dollar corporations race to build in Ohio while working families pick up the tab through higher utility bills. <span class="source-link">Source: Policy Matters Ohio, Oct 28, 2025</span><span class="source-url">https://policymattersohio.org/news/2025/10/28/ai-and-other-tech-are-consuming-our-electric-grid/</span> The issue isn't what these companies build &mdash; it's who pays for the infrastructure they use. Right now, that's you.</p>
+
+<p>And Ohio's state government? They passed HB 15, which lets data centers bypass local zoning entirely. Your community doesn't even get a say in whether one of these things goes up next door. <span class="source-link">Source: Cleveland Scene, Mar 12, 2026</span><span class="source-url">https://www.clevescene.com/news/ohio-news/ohioans-are-getting-fed-up-with-data-centers-state-lawmakers-are-starting-to-notice/</span> The good news is that communities are fighting back, and legislators are finally starting to listen &mdash; new bills like HB 706 and HB 710 would impose conditions on utility connections for these facilities. <span class="source-link">Source: Cleveland Scene</span> But we need people in Washington pushing for the same accountability at the federal level.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"To afford a two-bedroom apartment in Ohio, you need $22.51 an hour. Minimum wage is $11. You do the math. I've done it — at my kitchen table, as a nurse and a single mom. That math doesn't work."</span>
+  <span class="tip-context">Use when asked about wages or housing. The $22.51 vs $11 contrast is devastating and easy to remember.</span>
+</div>
+<h2>Now Let's Talk About the Rest of Your Bills.</h2>
+
+<p>Your electric bill isn't the only thing that went through the roof. In 2024, Cuyahoga County's property reappraisal produced an average <strong>32% increase</strong> in property values &mdash; which means higher taxes on the same house you've been living in for years. Over <strong>20,000 homeowners</strong> filed complaints. There are <strong>$248 million</strong> in delinquent property taxes in the county. <span class="source-link">Source: Signal Cleveland, Jan 6, 2026</span><span class="source-url">https://signalcleveland.org/cuyahoga-county-accepting-2025-property-tax-increase-complaints/</span> That's not a housing boom. That's a system telling working families they can't afford to live in their own neighborhoods anymore.</p>
+
+<p>And if you rent? Nearly half of Ohio's 1.58 million renters are paying more than they can afford. Among the lowest-income renters, <strong>73%</strong> spend more than half their income just on housing. <span class="source-link">Source: Ohio Capital Journal, Mar 10, 2026</span><span class="source-url">https://ohiocapitaljournal.com/2026/03/10/new-report-shows-nearly-half-of-ohios-renters-are-paying-more-than-they-can-afford-on-rent/</span> Ohio is short <strong>266,000 affordable housing units</strong>. Cleveland alone lacks 54,000. <span class="source-link">Source: Ohio Capital Journal, Jul 18, 2025</span><span class="source-url">https://ohiocapitaljournal.com/2025/07/18/ohio-renters-need-to-make-22-51-an-hour-to-afford-two-bedroom-apartment-new-report-shows/</span></p>
+
+<p>Here's the number that keeps me up at night: to afford a two-bedroom apartment in Ohio, you need to make <strong>$22.51 an hour</strong>. <span class="source-link">Source: Ohio Capital Journal</span> Ohio's minimum wage is $11 an hour. You do the math. I've done it. As a nurse and a mom who has lived through seasons of feast and famine, I've done that math at my kitchen table more times than I can count.</p>
+
+<div class="interview-tip">
+  <span class="tip-label">Interview Tip</span>
+  <span class="soundbite">"If billion-dollar corporations are straining our power grid, they should pay for the upgrades — not you. If they want to bypass your zoning, your community gets a say. That's not radical. That's common sense."</span>
+  <span class="tip-context">Use when asked about your policy platform. Frames corporate accountability as common sense, not ideology.</span>
+</div>
+<h2>What I'd Fight for in Congress</h2>
+
+<ul>
+  <li><strong>Corporate accountability on the grid.</strong> If billion-dollar companies are straining our energy infrastructure, they pay for the upgrades &mdash; not residential ratepayers.</li>
+  <li><strong>Community control over development.</strong> No more state preemption laws that strip local communities of their voice on industrial projects.</li>
+  <li><strong>Real affordable housing investment.</strong> Federal funding to close Ohio's 266,000-unit gap. Tenant protections. An end to Wall Street buying up single-family homes.</li>
+  <li><strong>A living wage.</strong> Nobody working full-time should choose between rent and food. Period.</li>
+</ul>
+
+<p>I'm not running for Congress to make speeches about the economy. I'm running because every number in this post is somebody I know. Somebody I've cared for. Somebody whose kid goes to school with my kids.</p>
+
+<p>We need <strong>2,200 signatures</strong> to get on the ballot by May 4th. If these numbers make you angry, good. Turn that anger into action. Sign. Volunteer. Talk to your neighbors. This campaign runs on people, not corporate money &mdash; and that means <strong>it runs on you.</strong></p>
+
+</div>
+
+<!-- ============ REVIEW SECTION ============ -->
+<div class="review-section">
+  <h2>Review Notes</h2>
+  <p class="review-subtitle">Please check one box below and add any notes or corrections.</p>
+
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="decision" value="approved"> Approved as-is</label>
+    <label><input type="checkbox" name="decision" value="corrections"> Approved with corrections</label>
+    <label><input type="checkbox" name="decision" value="revision"> Needs major revision</label>
+    <label><input type="checkbox" name="decision" value="kill"> Do not publish</label>
+  </div>
+
+  <div class="notes-area">
+    <label for="notes">Corrections &amp; Notes</label>
+    <textarea id="notes" placeholder="Write your corrections, changes, or notes here..."></textarea>
+  </div>
+
+  <div class="signature-line">
+    <div class="field">
+      <div class="line"></div>
+      <div class="field-label">Signature</div>
+    </div>
+    <div class="field" style="max-width: 200px;">
+      <div class="line"></div>
+      <div class="field-label">Date</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  Prepared by Patrick McGuire &nbsp;|&nbsp; Cortney Peterson for Congress
+</div>
+
+</body>
+</html>
