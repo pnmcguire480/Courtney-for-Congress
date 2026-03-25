@@ -29,6 +29,7 @@ function fallbackCopy(text, btn, showResult) {
   ta.style.left = '-9999px';
   document.body.appendChild(ta);
   ta.select();
+  ta.setSelectionRange(0, 99999);
   try {
     document.execCommand('copy');
     showResult(true);

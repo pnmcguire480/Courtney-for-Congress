@@ -33,7 +33,7 @@ body{
 
 /* ===== NAVIGATION ===== */
 .nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
+  position:fixed;top:0;left:0;right:0;z-index:1003;
   background:rgba(252,240,225,0.95);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
@@ -54,7 +54,7 @@ body{
   text-decoration:none;color:var(--plum);
 }
 .nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.12em;line-height:1.1}
-.nav-logo-sub{font-size:0.65rem;letter-spacing:0.2em;color:var(--plum-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
+.nav-logo-sub{font-size:0.75rem;letter-spacing:0.2em;color:var(--plum-light);text-transform:uppercase;font-family:'Source Sans 3',sans-serif;font-weight:600}
 .ohio-icon{
   width:32px;height:32px;
   background:var(--coral);
@@ -67,6 +67,7 @@ body{
   padding:0.5rem 0.9rem;border-radius:6px 6px 0 0;
   transition:all 0.3s ease;text-transform:uppercase;
   white-space:nowrap;
+  min-height:44px;display:inline-flex;align-items:center;
 }
 .nav-links a:hover{color:var(--plum);background:rgba(71,13,68,0.06)}
 .nav-links a.active{background:var(--plum);color:var(--cream);padding-bottom:calc(0.5rem + 4px);margin-bottom:-4px;border-radius:6px 6px 0 0}
@@ -115,6 +116,8 @@ body{
   transition:opacity 0.3s ease,visibility 0.3s ease;
 }
 .mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;cursor:pointer;padding:10px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;color:var(--plum);z-index:1}
+.mobile-menu-close svg{width:28px;height:28px}
 .mobile-menu a{
   color:var(--plum);text-decoration:none;font-family:'Bebas Neue',sans-serif;
   font-size:2rem;letter-spacing:0.15em;transition:color 0.3s;

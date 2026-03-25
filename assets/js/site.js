@@ -117,12 +117,32 @@ if (hamburger && mobileMenu) {
     }
   });
 
+  // Close button inside mobile menu
+  var closeBtn = mobileMenu.querySelector('.mobile-menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      closeMobile();
+      hamburger.focus();
+    });
+  }
+
   // Attach closeMobile to all mobile menu links (replaces inline onclick)
   var mobileLinks = mobileMenu.querySelectorAll('a');
   mobileLinks.forEach(function(link) {
     link.addEventListener('click', closeMobile);
   });
 }
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 768 && mobileMenu && mobileMenu.classList.contains('open')) {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    mobileMenu.setAttribute('aria-modal', 'false');
+    unlockScroll();
+  }
+});
 
 function closeMobile() {
   if (hamburger && mobileMenu) {
