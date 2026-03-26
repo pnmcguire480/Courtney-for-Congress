@@ -42,12 +42,12 @@ A zero-dependency static campaign website for Cortney Peterson, an Independent n
 
 ### What Works Right Now
 
-- All 15 pages load and function correctly (11 main + 3 news + 1 district-news)
+- All 20 pages load and function correctly (11 main + 4 news + 1 district-news + 3 Spanish + 1 news index)
 - Mobile hamburger menu + dropdown nav (touch + keyboard accessible)
 - iOS Safari scroll lock on overlays (menu + lightbox)
 - Lightbox swipe gestures on mobile, focus on container (not img)
 - Throttled scroll listeners with passive flag
-- Netlify Forms (volunteer signup, English + Spanish via unified signup.js)
+- Netlify Forms (volunteer signup EN/ES, email-signup, email-signup-hero, email-signup-es, voluntario — all via unified signup.js)
 - Voter registration directory (50 states + territories)
 - Theme toggle (light/dark) — dark mode fully covers all plum-text selectors
 - Google Analytics 4 (G-HTBD03VP7E) on all pages
@@ -55,7 +55,11 @@ A zero-dependency static campaign website for Cortney Peterson, an Independent n
 - Security: CSP (updated for GA4), HSTS, X-Frame-Options, Permissions-Policy
 - Accessibility: skip-nav, focus traps, ARIA labels/modal/expanded, keyboard nav, focus-visible, 44px targets, aria-labels on expandable issues
 - Signature progress bar on homepage
-- News/blog section with article template (template blocked from public access)
+- News/blog section: 4 articles published + template (blocked from public access)
+- "Why Independent?" section on homepage addressing spoiler objection
+- Email capture above fold on homepage
+- Faith & Community church organizing section on get-involved
+- Shontel Brown named on Follow the Money (SEO-targetable)
 - Double-submit protection on all forms
 - Null guards on all JS getElementById/querySelector calls
 
@@ -98,8 +102,10 @@ follow-the-money.html   Campaign finance transparency
 voter-registration.html State-by-state voter reg directory
 success.html            Form submission thank-you
 404.html                Custom error page
-news/                   Blog articles
-es/index.html           Spanish language homepage
+news/                   Blog articles (4 published + template)
+es/index.html           Spanish homepage
+es/issues.html          Spanish issues/platform (16 issues)
+es/get-involved.html    Spanish volunteer page + faith outreach
 
 assets/css/core.css        Main stylesheet
 assets/css/theme.css       Color variables, component theming
@@ -108,8 +114,7 @@ assets/css/a11y.css        Accessibility styles
 
 assets/js/site.js          Shared: nav, theme toggle, scroll, reveal
 assets/js/index.js         Homepage scroll tracking
-assets/js/signup.js        English form handling
-assets/js/signup-es.js     Spanish form handling
+assets/js/signup.js        Unified form handling (EN + ES via lang detection)
 assets/js/voter-registration.js  State directory builder
 assets/js/endorsements.js  Endorsements page logic
 assets/js/events.js        Events page logic
