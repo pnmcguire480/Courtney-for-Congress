@@ -61,22 +61,24 @@ var states = [
 // Populate dropdowns
 var regSelect = document.getElementById('registerSelect');
 var checkSelect = document.getElementById('checkSelect');
-states.forEach(function(s) {
-  var o1 = document.createElement('option');
-  o1.value = s.reg;
-  o1.textContent = s.name;
-  regSelect.appendChild(o1);
-  var o2 = document.createElement('option');
-  o2.value = s.check;
-  o2.textContent = s.name;
-  checkSelect.appendChild(o2);
-});
+if (regSelect && checkSelect) {
+  states.forEach(function(s) {
+    var o1 = document.createElement('option');
+    o1.value = s.reg;
+    o1.textContent = s.name;
+    regSelect.appendChild(o1);
+    var o2 = document.createElement('option');
+    o2.value = s.check;
+    o2.textContent = s.name;
+    checkSelect.appendChild(o2);
+  });
+}
 
 // Handle dropdown changes
 var regBtn = document.getElementById('registerBtn');
 var checkBtn = document.getElementById('checkBtn');
 
-regSelect.addEventListener('change', function() {
+if (regSelect) regSelect.addEventListener('change', function() {
   if (this.value) {
     regBtn.href = this.value;
     regBtn.classList.remove('disabled');
@@ -86,7 +88,7 @@ regSelect.addEventListener('change', function() {
   }
 });
 
-checkSelect.addEventListener('change', function() {
+if (checkSelect) checkSelect.addEventListener('change', function() {
   if (this.value) {
     checkBtn.href = this.value;
     checkBtn.classList.remove('disabled');
@@ -98,30 +100,35 @@ checkSelect.addEventListener('change', function() {
 
 // Build state directory (batched with DocumentFragment for mobile perf)
 var stateList = document.getElementById('stateList');
-var fragment = document.createDocumentFragment();
-states.forEach(function(s) {
-  var div = document.createElement('div');
-  div.className = 'state-item';
-  div.setAttribute('data-name', s.name.toLowerCase());
-  div.innerHTML =
-    '<span class="state-name">' + s.name + (s.note ? ' *' : '') + '</span>' +
-    '<div class="state-links">' +
-      '<a href="' + s.reg + '" class="link-register" target="_blank" rel="noopener noreferrer">Register</a>' +
-      '<a href="' + s.check + '" class="link-check" target="_blank" rel="noopener noreferrer">Check Status</a>' +
-    '</div>';
-  fragment.appendChild(div);
-});
-stateList.appendChild(fragment);
+if (stateList) {
+  var fragment = document.createDocumentFragment();
+  states.forEach(function(s) {
+    var div = document.createElement('div');
+    div.className = 'state-item';
+    div.setAttribute('data-name', s.name.toLowerCase());
+    div.innerHTML =
+      '<span class="state-name">' + s.name + (s.note ? ' *' : '') + '</span>' +
+      '<div class="state-links">' +
+        '<a href="' + s.reg + '" class="link-register" target="_blank" rel="noopener noreferrer">Register</a>' +
+        '<a href="' + s.check + '" class="link-check" target="_blank" rel="noopener noreferrer">Check Status</a>' +
+      '</div>';
+    fragment.appendChild(div);
+  });
+  stateList.appendChild(fragment);
+}
 
 // Search filter
-document.getElementById('stateSearch').addEventListener('input', function() {
-  var query = this.value.toLowerCase().trim();
-  var items = stateList.querySelectorAll('.state-item');
-  items.forEach(function(item) {
-    if (item.getAttribute('data-name').indexOf(query) !== -1) {
-      item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-    }
+var stateSearch = document.getElementById('stateSearch');
+if (stateSearch && stateList) {
+  stateSearch.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    var items = stateList.querySelectorAll('.state-item');
+    items.forEach(function(item) {
+      if (item.getAttribute('data-name').indexOf(query) !== -1) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
   });
-});
+}

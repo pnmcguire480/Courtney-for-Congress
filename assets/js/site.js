@@ -331,11 +331,13 @@ function closeMobile() {
 var sigCountdownEl = document.getElementById('sigCountdown');
 if (sigCountdownEl) {
   var sigDeadline = new Date('2026-05-04T23:59:59-04:00').getTime();
+  var sigIntervalId = null;
   function updateSigCountdown() {
     var now = Date.now();
     var diff = sigDeadline - now;
     if (diff <= 0) {
       sigCountdownEl.innerHTML = '<strong>Deadline passed</strong>';
+      if (sigIntervalId) { clearInterval(sigIntervalId); sigIntervalId = null; }
       return;
     }
     var days = Math.floor(diff / 86400000);
@@ -344,7 +346,7 @@ if (sigCountdownEl) {
     sigCountdownEl.innerHTML = '<strong>' + days + '</strong>d <strong>' + hours + '</strong>h <strong>' + mins + '</strong>m left';
   }
   updateSigCountdown();
-  setInterval(updateSigCountdown, 60000);
+  sigIntervalId = setInterval(updateSigCountdown, 60000);
 }
 
 // Scroll reveal animations (respects prefers-reduced-motion via CSS)

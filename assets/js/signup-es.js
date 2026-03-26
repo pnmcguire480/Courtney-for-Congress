@@ -3,8 +3,10 @@ document.querySelectorAll(".signup-form").forEach(function(form) {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     var btn = form.querySelector("button");
-    btn.textContent = "Enviando...";
-    btn.disabled = true;
+    if (btn) {
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+    }
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -12,13 +14,15 @@ document.querySelectorAll(".signup-form").forEach(function(form) {
     }).then(function(r) {
       if (r.ok) {
         form.innerHTML = '<p style="color:var(--coral);font-weight:700;padding:0.5rem 0">\u00a1Te has registrado!</p>';
-      } else {
+      } else if (btn) {
         btn.textContent = "Intentar de nuevo";
         btn.disabled = false;
       }
     }).catch(function() {
-      btn.textContent = "Intentar de nuevo";
-      btn.disabled = false;
+      if (btn) {
+        btn.textContent = "Intentar de nuevo";
+        btn.disabled = false;
+      }
     });
   });
 });
