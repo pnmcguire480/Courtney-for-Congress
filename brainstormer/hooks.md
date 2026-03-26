@@ -1,6 +1,8 @@
-# BrainStormer: Quality Run — Priority Action Items
+# BrainStormer: Quality Run #2 — Priority Action Items
 
-> Generated: 2026-03-26
+> Generated: 2026-03-26 (Run #2)
+> Previous run items: All CRITICAL and HIGH items from Run #1 were resolved in that session.
+> This run covers the content expansion + audit pass.
 
 ---
 

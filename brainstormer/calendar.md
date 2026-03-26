@@ -2,26 +2,48 @@
 
 > Generated: 2026-03-26 | Source: Grassroots Campaign Manager Agent
 > Context: 487/2,200 signatures collected, 39 days to May 4 deadline
+> **Updated: 2026-03-26 (Session 2)** — All 8 priority items completed + district-specific gaps addressed.
 
 ---
 
-## PRIORITY LIST — What to Do First (Ordered by Urgency)
+## PRIORITY LIST — Status After Session 2
 
-1. **Publish the 3 draft blog posts.** They're written and sitting in `docs/drafts/`. The electric bill post is a door-opener for signatures. Content on the site = content to share = signatures collected.
+1. ~~**Publish the 3 draft blog posts.**~~ **DONE.** Electric bill, kids in crisis, and follow the money published at `news/2026-03-26-*.html`. News index updated with cards.
 
-2. **Make signatures the primary CTA everywhere.** Move "Donate" to secondary. "Help Get Cortney on the Ballot" should be the hero button. You need signatures to survive. Money comes later.
+2. ~~**Make signatures the primary CTA everywhere.**~~ **DONE.** Hero CTA swapped to "Help Get Cortney on the Ballot". Donate demoted to outline button.
 
-3. **Add a "Why Independent?" section to the homepage.** Address the spoiler question head-on. "The two-party system has failed working people. The incumbent takes 59% of her money from PACs. Party loyalty is how they keep you from demanding better."
+3. ~~**Add a "Why Independent?" section to the homepage.**~~ **DONE.** New section between Meet Cortney and signature banner. Addresses spoiler question, cites 59% PAC funding, links to Follow the Money.
 
-4. **Name Shontel Brown on Follow the Money page.** Unlocks SEO for "Shontel Brown PAC money" and "Shontel Brown AIPAC" searches. The FEC/OpenSecrets links already name her — pretending not to is a contradiction.
+4. ~~**Name Shontel Brown on Follow the Money page.**~~ **DONE.** All "Incumbent (OH-11)" replaced with "Shontel Brown (OH-11)". SEO now targetable.
 
-5. **Add email capture above the fold on homepage.** Single-field inline form: "Get updates from Cortney." The footer signup is too buried.
+5. ~~**Add email capture above the fold on homepage.**~~ **DONE.** Inline Netlify form right after hero. "Get Updates from Cortney."
 
-6. **Add "Host a House Party" to volunteer page.** "Invite 10 friends. We'll provide talking points. You provide the living room."
+6. ~~**Add "Host a House Party" to volunteer page.**~~ **DONE.** New card in ways-grid + new checkbox in volunteer form.
 
-7. **Localize the issues page to Cleveland.** Mention specific neighborhoods, specific problems, specific employers. Not "affordable housing" but "rents in Cleveland went up X% while wages stayed flat."
+7. ~~**Localize the issues page to Cleveland.**~~ **DONE.** Tier 1 heading → "Fighting for Cleveland". Housing names East Cleveland/Garfield Heights/Warrensville Heights/Maple Heights + redlining/reappraisal. Data centers cite 24 centers + FirstEnergy + 23%. Green jobs mention RTA. Healthcare mentions MetroHealth.
 
-8. **Improve post-signup experience.** Success page should give immediate next action + social share prompt + Signal/WhatsApp group link.
+8. ~~**Improve post-signup experience.**~~ **DONE.** Success page now has "What to Do Next" (tell 3 people, follow social, read Follow the Money). Primary CTA → "Help Collect Signatures".
+
+---
+
+## DISTRICT-SPECIFIC GAPS — Status After Session 2
+
+- ~~**Majority-Black district**~~ **DONE.** Homepage Meet section names district as majority-Black working class. Housing references redlining + 32% reappraisal hitting Black homeowners. Prison section adds Cuyahoga County disparity.
+- ~~**Union town**~~ **DONE.** New union paragraph in wages section. PRO Act, right-to-work repeal, nurse staffing ratios. Homepage vision names Cleveland's union heritage.
+- ~~**Church organizing**~~ **DONE.** New "Faith & Community" section on get-involved. Faith Community Leader checkbox in volunteer form.
+- ~~**Spanish expansion**~~ **DONE.** `es/issues.html` (full 16-issue platform) and `es/get-involved.html` (full volunteer page + Faith & Community) created. Spanish homepage nav updated. Hreflang cross-refs added.
+
+---
+
+## WHAT'S NEXT (Priority Order)
+
+1. **Translate follow-the-money to Spanish** — the strongest page on the site, needs Spanish reach for Clark-Fulton/Brooklyn Centre/west side Cleveland
+2. **Add share buttons to blog posts** — zero-budget campaigns go viral through sharing, no share mechanism exists
+3. **Add "Votes That Follow the Money"** — 3-5 of Brown's votes against district interests, paired with "What would Cortney vote?"
+4. **Visualize PAC trend** — bar chart showing 24% → 54% → 59% PAC dependency growth
+5. **Add endorsement counter** — "X people have endorsed Cortney" adds social proof urgency
+6. **Event-specific RSVP** — event links go to generic get-involved, should be event-specific
+7. **Weekly blog cadence** — campaign in signature phase needs regular content updates
 
 ---
 

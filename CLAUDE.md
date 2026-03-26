@@ -36,25 +36,28 @@ A zero-dependency static campaign website for Cortney Peterson, an Independent n
 
 ### Last Session
 
-- **Date:** 2026-03-23
-- **What was accomplished:** Comprehensive mobile responsiveness audit (CSS, JS, accessibility, layout) and fixed all 17 issues: iOS Safari scroll lock, menu fade transition, dropdown touch support, hamburger/checkbox touch targets, form focus indicators, aria-modal/label toggling, scroll throttling with passive listeners, lightbox swipe gestures, clipboard API fallback, color contrast fixes, breakpoint normalization, DocumentFragment optimization, removed all inline onclick handlers across 13 pages
-- **Next session should start with:** Test mobile fixes on real devices (iOS Safari, Android Chrome), verify dark mode contrast still good with new section-label/em colors
+- **Date:** 2026-03-26 (Session 2)
+- **What was accomplished:** Executed all 8 grassroots priority items + 4 district-specific gaps. Published 3 blog posts (electric bill, kids in crisis, follow the money) + updated news index. Swapped hero CTA to signatures. Added "Why Independent?" section. Named Shontel Brown on Follow the Money. Email capture above fold. "Host a House Party" on volunteer page. Localized issues to Cleveland (neighborhoods, MetroHealth, FirstEnergy, redlining). Fixed success page dead end. Added Black Cleveland voice, labor/union language (PRO Act, staffing ratios), Faith & Community church organizing section. Created es/issues.html (16 issues) + es/get-involved.html. Quality audit #2: 4 findings fixed (hero form class, success.html meta, 404.html meta+hreflang). All 4 audits PASS.
+- **Next session should start with:** See brainstormer/calendar.md "What's Next" — translate follow-the-money to Spanish, add share buttons to blog posts, add "Votes That Follow the Money" contrast section, visualize PAC trend chart.
 
 ### What Works Right Now
 
-- All 11 pages load and function correctly
+- All 15 pages load and function correctly (11 main + 3 news + 1 district-news)
 - Mobile hamburger menu + dropdown nav (touch + keyboard accessible)
 - iOS Safari scroll lock on overlays (menu + lightbox)
-- Lightbox swipe gestures on mobile
+- Lightbox swipe gestures on mobile, focus on container (not img)
 - Throttled scroll listeners with passive flag
-- Netlify Forms (volunteer signup, English + Spanish)
+- Netlify Forms (volunteer signup, English + Spanish via unified signup.js)
 - Voter registration directory (50 states + territories)
-- Theme toggle (light/dark)
-- SEO: Schema.org JSON-LD on every page, Open Graph, canonical URLs
-- Security: CSP, HSTS, X-Frame-Options, Permissions-Policy
-- Accessibility: skip-nav, focus traps (includes hamburger), ARIA labels/modal/expanded, keyboard nav, focus-visible indicators, 44px touch targets
+- Theme toggle (light/dark) — dark mode fully covers all plum-text selectors
+- Google Analytics 4 (G-HTBD03VP7E) on all pages
+- SEO: Schema.org JSON-LD, Open Graph, canonical URLs, hreflang on all pages
+- Security: CSP (updated for GA4), HSTS, X-Frame-Options, Permissions-Policy
+- Accessibility: skip-nav, focus traps, ARIA labels/modal/expanded, keyboard nav, focus-visible, 44px targets, aria-labels on expandable issues
 - Signature progress bar on homepage
-- News/blog section with article template
+- News/blog section with article template (template blocked from public access)
+- Double-submit protection on all forms
+- Null guards on all JS getElementById/querySelector calls
 
 ### What's Broken Right Now
 
