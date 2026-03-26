@@ -38,6 +38,9 @@ Campaign-Intake-Results.txt
 *.draft
 *.old
 
+# Draft review documents (contain client review forms, not for public)
+docs/drafts/
+
 # Image originals (full-res before compression)
 assets/originals/
 
