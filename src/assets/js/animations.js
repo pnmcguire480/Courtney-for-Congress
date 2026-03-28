@@ -35,20 +35,24 @@
   function revealSimple(dur, yOff) {
     var items = gsap.utils.toArray('.reveal');
     for (var i = 0; i < items.length; i++) {
-      gsap.from(items[i], {
-        scrollTrigger: { trigger: items[i], start: 'top 90%', toggleActions: 'play none none none' },
-        y: yOff, opacity: 0, duration: dur, ease: 'power3.out'
-      });
+      gsap.fromTo(items[i],
+        { y: yOff, opacity: 0 },
+        { y: 0, opacity: 1, duration: dur, ease: 'power3.out',
+          scrollTrigger: { trigger: items[i], start: 'top 90%', toggleActions: 'play none none none' }
+        }
+      );
     }
   }
 
   function staggerCards(dur, stagger, yOff) {
     var grids = gsap.utils.toArray(gridSel);
     for (var i = 0; i < grids.length; i++) {
-      gsap.from(grids[i].children, {
-        scrollTrigger: { trigger: grids[i], start: 'top 85%', toggleActions: 'play none none none' },
-        y: yOff, opacity: 0, duration: dur, stagger: stagger, ease: 'power3.out'
-      });
+      gsap.fromTo(grids[i].children,
+        { y: yOff, opacity: 0 },
+        { y: 0, opacity: 1, duration: dur, stagger: stagger, ease: 'power3.out',
+          scrollTrigger: { trigger: grids[i], start: 'top 85%', toggleActions: 'play none none none' }
+        }
+      );
     }
   }
 
@@ -60,8 +64,8 @@
         var tl = gsap.timeline({
           scrollTrigger: { trigger: labels[i], start: 'top 85%', toggleActions: 'play none none none' }
         });
-        tl.from(labels[i], { x: labelX, opacity: 0, duration: labelDur, ease: 'power2.out' })
-          .from(title, { y: 20, opacity: 0, duration: titleDur, ease: 'power3.out' }, '-=0.15');
+        tl.fromTo(labels[i], { x: labelX, opacity: 0 }, { x: 0, opacity: 1, duration: labelDur, ease: 'power2.out' })
+          .fromTo(title, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: titleDur, ease: 'power3.out' }, '-=0.15');
       }
     }
   }
