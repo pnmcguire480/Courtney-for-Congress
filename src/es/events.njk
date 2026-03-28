@@ -16,60 +16,7 @@ hreflang:
   - lang: x-default
     url: https://cortneyforcongress.org/events.html
 permalink: /es/events.html
-ldJson: >
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "No Kings Rally — Cleveland",
-      "startDate": "2026-03-28T13:00:00-04:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "The Free Stamp, Willard Park",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cleveland",
-          "addressRegion": "OH",
-          "addressCountry": "US"
-        }
-      },
-      "description": "Manifestación No Kings en The Free Stamp en Cleveland. Defiende la democracia.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Cortney Peterson For Congress",
-        "url": "https://cortneyforcongress.org/"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Distribución de Alimentos con The People's Distro",
-      "startDate": "2026-03-26T18:00:00-04:00",
-      "endDate": "2026-03-26T20:00:00-04:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "New Era Clubhouse",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "11713 Buckeye Rd",
-          "addressLocality": "Cleveland",
-          "addressRegion": "OH",
-          "postalCode": "44120",
-          "addressCountry": "US"
-        }
-      },
-      "description": "Distribución comunitaria de alimentos con The People's Distro. Ven a ayudar a servir a tus vecinos y conectar con la campaña.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Cortney Peterson For Congress",
-        "url": "https://cortneyforcongress.org/"
-      }
-    }
-  ]
+ldJson: false
 pageStyle: >
   /* FILTER BAR */
   .filter-bar{background:var(--white);border-bottom:1px solid var(--cream-dark);padding:1rem 1.5rem;position:sticky;top:62px;z-index:100}
@@ -180,51 +127,48 @@ pageStyle: >
 
     <div class="events-grid" id="eventsGrid" aria-live="polite">
 
-      <article class="event-card reveal" data-type="rally">
+      {%- set hasUpcoming = false %}
+      {%- for event in events %}
+        {%- if event.date | isFuture %}
+          {%- set hasUpcoming = true %}
+      <article class="event-card reveal" data-type="{{ event.type }}"
+        data-cal-title="{{ event.title }}"
+        data-cal-start="{{ event.date | icsDateTime(event.startTime) }}"
+        data-cal-end="{{ event.date | icsDateTime(event.endTime) }}"
+        data-cal-location="{{ event.location }}"
+        data-cal-desc="{{ event.descriptionEs or event.description }}">
         <div class="event-date-block">
-          <span class="event-month">Mar</span>
-          <span class="event-day">28</span>
-          <span class="event-dow">Sáb</span>
+          <span class="event-month">{{ event.date | eventMonth }}</span>
+          <span class="event-day">{{ event.date | eventDay }}</span>
+          <span class="event-dow">{{ event.date | eventDowEs }}</span>
         </div>
         <div class="event-body">
-          <span class="event-type-tag tag-rally">Manifestación</span>
-          <h3 class="event-title">Manifestación No Kings — Cleveland</h3>
+          <span class="event-type-tag tag-{{ event.type }}">{{ event.type | eventTypeEs }}</span>
+          <h3 class="event-title">{{ event.title }}</h3>
           <div class="event-meta">
-            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>1:00 PM</span>
-            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>The Free Stamp, Willard Park, Cleveland, OH</span>
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ event.startTime | formatTime }}{% if event.endTime %} – {{ event.endTime | formatTime }}{% endif %}</span>
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ event.location }}</span>
           </div>
-          <p class="event-desc">Únete a nosotros en la manifestación No Kings. La democracia no es negociable — ven y haz que tu voz se escuche.</p>
+          <p class="event-desc">{{ event.descriptionEs or event.description }}</p>
         </div>
         <div class="event-actions">
+          <button class="btn-add-cal" onclick="addToCal(this)" aria-label="Agregar al calendario">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Agregar al Calendario
+          </button>
           <a href="/es/get-involved.html" class="btn-rsvp">Participa</a>
         </div>
       </article>
-
-      <article class="event-card reveal" data-type="community">
-        <div class="event-date-block">
-          <span class="event-month">Mar</span>
-          <span class="event-day">26</span>
-          <span class="event-dow">Jue</span>
-        </div>
-        <div class="event-body">
-          <span class="event-type-tag tag-community">Comunitario</span>
-          <h3 class="event-title">Distribución de Alimentos con The People's Distro</h3>
-          <div class="event-meta">
-            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6:00 PM – 8:00 PM</span>
-            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New Era Clubhouse, 11713 Buckeye Rd, Cleveland, OH 44120</span>
-          </div>
-          <p class="event-desc">Acompaña a Cortney y The People's Distro en una distribución comunitaria de alimentos. Ven a ayudar a servir a tus vecinos y conectar con la campaña.</p>
-        </div>
-        <div class="event-actions">
-          <a href="/es/get-involved.html" class="btn-rsvp">Participa</a>
-        </div>
-      </article>
+        {%- endif %}
+      {%- endfor %}
 
     </div><!-- end eventsGrid -->
 
-    <div class="no-events" style="display:none">
+    {%- if not hasUpcoming %}
+    <div class="no-events">
       <p>No hay eventos programados en este momento.<br>Síguenos en redes sociales para anuncios, o <a href="/es/get-involved.html" style="color:var(--coral);font-weight:700">regístrate para participar</a>.</p>
     </div>
+    {%- endif %}
   </div>
 </section>
 
@@ -234,38 +178,14 @@ pageStyle: >
     <p class="section-label">Estuvimos Ahí</p>
     <h2 class="section-title" id="past-heading">Eventos <em>Pasados</em></h2>
     <ul class="past-list" aria-label="Eventos pasados de la campaña">
-      <li class="past-item">
-        <span class="past-date">Mar 22, 2026</span>
-        <span class="past-title">Fast for Peace through Justice — Discurso Inaugural &nbsp;<span class="past-location">Eternal Life Fountain, Cleveland, OH</span></span>
+      {%- for event in events %}
+        {%- if event.date | isPast %}
+      <li class="past-item" data-type="{{ event.type }}">
+        <span class="past-date">{{ event.date | eventReadable }}</span>
+        <span class="past-title">{{ event.descriptionEs or event.title }} &nbsp;<span class="past-location">{{ event.location }}</span></span>
       </li>
-      <li class="past-item">
-        <span class="past-date">Mar 22, 2026</span>
-        <span class="past-title">Café y Conversación — Phoenix Coffee Coventry &nbsp;<span class="past-location">Cleveland Heights, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Mar 17, 2026</span>
-        <span class="past-title">Celebración del Día de San Patricio — Recolección de Firmas &nbsp;<span class="past-location">Downtown Cleveland, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Mar 14, 2026</span>
-        <span class="past-title">Ohio Cannabis Final Farmers Market &nbsp;<span class="past-location">78th Street Studios, Cleveland, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Mar 7, 2026</span>
-        <span class="past-title">Día Nacional de Acción: Detener la Guerra contra Irán — Manifestación en Market Square &nbsp;<span class="past-location">Cleveland, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Feb 26, 2026</span>
-        <span class="past-title">Distribución de Alimentos con The People's Distro &nbsp;<span class="past-location">Cleveland, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Feb 18, 2026</span>
-        <span class="past-title">Habló en Oposición al Proyecto de Ley del Senado 87 — Capitolio de Ohio &nbsp;<span class="past-location">Columbus, OH</span></span>
-      </li>
-      <li class="past-item">
-        <span class="past-date">Jan 30, 2026</span>
-        <span class="past-title">CLE: Solidaridad con Minnesota — ¡ICE FUERA! Día Nacional de Acción y Manifestación en Public Square &nbsp;<span class="past-location">Downtown Cleveland, OH</span></span>
-      </li>
+        {%- endif %}
+      {%- endfor %}
     </ul>
   </div>
 </section>
