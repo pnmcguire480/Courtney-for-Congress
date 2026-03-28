@@ -78,7 +78,7 @@ if (regSelect && checkSelect) {
 var regBtn = document.getElementById('registerBtn');
 var checkBtn = document.getElementById('checkBtn');
 
-if (regSelect && regBtn) regSelect.addEventListener('change', function() {
+if (regSelect) regSelect.addEventListener('change', function() {
   if (this.value) {
     regBtn.href = this.value;
     regBtn.classList.remove('disabled');
@@ -88,7 +88,7 @@ if (regSelect && regBtn) regSelect.addEventListener('change', function() {
   }
 });
 
-if (checkSelect && checkBtn) checkSelect.addEventListener('change', function() {
+if (checkSelect) checkSelect.addEventListener('change', function() {
   if (this.value) {
     checkBtn.href = this.value;
     checkBtn.classList.remove('disabled');
@@ -106,32 +106,12 @@ if (stateList) {
     var div = document.createElement('div');
     div.className = 'state-item';
     div.setAttribute('data-name', s.name.toLowerCase());
-
-    var nameSpan = document.createElement('span');
-    nameSpan.className = 'state-name';
-    nameSpan.textContent = s.name + (s.note ? ' *' : '');
-
-    var linksDiv = document.createElement('div');
-    linksDiv.className = 'state-links';
-
-    var regLink = document.createElement('a');
-    regLink.href = s.reg;
-    regLink.className = 'link-register';
-    regLink.target = '_blank';
-    regLink.rel = 'noopener noreferrer';
-    regLink.textContent = 'Register';
-
-    var checkLink = document.createElement('a');
-    checkLink.href = s.check;
-    checkLink.className = 'link-check';
-    checkLink.target = '_blank';
-    checkLink.rel = 'noopener noreferrer';
-    checkLink.textContent = 'Check Status';
-
-    linksDiv.appendChild(regLink);
-    linksDiv.appendChild(checkLink);
-    div.appendChild(nameSpan);
-    div.appendChild(linksDiv);
+    div.innerHTML =
+      '<span class="state-name">' + s.name + (s.note ? ' *' : '') + '</span>' +
+      '<div class="state-links">' +
+        '<a href="' + s.reg + '" class="link-register" target="_blank" rel="noopener noreferrer">Register</a>' +
+        '<a href="' + s.check + '" class="link-check" target="_blank" rel="noopener noreferrer">Check Status</a>' +
+      '</div>';
     fragment.appendChild(div);
   });
   stateList.appendChild(fragment);

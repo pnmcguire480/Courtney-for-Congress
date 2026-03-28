@@ -126,9 +126,10 @@ if (hamburger && mobileMenu) {
     });
   }
 
-  // Delegate click on mobile menu links to close menu (replaces inline onclick)
-  mobileMenu.addEventListener('click', function(e) {
-    if (e.target.closest('a')) closeMobile();
+  // Attach closeMobile to all mobile menu links (replaces inline onclick)
+  var mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', closeMobile);
   });
 }
 
