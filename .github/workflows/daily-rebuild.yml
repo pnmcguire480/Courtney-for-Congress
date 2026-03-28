@@ -1,0 +1,15 @@
+name: Daily Rebuild (auto-expire events)
+
+on:
+  schedule:
+    # Every day at 6:00 AM ET (10:00 UTC)
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build
+        run: |
+          curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
