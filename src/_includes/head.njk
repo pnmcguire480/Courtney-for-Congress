@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gaId }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{{ site.gaId }}')</script>
+<meta name="theme-color" content="{{ site.themeColor }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta property="og:title" content="{{ ogTitle | default(title) }}">
+<meta property="og:description" content="{{ ogDescription | default(description) }}">
+<meta property="og:image" content="{{ ogImage | default(site.url + '/assets/images/og-image.png') }}">
+<meta property="og:url" content="{{ ogUrl }}">
+<meta property="og:type" content="{{ ogType | default('website') }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{{ canonical | default(ogUrl) }}">
+{% for alt in hreflang %}<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
+{% endfor %}{% if noindex %}<meta name="robots" content="noindex">
+{% endif %}
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="preload" href="/assets/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/playfair-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v={{ site.cssVersion }}">
+<link rel="stylesheet" href="/assets/css/a11y.css?v={{ site.cssVersion }}">
+<link rel="stylesheet" href="/assets/css/core.css?v={{ site.cssVersion }}">
+<link rel="stylesheet" href="/assets/css/theme.css?v={{ site.cssVersion }}">
+<link rel="stylesheet" href="/assets/css/responsive.css?v={{ site.cssVersion }}">
+{% if ldJson %}<script type="application/ld+json">{{ ldJson | safe }}</script>
+{% endif %}{% if pageStyle %}<style>{{ pageStyle | safe }}</style>
+{% endif %}

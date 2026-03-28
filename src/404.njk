@@ -1,0 +1,119 @@
+---
+layout: bare
+title: "Page Not Found | Cortney Peterson for Congress — OH-11"
+description: "This page doesn't exist — but Cortney's campaign does. Head back home."
+ogTitle: "Page Not Found | Cortney Peterson for Congress"
+ogDescription: "This page doesn't exist — but Cortney's campaign does. Head back home."
+ogUrl: "https://cortneyforcongress.org/404.html"
+noindex: true
+pageScripts: []
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/404.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/404.html
+permalink: /404.html
+pageStyle: >
+  html{font-size:16px}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--plum-deep);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;overflow-x:hidden}
+
+  /* BG TEXTURE */
+  body::before{
+    content:'';position:fixed;inset:0;
+    background:radial-gradient(ellipse at 20% 20%,rgba(92,45,130,0.4) 0%,transparent 60%),
+               radial-gradient(ellipse at 80% 80%,rgba(253,180,155,0.15) 0%,transparent 55%);
+    pointer-events:none;z-index:0
+  }
+
+  .wrap{position:relative;z-index:1;max-width:640px;width:100%}
+
+  /* LOGO LINK */
+  .back-home{display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;color:var(--coral-light);font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:3rem;transition:color 0.3s}
+  .back-home:hover{color:var(--coral)}
+  .ohio-icon{width:28px;height:28px;background:var(--coral);clip-path:polygon(18% 0%,82% 2%,100% 8%,95% 25%,90% 45%,85% 60%,75% 78%,60% 92%,45% 100%,30% 95%,15% 80%,5% 60%,0% 35%,5% 15%);flex-shrink:0}
+
+  /* 404 NUMBER */
+  .error-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(6rem,20vw,10rem);letter-spacing:0.05em;color:transparent;-webkit-text-stroke:3px rgba(253,180,155,0.5);line-height:1;margin-bottom:0.5rem;user-select:none}
+
+  /* HEADLINE */
+  h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;color:var(--white);margin-bottom:1rem;line-height:1.2}
+
+  /* BODY */
+  .subtext{font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto}
+
+  /* LINKS */
+  .nav-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3rem}
+  .btn{display:inline-block;padding:0.85rem 2rem;border-radius:10px;font-weight:700;font-size:0.95rem;letter-spacing:0.05em;text-decoration:none;transition:all 0.3s ease;text-transform:uppercase}
+  .btn-primary{background:var(--plum);color:var(--white);box-shadow:0 4px 20px rgba(253,180,155,0.3)}
+  .btn-primary:hover{background:var(--coral-light);transform:translateY(-2px)}
+  .btn-ghost{color:var(--white);border:1.5px solid rgba(255,255,255,0.2)}
+  .btn-ghost:hover{background:rgba(255,255,255,0.15);transform:translateY(-2px)}
+
+  /* QUICK LINKS */
+  .quick-links{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:3rem}
+  .quick-link{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.9rem;font-weight:600;letter-spacing:0.04em;padding:0.4rem 0.75rem;border-radius:6px;transition:all 0.3s;border:1px solid rgba(255,255,255,0.12)}
+  .quick-link:hover{color:var(--coral-light);border-color:rgba(253,180,155,0.4);background:rgba(253,180,155,0.08)}
+
+  /* DISCLAIMER */
+  .disclaimer{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:1rem}
+
+  @media(max-width:767px){
+    .error-number{font-size:clamp(5rem,15vw,8rem)}
+    h1{font-size:clamp(1.4rem,3.5vw,2rem)}
+    .subtext{font-size:0.95rem}
+    .quick-links{gap:0.5rem}
+  }
+  @media(max-width:480px){
+    .error-number{font-size:7rem}
+    .nav-buttons{flex-direction:column;align-items:center}
+    .btn{width:100%;text-align:center}
+  }
+  @media(max-height:500px) and (orientation:landscape){
+    body{padding:1rem;justify-content:flex-start}
+    .back-home{margin-bottom:1.5rem}
+    .error-number{font-size:5rem;margin-bottom:0.25rem}
+    h1{font-size:1.4rem}
+    .subtext{margin-bottom:1.5rem}
+    .nav-buttons{margin-bottom:1.5rem}
+    .quick-links{margin-bottom:1.5rem}
+  }
+---
+
+<main id="main-content">
+<div class="wrap">
+
+  <a href="/" class="back-home" aria-label="Back to homepage">
+    <div class="ohio-icon" aria-hidden="true"></div>
+    Cortney Peterson For Congress
+  </a>
+
+  <div class="error-number" aria-hidden="true">404</div>
+
+  <h1>This page got lost<br>somewhere in Washington.</h1>
+
+  <p class="subtext">
+    Just like our current representatives — it wandered off and stopped showing up for people.
+    Let's get you back where it counts.
+  </p>
+
+  <div class="nav-buttons">
+    <a href="/" class="btn btn-primary">Back to Homepage</a>
+    <a href="{{ site.donateUrl }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Donate to the Campaign</a>
+  </div>
+
+  <nav class="quick-links" aria-label="Quick links">
+    <a href="issues.html" class="quick-link">Issues</a>
+    <a href="follow-the-money.html" class="quick-link">Follow the Money</a>
+    <a href="get-involved.html" class="quick-link">Get Involved</a>
+    <a href="endorsements.html" class="quick-link">Endorsements</a>
+    <a href="events.html" class="quick-link">Events</a>
+    <a href="news/" class="quick-link">Updates</a>
+    <a href="press.html" class="quick-link">Press</a>
+    <a href="voter-registration.html" class="quick-link">Vote</a>
+    <a href="mailto:{{ site.email }}" class="quick-link">Contact</a>
+  </nav>
+
+  <p class="disclaimer">Paid for by Cortney Peterson For Congress &nbsp;&middot;&nbsp; FEC #{{ site.fec }}</p>
+
+</div>
+</main>

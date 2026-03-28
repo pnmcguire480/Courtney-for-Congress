@@ -13,8 +13,11 @@ desktop.ini
 # Netlify local
 .netlify/
 
-# Node (shouldn't exist, but just in case)
+# Node
 node_modules/
+
+# 11ty build output
+_site/
 
 # Environment files (shouldn't exist for static site, but safety net)
 .env

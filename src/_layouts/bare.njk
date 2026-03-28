@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('en') }}">
+<head>
+{% include "head.njk" %}
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+{% include "sig-banner.njk" %}
+
+{{ content | safe }}
+
+<script src="/assets/js/site.js?v={{ site.cssVersion }}" defer></script>
+</body>
+</html>

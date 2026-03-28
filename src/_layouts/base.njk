@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('en') }}">
+<head>
+{% include "head.njk" %}
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+{% include "nav.njk" %}
+{% include "sig-banner.njk" %}
+
+{{ content | safe }}
+
+{% include "footer.njk" %}
+{% include "scripts.njk" %}
+</body>
+</html>

@@ -1,0 +1,591 @@
+---
+layout: base
+title: "Follow the Money | Cortney Peterson for Congress — OH-11"
+description: "See who funds Ohio's 11th Congressional District race. Compare PAC money, corporate donors, and grassroots funding — every dollar sourced from public FEC records."
+ogTitle: "Follow the Money | Cortney Peterson for Congress — OH-11"
+ogDescription: "See who funds Ohio's 11th Congressional District race. Compare PAC money, corporate donors, and grassroots funding — every dollar sourced from public FEC records."
+ogUrl: "https://cortneyforcongress.org/follow-the-money.html"
+navActive: "follow-the-money"
+pageScripts: []
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/follow-the-money.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/follow-the-money.html
+permalink: /follow-the-money.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Follow the Money",
+    "description": "Campaign finance transparency for Cortney Peterson for Congress. See how this grassroots campaign is funded.",
+    "url": "https://cortneyforcongress.org/follow-the-money.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Cortney Peterson for Congress",
+      "url": "https://cortneyforcongress.org/"
+    },
+    "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+  }
+pageStyle: >
+  /* HERO SOCIALS */
+  .hero-socials{display:flex;justify-content:center;gap:0.75rem;margin-top:1.75rem}
+  .hero-social{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:1px solid rgba(255,255,255,0.35)}
+  .hero-social:hover{background:var(--coral);border-color:var(--coral);color:var(--white);transform:translateY(-2px)}
+
+  /* CONTENT BODY */
+  .money-body{max-width:860px;margin:0 auto;padding:3rem 1.5rem 5rem}
+
+  /* INTRO BLOCK */
+  .intro-block{background:var(--white);border-radius:20px;padding:2.5rem 2rem;margin-bottom:2.5rem;box-shadow:0 2px 12px rgba(71,13,68,0.06)}
+  .intro-block p{font-size:1.05rem;color:var(--text-light);line-height:1.8;margin-bottom:1rem}
+  .intro-block p:last-child{margin-bottom:0}
+  .intro-block strong{color:var(--text);font-weight:700}
+
+  /* COMPARISON TABLE */
+  .compare-section{margin-bottom:2.5rem}
+  .compare-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:900;color:var(--plum);line-height:1.2;margin-bottom:1.25rem}
+  .compare-section h2 em{font-style:italic;color:var(--coral)}
+  .compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(71,13,68,0.06);margin-bottom:1rem}
+  .compare-table thead th{background:var(--plum);color:var(--white);font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 1.25rem;text-align:left}
+  .compare-table thead th:first-child{width:40%}
+  .compare-table tbody td{padding:0.85rem 1.25rem;border-bottom:1px solid rgba(71,13,68,0.06);font-size:0.95rem;vertical-align:top}
+  .compare-table tbody tr:last-child td{border-bottom:none}
+  .compare-table tbody tr:nth-child(even){background:rgba(244,238,248,0.4)}
+  .compare-table tbody tr:nth-child(odd){background:var(--white)}
+  .col-cortney{color:var(--plum);font-weight:700}
+  .col-incumbent{color:var(--text-light)}
+  .compare-table .highlight-row td{background:rgba(253,180,155,0.15);font-weight:600}
+
+  /* DATA CARDS */
+  .data-section{margin-bottom:2.5rem}
+  .data-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:900;color:var(--plum);line-height:1.2;margin-bottom:0.5rem}
+  .data-section h2 em{font-style:italic;color:var(--coral)}
+  .data-section .section-note{font-size:0.95rem;color:var(--text-light);margin-bottom:1.25rem;line-height:1.7}
+  .data-card{background:#f4eef8;border-radius:20px;padding:2rem;margin-bottom:1.5rem}
+  .data-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--plum);margin-bottom:1rem}
+  .data-card p{font-size:0.95rem;color:var(--text-light);line-height:1.7;margin-bottom:0.75rem}
+  .data-card p:last-child{margin-bottom:0}
+  .data-card strong{color:var(--text)}
+
+  /* STAT HIGHLIGHTS */
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+  .stat-box{background:var(--white);border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 2px 8px rgba(71,13,68,0.05)}
+  .stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--plum);letter-spacing:0.04em;line-height:1.1}
+  .stat-label{font-size:0.82rem;color:var(--text-light);margin-top:0.4rem;line-height:1.4;font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
+
+  /* DONOR LIST */
+  .donor-list{list-style:none;background:var(--white);border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 2px 8px rgba(71,13,68,0.05);margin-bottom:1rem}
+  .donor-list li{font-size:0.95rem;color:var(--text);padding:0.5rem 0;border-bottom:1px solid rgba(0,0,0,0.06);display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+  .donor-list li:last-child{border-bottom:none;padding-bottom:0}
+  .donor-name{font-weight:600}
+  .donor-amount{color:var(--plum);font-weight:700;white-space:nowrap;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:0.04em}
+
+  /* OUTSIDE SPENDING */
+  .outside-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(71,13,68,0.05);margin-bottom:1rem}
+  .outside-table thead th{background:#f4eef8;color:var(--plum);font-family:'Bebas Neue',sans-serif;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.85rem 1rem;text-align:left;border-bottom:2px solid rgba(71,13,68,0.1)}
+  .outside-table tbody td{padding:0.7rem 1rem;border-bottom:1px solid rgba(0,0,0,0.05);font-size:0.9rem;background:var(--white)}
+  .outside-table tbody tr:last-child td{border-bottom:none}
+  .outside-table .total-row td{font-weight:700;background:rgba(253,180,155,0.12);border-top:2px solid rgba(71,13,68,0.1)}
+
+  /* SOURCE LINKS */
+  .source-note{font-size:0.82rem;color:var(--text-light);font-style:italic;margin-top:0.5rem;line-height:1.6}
+  .source-note a{color:var(--plum-light);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .source-note a:hover{color:var(--coral);text-decoration-style:solid}
+
+  /* VOTE SECTION */
+  .vote-card{background:var(--white);border-radius:16px;padding:1.5rem 1.75rem;box-shadow:0 2px 8px rgba(71,13,68,0.05);margin-bottom:1rem}
+  .vote-card h4{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.15em;color:var(--coral);text-transform:uppercase;margin-bottom:0.5rem}
+  .vote-card p{font-size:0.95rem;color:var(--text-light);line-height:1.7}
+  .vote-card .contrast{margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);font-weight:600;color:var(--plum)}
+
+  /* CTA SECTION */
+  .money-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+  .money-cta-inner{max-width:600px;margin:0 auto}
+  .money-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+  .money-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+  .btn-primary{background:var(--coral);color:var(--plum);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+  .btn-primary:hover{background:var(--coral-light);transform:translateY(-2px)}
+  .btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+  .btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
+
+  /* RESPONSIVE */
+
+  /* Mobile: 0-767px */
+  @media(max-width:767px){
+    /* Statistics row: single column */
+    .stat-row{
+      grid-template-columns:1fr !important;
+      gap:1rem;
+    }
+
+    /* Table container: horizontal scroll */
+    .table-container{
+      position:relative;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      margin:-0.5rem 0 1rem;
+      padding:0.5rem 0;
+      border-radius:8px;
+    }
+    .table-container::after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      width:2rem;
+      background:linear-gradient(to right, transparent, var(--cream));
+      pointer-events:none;
+      opacity:1;
+      transition:opacity 0.3s;
+    }
+    [data-theme="dark"] .table-container::after{
+      background:linear-gradient(to right, transparent, var(--cream-dark, #150e1b));
+    }
+
+    /* Tables: smaller text and padding */
+    .compare-table{
+      font-size:0.82rem;
+      min-width:500px;
+    }
+
+    .compare-table thead th{
+      padding:0.6rem 0.75rem;
+      font-size:0.75rem;
+    }
+
+    .compare-table tbody td{
+      padding:0.6rem 0.75rem;
+      word-break:break-word;
+    }
+
+    .outside-table{
+      font-size:0.8rem;
+      min-width:450px;
+    }
+
+    .outside-table thead th,
+    .outside-table tbody td{
+      padding:0.5rem 0.6rem;
+    }
+
+    /* Content adjustments */
+    .money-body{
+      padding:2.5rem 1.25rem 4rem;
+    }
+
+    .intro-block{
+      padding:2rem 1.5rem;
+      border-radius:16px;
+    }
+
+    .data-card{
+      padding:1.75rem 1.5rem;
+      border-radius:16px;
+    }
+
+    .donor-list{
+      padding:1.25rem 1.5rem;
+    }
+  }
+
+  /* Small Mobile: 0-480px */
+  @media(max-width:480px){
+    .money-body{
+      padding:2rem 1rem 3rem;
+    }
+
+    .intro-block{
+      padding:1.5rem 1.25rem;
+    }
+
+    .data-card{
+      padding:1.5rem 1.25rem;
+    }
+
+    .donor-list{
+      padding:1rem 1.25rem;
+    }
+
+    .stat-row{
+      gap:0.75rem;
+    }
+
+    .stat-box{
+      padding:1.25rem;
+    }
+
+    /* Tables: even smaller on tiny screens */
+    .compare-table{
+      font-size:0.78rem;
+    }
+
+    .compare-table thead th,
+    .compare-table tbody td{
+      padding:0.5rem 0.6rem;
+    }
+
+    .outside-table{
+      font-size:0.76rem;
+    }
+
+    .outside-table thead th,
+    .outside-table tbody td{
+      padding:0.4rem 0.5rem;
+    }
+  }
+
+  /* Tablet: 768-1023px */
+  @media(min-width:768px) and (max-width:1023px){
+    .money-body{
+      padding:4rem 2rem 6rem;
+    }
+
+    .stat-row{
+      grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+    }
+
+    .compare-table{
+      font-size:0.9rem;
+    }
+
+    .outside-table{
+      font-size:0.88rem;
+    }
+  }
+
+  /* Large screens: 1024px+ */
+  @media(min-width:1024px){
+    .money-body{
+      padding:5rem 3rem 8rem;
+    }
+
+    .money-cta{
+      padding:7rem 3rem;
+    }
+
+    .stat-row{
+      gap:2rem;
+    }
+  }
+---
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Transparency</div>
+    <h1>Follow the <em>Money</em></h1>
+    <p>In our democracy, voters deserve to know who funds their representatives and how those representatives vote. Here's a clear, fact-based look at the money behind OH-11.</p>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- INTRO -->
+<div class="money-body">
+
+  <div class="intro-block reveal">
+    <p><strong>This is not an attack page.</strong> This is a transparency page. Every dollar amount below comes from public FEC filings and OpenSecrets data. Every fact is sourced. We believe voters are smart enough to look at the numbers and draw their own conclusions.</p>
+    <p>The question isn't whether politicians take money from corporations and PACs. The question is: <strong>who do they work for once they get to Washington?</strong></p>
+  </div>
+
+  <!-- THE BIG NUMBERS -->
+  <div class="stat-row reveal">
+    <div class="stat-box">
+      <div class="stat-num">58.8%</div>
+      <div class="stat-label">Shontel Brown's Funding<br>from PACs (2026 cycle)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3.7%</div>
+      <div class="stat-label">Shontel Brown's Funding from<br>Small Donors under $200</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$0</div>
+      <div class="stat-label">Corporate &amp; Foreign PAC<br>Money We Accept</div>
+    </div>
+  </div>
+
+  <!-- SIDE-BY-SIDE COMPARISON -->
+  <section class="compare-section reveal">
+    <h2>The <em>Comparison</em></h2>
+    <div class="table-container">
+    <table class="compare-table" role="table">
+      <caption class="sr-only">Campaign funding comparison: Cortney Peterson vs. Shontel Brown (OH-11)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Metric</th>
+          <th scope="col">Cortney Peterson</th>
+          <th scope="col">Shontel Brown (OH-11)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td>Corporate PAC money</td>
+          <td class="col-cortney">$0 — refuses all</td>
+          <td class="col-incumbent">$395,500+ (2026 cycle)</td>
+        </tr>
+        <tr>
+          <td>Foreign-influence PAC money (AIPAC, etc.)</td>
+          <td class="col-cortney">$0 — refuses all</td>
+          <td class="col-incumbent">~$1.14 million (career)</td>
+        </tr>
+        <tr>
+          <td>% funded by PACs</td>
+          <td class="col-cortney">0%</td>
+          <td class="col-incumbent">58.8% (2026 cycle)</td>
+        </tr>
+        <tr>
+          <td>% funded by small donors (under $200)</td>
+          <td class="col-cortney">100% grassroots</td>
+          <td class="col-incumbent">3.7% (2026 cycle)</td>
+        </tr>
+        <tr>
+          <td>Leadership PAC</td>
+          <td class="col-cortney">No</td>
+          <td class="col-incumbent">Yes — "Strength in Seven PAC"</td>
+        </tr>
+        <tr>
+          <td>Career fundraising total</td>
+          <td class="col-cortney">People-powered</td>
+          <td class="col-incumbent">$6.09 million+</td>
+        </tr>
+        <tr>
+          <td>Super PAC support (career)</td>
+          <td class="col-cortney">None</td>
+          <td class="col-incumbent">$5+ million in outside spending</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source-note">Sources: <a href="https://www.fec.gov/data/candidate/H2OH11169/" target="_blank" rel="noopener noreferrer">FEC.gov — Candidate filings</a>, <a href="https://www.opensecrets.org/members-of-congress/shontel-brown/summary?cid=N00047875" target="_blank" rel="noopener noreferrer">OpenSecrets — Member summary</a>. All data from publicly available federal election records.</p>
+  </section>
+
+  <!-- PAC FUNDING BREAKDOWN -->
+  <section class="data-section reveal">
+    <h2>Where the <em>Money</em> Comes From</h2>
+    <p class="section-note">Here's how Shontel Brown's campaign funding breaks down across recent election cycles — straight from FEC filings.</p>
+
+    <div class="data-card">
+      <h3>2025–2026 Cycle (Current)</h3>
+      <p><strong>Total raised:</strong> $672,085</p>
+      <p><strong>PAC / committee contributions:</strong> $395,500 (58.8%)</p>
+      <p><strong>Individual contributions:</strong> $268,084 (39.9%)</p>
+      <p><strong>Small donors (under $200):</strong> $24,539 (3.7%)</p>
+      <p><strong>Cash on hand:</strong> $1,088,668</p>
+      <p class="source-note">Source: <a href="https://www.fec.gov/data/candidate/H2OH11169/" target="_blank" rel="noopener noreferrer">FEC.gov</a> — through 12/31/2025</p>
+    </div>
+
+    <div class="data-card">
+      <h3>2023–2024 Cycle</h3>
+      <p><strong>Total raised:</strong> $1,418,292</p>
+      <p><strong>PAC / committee contributions:</strong> $763,803 (53.9%)</p>
+      <p><strong>Individual contributions:</strong> $568,031 (40.0%)</p>
+      <p><strong>Small donors (under $200):</strong> $64,413 (4.5%)</p>
+      <p class="source-note">Source: <a href="https://www.fec.gov/data/committee/C00764381/?cycle=2024" target="_blank" rel="noopener noreferrer">FEC.gov</a></p>
+    </div>
+
+    <div class="data-card">
+      <h3>The Trend</h3>
+      <p>PAC dependency has <strong>more than doubled</strong> — from 24% in 2022 to 54% in 2024 to nearly 59% in 2026. Small-dollar donations were <strong>cut by more than half</strong> — from 9.4% to 4.5% to 3.7%. Brown's campaign is becoming <em>more</em> corporate-dependent over time, not less.</p>
+    </div>
+  </section>
+
+  <!-- PRO-ISRAEL / AIPAC MONEY -->
+  <section class="data-section reveal">
+    <h2>The <em>AIPAC</em> Question</h2>
+    <p class="section-note">Pro-Israel lobby spending is the #1 industry contributor in this district. Here's what the public record shows.</p>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-num">~$1.14M</div>
+        <div class="stat-label">Career Pro-Israel<br>Lobby Contributions</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$700K+</div>
+        <div class="stat-label">From Pro-Israel<br>America PAC Alone</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$264K+</div>
+        <div class="stat-label">Bundled Through<br>AIPAC Directly</div>
+      </div>
+    </div>
+
+    <ul class="donor-list">
+      <li><span class="donor-name">Pro-Israel America PAC</span><span class="donor-amount">$700,366</span></li>
+      <li><span class="donor-name">AIPAC (bundled contributions)</span><span class="donor-amount">$264,290+</span></li>
+      <li><span class="donor-name">Pro-Israel (2024 cycle only)</span><span class="donor-amount">$124,770</span></li>
+      <li><span class="donor-name">NorPAC</span><span class="donor-amount">$87,400</span></li>
+    </ul>
+    <p class="source-note">Sources: <a href="https://www.opensecrets.org/members-of-congress/shontel-brown/summary?cid=N00047875" target="_blank" rel="noopener noreferrer">OpenSecrets</a>, <a href="https://www.fec.gov/data/committee/C00764381/" target="_blank" rel="noopener noreferrer">FEC.gov</a>, <a href="https://theintercept.com/2023/09/21/aipac-cbc-progressive-black-democrats/" target="_blank" rel="noopener noreferrer">The Intercept</a></p>
+
+    <div class="data-card" style="margin-top:1.5rem">
+      <h3>How AIPAC Bundling Works</h3>
+      <p>AIPAC's PAC is legally limited to $5,000 per candidate per election in direct contributions. But AIPAC also operates as a "conduit" — individual donors earmark their contributions through AIPAC to specific candidates, allowing totals far exceeding the PAC limit. This is legal, but it means the actual AIPAC influence is much larger than the direct PAC number suggests.</p>
+    </div>
+  </section>
+
+  <!-- OUTSIDE SPENDING -->
+  <section class="data-section reveal">
+    <h2>Outside <em>Spending</em></h2>
+    <p class="section-note">Beyond direct contributions, millions in super PAC money has flowed into OH-11. These groups can spend unlimited amounts — and voters should know who's spending it.</p>
+
+    <div class="data-card">
+      <h3>2021 Special Election</h3>
+      <div class="table-container">
+      <table class="outside-table" role="table">
+        <caption class="sr-only">Outside spending in 2021 Special Election for OH-11</caption>
+        <thead>
+          <tr>
+            <th scope="col">Group</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DMFI PAC (Democratic Majority for Israel)</td>
+            <td>~$2.0 million</td>
+            <td>TV, digital, mailers</td>
+          </tr>
+          <tr>
+            <td>Pro-Israel America PAC</td>
+            <td>$623,000</td>
+            <td>Bundled contributions</td>
+          </tr>
+          <tr>
+            <td>Third Way</td>
+            <td>$255,000</td>
+            <td>Digital ads</td>
+          </tr>
+          <tr class="total-row">
+            <td>Total pro-Brown outside spending</td>
+            <td>~$2.9 million</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="data-card">
+      <h3>2022 Primary</h3>
+      <div class="table-container">
+      <table class="outside-table" role="table">
+        <caption class="sr-only">Outside spending in 2022 Primary for OH-11</caption>
+        <thead>
+          <tr>
+            <th scope="col">Group</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DMFI PAC</td>
+            <td>~$1.0+ million</td>
+            <td>TV ads, including attack ads</td>
+          </tr>
+          <tr>
+            <td>United Democracy Project (AIPAC super PAC)</td>
+            <td>$280,000+</td>
+            <td>Ads</td>
+          </tr>
+          <tr>
+            <td>Protect Our Future (Sam Bankman-Fried crypto PAC)</td>
+            <td>$1,000,000</td>
+            <td>Super PAC support</td>
+          </tr>
+          <tr class="total-row">
+            <td>Total pro-Brown outside spending</td>
+            <td>~$2.3 million</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="data-card">
+      <h3>The Pattern</h3>
+      <p>Across just two elections, <strong>over $5 million</strong> in outside super PAC money was spent to support Shontel Brown and attack her opponent. DMFI alone spent approximately <strong>$3 million total</strong> across both races. One of the largest contributors — Sam Bankman-Fried's crypto PAC — was later connected to one of the largest financial fraud cases in American history.</p>
+      <p class="source-note">Sources: <a href="https://ballotpedia.org/Ohio%27s_11th_Congressional_District_special_election,_2021_(August_3_Democratic_primary)" target="_blank" rel="noopener noreferrer">Ballotpedia</a>, <a href="https://theintercept.com/2022/05/03/ohio-primary-elections-nina-turner-shontel-brown/" target="_blank" rel="noopener noreferrer">The Intercept</a>, <a href="https://www.commondreams.org/news/2022/05/04/progressive-champion-nina-turner-falls-establishment-incumbent-shontel-brown" target="_blank" rel="noopener noreferrer">Common Dreams</a></p>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP PAC -->
+  <section class="data-section reveal">
+    <h2>The Leadership <em>PAC</em></h2>
+    <p class="section-note">Members of Congress can create "Leadership PACs" to raise money and distribute it to other politicians — building party influence and political IOUs.</p>
+
+    <div class="data-card">
+      <h3>Strength in Seven PAC</h3>
+      <p><strong>FEC ID:</strong> C00804153</p>
+      <p><strong>Registered:</strong> February 7, 2022</p>
+      <p><strong>Career total raised:</strong> ~$238,775</p>
+      <p><strong>2025–2026 spending:</strong> $49,386 — of which <strong>$45,000 (91%)</strong> went to contributions to other candidates and committees. Only $3,886 went to operating expenses.</p>
+      <p>That means 91 cents of every dollar raised by this Leadership PAC goes to building political power — not serving OH-11.</p>
+      <p class="source-note">Source: <a href="https://www.fec.gov/data/committee/C00804153/" target="_blank" rel="noopener noreferrer">FEC.gov — Strength in Seven PAC</a></p>
+    </div>
+  </section>
+
+  <!-- THE TWO CAUCUSES -->
+  <section class="data-section reveal">
+    <h2>Two Caucuses, <em>One Vote</em></h2>
+    <p class="section-note">Shontel Brown is simultaneously a member of both the Congressional Progressive Caucus (the left wing) and the New Democrat Coalition (the corporate-friendly centrist wing). That's unusual — and worth asking about.</p>
+
+    <div class="data-card">
+      <h3>What Does That Mean?</h3>
+      <p>The <strong>Congressional Progressive Caucus</strong> fights for Medicare for All, a $15 minimum wage, and the Green New Deal. The <strong>New Democrat Coalition</strong> is backed by corporate interests and advocates for "market-friendly" policies. These groups have fundamentally different views on healthcare, labor rights, and corporate regulation.</p>
+      <p>Being in both lets a representative claim progressive credentials while maintaining corporate-friendly relationships. Voters deserve clarity about which side their representative is actually on.</p>
+      <p class="source-note">Source: <a href="https://shontelbrown.house.gov/about/committees-and-caucuses" target="_blank" rel="noopener noreferrer">Official House website — Committees &amp; Caucuses</a></p>
+    </div>
+  </section>
+
+  <!-- CORTNEY'S PLEDGE -->
+  <section class="data-section reveal">
+    <h2>Cortney's <em>Pledge</em></h2>
+    <div class="data-card" style="background:var(--plum);color:var(--white);border:none">
+      <h3 style="color:var(--coral)">The People's Campaign</h3>
+      <p style="color:rgba(255,255,255,0.85)">Cortney Peterson's campaign accepts <strong style="color:var(--white)">zero</strong> dollars from:</p>
+      <ul style="list-style:none;margin:1rem 0;padding:0">
+        <li style="color:rgba(255,255,255,0.9);padding:0.3rem 0;font-size:0.95rem">&#10005;&nbsp;&nbsp;Corporate PACs</li>
+        <li style="color:rgba(255,255,255,0.9);padding:0.3rem 0;font-size:0.95rem">&#10005;&nbsp;&nbsp;Foreign-influence PACs (AIPAC, etc.)</li>
+        <li style="color:rgba(255,255,255,0.9);padding:0.3rem 0;font-size:0.95rem">&#10005;&nbsp;&nbsp;Big Pharma PACs</li>
+        <li style="color:rgba(255,255,255,0.9);padding:0.3rem 0;font-size:0.95rem">&#10005;&nbsp;&nbsp;Fossil Fuel PACs</li>
+        <li style="color:rgba(255,255,255,0.9);padding:0.3rem 0;font-size:0.95rem">&#10005;&nbsp;&nbsp;Big Tech / Crypto PACs</li>
+      </ul>
+      <p style="color:rgba(255,255,255,0.85)">This campaign is funded by <strong style="color:var(--white)">working people</strong> — nurses, teachers, warehouse workers, parents, and neighbors making small-dollar donations. That's who Cortney will answer to in Congress. Period.</p>
+    </div>
+  </section>
+
+  <!-- VERIFY IT YOURSELF -->
+  <section class="data-section reveal">
+    <h2>Verify It <em>Yourself</em></h2>
+    <p class="section-note">Don't take our word for it. Every fact on this page is sourced from public records. Here's where to look:</p>
+    <div class="data-card">
+      <ul class="donor-list" style="box-shadow:none;padding:0;background:transparent">
+        <li style="border-color:rgba(71,13,68,0.1)"><span class="donor-name">FEC.gov — Official filings</span><span><a href="https://www.fec.gov/data/candidate/H2OH11169/" target="_blank" rel="noopener noreferrer" style="color:var(--plum);font-weight:600;font-size:0.9rem">View filings →</a></span></li>
+        <li style="border-color:rgba(71,13,68,0.1)"><span class="donor-name">OpenSecrets — Member summary</span><span><a href="https://www.opensecrets.org/members-of-congress/shontel-brown/summary?cid=N00047875" target="_blank" rel="noopener noreferrer" style="color:var(--plum);font-weight:600;font-size:0.9rem">View data →</a></span></li>
+        <li style="border-color:rgba(71,13,68,0.1)"><span class="donor-name">FEC.gov — Leadership PAC</span><span><a href="https://www.fec.gov/data/committee/C00804153/" target="_blank" rel="noopener noreferrer" style="color:var(--plum);font-weight:600;font-size:0.9rem">View filings →</a></span></li>
+        <li style="border-color:rgba(71,13,68,0.1)"><span class="donor-name">GovTrack — Voting record</span><span><a href="https://www.govtrack.us/congress/members/shontel_brown/456863" target="_blank" rel="noopener noreferrer" style="color:var(--plum);font-weight:600;font-size:0.9rem">View record →</a></span></li>
+        <li style="border-bottom:none"><span class="donor-name">Ballotpedia — Election data</span><span><a href="https://ballotpedia.org/Shontel_Brown" target="_blank" rel="noopener noreferrer" style="color:var(--plum);font-weight:600;font-size:0.9rem">View profile →</a></span></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<!-- CTA -->
+<section class="money-cta">
+  <div class="money-cta-inner">
+    <h2>Want a Representative Who Works for You?</h2>
+    <p>Every dollar Cortney raises comes from working people. No corporate PAC money. No foreign influence. Just neighbors funding a neighbor's campaign for Congress.</p>
+    <div class="btn-group">
+      <a href="get-involved.html" class="btn btn-primary">Get Involved →</a>
+      <a href="{{ site.donateUrl }}" class="btn btn-outline-white">Donate Now</a>
+    </div>
+  </div>
+</section>

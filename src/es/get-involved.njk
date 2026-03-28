@@ -1,0 +1,364 @@
+---
+layout: base
+lang: "es"
+title: "Participa | Cortney Peterson para el Congreso — OH-11"
+description: "Hazte voluntario, toca puertas, haz llamadas y apoya la campaña popular de Cortney Peterson para el 11.º Distrito Congresional de Ohio. Sin dinero de PACs — impulsada por la gente."
+ogTitle: "Participa | Cortney Peterson para el Congreso"
+ogDescription: "Hazte voluntario, toca puertas, haz llamadas y apoya la campaña popular de Cortney Peterson para el 11.º Distrito de Ohio. Impulsada por la gente."
+ogUrl: "https://cortneyforcongress.org/es/get-involved.html"
+navActive: "get-involved"
+pageScripts: ["get-involved.js"]
+formName: "voluntario"
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/get-involved.html
+  - lang: es
+    url: https://cortneyforcongress.org/es/get-involved.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/get-involved.html
+permalink: /es/get-involved.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@type": "JoinAction",
+    "target": {
+      "@type": "EntryPoint",
+      "name": "Voluntariado para Cortney Peterson para el Congreso",
+      "url": "https://cortneyforcongress.org/es/get-involved.html"
+    },
+    "agent": {
+      "@type": "Organization",
+      "name": "Cortney Peterson For Congress",
+      "url": "https://cortneyforcongress.org/"
+    },
+    "description": "Únete a la campaña popular de Cortney Peterson. Hazte voluntario para tocar puertas, hacer llamadas, organizar eventos y más. Sin dinero de PACs — impulsada por la gente.",
+    "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+  }
+pageStyle: >
+  :root{--green:#2d6a4f;--green-light:#d8f3dc}
+  /* NAV OVERRIDES (es) */
+  .nav-links a{border-radius:6px}
+  .lang-switch{font-size:0.78rem!important;color:rgba(255,255,255,0.6)!important;border:1px solid rgba(255,255,255,0.2)!important;padding:0.4rem 0.7rem!important}
+  .lang-switch:hover{color:var(--white)!important;border-color:rgba(255,255,255,0.5)!important}
+  /* WAYS TO HELP */
+  .ways{padding:5rem 1.5rem}
+  .ways-inner{max-width:1000px;margin:0 auto}
+  .section-intro{font-size:1.05rem;color:var(--text-light);max-width:640px;line-height:1.8;margin-bottom:3rem}
+  .ways-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+  .way-card{background:var(--white);border-radius:12px;padding:2rem 1.75rem;border:1px solid rgba(0,0,0,0.05);border-top:3px solid var(--coral);transition:border-color 0.2s ease,box-shadow 0.25s ease;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+  .way-card:hover{box-shadow:0 6px 24px rgba(46,8,41,0.09);border-top-color:var(--plum)}
+  .way-icon{display:none}
+  .way-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--plum);margin-bottom:0.5rem}
+  .way-card p{font-size:0.9rem;color:var(--text-light);line-height:1.7}
+  .way-card .way-cta{display:inline-block;margin-top:auto;padding-top:1rem;font-size:0.82rem;font-weight:700;color:var(--coral);letter-spacing:0.05em;text-transform:uppercase}
+  /* VOLUNTEER FORM */
+  .volunteer-section{background:var(--white);padding:5rem 1.5rem;border-top:1px solid rgba(0,0,0,0.05)}
+  .volunteer-inner{max-width:700px;margin:0 auto}
+  .volunteer-intro-aside{display:none}
+  .form-card{background:var(--cream);border-radius:24px;padding:3rem;border:1px solid rgba(0,0,0,0.05)}
+  .field-group{margin-bottom:1.5rem}
+  .field-group label{display:block;font-size:0.85rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;letter-spacing:0.01em}
+  .field-group label .req{color:var(--coral);font-weight:700}
+  .field-group input,.field-group select,.field-group textarea{width:100%;padding:0.75rem 1rem;background:var(--white);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;font-size:0.95rem;font-family:'Source Sans 3',sans-serif;color:var(--text);transition:border-color 0.2s,box-shadow 0.2s}
+  .field-group input:focus,.field-group select:focus,.field-group textarea:focus{border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)}
+  .field-group textarea{resize:vertical;min-height:80px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .checkbox-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+  .checkbox-list li label{display:flex;align-items:flex-start;gap:0.5rem;font-weight:400;cursor:pointer;font-size:0.9rem;color:var(--text-light);padding:0.35rem 0.5rem;border-radius:8px;transition:background 0.15s}
+  .checkbox-list li label:hover{background:var(--cream-dark)}
+  .checkbox-list input[type="checkbox"]{margin-top:0.2rem;width:16px;height:16px;accent-color:var(--plum);flex-shrink:0}
+  .submit-btn{width:100%;padding:1rem;margin-top:0.5rem;background:linear-gradient(135deg,var(--plum),var(--plum-light));color:var(--white);border:none;border-radius:12px;font-size:1rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;font-family:'Source Sans 3',sans-serif;box-shadow:0 4px 20px rgba(71,13,68,0.25)}
+  .submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(71,13,68,0.35)}
+  .form-note{font-size:0.8rem;color:var(--text-light);margin-top:1rem;text-align:center;line-height:1.6}
+  /* SUCCESS MESSAGE */
+  .form-success{display:none;background:var(--green-light);border:1.5px solid var(--green);border-radius:16px;padding:2.5rem;text-align:center}
+  .form-success h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green);margin-bottom:0.75rem}
+  .form-success p{color:#2d6a4f;font-size:0.95rem;line-height:1.7}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+  .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+  .form-group label{font-size:0.82rem;font-weight:700;letter-spacing:0.05em;color:var(--text);text-transform:uppercase}
+  .form-group input,.form-group textarea,.form-group select{width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid var(--cream-dark);background:var(--cream);color:var(--text);font-size:0.95rem;font-family:'Source Sans 3',sans-serif;transition:border-color 0.3s}
+  .form-group input:focus-visible,.form-group textarea:focus-visible,.form-group select:focus-visible{border-color:var(--coral);background:var(--white);outline:3px solid var(--coral);outline-offset:2px}
+  .form-group input:focus:not(:focus-visible),.form-group textarea:focus:not(:focus-visible),.form-group select:focus:not(:focus-visible){outline:none;border-color:var(--coral);background:var(--white)}
+  .form-group select option{background:var(--white)}
+  /* DONATE CTA */
+  .donate-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+  .donate-cta-inner{max-width:600px;margin:0 auto}
+  .donate-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+  .donate-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+  .btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+  .btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
+  /* SIGNATURE BANNER */
+  .sig-banner{background:var(--plum);padding:2rem 1.5rem;text-align:center}
+  .sig-banner-inner{max-width:800px;margin:0 auto}
+  .sig-banner h2{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.1em;color:var(--white);margin-bottom:0.5rem}
+  .sig-banner p{color:rgba(255,255,255,0.95);font-size:1.05rem;line-height:1.7;margin-bottom:0.5rem}
+  .sig-banner p.small{font-size:0.95rem}
+  .sig-banner-footer{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.15)}
+  .sig-banner-footer p{color:rgba(255,255,255,0.85);font-size:0.95rem;margin-bottom:0.75rem}
+  .btn-register-vote{background:var(--coral);color:var(--plum);font-weight:700;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.3s ease}
+  /* FOOTER (es uses custom dark footer) */
+  [data-theme="dark"] .connect{background:var(--cream-dark);color:var(--white)}
+  [data-theme="dark"] .connect h3{color:var(--white)}
+  [data-theme="dark"] .connect p,[data-theme="dark"] .connect a{color:rgba(255,255,255,0.7)}
+  [data-theme="dark"] .connect a:hover{color:var(--coral-light)}
+  [data-theme="dark"] .social-link{background:rgba(255,255,255,0.08);color:var(--white);font-size:1.1rem}
+  [data-theme="dark"] .social-link:hover{background:var(--coral);transform:translateY(-2px)}
+  [data-theme="dark"] .signup-form input[type="email"]{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--white)}
+  [data-theme="dark"] .signup-form input[type="email"]::placeholder{color:rgba(255,255,255,0.4)}
+  [data-theme="dark"] .signup-form input[type="email"]:focus{border-color:var(--coral)}
+  [data-theme="dark"] .signup-form button:hover{background:var(--coral-light)}
+  [data-theme="dark"] .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.4)}
+  /* RESPONSIVE */
+  /* Mobile: 0-767px */
+  @media(max-width:767px){
+    .field-row,.form-row{grid-template-columns:1fr !important}
+    .checkbox-list{grid-template-columns:1fr}
+    .ways-grid{grid-template-columns:1fr !important}
+    .form-card,.endorse-form-wrap{padding:2rem 1.5rem;border-radius:16px}
+    .volunteer-section{padding:4rem 1.25rem}
+    .submit-btn,.btn-submit{font-size:0.95rem;padding:0.9rem}
+    .sig-banner{padding:2rem 1.25rem}
+    .sig-banner h2{font-size:1.4rem}
+  }
+  /* Small Mobile: 0-480px */
+  @media(max-width:480px){
+    .ways-grid{grid-template-columns:1fr}
+    .ways{padding:3rem 1rem}
+    .way-card{padding:1.75rem 1.5rem}
+    .volunteer-section{padding:3rem 1rem}
+    .form-card{padding:1.75rem 1.25rem}
+    .checkbox-list li label{padding:0.5rem;font-size:0.85rem}
+    .sig-banner{padding:1.5rem 1rem}
+  }
+  /* Tablet: 768-1023px */
+  @media(min-width:768px) and (max-width:1023px){
+    .ways{padding:5rem 2rem}
+    .volunteer-section{padding:5rem 2rem}
+    .ways-grid{grid-template-columns:repeat(2,1fr)}
+    .form-row{grid-template-columns:1fr 1fr}
+    .checkbox-list{grid-template-columns:1fr 1fr}
+  }
+  /* Large screens: 1024px+ */
+  @media(min-width:1024px){
+    .ways{padding:7rem 3rem}
+    .ways-inner{max-width:1200px}
+    .volunteer-section{padding:7rem 3rem}
+    .volunteer-inner{max-width:1200px;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+    .volunteer-intro-aside{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:6rem}
+    .volunteer-aside-stat{background:var(--cream);border-radius:16px;padding:1.75rem 2rem;border-left:4px solid var(--coral)}
+    .volunteer-aside-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--coral);line-height:1;margin-bottom:0.25rem}
+    .volunteer-aside-stat-label{font-size:0.85rem;font-weight:700;color:var(--plum);letter-spacing:0.05em;text-transform:uppercase}
+    .donate-cta{padding:7rem 3rem}
+    .volunteer-form-heading,.volunteer-form-intro,.volunteer-form-col>.section-label{display:none}
+    .form-row{grid-template-columns:1fr 1fr}
+  }
+  /* Landscape mobile */
+  @media(max-height:500px) and (orientation:landscape){
+    .sig-banner{padding:1.25rem 1.5rem}
+  }
+---
+
+<main id="main-content">
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Únete al Movimiento</div>
+    <h1><em>Participa</em></h1>
+    <p>Esta campaña funciona con el poder popular. Sin dinero corporativo, sin fondos de PACs — solo gente trabajadora luchando por gente trabajadora. Te necesitamos.</p>
+  </div>
+</header>
+
+<!-- SIGNATURE COLLECTION URGENCY -->
+<section class="sig-banner" aria-label="Urgencia de recolección de firmas para la boleta">
+  <div class="sig-banner-inner">
+    <h2>Prioridad: Firmas para la Boleta</h2>
+    <p>Como candidata independiente, Cortney no participa en las primarias. Para estar en la <strong>boleta de las elecciones generales de noviembre</strong>, necesitamos recoger <strong>{{ site.sigGoal | toLocaleString }} firmas válidas</strong> y entregarlas a la Junta Electoral antes del <strong>4 de mayo de 2026</strong>.</p>
+    <p class="small">Si vives en el 11.º Distrito Congresional de Ohio, tu firma pone a Cortney en la boleta. Hazte voluntario para ayudar a recoger firmas en tu vecindario.</p>
+    <div class="sig-banner-footer">
+      <p>¿Aún no estás registrado para votar? Necesitas estar registrado para firmar la petición y para votar en noviembre.</p>
+      <a href="/voter-registration.html" class="btn-register-vote">Regístrate para Votar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS TO HELP -->
+<section class="ways" aria-labelledby="ways-heading">
+  <div class="ways-inner">
+    <div class="section-label reveal">Cómo Puedes Ayudar</div>
+    <h2 class="section-title reveal" id="ways-heading">Cada Acción <em>Importa</em></h2>
+    <p class="section-intro reveal">El cambio no viene de Washington — viene de comunidades como la nuestra que deciden que ya es suficiente. Así es como puedes ser parte de este movimiento.</p>
+
+    <div class="ways-grid">
+      <a href="#volunteer" class="way-card reveal">
+        <span class="way-icon">🚪</span>
+        <h3>Tocar Puertas</h3>
+        <p>Ve puerta a puerta en tu vecindario hablando con los votantes. El contacto cara a cara es la herramienta más poderosa de cualquier campaña. Te entrenaremos — no se necesita experiencia.</p>
+        <span class="way-cta">Voluntariado →</span>
+      </a>
+      <a href="#volunteer" class="way-card reveal reveal-delay-1">
+        <span class="way-icon">📞</span>
+        <h3>Llamadas Telefónicas</h3>
+        <p>Llama a votantes desde tu casa. Te damos el guión, la lista y el apoyo. Si puedes hacer llamadas, puedes hacer banco telefónico — así de sencillo.</p>
+        <span class="way-cta">Voluntariado →</span>
+      </a>
+      <a href="#volunteer" class="way-card reveal reveal-delay-2">
+        <span class="way-icon">📱</span>
+        <h3>Organización Digital</h3>
+        <p>Comparte el mensaje de Cortney en redes sociales, escribe cartas al editor, publica en grupos comunitarios. La organización digital amplifica nuestra voz popular sin costo alguno.</p>
+        <span class="way-cta">Voluntariado →</span>
+      </a>
+      <a href="#volunteer" class="way-card reveal reveal-delay-3">
+        <span class="way-icon">🪧</span>
+        <h3>Carteles de Jardín</h3>
+        <p>Los carteles de jardín llegan pronto. Marca la casilla en el formulario de voluntario abajo para ser el primero en la lista cuando estén listos.</p>
+        <span class="way-cta">Voluntariado →</span>
+      </a>
+      <a href="#volunteer" class="way-card reveal">
+        <span class="way-icon">🏠</span>
+        <h3>Organizar una Fiesta en Casa</h3>
+        <p>Invita a 10 amigos a tu sala. Nosotros proporcionamos los temas de conversación y los materiales. Tú proporcionas el espacio. Las fiestas en casa son como las campañas populares ganan — una conversación a la vez.</p>
+        <span class="way-cta">Voluntariado →</span>
+      </a>
+      <a href="/events.html" class="way-card reveal reveal-delay-1">
+        <span class="way-icon">🗓️</span>
+        <h3>Asiste a Eventos</h3>
+        <p>Únete a nosotros en reuniones públicas, mítines y eventos comunitarios en Cleveland y el OH-11. Conoce a Cortney, conoce a otros simpatizantes y haz que tu voz se escuche en persona.</p>
+        <span class="way-cta">Ver Eventos →</span>
+      </a>
+      <a href="{{ site.donateUrl }}" class="way-card reveal reveal-delay-1" style="background:linear-gradient(135deg,var(--plum),var(--plum-light));color:white" target="_blank" rel="noopener noreferrer">
+        <span class="way-icon">💰</span>
+        <h3 style="color:white">Donar</h3>
+        <p style="color:rgba(255,255,255,0.8)">Cada dólar de una persona trabajadora vale más que un cheque de un PAC corporativo. Las pequeñas donaciones impulsan esta campaña y envían un mensaje de que no le debemos nada a nadie.</p>
+        <span class="way-cta" style="color:var(--coral-light)">Donar Ahora →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FE Y COMUNIDAD -->
+<section style="background:var(--cream);padding:4rem 1.5rem;border-top:1px solid rgba(0,0,0,0.05)" id="faith">
+  <div style="max-width:760px;margin:0 auto">
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.25em;color:#a0604a;text-transform:uppercase;margin-bottom:0.75rem">Fe y Comunidad</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:900;color:var(--plum);line-height:1.15;margin-bottom:1.5rem">Tu Iglesia Puede Cambiar <em style="font-style:italic;color:var(--coral)">Este Distrito</em></h2>
+    <div style="font-size:1.05rem;color:var(--text-light);line-height:1.8">
+      <p style="margin-bottom:1.25rem">Las iglesias negras de Cleveland han sido el pilar de la organización comunitaria en esta comunidad por generaciones. Desde el movimiento por los derechos civiles hasta hoy, cuando el cambio sucede en este distrito, comienza en las bancas de la iglesia.</p>
+      <p style="margin-bottom:1.25rem">El principio guía de Cortney es la Regla de Oro — trata a los demás como quieres que te traten. Eso no es un eslogan de campaña. Es un compromiso moral. Y se alinea con lo que las comunidades de fe en Cleveland han vivido por décadas: cuidar al enfermo, alimentar al hambriento, luchar por la justicia, proteger al vulnerable.</p>
+      <p style="margin-bottom:1.5rem"><strong style="color:var(--text)">Buscamos líderes de fe y congregaciones dispuestas a asociarse con nosotros.</strong> Eso puede significar organizar un foro de candidatos, compartir información sobre el registro de votantes con tu congregación, organizar una recolección de firmas después del servicio, o simplemente abrir una conversación sobre lo que las familias de Cleveland necesitan de su representante.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#volunteer" style="display:inline-block;padding:0.85rem 2rem;border-radius:10px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;text-decoration:none;text-transform:uppercase;background:var(--plum);color:var(--white)">Conecta Tu Congregación →</a>
+        <a href="mailto:{{ site.email }}?subject=Asociaci%C3%B3n%20de%20Comunidad%20de%20Fe" style="display:inline-block;padding:0.85rem 2rem;border-radius:10px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;text-decoration:none;text-transform:uppercase;border:2px solid var(--plum);color:var(--plum)">Envíanos un Correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER FORM -->
+<section class="volunteer-section" id="volunteer" aria-labelledby="volunteer-heading">
+  <div class="volunteer-inner">
+    <div class="volunteer-intro-aside">
+      <div>
+        <div class="section-label">Registro de Voluntarios</div>
+        <h2 class="section-title" style="margin-bottom:1rem">Únete al <em>Equipo</em></h2>
+        <p style="color:var(--text-light);font-size:1rem;line-height:1.8">Llena el formulario y te contactaremos con las oportunidades adecuadas para ti. Sin compromiso.</p>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">100%</div>
+        <div class="volunteer-aside-stat-label">Popular — sin dinero de PACs</div>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">OH-11</div>
+        <div class="volunteer-aside-stat-label">Comunidades por las que luchamos</div>
+      </div>
+      <div class="volunteer-aside-stat">
+        <div class="volunteer-aside-stat-num">$0</div>
+        <div class="volunteer-aside-stat-label">Donaciones corporativas aceptadas</div>
+      </div>
+    </div>
+    <div class="volunteer-form-col">
+    <div class="section-label" style="display:block" aria-hidden="false">Registro de Voluntarios</div>
+    <h2 class="section-title volunteer-form-heading" id="volunteer-heading" style="margin-bottom:0.5rem">Únete al <em>Equipo</em></h2>
+    <p class="volunteer-form-intro" style="color:var(--text-light);margin-bottom:2.5rem;font-size:1rem">Llena el formulario abajo y te contactaremos con oportunidades para participar. Sin compromiso — solo déjanos saber que estás interesado.</p>
+
+    <div class="form-card">
+      <form name="voluntario" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" id="volunteerForm">
+        <input type="hidden" name="form-name" value="voluntario">
+        <p hidden><label>No llenes esto: <input name="bot-field"></label></p>
+        <p class="form-required-note" style="font-size:0.85rem;color:var(--text-light);margin-bottom:1.5rem">Los campos marcados con <span class="req" aria-hidden="true">*</span><span class="sr-only">un asterisco</span> son obligatorios.</p>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="firstName">Nombre <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="firstName" name="first_name" required aria-required="true" autocomplete="given-name">
+          </div>
+          <div class="field-group">
+            <label for="lastName">Apellido <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="lastName" name="last_name" required aria-required="true" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Correo Electrónico <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+        </div>
+
+        <div class="field-group">
+          <label for="phone">Teléfono <span style="font-weight:400;color:var(--text-light)">(opcional)</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="field-group">
+          <label for="zip">Código Postal <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="zip" name="zip" required aria-required="true" pattern="[0-9]{5}" maxlength="5" inputmode="numeric" autocomplete="postal-code">
+        </div>
+
+        <div class="field-group">
+          <label>¿Cómo te gustaría ayudar? <span style="font-weight:400;color:var(--text-light)">(marca todo lo que aplique)</span></label>
+          <ul class="checkbox-list">
+            <li><label><input type="checkbox" name="help[]" value="Tocando Puertas"> Tocando Puertas</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Llamadas Telefónicas"> Llamadas Telefónicas</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Digital / Redes Sociales"> Digital / Redes Sociales</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Cartel de Jardín"> Cartel de Jardín (próximamente)</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Organizar una Fiesta en Casa"> Organizar una Fiesta en Casa</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Voluntario de Eventos"> Voluntario de Eventos</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Donar"> Donar</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Líder de Comunidad de Fe"> Líder de Comunidad de Fe</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Entrada de Datos / Admin"> Entrada de Datos / Admin</label></li>
+            <li><label><input type="checkbox" name="help[]" value="Otro"> Otro</label></li>
+          </ul>
+        </div>
+
+        <div class="field-group">
+          <label for="message">¿Algo más que quieras que sepamos? <span style="font-weight:400;color:var(--text-light)">(opcional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Habilidades, disponibilidad, preguntas — lo que quieras compartir."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">¡Cuéntame! →</button>
+        <p class="form-note">Nunca venderemos ni compartiremos tu información. Puedes cancelar tu suscripción en cualquier momento.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="alert">
+        <h3>¡Ya estás! Gracias.</h3>
+        <p>Pronto te contactaremos con formas de participar. Mantente atento a tu correo — y mientras tanto, corre la voz. Cuanta más gente conozca esta campaña, más fuertes nos hacemos.</p>
+        <p style="margin-top:1rem"><strong>¿Quieres hacer algo ahora mismo?</strong> Comparte esta página con alguien que se preocupe por el 11.º Distrito de Ohio.</p>
+      </div>
+    </div><!-- end form-card -->
+    </div><!-- end volunteer-form-col -->
+  </div><!-- end volunteer-inner -->
+</section>
+
+<!-- YARD SIGNS — coming when funding allows -->
+
+<!-- DONATE CTA -->
+<section class="donate-cta" aria-label="Llamada a la acción para donar">
+  <div class="donate-cta-inner">
+    <h2>¿No Puedes Ser Voluntario Ahora?</h2>
+    <p>Una donación — aunque sea de $5 o $10 — impulsa directamente esta campaña popular. Sin ataduras corporativas. Cada dólar viene de personas reales que quieren un cambio real.</p>
+    <div class="btn-group">
+      <a href="{{ site.donateUrl }}" class="btn btn-primary">Donar Ahora →</a>
+      <a href="/es/issues.html" class="btn btn-outline-white">Lee las Propuestas</a>
+    </div>
+  </div>
+</section>
+
+</main>

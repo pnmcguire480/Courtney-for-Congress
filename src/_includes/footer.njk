@@ -1,0 +1,35 @@
+{% set formName = formName | default("email-signup") %}
+<footer class="connect" id="connect">
+  <div class="connect-inner">
+    <div>
+      <h3>Connect</h3>
+      <p>Join us to fight for the working class.</p>
+      <div class="social-links">
+        {% for social in site.socials %}
+        <a href="{{ social.url }}" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }}">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">{{ social.svg | safe }}</svg>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-bottom:0.5rem"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>{{ site.district }}</p>
+    </div>
+    <div>
+      <h3>Stay Updated</h3>
+      <p>Get campaign updates in your inbox.</p>
+      <form class="signup-form" name="{{ formName }}" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="{{ formName }}">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Paid for by Cortney Peterson For Congress &nbsp;&middot;&nbsp; FEC #{{ site.fec }}</p>
+    <p>&copy; 2026 Cortney Peterson For Congress. All rights reserved.</p>
+  </div>
+</footer>

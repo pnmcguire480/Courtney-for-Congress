@@ -1,0 +1,38 @@
+---
+layout: base
+---
+
+<header class="post-header">
+  <div class="post-header-inner">
+    <a href="/news/" class="post-back">All Updates</a>
+    <div class="post-tag {{ tagClass }}">{{ tag }}</div>
+    <h1>{{ title | safe }}</h1>
+    <div class="post-byline">
+      <span><strong>{{ author | default("Cortney Peterson for Congress") }}</strong></span>
+      <span>{{ date | readableDate }}</span>
+      <span>{{ readTime }}</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body" aria-label="Post content">
+    {{ content | safe }}
+
+    <nav class="post-nav" aria-label="Post navigation">
+      <a href="/news/" class="post-nav-back">All Updates</a>
+      {% if nextPost %}<a href="{{ nextPost.url }}" class="post-nav-next">{{ nextPost.title }}</a>{% endif %}
+    </nav>
+  </article>
+</div>
+
+<section class="post-cta" aria-labelledby="post-cta-heading">
+  <div class="post-cta-inner">
+    <h2 id="post-cta-heading">{{ ctaHeading | default("Ready to Fight for These Changes?") }}</h2>
+    <p>{{ ctaText | default("This campaign runs on grassroots power — not PAC money. Every signature, every volunteer, every small donation keeps this movement going.") }}</p>
+    <div class="btn-group">
+      <a href="/get-involved.html" class="btn btn-coral">Get Involved &rarr;</a>
+      <a href="{{ site.donateUrl }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Donate Now</a>
+    </div>
+  </div>
+</section>

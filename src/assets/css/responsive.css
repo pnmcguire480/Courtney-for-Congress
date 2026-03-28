@@ -1,0 +1,304 @@
+/* Responsive fixes — landscape mobile, tablet gaps, breakpoint normalization
+   Loaded after theme.css and before page-specific <style> blocks. */
+
+/* ===== NORMALIZE SECTION MAX-WIDTHS =====
+   Fix conflicting max-width values across pages */
+
+.section-inner {
+  max-width: 1100px !important; /* Standardize on 1100px */
+  margin: 0 auto;
+}
+
+/* ===== MOBILE FIRST (0-767px) ===== */
+
+@media (max-width: 767px) {
+  /* Hero grids - force single column on mobile */
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* All grid layouts should be single column on mobile */
+  .ways-grid,
+  .quick-grid,
+  .info-grid,
+  .endorsement-grid,
+  .org-grid,
+  .acc-cards,
+  .priorities-grid,
+  .data-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Touch targets - ensure minimum 44x44px */
+  .nav-links a,
+  .btn,
+  .action-btn,
+  .social-link {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* Button adjustments for mobile */
+  .btn,
+  .action-btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Form improvements */
+  .field-row,
+  .form-row,
+  .checkbox-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px) */
+  .field-group input,
+  .field-group select,
+  .field-group textarea,
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .signup-form input[type="email"] {
+    font-size: 1rem !important;
+  }
+
+  /* Checkbox touch targets */
+  .checkbox-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  .checkbox-list li label {
+    padding: 0.6rem 0.75rem;
+    min-height: 44px;
+  }
+
+  /* Tables - force mobile scroll */
+  .compare-table,
+  .outside-table {
+    font-size: 0.85rem;
+  }
+
+  .compare-table thead th,
+  .compare-table tbody td,
+  .outside-table thead th,
+  .outside-table tbody td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Reduce padding to maximize content space */
+  .section {
+    padding: 3rem 1.25rem !important;
+  }
+
+  .page-hero {
+    padding: 7rem 1.25rem 4rem !important;
+  }
+
+  /* Fix issue navigation overflow */
+  .issue-pills {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .issue-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+/* ===== SMALL MOBILE (0-480px) ===== */
+
+@media (max-width: 480px) {
+  /* Even tighter spacing */
+  .section {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .page-hero {
+    padding: 6rem 1rem 3rem !important;
+  }
+
+  /* Photo grid - 2 columns only */
+  .photo-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem;
+  }
+
+  /* Navigation adjustments */
+  .nav-inner {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Card padding reductions */
+  .issue-block,
+  .way-card,
+  .quick-card,
+  .info-card,
+  .endorsement-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  /* Form adjustments */
+  .form-card,
+  .endorse-form-wrap {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* ===== TABLET (768-1023px) ===== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Footer layouts */
+  .connect-inner,
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Hero adjustment for tablet */
+  .hero-inner {
+    gap: 3rem;
+  }
+
+  /* Grid adjustments - 2 columns for medium cards */
+  .ways-grid,
+  .acc-cards,
+  .endorsement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reduce some padding on tablet */
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  .page-hero {
+    padding: 8rem 2rem 4rem;
+  }
+}
+
+/* ===== LANDSCAPE MOBILE (any width, height < 500px) ===== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Hero: reduce padding so content is visible */
+  .page-hero {
+    padding-top: 4rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .hero {
+    padding: 4rem 1.5rem 2rem !important;
+  }
+
+  /* Mobile menu: shrink links and enable scroll */
+  .mobile-menu {
+    gap: 0.6rem;
+    padding: 3.5rem 1.5rem 1.5rem;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  .mobile-menu a {
+    font-size: 1.2rem;
+  }
+  .mobile-menu .mobile-donate {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.25rem;
+  }
+  .mobile-theme-toggle {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Sections: tighter vertical padding */
+  .section,
+  .ways,
+  .quick-actions,
+  .info-section,
+  .directory-section,
+  .volunteer-section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* CTA sections */
+  .donate-cta,
+  .host-cta,
+  .submit-cta,
+  .press-cta,
+  .endorse-cta,
+  .money-cta,
+  .issues-cta,
+  .national-banner {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Footer */
+  .connect {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* ===== LARGE DESKTOP (1024px+) ===== */
+
+@media (min-width: 1024px) {
+  /* Increase padding for large screens */
+  .section {
+    padding: 6rem 3rem;
+  }
+
+  .page-hero {
+    padding: 11rem 3rem 6rem;
+  }
+
+  .hero {
+    padding: 8rem 3rem 6rem;
+  }
+
+  /* CTA sections */
+  .donate-cta,
+  .issues-cta,
+  .money-cta,
+  .submit-cta,
+  .endorse-cta {
+    padding: 7rem 3rem;
+  }
+
+  /* Grid optimizations for large screens */
+  .ways-grid,
+  .acc-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .priorities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== TABLE RESPONSIVE HELPERS ===== */
+
+@media (max-width: 767px) {
+  /* Make tables horizontally scrollable on mobile */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .compare-table,
+  .outside-table {
+    min-width: 500px; /* Ensure tables don't collapse too much */
+  }
+}

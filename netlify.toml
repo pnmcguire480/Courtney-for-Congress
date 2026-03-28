@@ -2,8 +2,8 @@
 # This file controls deployment, headers, and redirects
 
 [build]
-  # No build command needed — static HTML files
-  publish = "."
+  command = "npx @11ty/eleventy"
+  publish = "_site"
 
 # Security Headers — Applied to ALL responses
 [[headers]]
@@ -33,7 +33,7 @@
     # - connect-src: our domain + Netlify Forms API
     # - frame-src: Anedot donation widget only
     # - frame-ancestors 'none': nobody can iframe us
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.netlify.com https://api.rss2json.com https://public.api.bsky.app https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src https://secure.anedot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.netlify.com https://api.rss2json.com https://public.api.bsky.app https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src https://secure.anedot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
     # Cross-origin policies
     Cross-Origin-Opener-Policy = "same-origin"
@@ -80,16 +80,16 @@
   status = 404
   force = true
 
-# Block access to news template file
+# Block access to brainstormer directory
 [[redirects]]
-  from = "/news/_template.html"
+  from = "/brainstormer/*"
   to = "/404.html"
   status = 404
   force = true
 
-# Block access to brainstormer directory
+# Block access to source files (defense-in-depth — should not exist in _site output)
 [[redirects]]
-  from = "/brainstormer/*"
+  from = "/src/*"
   to = "/404.html"
   status = 404
   force = true

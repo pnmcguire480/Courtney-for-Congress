@@ -1,0 +1,4 @@
+<script src="/assets/js/site.js?v={{ site.cssVersion }}" defer></script>
+<script src="/assets/js/signup.js?v={{ site.cssVersion }}" defer></script>
+{% for script in pageScripts %}<script src="/assets/js/{{ script }}?v={{ site.cssVersion }}" defer></script>
+{% endfor %}

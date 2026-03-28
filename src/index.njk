@@ -1,0 +1,687 @@
+---
+layout: base
+title: "Cortney Peterson | Independent for Congress — OH-11"
+description: "Cortney Peterson — nurse, mom, and independent candidate for Ohio's 11th Congressional District. No PAC money. People-powered."
+ogTitle: "Cortney Peterson | Independent for Congress — OH-11"
+ogDescription: "Nurse, mom, and independent candidate fighting for working families in Ohio's 11th Congressional District. Grassroots. No PAC money. People-powered."
+ogUrl: "https://cortneyforcongress.org/"
+ogType: "website"
+navActive: "about"
+pageScripts: ["index.js"]
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/
+  - lang: es
+    url: https://cortneyforcongress.org/es/
+  - lang: x-default
+    url: https://cortneyforcongress.org/
+permalink: /index.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Cortney Peterson",
+        "jobTitle": "Independent Candidate for U.S. Congress, Ohio's 11th District",
+        "description": "Nurse, mom, and independent candidate fighting for working families in Ohio's 11th Congressional District. Grassroots campaign, no PAC money.",
+        "image": "https://cortneyforcongress.org/assets/images/cortney-headshot.jpeg",
+        "url": "https://cortneyforcongress.org/",
+        "sameAs": [
+          "https://facebook.com/cortneyforcongress",
+          "https://instagram.com/cortneyforcongress",
+          "https://tiktok.com/@cortneyforcongress",
+          "https://threads.net/@cortneyforcongress",
+          "https://bsky.app/profile/cortneyforcongress.bsky.social"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Cortney Peterson For Congress",
+        "url": "https://cortneyforcongress.org/",
+        "logo": "https://cortneyforcongress.org/assets/images/campaign-logo.png",
+        "description": "Grassroots campaign committee for Cortney Peterson, Independent candidate for Ohio's 11th Congressional District.",
+        "email": "cortneyforcongress@gmail.com",
+        "sameAs": [
+          "https://facebook.com/cortneyforcongress",
+          "https://instagram.com/cortneyforcongress",
+          "https://tiktok.com/@cortneyforcongress",
+          "https://threads.net/@cortneyforcongress",
+          "https://bsky.app/profile/cortneyforcongress.bsky.social"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Cortney Peterson for Congress",
+        "url": "https://cortneyforcongress.org/"
+      }
+    ]
+  }
+pageStyle: >
+  /* ===== INDEX-SPECIFIC OVERRIDES ===== */
+  /* Nav overrides — index uses different transition and position:relative */
+  .nav-links a{
+    transition:color 0.15s ease-out,background 0.15s ease-out;
+    position:relative;
+  }
+  .nav-links a.active{background:var(--plum);color:var(--cream);padding-bottom:calc(0.5rem + 4px);margin-bottom:-4px}
+  /* Section overrides — index uses element selector with different values */
+  section{padding:5rem 1.5rem}
+  .section-inner{margin:0 auto}
+  .section-label{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:0.85rem;letter-spacing:0.25em;
+    color:#a0604a;text-transform:uppercase;
+    margin-bottom:0.75rem;
+  }
+  .section-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,4vw,3rem);font-weight:900;
+    color:var(--plum);line-height:1.15;
+    margin-bottom:1.5rem;
+  }
+  .section-title em{font-style:italic;color:var(--coral)}
+  /* ===== HERO ===== */
+  .hero{
+    min-height:100vh;
+    background:linear-gradient(165deg, var(--plum-deep) 0%, var(--plum) 40%, var(--plum-light) 100%);
+    display:flex;align-items:center;
+    position:relative;overflow:hidden;
+    padding:6rem 1.5rem 4rem;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 80% 50% at 70% 60%, rgba(253,180,155,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 20% 30%, rgba(92,45,130,0.3) 0%, transparent 50%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;height:200px;
+    background:linear-gradient(to top, var(--cream), transparent);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1200px;margin:0 auto;width:100%;
+    display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+    align-items:center;position:relative;z-index:1;
+  }
+  .hero-content{animation:fadeSlideUp 1s ease 0.2s both}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:0.5rem;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+    padding:0.4rem 1rem;border-radius:50px;
+    color:var(--coral-light);font-size:0.8rem;font-weight:600;
+    letter-spacing:0.1em;text-transform:uppercase;
+    margin-bottom:1.5rem;
+    backdrop-filter:blur(8px);
+  }
+  .hero-tag::before{content:'';width:6px;height:6px;background:var(--coral-light);border-radius:50%;flex-shrink:0}
+  .hero-name{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2.8rem,6vw,4.5rem);
+    font-weight:900;color:var(--white);
+    line-height:1.05;margin-bottom:0.5rem;
+  }
+  .hero-name em{font-style:italic;color:var(--coral)}
+  .hero-office{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(1rem,2.5vw,1.5rem);
+    letter-spacing:0.25em;color:var(--coral-light);
+    margin-bottom:1.5rem;
+  }
+  .hero-quote{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.1rem,2vw,1.35rem);
+    font-style:italic;color:rgba(255,255,255,0.8);
+    line-height:1.6;margin-bottom:2rem;
+    max-width:520px;
+    border-left:3px solid var(--coral);
+    padding-left:1.25rem;
+  }
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-image-wrap{
+    position:relative;animation:fadeSlideUp 1s ease 0.5s both;
+  }
+  .hero-image-frame{
+    position:relative;
+    border-radius:24px 24px 0 24px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(46,8,41,0.3);
+    aspect-ratio:3/4;
+    max-height:580px;
+    background:var(--plum-light);
+  }
+  .hero-image-frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-image-placeholder{
+    width:100%;height:100%;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    background:linear-gradient(135deg, var(--plum-light), var(--plum));
+    color:rgba(255,255,255,0.4);font-size:0.85rem;text-align:center;padding:2rem;
+  }
+  .hero-image-placeholder span{font-size:3rem;margin-bottom:1rem;opacity:0.3}
+  .hero-badge{
+    position:absolute;bottom:-1.5rem;right:-1rem;
+    background:var(--plum);color:var(--white);
+    padding:1rem 1.5rem;border-radius:16px;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.3rem;letter-spacing:0.1em;
+    box-shadow:0 8px 30px rgba(253,180,155,0.4);
+    transform:rotate(-3deg);
+    z-index:2;
+  }
+  /* ===== MEET CORTNEY ===== */
+  .meet{background:var(--cream)}
+  .meet-grid{
+    display:grid;grid-template-columns:1fr;gap:2.5rem;
+    margin-top:2rem;
+  }
+  .meet-text p{
+    font-size:1.05rem;color:var(--text-light);margin-bottom:1.25rem;
+    line-height:1.8;
+  }
+  .meet-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+  .meet-text p:first-of-type::first-letter{
+    font-family:'Playfair Display',serif;
+    font-size:3.5rem;font-weight:900;color:var(--plum);
+    float:left;line-height:0.85;margin-right:0.5rem;margin-top:0.1rem;
+  }
+  .golden-rule{
+    background:var(--coral);
+    border-radius:20px;padding:2.5rem;
+    color:var(--text);margin:2.5rem 0;
+    position:relative;overflow:hidden;
+    border-left:4px solid var(--plum);
+  }
+  .golden-rule::before{
+    content:'';position:absolute;top:0;right:0;width:80px;height:80px;
+    background:rgba(71,13,68,0.04);border-radius:0 0 0 80px;
+  }
+  .golden-rule h3{
+    font-family:'Playfair Display',serif;font-size:1.6rem;
+    margin-bottom:0.75rem;color:var(--plum);
+  }
+  .golden-rule p{
+    font-size:1.05rem;line-height:1.7;
+    color:var(--text);
+    font-style:italic;
+  }
+  .not-a-politician{
+    background:var(--coral);border-radius:16px;padding:2rem;
+    border-left:4px solid var(--plum);margin:2rem 0;
+  }
+  .not-a-politician strong{
+    font-family:'Playfair Display',serif;font-size:1.3rem;
+    color:var(--plum);display:block;margin-bottom:0.5rem;
+  }
+  /* ===== ACCOMPLISHMENTS ===== */
+  .accomplishments{
+    background:var(--white);
+    border-top:1px solid rgba(0,0,0,0.05);
+    border-bottom:1px solid rgba(0,0,0,0.05);
+  }
+  .acc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2.5rem}
+  .acc-card{
+    background:var(--cream);border-radius:20px;padding:2.5rem;
+    position:relative;overflow:hidden;
+    transition:box-shadow 0.25s ease;
+  }
+  .acc-card:hover{box-shadow:0 6px 28px rgba(46,8,41,0.07)}
+  .acc-years{
+    font-family:'Bebas Neue',sans-serif;font-size:3.5rem;
+    color:var(--coral);line-height:1;margin-bottom:0.25rem;
+  }
+  .acc-role{
+    font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
+    color:var(--plum);margin-bottom:1rem;
+  }
+  .acc-card p{color:var(--text-light);font-size:0.95rem;line-height:1.7}
+  /* ===== VISION ===== */
+  .vision{
+    background:linear-gradient(175deg, var(--plum-deep) 20%, var(--plum) 80%);
+    color:var(--white);position:relative;overflow:hidden;
+  }
+  .vision::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 20%, rgba(253,180,155,0.1), transparent 50%);
+  }
+  .vision .section-inner{position:relative;z-index:1}
+  .vision .section-label{color:var(--coral-light)}
+  .vision .section-title{color:var(--white)}
+  .vision .section-title em{color:var(--coral-light)}
+  .vision-text{
+    font-size:1.1rem;line-height:1.8;
+    color:rgba(255,255,255,0.8);max-width:750px;
+  }
+  .vision-text p{margin-bottom:1.5rem}
+  .vision-highlight{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.3rem,3vw,1.8rem);
+    font-weight:700;font-style:italic;
+    color:var(--white);line-height:1.4;
+    border-left:4px solid var(--coral);
+    padding:1.5rem 0 1.5rem 1.5rem;
+    margin:2.5rem 0;
+  }
+  .vision-bold{
+    font-weight:700;color:var(--white);
+  }
+  /* ===== PRIORITIES ===== */
+  .priorities{background:var(--cream)}
+  .priorities-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1.25rem;margin-top:2.5rem;
+  }
+  .priority-card{
+    background:var(--white);border-radius:8px;
+    padding:1rem 1.25rem;text-align:left;
+    transition:border-color 0.2s ease, box-shadow 0.25s ease;
+    border:1px solid rgba(0,0,0,0.04);
+    border-left:3px solid var(--coral);
+    cursor:pointer;text-decoration:none;color:inherit;display:block;
+  }
+  .priority-card:hover{
+    border-color:var(--plum-light);border-left-color:var(--plum);
+    box-shadow:0 4px 18px rgba(46,8,41,0.08);
+  }
+  .priority-icon{display:block;font-size:1.5rem;margin-bottom:0.4rem;line-height:1}
+  .priority-card h4{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:0.88rem;font-weight:700;color:var(--plum);
+    line-height:1.35;
+  }
+  /* ===== GRASSROOTS PLEDGE ===== */
+  .pledge{
+    background:var(--white);
+    border-top:1px solid rgba(0,0,0,0.05);
+  }
+  .pledge-box{
+    background:linear-gradient(150deg, var(--plum-deep) 30%, var(--plum));
+    border-radius:24px;padding:clamp(2rem, 4vw, 3.5rem);text-align:center;
+    color:var(--white);position:relative;overflow:hidden;
+    max-width:800px;margin:0 auto;
+  }
+  .pledge-box::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(253,180,155,0.12), transparent 60%);
+  }
+  .pledge-box>*{position:relative;z-index:1}
+  .pledge-stars{display:none}
+  .pledge-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.6rem,3.5vw,2.3rem);
+    font-weight:900;margin-bottom:1.5rem;line-height:1.2;
+  }
+  .pledge-box p{
+    font-size:1.05rem;line-height:1.7;
+    color:rgba(255,255,255,0.8);margin-bottom:1rem;
+    max-width:600px;margin-left:auto;margin-right:auto;
+  }
+  .pledge-box p strong{color:var(--coral-light)}
+  .pledge-divider{
+    width:60px;height:3px;background:var(--coral);
+    margin:1.5rem auto;border-radius:2px;
+  }
+  .pledge-stance{
+    font-family:'Playfair Display',serif;
+    font-size:1.15rem;font-style:italic;
+    color:var(--coral-light);margin-top:1rem;
+  }
+  /* ===== INDEX-SPECIFIC RESPONSIVE ===== */
+  /* Mobile First: 0-767px */
+  @media(max-width:767px){
+    /* Hero: force single column layout */
+    .hero-inner{
+      grid-template-columns:1fr !important;
+      text-align:center;
+      gap:2rem;
+    }
+    .hero-quote{
+      margin-left:auto;
+      margin-right:auto;
+      border-left:none;
+      padding-left:0;
+      border-bottom:3px solid var(--coral);
+      padding-bottom:1rem;
+    }
+    .hero-btns{
+      justify-content:center;
+      gap:1rem;
+    }
+    .hero-image-wrap{
+      max-width:320px;
+      margin:0 auto;
+    }
+    .hero-badge{
+      right:0;
+      bottom:-1rem;
+      font-size:1rem;
+      padding:0.75rem 1.25rem;
+    }
+    /* Priorities: force responsive grid */
+    .priorities-grid{
+      grid-template-columns:repeat(2,1fr) !important;
+      gap:1rem;
+    }
+    .priority-card{
+      padding:1rem;
+      min-height:44px;
+      display:flex;
+      align-items:center;
+    }
+    /* Accomplishments: single column */
+    .acc-cards{
+      grid-template-columns:1fr !important;
+    }
+    /* Pledge box adjustments */
+    .pledge-box{
+      padding:2rem 1.5rem;
+      border-radius:16px;
+    }
+    /* Button improvements */
+    .hero-btns .btn{
+      flex:1;
+      min-width:140px;
+      justify-content:center;
+    }
+  }
+  /* Small Mobile: 0-480px */
+  @media(max-width:480px){
+    .hero{
+      min-height:auto;
+      padding:5.5rem 1rem 3rem;
+    }
+    .hero-name{
+      font-size:clamp(2rem,8vw,2.4rem);
+    }
+    .hero-image-wrap{
+      max-width:280px;
+    }
+    /* Priorities: single column on tiny screens */
+    .priorities-grid{
+      grid-template-columns:1fr !important;
+      gap:0.75rem;
+    }
+    .priority-card{
+      padding:1.25rem 1rem;
+    }
+    /* Button adjustments */
+    .btn{
+      padding:0.85rem 1.5rem;
+      font-size:0.85rem;
+      width:100%;
+    }
+    .hero-btns{
+      flex-direction:column;
+      gap:0.75rem;
+    }
+    /* Reduce padding in cards */
+    .golden-rule,
+    .not-a-politician{
+      padding:1.75rem;
+      border-radius:12px;
+    }
+    .acc-card{
+      padding:2rem 1.5rem;
+    }
+  }
+  /* Tablet: 768-1023px */
+  @media(min-width:768px) and (max-width:1023px){
+    .hero-inner{
+      gap:3rem;
+    }
+    .priorities-grid{
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+    }
+    .acc-cards{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+  /* Large screens: 1024px+ */
+  @media(min-width:1024px){
+    .hero{
+      padding:8rem 3rem 5rem;
+    }
+    section{
+      padding:6.5rem 3rem;
+    }
+    .meet-grid{
+      grid-template-columns:3fr 2fr;
+      gap:3.5rem;
+      align-items:start;
+    }
+    .meet-sidebar{
+      position:sticky;
+      top:6rem;
+    }
+    .acc-cards{
+      grid-template-columns:repeat(3,1fr);
+    }
+    .priorities-grid{
+      grid-template-columns:repeat(4,1fr);
+      gap:1.5rem;
+    }
+    .connect-inner{
+      gap:4rem;
+    }
+  }
+  /* ===== SUBTLE TEXTURE ===== */
+  .hero .hero-inner::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    background-size:256px;opacity:0.5;
+  }
+  @media(max-height:500px) and (orientation:landscape){
+    .hero{min-height:auto;padding:5rem 1.5rem 2.5rem}
+  }
+---
+
+<main id="main-content">
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">Independent Candidate · Ohio</div>
+      <h1 class="hero-name">Cortney<br><em>Peterson</em></h1>
+      <p class="hero-office">Independent for Congress — OH-11</p>
+      <p class="hero-slogan" style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.18em;color:var(--coral);margin-top:0.5rem;text-transform:uppercase">Unbought. Unafraid. Unwavering Loyalty to the Working Class.</p>
+      <blockquote class="hero-quote">
+        "I am not a politician. I want to be a <strong>policymaker</strong> — someone who fights for fairness and equity for the working class."
+      </blockquote>
+      <div class="hero-btns">
+        <a href="get-involved.html" class="btn btn-primary">Help Get Cortney on the Ballot →</a>
+        <a href="{{ site.donateUrl }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Donate</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-image-frame">
+        <picture>
+          <source srcset="assets/images/cortney-headshot.webp" type="image/webp">
+          <img src="assets/images/cortney-headshot.jpeg" alt="Cortney Peterson, Independent candidate for Ohio's 11th Congressional District" width="480" height="640" loading="eager">
+        </picture>
+      </div>
+      <div class="hero-badge">Mom · Nurse · Fighter</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EMAIL CAPTURE ===== -->
+<section style="background:var(--plum);padding:2.5rem 1.5rem;text-align:center">
+  <div style="max-width:540px;margin:0 auto">
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:0.5rem">Get Updates from Cortney</p>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:1.25rem">Campaign news, events, and ways to help &mdash; straight to your inbox. No spam.</p>
+    <form class="signup-form signup-inline" name="email-signup-hero" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" style="display:flex;gap:0.6rem;max-width:440px;margin:0 auto;flex-wrap:wrap">
+      <input type="hidden" name="form-name" value="email-signup-hero">
+      <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required style="flex:1;min-width:200px;padding:0.8rem 1rem;border-radius:10px;border:1.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:var(--white);font-size:0.95rem;font-family:'Source Sans 3',sans-serif">
+      <button type="submit" style="padding:0.8rem 1.5rem;background:var(--coral);border:none;border-radius:10px;color:var(--plum);font-weight:700;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Source Sans 3',sans-serif;white-space:nowrap">Sign Up</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== MEET CORTNEY ===== -->
+<section class="meet" id="meet">
+  <div class="section-inner">
+    <div class="section-label reveal">Who She Is</div>
+    <h2 class="section-title reveal">Meet <em>Cortney</em></h2>
+
+    <div class="meet-grid">
+      <div class="meet-text">
+        <p class="reveal">A nurse and mom fighting for working families in Ohio's 11th district. Cortney grew up downtown Ashtabula, Ohio in a hardworking family. She's spent the last 12 years working as a licensed practical nurse — caring for patients, fighting for the vulnerable, and learning firsthand what it looks like when a system fails the people it's supposed to serve.</p>
+
+        <p class="reveal">A rare condition required a stent to be placed in her brain to restore normal pressure and blood flow. After her procedure in October 2025, she's feeling better than she has in years — and that radical change in her life fueled her passion to help people on a larger scale.</p>
+
+        <p class="reveal"><em>"I spent most of my life in a political coma. Then, a life-changing procedure restored blood flow to my brain, and I awoke. Suddenly, I became fully aware of the corruption and inept leadership representing the American people. I realized that members of Congress were casting votes not on behalf of their constituents, but for the lobbyists who lined their pockets. In that moment, I knew that if I want my sons to inherit a sustainable future, I will have to fight for it myself."</em></p>
+
+        <p class="reveal">Cleveland's 11th District is majority-Black, deeply working class, and built on generations of resilience. Cortney has spent her nursing career in this community &mdash; caring for the families, the elders, the children who deserve representation that actually fights for them. She once believed nursing was her true calling. But as national crises deepen, she's come to realize her lifelong defense of the "little guy" has been preparing her for public service all along.</p>
+      </div>
+
+      <aside class="meet-sidebar">
+        <div class="golden-rule reveal">
+          <h3>My Guiding Principle: The Golden Rule</h3>
+          <p>Living by the golden rule, I treat others with the same respect I seek, uphold others' dignity, live my life with integrity, speak out against injustice, and protect those who cannot defend themselves.</p>
+        </div>
+
+        <div class="not-a-politician reveal">
+          <strong>"I am NOT a politician."</strong>
+          <p>Instead, I want to be a POLICYMAKER and someone who fights for fairness and equity for the working class. I have had seasons of feast and seasons of famine. I have two wonderful sons — one very bright teenager and one very bright little guy who receives therapies for his autism spectrum disorder. I am also a proud pet parent to 4 rescues — 2 dogs, 2 cats. I am joining the fight to eliminate corruption in DC and to end America's complicity in genocide.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY INDEPENDENT? ===== -->
+<section class="why-independent" id="why-independent" style="background:var(--white);border-top:1px solid rgba(0,0,0,0.05);border-bottom:1px solid rgba(0,0,0,0.05)">
+  <div class="section-inner" style="max-width:800px">
+    <div class="section-label reveal">The Question Everyone Asks</div>
+    <h2 class="section-title reveal">Why <em>Independent?</em></h2>
+
+    <div style="font-size:1.05rem;color:var(--text-light);line-height:1.8">
+      <p class="reveal" style="margin-bottom:1.25rem">Because the two-party system has failed working people. The incumbent in Ohio's 11th takes <strong style="color:var(--text)">59% of her campaign funding from PACs</strong> &mdash; corporate money, foreign-interest money, Super PAC money. Party loyalty is how they keep you from demanding better.</p>
+
+      <p class="reveal" style="margin-bottom:1.25rem">I'm not a spoiler. I'm the alternative. When both parties answer to the same donors, voting for either one isn't a choice &mdash; it's an illusion. An independent candidate funded entirely by working people is the only vote that actually threatens the machine.</p>
+
+      <p class="reveal" style="margin-bottom:1.25rem">Cleveland deserves a representative who answers to Cleveland &mdash; not to AIPAC, not to Big Pharma, not to the party bosses who decide which candidates get funding and which get crushed.</p>
+
+      <div class="reveal" style="background:var(--cream);border-left:4px solid var(--coral);border-radius:0 12px 12px 0;padding:1.5rem 2rem;margin:2rem 0">
+        <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--plum);line-height:1.6;margin:0"><strong>Every dollar in this campaign comes from real people.</strong> When I get to Congress, I answer to you &mdash; not to the groups that wrote the checks. That's the difference.</p>
+      </div>
+
+      <div class="reveal" style="text-align:center;margin-top:2rem">
+        <a href="follow-the-money.html" class="btn btn-primary" style="display:inline-block;padding:0.85rem 2rem;border-radius:10px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;text-decoration:none;text-transform:uppercase;background:var(--plum);color:var(--white)">See Where the Money Goes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGNATURE BANNER ===== -->
+<section class="sig-banner" style="background:var(--plum);padding:2rem 2rem;text-align:center">
+  <div style="max-width:900px;margin:0 auto">
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.1rem, 4vw, 1.6rem);letter-spacing:0.1em;color:var(--white);margin-bottom:0.25rem">We Need {{ site.sigGoal | toLocaleString }} Signatures by May 4th to Get on the Ballot</p>
+    <p style="color:rgba(255,255,255,0.9);font-size:0.95rem;margin-bottom:1rem">As an independent candidate, Cortney isn't in the primary. She needs YOUR signature to earn a spot on the November general election ballot.</p>
+
+    <!-- Signature Progress Counter — update data-collected to change the number -->
+    <div class="sig-progress" data-collected="{{ site.sigCount }}" data-goal="{{ site.sigGoal }}" style="max-width:500px;margin:0 auto 1.25rem">
+      <div style="display:flex;justify-content:space-between;font-family:'Bebas Neue',sans-serif;color:var(--coral-light);font-size:0.85rem;letter-spacing:0.1em;margin-bottom:0.35rem">
+        <span><strong id="sig-count">{{ site.sigCount }}</strong> signatures collected</span>
+        <span>Goal: {{ site.sigGoal | toLocaleString }}</span>
+      </div>
+      <div style="background:rgba(255,255,255,0.15);border-radius:50px;height:14px;overflow:hidden">
+        <div id="sig-bar" style="width:0%;background:linear-gradient(90deg,var(--coral),var(--coral-light));height:100%;border-radius:50px;transition:width 1.2s ease-out"></div>
+      </div>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.75rem;margin-top:0.35rem;font-style:italic">Updated weekly — every signature counts</p>
+    </div>
+
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="get-involved.html" class="btn" style="background:var(--white);color:var(--plum);font-weight:700;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase">Help Collect Signatures →</a>
+      <a href="voter-registration.html" class="btn" style="background:var(--coral);color:var(--plum);font-weight:700;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase">Register to Vote →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCOMPLISHMENTS ===== -->
+<section class="accomplishments" id="accomplishments">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Real-World <em>Experience</em></h2>
+
+    <div class="acc-cards">
+      <div class="acc-card reveal">
+        <div class="acc-years">15</div>
+        <div class="acc-role">Years as a Matriarch</div>
+        <p>My greatest accomplishment is motherhood. I am raising two extraordinary young men with respect, compassion, and unwavering moral values. Overcoming the challenges of guiding them on my own is a true reflection of my character and determination. Managing my household independently has honed my ability to run a tight ship — a skill that will translate seamlessly into managing a national budget.</p>
+      </div>
+      <div class="acc-card reveal reveal-delay-1">
+        <div class="acc-years">12</div>
+        <div class="acc-role">Years as a Trusted LPN</div>
+        <p>With twelve years of nursing experience, I take great pride in building strong relationships and delivering exceptional care. My career includes 2 years as an Anesthesia Technician, 5 years as a Pediatric Outpatient Nurse, and 5 years as a Cardiac Data Abstractor for the National Cardiovascular Data Registry CathPCI Program.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMPAIGN VISION ===== -->
+<section class="vision" id="vision">
+  <div class="section-inner">
+    <h2 class="section-title reveal" style="margin-bottom:0.5rem">We're Taking Back the <em>American Dream</em></h2>
+    <p class="reveal" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.2em;color:var(--coral-light);text-transform:uppercase;margin-bottom:2rem">Our Campaign</p>
+
+    <div class="vision-text">
+      <p class="reveal"><span class="vision-bold">While we were busy building this nation, the ultra-wealthy stole the American Dream from us.</span> We've been funding corporate welfare for too long. It's time to make our taxes work FOR US AGAIN. It's time for the working class to RECLAIM OUR POWER.</p>
+
+      <p class="reveal">I believe the United States is a land of opportunity — that with hard work, there should be an opportunity for upward mobility, freedom &amp; equity for people of all classes.</p>
+
+      <div class="vision-highlight reveal">
+        Regardless of which side you stand on, the true obstacle to achieving our dreams lies with those at the TOP.
+      </div>
+
+      <p class="reveal">Billionaires and corporations have convinced Americans to fight among ourselves, left against right. But make no mistake — the real fight is the working class against the ruling class. Cleveland is a union town — nurses, steelworkers, teachers, building trades. It's time we had a representative who stands with labor, not with the corporations trying to crush it. And that fight starts right here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRIORITIES ===== -->
+<section class="priorities" id="priorities">
+  <div class="section-inner">
+    <div class="section-label reveal">Platform</div>
+    <h2 class="section-title reveal">Our <em>Priorities</em></h2>
+    <p class="reveal" style="color:var(--text-light);max-width:600px;margin-bottom:0.5rem">Fighting for everyday Americans with bold, commonsense solutions.</p>
+
+    <div class="priorities-grid">
+      <a href="issues.html#foreign-influence" class="priority-card reveal"><span class="priority-icon">🏛️</span><h4>End Foreign Influence in Politics</h4></a>
+      <a href="issues.html#corporate-influence" class="priority-card reveal reveal-delay-1"><span class="priority-icon">💼</span><h4>End Corporate Influence in Politics</h4></a>
+      <a href="issues.html#tax-the-rich" class="priority-card reveal reveal-delay-2"><span class="priority-icon">💰</span><h4>Tax the Rich &amp; Corporations</h4></a>
+      <a href="issues.html#medicare" class="priority-card reveal"><span class="priority-icon">🏥</span><h4>Medicare for All</h4></a>
+      <a href="issues.html#reproductive-freedom" class="priority-card reveal reveal-delay-1"><span class="priority-icon">❤️</span><h4>Reproductive Freedom</h4></a>
+      <a href="issues.html#childcare" class="priority-card reveal reveal-delay-2"><span class="priority-icon">🏡</span><h4>Affordable &amp; Accessible Daycare</h4></a>
+      <a href="issues.html#education" class="priority-card reveal"><span class="priority-icon">🎓</span><h4>Free Pre-K through College</h4></a>
+      <a href="issues.html#family-leave" class="priority-card reveal reveal-delay-1"><span class="priority-icon">👨‍👩‍👧</span><h4>Paid Family Leave</h4></a>
+      <a href="issues.html#green-new-deal" class="priority-card reveal reveal-delay-2"><span class="priority-icon">🌿</span><h4>Green New Deal &amp; Data Center Threats</h4></a>
+      <a href="issues.html#housing" class="priority-card reveal"><span class="priority-icon">🏠</span><h4>Affordable Housing</h4></a>
+      <a href="issues.html#wages" class="priority-card reveal reveal-delay-1"><span class="priority-icon">📈</span><h4>Livable Wages &amp; UBI</h4></a>
+      <a href="issues.html#gun-laws" class="priority-card reveal reveal-delay-2"><span class="priority-icon">🔫</span><h4>Common Sense Gun Laws</h4></a>
+      <a href="issues.html#human-rights" class="priority-card reveal"><span class="priority-icon">🌈</span><h4>Human Rights for All</h4></a>
+      <a href="issues.html#abolish-ice" class="priority-card reveal reveal-delay-1"><span class="priority-icon">✊</span><h4>Abolish ICE</h4></a>
+      <a href="issues.html#prison-industrial-complex" class="priority-card reveal reveal-delay-2"><span class="priority-icon">⚖️</span><h4>End the Prison Industrial Complex</h4></a>
+      <a href="issues.html#military-industrial-complex" class="priority-card reveal"><span class="priority-icon">🕊️</span><h4>End the Military Industrial Complex</h4></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRASSROOTS PLEDGE ===== -->
+<section class="pledge" id="pledge">
+  <div class="section-inner">
+    <div class="pledge-box reveal">
+      <div class="pledge-divider" style="width:40px;height:2px;background:var(--coral);margin:0 auto 1.5rem;border-radius:1px" aria-hidden="true"></div>
+      <h2>This is a <em>Grassroots</em> Campaign</h2>
+      <p>I will <strong>NOT</strong> be accepting donations from <strong>Foreign PACs</strong> (AIPAC/Pro-Israel PACs/etc), or <strong>Corporate PACs</strong> (Big Tech, Crypto, Big Oil, Big Pharma, etc).</p>
+      <div class="pledge-divider"></div>
+      <p>I am going to fight <strong>FOREIGN</strong> and <strong>CORPORATE</strong> influence in US Government Policy.</p>
+      <div class="pledge-stance">I Condemn Genocide.</div>
+      <a href="{{ site.donateUrl }}" class="btn btn-primary" style="margin-top:2rem">Support the Movement →</a>
+    </div>
+  </div>
+</section>
+
+</main>

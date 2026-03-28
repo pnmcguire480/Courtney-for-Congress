@@ -1,0 +1,551 @@
+/* Theme — light/dark mode system
+   Overrides :root palette variables defined inline in each page.
+   Uses [data-theme="dark"] (manual toggle) and @media prefers-color-scheme (auto-detect).
+   Higher specificity than bare :root ensures these win over inline <style> blocks. */
+
+/* ===== DARK MODE VARIABLE OVERRIDES ===== */
+
+/* Manual toggle */
+[data-theme="dark"] {
+  --cream: #0f0a14;
+  --cream-dark: #150e1b;
+  --white: #1a1220;
+  --text: #ece4f2;
+  --text-light: #a89bb3;
+  --slate: #ece4f2;
+  --plum-light: #c98ec6;
+  --green: #5aad82;
+  --green-light: #1a3a28;
+  --text-accent: #d4957e;
+  color-scheme: dark;
+}
+
+/* Auto-detect system preference (only when user hasn't manually toggled) */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --cream: #0f0a14;
+    --cream-dark: #150e1b;
+    --white: #1a1220;
+    --text: #ece4f2;
+    --text-light: #a89bb3;
+    --slate: #ece4f2;
+    --plum-light: #c98ec6;
+    --green: #5aad82;
+    --green-light: #1a3a28;
+    --text-accent: #d4957e;
+    color-scheme: dark;
+  }
+}
+
+/* ===== PLUM-AS-TEXT OVERRIDES =====
+   --plum stays unchanged (used as dark background in hero/CTA/footer).
+   These selectors use plum as text on light surfaces — must lighten in dark mode. */
+
+[data-theme="dark"] .nav-logo,
+[data-theme="dark"] .nav-socials a,
+[data-theme="dark"] .nav-links a,
+[data-theme="dark"] .nav-dropdown-menu,
+[data-theme="dark"] .nav-dropdown-menu a:hover,
+[data-theme="dark"] .mobile-menu a,
+[data-theme="dark"] .mobile-menu-close,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .section-heading,
+[data-theme="dark"] .connect h3,
+[data-theme="dark"] .connect a,
+[data-theme="dark"] .social-link,
+[data-theme="dark"] .quick-card h3,
+[data-theme="dark"] .state-name,
+[data-theme="dark"] .endorser-name,
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] .asset-name,
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .post-read-more,
+[data-theme="dark"] .post-byline strong,
+[data-theme="dark"] .post-body h2,
+[data-theme="dark"] .post-body h3,
+[data-theme="dark"] .post-body blockquote,
+[data-theme="dark"] .post-body a:hover,
+[data-theme="dark"] .post-nav a,
+[data-theme="dark"] .way-card h3,
+[data-theme="dark"] .drop-cap,
+[data-theme="dark"] .timeline-role,
+[data-theme="dark"] .signup-label,
+[data-theme="dark"] .issue-title,
+[data-theme="dark"] .issue-pill,
+[data-theme="dark"] .issue-block h2,
+[data-theme="dark"] .tier-header .tier-title,
+[data-theme="dark"] .org-name,
+[data-theme="dark"] .org-name a,
+[data-theme="dark"] .endorse-cta h2,
+[data-theme="dark"] .endorse-success h3,
+[data-theme="dark"] .fact-value,
+[data-theme="dark"] .copy-btn,
+[data-theme="dark"] .news-headline a,
+[data-theme="dark"] .news-card-title a,
+[data-theme="dark"] .news-source-links a,
+[data-theme="dark"] .press-cta h2,
+[data-theme="dark"] .event-title,
+[data-theme="dark"] .btn-details,
+[data-theme="dark"] .filter-btn,
+[data-theme="dark"] .compare-section h2,
+[data-theme="dark"] .col-cortney,
+[data-theme="dark"] .data-section h2,
+[data-theme="dark"] .data-card h3,
+[data-theme="dark"] .stat-num,
+[data-theme="dark"] .donor-amount,
+[data-theme="dark"] .outside-table thead th,
+[data-theme="dark"] .vote-card .contrast,
+[data-theme="dark"] .btn-check,
+[data-theme="dark"] .national-banner a,
+[data-theme="dark"] .info-card h3,
+[data-theme="dark"] .not-a-politician strong,
+[data-theme="dark"] .acc-role,
+[data-theme="dark"] .priority-card h4,
+[data-theme="dark"] footer h3,
+[data-theme="dark"] footer a,
+[data-theme="dark"] .footer-inner h3,
+[data-theme="dark"] .footer-inner a {
+  color: #c98ec6;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .nav-logo,
+  html:not([data-theme="light"]) .nav-socials a,
+  html:not([data-theme="light"]) .nav-links a,
+  html:not([data-theme="light"]) .nav-dropdown-menu,
+  html:not([data-theme="light"]) .nav-dropdown-menu a:hover,
+  html:not([data-theme="light"]) .mobile-menu a,
+  html:not([data-theme="light"]) .mobile-menu-close,
+  html:not([data-theme="light"]) .section-title,
+  html:not([data-theme="light"]) .section-heading,
+  html:not([data-theme="light"]) .connect h3,
+  html:not([data-theme="light"]) .connect a,
+  html:not([data-theme="light"]) .social-link,
+  html:not([data-theme="light"]) .quick-card h3,
+  html:not([data-theme="light"]) .state-name,
+  html:not([data-theme="light"]) .endorser-name,
+  html:not([data-theme="light"]) .form-group label,
+  html:not([data-theme="light"]) .asset-name,
+  html:not([data-theme="light"]) .post-title,
+  html:not([data-theme="light"]) .post-read-more,
+  html:not([data-theme="light"]) .post-byline strong,
+  html:not([data-theme="light"]) .post-body h2,
+  html:not([data-theme="light"]) .post-body h3,
+  html:not([data-theme="light"]) .post-body blockquote,
+  html:not([data-theme="light"]) .post-body a:hover,
+  html:not([data-theme="light"]) .post-nav a,
+  html:not([data-theme="light"]) .way-card h3,
+  html:not([data-theme="light"]) .drop-cap,
+  html:not([data-theme="light"]) .timeline-role,
+  html:not([data-theme="light"]) .signup-label,
+  html:not([data-theme="light"]) .issue-title,
+  html:not([data-theme="light"]) .issue-pill,
+  html:not([data-theme="light"]) .issue-block h2,
+  html:not([data-theme="light"]) .tier-header .tier-title,
+  html:not([data-theme="light"]) .org-name,
+  html:not([data-theme="light"]) .org-name a,
+  html:not([data-theme="light"]) .endorse-cta h2,
+  html:not([data-theme="light"]) .endorse-success h3,
+  html:not([data-theme="light"]) .fact-value,
+  html:not([data-theme="light"]) .copy-btn,
+  html:not([data-theme="light"]) .news-headline a,
+  html:not([data-theme="light"]) .news-card-title a,
+  html:not([data-theme="light"]) .news-source-links a,
+  html:not([data-theme="light"]) .press-cta h2,
+  html:not([data-theme="light"]) .event-title,
+  html:not([data-theme="light"]) .btn-details,
+  html:not([data-theme="light"]) .filter-btn,
+  html:not([data-theme="light"]) .compare-section h2,
+  html:not([data-theme="light"]) .col-cortney,
+  html:not([data-theme="light"]) .data-section h2,
+  html:not([data-theme="light"]) .data-card h3,
+  html:not([data-theme="light"]) .stat-num,
+  html:not([data-theme="light"]) .donor-amount,
+  html:not([data-theme="light"]) .outside-table thead th,
+  html:not([data-theme="light"]) .vote-card .contrast,
+  html:not([data-theme="light"]) .btn-check,
+  html:not([data-theme="light"]) .national-banner a,
+  html:not([data-theme="light"]) .info-card h3,
+  html:not([data-theme="light"]) .not-a-politician strong,
+  html:not([data-theme="light"]) .acc-role,
+  html:not([data-theme="light"]) .priority-card h4,
+  html:not([data-theme="light"]) footer h3,
+  html:not([data-theme="light"]) footer a,
+  html:not([data-theme="light"]) .footer-inner h3,
+  html:not([data-theme="light"]) .footer-inner a {
+    color: #c98ec6;
+  }
+}
+
+/* ===== HARDCODED COLOR OVERRIDES ===== */
+
+/* Section label — #a0604a hardcoded in inline styles */
+html .section-label,
+html .category-label,
+html .post-date {
+  color: var(--text-accent, #a0604a);
+}
+
+/* Hamburger bars use background:var(--plum) */
+[data-theme="dark"] .hamburger span {
+  background: #c98ec6;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .hamburger span {
+    background: #c98ec6;
+  }
+}
+
+/* ===== NAV — HARDCODED RGBA OVERRIDES ===== */
+
+[data-theme="dark"] .nav {
+  background: rgba(15, 10, 20, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+[data-theme="dark"] .nav.scrolled {
+  background: rgba(15, 10, 20, 0.98);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .mobile-menu {
+  background: #0f0a14;
+}
+[data-theme="dark"] .nav-links a:hover {
+  color: #c98ec6;
+  background: rgba(201, 142, 198, 0.1);
+}
+[data-theme="dark"] .nav-links a.active {
+  background: var(--plum);
+  color: #ece4f2;
+}
+[data-theme="dark"] .nav-dropdown-menu {
+  background: #150e1b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+[data-theme="dark"] .nav-dropdown-menu a:hover {
+  background: rgba(201, 142, 198, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .nav {
+    background: rgba(15, 10, 20, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+  }
+  html:not([data-theme="light"]) .nav.scrolled {
+    background: rgba(15, 10, 20, 0.98);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  html:not([data-theme="light"]) .mobile-menu {
+    background: #0f0a14;
+  }
+  html:not([data-theme="light"]) .nav-links a:hover {
+    color: #c98ec6;
+    background: rgba(201, 142, 198, 0.1);
+  }
+  html:not([data-theme="light"]) .nav-links a.active {
+    background: var(--plum);
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) .nav-dropdown-menu {
+    background: #150e1b;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  html:not([data-theme="light"]) .nav-dropdown-menu a:hover {
+    background: rgba(201, 142, 198, 0.1);
+  }
+}
+
+/* ===== FOOTER SIGNUP INPUT ===== */
+
+[data-theme="dark"] .signup-form input[type="email"] {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== FORM INPUTS ===== */
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ece4f2;
+}
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 3px rgba(253, 180, 155, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .signup-form input[type="email"] {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) input,
+  html:not([data-theme="light"]) select,
+  html:not([data-theme="light"]) textarea {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) input:focus,
+  html:not([data-theme="light"]) select:focus,
+  html:not([data-theme="light"]) textarea:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(253, 180, 155, 0.15);
+  }
+}
+
+/* ===== CARD & SURFACE BORDERS ===== */
+
+[data-theme="dark"] .event-card,
+[data-theme="dark"] .quick-card,
+[data-theme="dark"] .endorsement-card,
+[data-theme="dark"] .org-card,
+[data-theme="dark"] .way-card,
+[data-theme="dark"] .form-card,
+[data-theme="dark"] .acc-card,
+[data-theme="dark"] .endorse-form-wrap,
+[data-theme="dark"] .issue-points,
+[data-theme="dark"] .cite-block,
+[data-theme="dark"] .state-item,
+[data-theme="dark"] .gallery-coming-soon,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .post-card {
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .event-card,
+  html:not([data-theme="light"]) .quick-card,
+  html:not([data-theme="light"]) .endorsement-card,
+  html:not([data-theme="light"]) .org-card,
+  html:not([data-theme="light"]) .way-card,
+  html:not([data-theme="light"]) .form-card,
+  html:not([data-theme="light"]) .acc-card,
+  html:not([data-theme="light"]) .endorse-form-wrap,
+  html:not([data-theme="light"]) .issue-points,
+  html:not([data-theme="light"]) .cite-block,
+  html:not([data-theme="light"]) .state-item,
+  html:not([data-theme="light"]) .gallery-coming-soon,
+  html:not([data-theme="light"]) .testimonial-card,
+  html:not([data-theme="light"]) .post-card {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ===== FOOTER BORDERS ===== */
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--plum);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  transition: color 0.2s, background 0.2s;
+}
+.theme-toggle:hover {
+  background: rgba(71, 13, 68, 0.06);
+}
+[data-theme="dark"] .theme-toggle {
+  color: #ece4f2;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle {
+    color: #ece4f2;
+  }
+  html:not([data-theme="light"]) .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Show sun in light, moon in dark */
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle .icon-sun { display: none; }
+  html:not([data-theme="light"]) .theme-toggle .icon-moon { display: block; }
+  html[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+}
+
+/* Mobile toggle in mobile menu */
+.mobile-theme-toggle {
+  background: none;
+  border: 1px solid rgba(71, 13, 68, 0.15);
+  cursor: pointer;
+  color: var(--plum);
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  min-height: 44px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.mobile-theme-toggle:hover {
+  background: rgba(71, 13, 68, 0.06);
+}
+[data-theme="dark"] .mobile-theme-toggle {
+  color: #ece4f2;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+[data-theme="dark"] .mobile-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.mobile-theme-toggle .icon-moon { display: none; }
+.mobile-theme-toggle .label-dark { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .icon-moon { display: inline; }
+[data-theme="dark"] .mobile-theme-toggle .label-light { display: none; }
+[data-theme="dark"] .mobile-theme-toggle .label-dark { display: inline; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .mobile-theme-toggle {
+    color: #ece4f2;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  html:not([data-theme="light"]) .mobile-theme-toggle .icon-sun { display: none; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .icon-moon { display: inline; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .label-light { display: none; }
+  html:not([data-theme="light"]) .mobile-theme-toggle .label-dark { display: inline; }
+}
+
+/* ===== INLINE STYLE OVERRIDES =====
+   Some elements use inline style="..." with var(--plum) text colors.
+   These need !important in dark mode to override inline specificity. */
+
+[data-theme="dark"] [style*="color:var(--plum)"],
+[data-theme="dark"] [style*="color: var(--plum)"] {
+  color: #c98ec6 !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) [style*="color:var(--plum)"],
+  html:not([data-theme="light"]) [style*="color: var(--plum)"] {
+    color: #c98ec6 !important;
+  }
+}
+
+/* ===== HARDCODED BACKGROUND OVERRIDES ===== */
+
+/* #f4eef8 light purple surfaces — dark mode equivalent */
+[data-theme="dark"] .issue-pill,
+[data-theme="dark"] .issue-block,
+[data-theme="dark"] .data-card,
+[data-theme="dark"] .outside-table thead th {
+  background: #1e1528 !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .issue-pill,
+  html:not([data-theme="light"]) .issue-block,
+  html:not([data-theme="light"]) .data-card,
+  html:not([data-theme="light"]) .outside-table thead th {
+    background: #1e1528 !important;
+  }
+}
+
+/* #a0604a section labels — override inline styles */
+[data-theme="dark"] .section-label,
+[data-theme="dark"] .category-label,
+[data-theme="dark"] [style*="color:#a0604a"] {
+  color: #d4957e !important;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .section-label,
+  html:not([data-theme="light"]) .category-label,
+  html:not([data-theme="light"]) [style*="color:#a0604a"] {
+    color: #d4957e !important;
+  }
+}
+
+/* Form success message — hardcoded dark green on dark green */
+[data-theme="dark"] .form-success p {
+  color: #5aad82;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .form-success p {
+    color: #5aad82;
+  }
+}
+
+/* Copy button border in dark mode */
+[data-theme="dark"] .copy-btn {
+  border-color: rgba(201, 142, 198, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .copy-btn {
+    border-color: rgba(201, 142, 198, 0.3);
+  }
+}
+
+/* Event type tags — softer backgrounds in dark mode */
+[data-theme="dark"] .tag-town-hall { background:#1a2e1a; color:#6dbf6d }
+[data-theme="dark"] .tag-canvass { background:#2e2210; color:#d4935a }
+[data-theme="dark"] .tag-phone-bank { background:#1a1d2e; color:#7b8fd4 }
+[data-theme="dark"] .tag-fundraiser { background:#2e1520; color:#d46b8e }
+[data-theme="dark"] .tag-community { background:#102e2e; color:#5abfbf }
+[data-theme="dark"] .tag-rally { background:#251530; color:#b87fd4 }
+[data-theme="dark"] .tag-update { background:#1e1528; color:#c98ec6 }
+[data-theme="dark"] .tag-statement { background:#2e2210; color:#d4935a }
+[data-theme="dark"] .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
+[data-theme="dark"] .tag-press { background:#1a1d2e; color:#7b8fd4 }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .tag-town-hall { background:#1a2e1a; color:#6dbf6d }
+  html:not([data-theme="light"]) .tag-canvass { background:#2e2210; color:#d4935a }
+  html:not([data-theme="light"]) .tag-phone-bank { background:#1a1d2e; color:#7b8fd4 }
+  html:not([data-theme="light"]) .tag-fundraiser { background:#2e1520; color:#d46b8e }
+  html:not([data-theme="light"]) .tag-community { background:#102e2e; color:#5abfbf }
+  html:not([data-theme="light"]) .tag-rally { background:#251530; color:#b87fd4 }
+  html:not([data-theme="light"]) .tag-update { background:#1e1528; color:#c98ec6 }
+  html:not([data-theme="light"]) .tag-statement { background:#2e2210; color:#d4935a }
+  html:not([data-theme="light"]) .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
+  html:not([data-theme="light"]) .tag-press { background:#1a1d2e; color:#7b8fd4 }
+}
+
+/* Decorative borders — white-based in dark mode */
+[data-theme="dark"] .issue-nav,
+[data-theme="dark"] .issue-points li,
+[data-theme="dark"] .past-item,
+[data-theme="dark"] .donor-list li,
+[data-theme="dark"] .filter-bar {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .issue-nav,
+  html:not([data-theme="light"]) .issue-points li,
+  html:not([data-theme="light"]) .past-item,
+  html:not([data-theme="light"]) .donor-list li,
+  html:not([data-theme="light"]) .filter-bar {
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+}

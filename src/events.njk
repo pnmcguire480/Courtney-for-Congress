@@ -1,0 +1,350 @@
+---
+layout: base
+title: "Events | Cortney Peterson for Congress — OH-11"
+description: "Upcoming campaign events for Cortney Peterson for Congress — town halls, canvasses, phone banks, and community gatherings in Ohio's 11th Congressional District."
+ogTitle: "Events | Cortney Peterson for Congress"
+ogDescription: "Town halls, canvasses, phone banks, and community gatherings for Cortney Peterson's campaign in Ohio's 11th District."
+ogUrl: "https://cortneyforcongress.org/events.html"
+navActive: "events"
+pageScripts: ["events.js"]
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/events.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/events.html
+permalink: /events.html
+ldJson: >
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "No Kings Rally — Cleveland",
+      "startDate": "2026-03-28T13:00:00-04:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "The Free Stamp, Willard Park",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cleveland",
+          "addressRegion": "OH",
+          "addressCountry": "US"
+        }
+      },
+      "description": "No Kings rally at the Free Stamp in Cleveland. Stand up for democracy.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Cortney Peterson For Congress",
+        "url": "https://cortneyforcongress.org/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Food Distribution with The People's Distro",
+      "startDate": "2026-03-26T18:00:00-04:00",
+      "endDate": "2026-03-26T20:00:00-04:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "New Era Clubhouse",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "11713 Buckeye Rd",
+          "addressLocality": "Cleveland",
+          "addressRegion": "OH",
+          "postalCode": "44120",
+          "addressCountry": "US"
+        }
+      },
+      "description": "Community food distribution with The People's Distro. Come help serve your neighbors and connect with the campaign.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Cortney Peterson For Congress",
+        "url": "https://cortneyforcongress.org/"
+      }
+    }
+  ]
+pageStyle: >
+  /* FILTER BAR */
+  .filter-bar{background:var(--white);border-bottom:1px solid var(--cream-dark);padding:1rem 1.5rem;position:sticky;top:62px;z-index:100}
+  .filter-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+  .filter-label{font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--text-light);text-transform:uppercase;margin-right:0.25rem}
+  .filter-btn{padding:0.4rem 1rem;border-radius:50px;border:1.5px solid var(--cream-dark);background:transparent;color:var(--text-light);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Source Sans 3',sans-serif;letter-spacing:0.03em;min-height:44px}
+  .filter-btn:hover,.filter-btn.active{background:var(--plum);color:var(--white);border-color:var(--plum)}
+  /* EVENT CARDS */
+  .events-grid{display:grid;gap:1.25rem;margin-top:2rem}
+  .event-card{background:var(--white);border-radius:16px;border:1.5px solid var(--cream-dark);overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:0;transition:border-color 0.3s,box-shadow 0.3s}
+  .event-card:hover{border-color:var(--coral);box-shadow:0 6px 24px rgba(71,13,68,0.1)}
+  .event-date-block{background:var(--plum);color:var(--white);padding:1.25rem 1.5rem;text-align:center;min-width:90px;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .event-month{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.2em;color:var(--coral-light);text-transform:uppercase}
+  .event-day{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;color:var(--white)}
+  .event-dow{font-size:0.75rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.1rem}
+  .event-body{padding:1.25rem 1.5rem}
+  .event-type-tag{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.2em;padding:0.2rem 0.6rem;border-radius:4px;text-transform:uppercase;margin-bottom:0.5rem}
+  .tag-town-hall{background:#e8f4e8;color:#2d6a2d}
+  .tag-canvass{background:#fff3e0;color:#a05000}
+  .tag-phone-bank{background:#e8eaf6;color:#3949ab}
+  .tag-fundraiser{background:#fce4ec;color:#ad1457}
+  .tag-community{background:#e0f7fa;color:#006064}
+  .tag-rally{background:#f3e5f5;color:#6a1b9a}
+  .event-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--plum);line-height:1.3;margin-bottom:0.4rem}
+  .event-meta{display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.83rem;color:var(--text-light)}
+  .event-meta span{display:flex;align-items:center;gap:0.3rem}
+  .event-desc{font-size:0.9rem;color:var(--text-light);margin-top:0.6rem;line-height:1.6}
+  .event-actions{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.6rem;min-width:130px}
+  .btn-rsvp{display:inline-flex;align-items:center;justify-content:center;padding:0.6rem 1.25rem;background:var(--plum);color:var(--white);border-radius:8px;text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.25s;white-space:nowrap}
+  .btn-rsvp:hover{background:var(--coral-light);transform:translateY(-1px)}
+  .btn-details{display:inline-flex;align-items:center;justify-content:center;padding:0.6rem 1.25rem;background:transparent;color:var(--plum);border:1.5px solid var(--plum);border-radius:8px;text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.25s;white-space:nowrap}
+  .btn-details:hover{background:var(--plum);color:var(--white)}
+  /* NO EVENTS STATE */
+  .no-events{text-align:center;padding:4rem 2rem;background:var(--white);border-radius:16px;border:2px dashed var(--cream-dark);margin-top:2rem}
+  .no-events p{color:var(--text-light);font-size:1rem}
+  /* PAST EVENTS */
+  .past-section{background:var(--white)}
+  .past-list{list-style:none;margin-top:1.75rem;display:flex;flex-direction:column;gap:0.75rem}
+  .past-item{display:flex;align-items:baseline;gap:1rem;font-size:0.92rem;padding:0.6rem 0;border-bottom:1px solid rgba(0,0,0,0.06)}
+  .past-item:last-child{border-bottom:none}
+  .past-date{font-family:'Bebas Neue',sans-serif;font-size:0.82rem;letter-spacing:0.15em;color:var(--coral);white-space:nowrap;min-width:90px;font-weight:700}
+  .past-title{color:var(--text-light)}
+  .past-location{color:var(--text-light);font-style:italic;font-size:0.85rem}
+  /* HOST CTA */
+  .host-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+  .host-cta-inner{max-width:640px;margin:0 auto}
+  .host-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+  .host-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+  /* RESPONSIVE — events-page-specific */
+  /* Mobile: 0-767px */
+  @media(max-width:767px){
+    .event-card{
+      grid-template-columns:auto 1fr;
+      grid-template-rows:1fr auto;
+    }
+    .event-actions{
+      grid-column:1/-1;
+      flex-direction:row;
+      padding:0 1.25rem 1.25rem;
+      border-top:1px solid var(--cream-dark);
+    }
+    .event-date-block{
+      grid-row:1/2;
+    }
+    .filter-bar{
+      padding:0.75rem 1rem;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+    .filter-inner{
+      flex-wrap:nowrap;
+      gap:0.5rem;
+    }
+    .filter-btn{
+      flex-shrink:0;
+      font-size:0.8rem;
+      padding:0.35rem 0.8rem;
+    }
+    .events-grid{
+      grid-template-columns:1fr !important;
+    }
+    .host-cta{
+      padding:4rem 1.25rem;
+    }
+  }
+  /* Small Mobile: 0-480px */
+  @media(max-width:480px){
+    .event-card{
+      grid-template-columns:1fr;
+      grid-template-rows:auto;
+    }
+    .event-date-block{
+      flex-direction:row;
+      gap:0.5rem;
+      align-items:baseline;
+      padding:0.9rem 1.25rem;
+      justify-content:flex-start;
+    }
+    .event-day{
+      font-size:1.6rem;
+    }
+    .event-actions{
+      flex-direction:column;
+      gap:0.75rem;
+    }
+    .filter-inner{
+      gap:0.4rem;
+    }
+    .filter-bar{
+      padding:0.5rem;
+    }
+    .host-cta{
+      padding:3rem 1rem;
+    }
+    .host-cta h2{
+      font-size:1.6rem;
+    }
+  }
+  /* Tablet: 768-1023px */
+  @media(min-width:768px) and (max-width:1023px){
+    .events-grid{
+      grid-template-columns:1fr;
+    }
+    .host-cta{
+      padding:5rem 2rem;
+    }
+  }
+  /* Large screens: 1024px+ */
+  @media(min-width:1024px){
+    .host-cta{
+      padding:7rem 3rem;
+    }
+    .events-grid{
+      grid-template-columns:1fr;
+    }
+  }
+---
+
+<main id="main-content">
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-label">On the Ground</p>
+    <h1>Campaign <em>Events</em></h1>
+    <p>Town halls, canvasses, phone banks, and community gatherings across Ohio's 11th District. Show up. Make the difference.</p>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" role="search" aria-label="Filter events by type">
+  <div class="filter-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Events</button>
+    <button class="filter-btn" data-filter="town-hall" aria-pressed="false">Town Halls</button>
+    <button class="filter-btn" data-filter="canvass" aria-pressed="false">Canvasses</button>
+    <button class="filter-btn" data-filter="phone-bank" aria-pressed="false">Phone Banks</button>
+    <button class="filter-btn" data-filter="rally" aria-pressed="false">Rallies</button>
+    <button class="filter-btn" data-filter="community" aria-pressed="false">Community</button>
+  </div>
+</div>
+
+<!-- UPCOMING EVENTS -->
+<section class="section" aria-labelledby="upcoming-heading">
+  <div class="section-inner">
+    <p class="section-label">Don't Miss It</p>
+    <h2 class="section-title" id="upcoming-heading">Upcoming <em>Events</em></h2>
+
+    <div class="events-grid" id="eventsGrid" aria-live="polite">
+
+      <!-- ============================================================
+           HOW TO ADD AN EVENT:
+           1. Copy one <article class="event-card"> block below
+           2. Update the date, type tag, title, time, location, and description
+           3. Set data-type to: town-hall | canvass | phone-bank | rally | community | fundraiser
+           4. Update or remove the RSVP link
+           ============================================================ -->
+
+      <article class="event-card reveal" data-type="rally">
+        <div class="event-date-block">
+          <span class="event-month">Mar</span>
+          <span class="event-day">28</span>
+          <span class="event-dow">Sat</span>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-rally">Rally</span>
+          <h3 class="event-title">No Kings Rally — Cleveland</h3>
+          <div class="event-meta">
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>1:00 PM</span>
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>The Free Stamp, Willard Park, Cleveland, OH</span>
+          </div>
+          <p class="event-desc">Stand with us at the No Kings rally. Democracy is not negotiable — show up and make your voice heard.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp">Get Involved</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal" data-type="community">
+        <div class="event-date-block">
+          <span class="event-month">Mar</span>
+          <span class="event-day">26</span>
+          <span class="event-dow">Thu</span>
+        </div>
+        <div class="event-body">
+          <span class="event-type-tag tag-community">Community</span>
+          <h3 class="event-title">Food Distribution with The People's Distro</h3>
+          <div class="event-meta">
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6:00 PM – 8:00 PM</span>
+            <span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New Era Clubhouse, 11713 Buckeye Rd, Cleveland, OH 44120</span>
+          </div>
+          <p class="event-desc">Join Cortney and The People's Distro for a community food distribution. Come help serve your neighbors and connect with the campaign.</p>
+        </div>
+        <div class="event-actions">
+          <a href="get-involved.html" class="btn-rsvp">Get Involved</a>
+        </div>
+      </article>
+
+    </div><!-- end eventsGrid -->
+
+    <div class="no-events" style="display:none">
+      <p>No upcoming events scheduled right now.<br>Follow us on social media for announcements, or <a href="get-involved.html" style="color:var(--coral);font-weight:700">sign up to get involved</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EVENTS -->
+<section class="section past-section" aria-labelledby="past-heading">
+  <div class="section-inner">
+    <p class="section-label">We Were There</p>
+    <h2 class="section-title" id="past-heading">Past <em>Events</em></h2>
+    <ul class="past-list" aria-label="Past campaign events">
+      <li class="past-item">
+        <span class="past-date">Mar 22, 2026</span>
+        <span class="past-title">Fast for Peace through Justice — Kickoff Speech &nbsp;<span class="past-location">Eternal Life Fountain, Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 22, 2026</span>
+        <span class="past-title">Coffee &amp; Conversation — Phoenix Coffee Coventry &nbsp;<span class="past-location">Cleveland Heights, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 17, 2026</span>
+        <span class="past-title">St. Patrick's Day Celebration — Signature Collection &nbsp;<span class="past-location">Downtown Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 14, 2026</span>
+        <span class="past-title">Ohio Cannabis Final Farmers Market &nbsp;<span class="past-location">78th Street Studios, Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Mar 7, 2026</span>
+        <span class="past-title">National Day of Action: Stop the War on Iran — Rally at Market Square &nbsp;<span class="past-location">Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Feb 26, 2026</span>
+        <span class="past-title">Food Distribution with The People's Distro &nbsp;<span class="past-location">Cleveland, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Feb 18, 2026</span>
+        <span class="past-title">Spoke in Opposition of Senate Bill 87 — Ohio Statehouse &nbsp;<span class="past-location">Columbus, OH</span></span>
+      </li>
+      <li class="past-item">
+        <span class="past-date">Jan 30, 2026</span>
+        <span class="past-title">CLE: Stand with Minnesota — ICE OUT! National Day of Action &amp; Rally at Public Square &nbsp;<span class="past-location">Downtown Cleveland, OH</span></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOST AN EVENT CTA -->
+<section class="host-cta" aria-labelledby="host-heading">
+  <div class="host-cta-inner">
+    <p class="page-label" style="color:var(--coral-light)">Make It Happen</p>
+    <h2 id="host-heading">Host an Event for Cortney</h2>
+    <p>Have space, a neighborhood, a union hall, or a backyard? We'll come to you. House parties and community events are how grassroots campaigns win.</p>
+    <div class="btn-group">
+      <a href="get-involved.html" class="btn btn-coral">Sign Up to Host</a>
+      <a href="{{ site.donateUrl }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Support the Campaign</a>
+    </div>
+  </div>
+</section>
+
+</main>
