@@ -17,6 +17,15 @@
   --green: #5aad82;
   --green-light: #1a3a28;
   --text-accent: #d4957e;
+
+  /* Dark mode semantic tokens — used throughout this file instead of raw hex */
+  --dm-plum-text: #c98ec6;
+  --dm-surface: #0f0a14;
+  --dm-surface-raised: #150e1b;
+  --dm-on-surface: #ece4f2;
+  --dm-accent-muted: #d4957e;
+  --dm-surface-purple: #1e1528;
+  --dm-plum-text-rgb: 201, 142, 198;
   color-scheme: dark;
 }
 
@@ -33,6 +42,15 @@
     --green: #5aad82;
     --green-light: #1a3a28;
     --text-accent: #d4957e;
+
+    /* Dark mode semantic tokens — used throughout this file instead of raw hex */
+    --dm-plum-text: #c98ec6;
+    --dm-surface: #0f0a14;
+    --dm-surface-raised: #150e1b;
+    --dm-on-surface: #ece4f2;
+    --dm-accent-muted: #d4957e;
+    --dm-surface-purple: #1e1528;
+    --dm-plum-text-rgb: 201, 142, 198;
     color-scheme: dark;
   }
 }
@@ -104,8 +122,11 @@
 [data-theme="dark"] footer h3,
 [data-theme="dark"] footer a,
 [data-theme="dark"] .footer-inner h3,
-[data-theme="dark"] .footer-inner a {
-  color: #c98ec6;
+[data-theme="dark"] .footer-inner a,
+[data-theme="dark"] .news-headline,
+[data-theme="dark"] .volunteer-aside-stat-label,
+[data-theme="dark"] .golden-rule h3 {
+  color: var(--dm-plum-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -172,8 +193,11 @@
   html:not([data-theme="light"]) footer h3,
   html:not([data-theme="light"]) footer a,
   html:not([data-theme="light"]) .footer-inner h3,
-  html:not([data-theme="light"]) .footer-inner a {
-    color: #c98ec6;
+  html:not([data-theme="light"]) .footer-inner a,
+  html:not([data-theme="light"]) .news-headline,
+  html:not([data-theme="light"]) .volunteer-aside-stat-label,
+  html:not([data-theme="light"]) .golden-rule h3 {
+    color: var(--dm-plum-text);
   }
 }
 
@@ -188,11 +212,11 @@ html .post-date {
 
 /* Hamburger bars use background:var(--plum) */
 [data-theme="dark"] .hamburger span {
-  background: #c98ec6;
+  background: var(--dm-plum-text);
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .hamburger span {
-    background: #c98ec6;
+    background: var(--dm-plum-text);
   }
 }
 
@@ -207,23 +231,23 @@ html .post-date {
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
 [data-theme="dark"] .mobile-menu {
-  background: #0f0a14;
+  background: var(--dm-surface);
 }
 [data-theme="dark"] .nav-links a:hover {
-  color: #c98ec6;
-  background: rgba(201, 142, 198, 0.1);
+  color: var(--dm-plum-text);
+  background: rgba(var(--dm-plum-text-rgb), 0.1);
 }
 [data-theme="dark"] .nav-links a.active {
   background: var(--plum);
-  color: #ece4f2;
+  color: var(--dm-on-surface);
 }
 [data-theme="dark"] .nav-dropdown-menu {
-  background: #150e1b;
+  background: var(--dm-surface-raised);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 [data-theme="dark"] .nav-dropdown-menu a:hover {
-  background: rgba(201, 142, 198, 0.1);
+  background: rgba(var(--dm-plum-text-rgb), 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -236,23 +260,23 @@ html .post-date {
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
   }
   html:not([data-theme="light"]) .mobile-menu {
-    background: #0f0a14;
+    background: var(--dm-surface);
   }
   html:not([data-theme="light"]) .nav-links a:hover {
-    color: #c98ec6;
-    background: rgba(201, 142, 198, 0.1);
+    color: var(--dm-plum-text);
+    background: rgba(var(--dm-plum-text-rgb), 0.1);
   }
   html:not([data-theme="light"]) .nav-links a.active {
     background: var(--plum);
-    color: #ece4f2;
+    color: var(--dm-on-surface);
   }
   html:not([data-theme="light"]) .nav-dropdown-menu {
-    background: #150e1b;
+    background: var(--dm-surface-raised);
     border-color: rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
   html:not([data-theme="light"]) .nav-dropdown-menu a:hover {
-    background: rgba(201, 142, 198, 0.1);
+    background: rgba(var(--dm-plum-text-rgb), 0.1);
   }
 }
 
@@ -269,7 +293,7 @@ html .post-date {
 [data-theme="dark"] select,
 [data-theme="dark"] textarea {
   border-color: rgba(255, 255, 255, 0.12);
-  color: #ece4f2;
+  color: var(--dm-on-surface);
 }
 [data-theme="dark"] input:focus,
 [data-theme="dark"] select:focus,
@@ -290,7 +314,7 @@ html .post-date {
   html:not([data-theme="light"]) select,
   html:not([data-theme="light"]) textarea {
     border-color: rgba(255, 255, 255, 0.12);
-    color: #ece4f2;
+    color: var(--dm-on-surface);
   }
   html:not([data-theme="light"]) input:focus,
   html:not([data-theme="light"]) select:focus,
@@ -371,14 +395,14 @@ html .post-date {
   background: rgba(71, 13, 68, 0.06);
 }
 [data-theme="dark"] .theme-toggle {
-  color: #ece4f2;
+  color: var(--dm-on-surface);
 }
 [data-theme="dark"] .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .theme-toggle {
-    color: #ece4f2;
+    color: var(--dm-on-surface);
   }
   html:not([data-theme="light"]) .theme-toggle:hover {
     background: rgba(255, 255, 255, 0.08);
@@ -418,7 +442,7 @@ html .post-date {
   background: rgba(71, 13, 68, 0.06);
 }
 [data-theme="dark"] .mobile-theme-toggle {
-  color: #ece4f2;
+  color: var(--dm-on-surface);
   border-color: rgba(255, 255, 255, 0.12);
 }
 [data-theme="dark"] .mobile-theme-toggle:hover {
@@ -432,7 +456,7 @@ html .post-date {
 [data-theme="dark"] .mobile-theme-toggle .label-dark { display: inline; }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .mobile-theme-toggle {
-    color: #ece4f2;
+    color: var(--dm-on-surface);
     border-color: rgba(255, 255, 255, 0.12);
   }
   html:not([data-theme="light"]) .mobile-theme-toggle .icon-sun { display: none; }
@@ -445,46 +469,49 @@ html .post-date {
    Some elements use inline style="..." with var(--plum) text colors.
    These need !important in dark mode to override inline specificity. */
 
+/* !important required here to override inline style="" specificity */
 [data-theme="dark"] [style*="color:var(--plum)"],
 [data-theme="dark"] [style*="color: var(--plum)"] {
-  color: #c98ec6 !important;
+  color: var(--dm-plum-text) !important;
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) [style*="color:var(--plum)"],
   html:not([data-theme="light"]) [style*="color: var(--plum)"] {
-    color: #c98ec6 !important;
+    color: var(--dm-plum-text) !important;
   }
 }
 
 /* ===== HARDCODED BACKGROUND OVERRIDES ===== */
 
-/* #f4eef8 light purple surfaces — dark mode equivalent */
+/* #f4eef8 light purple surfaces — dark mode equivalent
+   !important required to override inline style="background:..." on some elements */
 [data-theme="dark"] .issue-pill,
 [data-theme="dark"] .issue-block,
 [data-theme="dark"] .data-card,
 [data-theme="dark"] .outside-table thead th {
-  background: #1e1528 !important;
+  background: var(--dm-surface-purple) !important;
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .issue-pill,
   html:not([data-theme="light"]) .issue-block,
   html:not([data-theme="light"]) .data-card,
   html:not([data-theme="light"]) .outside-table thead th {
-    background: #1e1528 !important;
+    background: var(--dm-surface-purple) !important;
   }
 }
 
-/* #a0604a section labels — override inline styles */
+/* #a0604a section labels — override inline styles
+   !important required to override inline style="color:#a0604a" */
 [data-theme="dark"] .section-label,
 [data-theme="dark"] .category-label,
 [data-theme="dark"] [style*="color:#a0604a"] {
-  color: #d4957e !important;
+  color: var(--dm-accent-muted) !important;
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .section-label,
   html:not([data-theme="light"]) .category-label,
   html:not([data-theme="light"]) [style*="color:#a0604a"] {
-    color: #d4957e !important;
+    color: var(--dm-accent-muted) !important;
   }
 }
 
@@ -500,11 +527,11 @@ html .post-date {
 
 /* Copy button border in dark mode */
 [data-theme="dark"] .copy-btn {
-  border-color: rgba(201, 142, 198, 0.3);
+  border-color: rgba(var(--dm-plum-text-rgb), 0.3);
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .copy-btn {
-    border-color: rgba(201, 142, 198, 0.3);
+    border-color: rgba(var(--dm-plum-text-rgb), 0.3);
   }
 }
 
@@ -515,7 +542,7 @@ html .post-date {
 [data-theme="dark"] .tag-fundraiser { background:#2e1520; color:#d46b8e }
 [data-theme="dark"] .tag-community { background:#102e2e; color:#5abfbf }
 [data-theme="dark"] .tag-rally { background:#251530; color:#b87fd4 }
-[data-theme="dark"] .tag-update { background:#1e1528; color:#c98ec6 }
+[data-theme="dark"] .tag-update { background:var(--dm-surface-purple); color:var(--dm-plum-text) }
 [data-theme="dark"] .tag-statement { background:#2e2210; color:#d4935a }
 [data-theme="dark"] .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
 [data-theme="dark"] .tag-press { background:#1a1d2e; color:#7b8fd4 }
@@ -526,7 +553,7 @@ html .post-date {
   html:not([data-theme="light"]) .tag-fundraiser { background:#2e1520; color:#d46b8e }
   html:not([data-theme="light"]) .tag-community { background:#102e2e; color:#5abfbf }
   html:not([data-theme="light"]) .tag-rally { background:#251530; color:#b87fd4 }
-  html:not([data-theme="light"]) .tag-update { background:#1e1528; color:#c98ec6 }
+  html:not([data-theme="light"]) .tag-update { background:var(--dm-surface-purple); color:var(--dm-plum-text) }
   html:not([data-theme="light"]) .tag-statement { background:#2e2210; color:#d4935a }
   html:not([data-theme="light"]) .tag-event-recap { background:#1a2e1a; color:#6dbf6d }
   html:not([data-theme="light"]) .tag-press { background:#1a1d2e; color:#7b8fd4 }

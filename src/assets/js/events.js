@@ -20,11 +20,14 @@ filterBtns.forEach(function(btn) {
     var noEvents = document.getElementById('noEventsMsg');
     if (visibleCount === 0) {
       if (!noEvents) {
-        noEvents = document.createElement('div');
-        noEvents.id = 'noEventsMsg';
-        noEvents.className = 'no-events';
-        noEvents.innerHTML = '<p>No upcoming events in this category right now.<br>Check back soon or <a href="get-involved.html" style="color:var(--coral);font-weight:700">sign up to host one</a>.</p>';
-        document.getElementById('eventsGrid').appendChild(noEvents);
+        var eventsGrid = document.getElementById('eventsGrid');
+        if (eventsGrid) {
+          noEvents = document.createElement('div');
+          noEvents.id = 'noEventsMsg';
+          noEvents.className = 'no-events';
+          noEvents.innerHTML = '<p>No upcoming events in this category right now.<br>Check back soon or <a href="get-involved.html" style="color:var(--coral);font-weight:700">sign up to host one</a>.</p>';
+          eventsGrid.appendChild(noEvents);
+        }
       }
     } else if (noEvents) {
       noEvents.remove();

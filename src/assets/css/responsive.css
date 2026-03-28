@@ -1,24 +1,28 @@
 /* Responsive fixes — landscape mobile, tablet gaps, breakpoint normalization
-   Loaded after theme.css and before page-specific <style> blocks. */
+   Loaded after theme.css and BEFORE page-specific <style> blocks (pageStyle).
+   Because pageStyle loads later at equal specificity, !important is needed on
+   rules that must override page-specific values. Each use is annotated. */
 
 /* ===== NORMALIZE SECTION MAX-WIDTHS =====
    Fix conflicting max-width values across pages */
 
 .section-inner {
-  max-width: 1100px !important; /* Standardize on 1100px */
+  max-width: 1100px !important; /* override: pageStyle sets varying max-widths */
   margin: 0 auto;
 }
 
 /* ===== MOBILE FIRST (0-767px) ===== */
 
 @media (max-width: 767px) {
-  /* Hero grids - force single column on mobile */
+  /* Hero grids - force single column on mobile
+     override: pageStyle defines multi-column grids */
   .hero-inner {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  /* All grid layouts should be single column on mobile */
+  /* All grid layouts should be single column on mobile
+     override: pageStyle defines multi-column grids */
   .ways-grid,
   .quick-grid,
   .info-grid,
@@ -30,7 +34,8 @@
     grid-template-columns: 1fr !important;
   }
 
-  /* Touch targets - ensure minimum 44x44px */
+  /* Touch targets - ensure minimum 44x44px (WCAG 2.5.8)
+     override: pageStyle may set smaller targets */
   .nav-links a,
   .btn,
   .action-btn,
@@ -48,14 +53,16 @@
     justify-content: center;
   }
 
-  /* Form improvements */
+  /* Form improvements
+     override: pageStyle defines multi-column form rows */
   .field-row,
   .form-row,
   .checkbox-list {
     grid-template-columns: 1fr !important;
   }
 
-  /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px) */
+  /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px)
+     override: pageStyle may set smaller font sizes on inputs */
   .field-group input,
   .field-group select,
   .field-group textarea,
@@ -89,7 +96,8 @@
     padding: 0.5rem 0.75rem;
   }
 
-  /* Reduce padding to maximize content space */
+  /* Reduce padding to maximize content space
+     override: pageStyle sets larger padding values per page */
   .section {
     padding: 3rem 1.25rem !important;
   }
@@ -114,7 +122,8 @@
 /* ===== SMALL MOBILE (0-480px) ===== */
 
 @media (max-width: 480px) {
-  /* Even tighter spacing */
+  /* Even tighter spacing
+     override: pageStyle sets larger padding values per page */
   .section {
     padding: 2.5rem 1rem !important;
   }
@@ -123,7 +132,8 @@
     padding: 6rem 1rem 3rem !important;
   }
 
-  /* Photo grid - 2 columns only */
+  /* Photo grid - 2 columns only
+     override: pageStyle defines wider grids */
   .photo-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 0.5rem;
@@ -134,7 +144,8 @@
     padding: 0.5rem 1rem;
   }
 
-  /* Card padding reductions */
+  /* Card padding reductions
+     override: pageStyle sets larger card padding */
   .issue-block,
   .way-card,
   .quick-card,
@@ -143,7 +154,8 @@
     padding: 1.5rem 1.25rem !important;
   }
 
-  /* Form adjustments */
+  /* Form adjustments
+     override: pageStyle sets larger form card padding */
   .form-card,
   .endorse-form-wrap {
     padding: 2rem 1.5rem !important;
@@ -184,7 +196,8 @@
 /* ===== LANDSCAPE MOBILE (any width, height < 500px) ===== */
 
 @media (max-height: 500px) and (orientation: landscape) {
-  /* Hero: reduce padding so content is visible */
+  /* Hero: reduce padding so content is visible
+     override: pageStyle and core.css set larger hero padding */
   .page-hero {
     padding-top: 4rem !important;
     padding-bottom: 2rem !important;
@@ -193,6 +206,7 @@
     font-size: clamp(1.6rem, 4vw, 2.2rem);
   }
 
+  /* override: pageStyle sets larger hero padding */
   .hero {
     padding: 4rem 1.5rem 2rem !important;
   }
@@ -217,7 +231,8 @@
     padding: 0.4rem 1rem;
   }
 
-  /* Sections: tighter vertical padding */
+  /* Sections: tighter vertical padding
+     override: pageStyle sets larger section padding */
   .section,
   .ways,
   .quick-actions,
@@ -228,7 +243,8 @@
     padding-bottom: 2.5rem !important;
   }
 
-  /* CTA sections */
+  /* CTA sections
+     override: pageStyle sets larger CTA padding */
   .donate-cta,
   .host-cta,
   .submit-cta,

@@ -1,22 +1,23 @@
 // Issues page — collapsible cite blocks
 document.querySelectorAll('.cite-block').forEach(function(block) {
-  // Make cite-blocks accessible as disclosure widgets
-  block.setAttribute('tabindex', '0');
-  block.setAttribute('role', 'button');
-  block.setAttribute('aria-expanded', 'false');
-  var heading = block.querySelector('h3, h4, h5, strong');
-  if (heading) block.setAttribute('aria-label', 'Toggle sources: ' + heading.textContent.trim());
+  var label = block.querySelector('.cite-label');
+  if (!label) return;
 
-  block.addEventListener('click', function() {
+  // Make the cite-label the accessible toggle control
+  label.setAttribute('tabindex', '0');
+
+  function toggle() {
     block.classList.toggle('open');
-    block.setAttribute('aria-expanded', block.classList.contains('open') ? 'true' : 'false');
-  });
+    var expanded = block.classList.contains('open');
+    label.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
 
-  block.addEventListener('keydown', function(e) {
+  block.addEventListener('click', toggle);
+
+  label.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      block.classList.toggle('open');
-      block.setAttribute('aria-expanded', block.classList.contains('open') ? 'true' : 'false');
+      toggle();
     }
   });
 });

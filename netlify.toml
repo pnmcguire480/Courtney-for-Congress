@@ -52,6 +52,12 @@
   status = 301
   force = true
 
+# Redirect broken kickoff recap link to news index
+[[redirects]]
+  from = "/news/2026-03-15-kickoff-recap.html"
+  to = "/news/"
+  status = 301
+
 # Block access to private documents (invoices, agreements, PII)
 [[redirects]]
   from = "/docs/*"

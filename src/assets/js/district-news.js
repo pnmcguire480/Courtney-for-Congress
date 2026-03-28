@@ -23,6 +23,7 @@ var activeFilter = 'all';
 function loadAllFeeds() {
   var container = document.getElementById('newsFeed');
   var loading = document.getElementById('newsLoading');
+  if (!container) return;
 
   var fetches = FEEDS.map(function(feed) {
     return fetch(RSS_API + encodeURIComponent(feed.url))
@@ -64,6 +65,7 @@ function loadAllFeeds() {
 
 function renderItems() {
   var container = document.getElementById('newsFeed');
+  if (!container) return;
   var filtered = activeFilter === 'all' ? allItems : allItems.filter(function(item) {
     return item.category === activeFilter;
   });
