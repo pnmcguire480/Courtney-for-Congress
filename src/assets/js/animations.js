@@ -19,10 +19,13 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Disable the CSS .reveal transitions — GSAP handles it now
-  var style = document.createElement('style');
-  style.textContent = '.reveal{transition:none!important}';
-  document.head.appendChild(style);
+  // Make all .reveal elements visible immediately — GSAP will animate FROM opacity:0
+  // This ensures content is NEVER permanently hidden if ScrollTrigger doesn't fire
+  var allReveals = document.querySelectorAll('.reveal');
+  for (var r = 0; r < allReveals.length; r++) {
+    allReveals[r].style.opacity = '1';
+    allReveals[r].style.transform = 'none';
+  }
 
   // Grid selectors used for staggered card entrances
   var gridSel = '.priorities-grid, .acc-cards, .posts-grid, .facts-grid, .assets-grid';
