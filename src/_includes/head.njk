@@ -17,6 +17,7 @@
 <meta property="og:type" content="{{ ogType | default('website') }}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{{ canonical | default(ogUrl) }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
 {% for alt in hreflang %}<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
 {% endfor %}{% if noindex %}<meta name="robots" content="noindex">
 {% endif %}

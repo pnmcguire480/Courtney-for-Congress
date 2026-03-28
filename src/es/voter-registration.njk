@@ -1,0 +1,250 @@
+---
+layout: base
+lang: "es"
+title: "Registro de Votantes | Cortney Peterson para el Congreso — OH-11"
+description: "Regístrate para votar o verifica tu estado de registro en cualquier estado de EE. UU. Encuentra el portal oficial de registro de votantes de tu estado, fechas límite y requisitos."
+ogTitle: "Registro de Votantes | Cortney Peterson para el Congreso"
+ogDescription: "Regístrate para votar o verifica tu estado de registro. Cada voto importa — asegúrate de que el tuyo cuente."
+ogUrl: "https://cortneyforcongress.org/es/voter-registration.html"
+navActive: "vote"
+pageScripts: ["voter-registration.js"]
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/voter-registration.html
+  - lang: es
+    url: https://cortneyforcongress.org/es/voter-registration.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/voter-registration.html
+permalink: /es/voter-registration.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    "name": "Directorio de Registro de Votantes",
+    "description": "Encuentra el portal de registro de votantes de tu estado y las fechas límite. Regístrate para votar o verifica tu estado en cualquier estado de EE. UU.",
+    "url": "https://cortneyforcongress.org/es/voter-registration.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Cortney Peterson For Congress"
+    },
+    "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+  }
+pageStyle: >
+  :root{--green:#2d6a4f;--green-light:#d8f3dc}
+  /* SECTIONS */
+  .section-intro{font-size:1.05rem;color:var(--text-light);max-width:640px;line-height:1.8;margin-bottom:3rem}
+  /* QUICK ACTIONS */
+  .quick-actions{padding:5rem 1.5rem}
+  .quick-actions-inner{max-width:1000px;margin:0 auto}
+  .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}
+  .quick-card{background:var(--white);border-radius:24px;padding:2.5rem 2rem;border:1px solid rgba(0,0,0,0.05);text-align:center;transition:all 0.3s ease}
+  .quick-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(71,13,68,0.1)}
+  .quick-card-icon{font-size:3rem;margin-bottom:1rem;display:block}
+  .quick-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--plum);margin-bottom:0.75rem}
+  .quick-card p{font-size:0.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem}
+  .quick-card .state-select{width:100%;padding:0.85rem 1rem;background:var(--cream);border:1.5px solid rgba(0,0,0,0.1);border-radius:10px;font-size:1rem;font-family:'Source Sans 3',sans-serif;color:var(--text);cursor:pointer;transition:border-color 0.2s;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23470d44' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+  .quick-card .state-select:focus{border-color:var(--plum);box-shadow:0 0 0 3px rgba(71,13,68,0.08)}
+  .action-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.95rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase;border:none;cursor:pointer;font-family:'Source Sans 3',sans-serif;margin-top:1rem;width:100%;justify-content:center}
+  .btn-register{background:linear-gradient(135deg,var(--plum),var(--plum-light));color:var(--white);box-shadow:0 4px 20px rgba(71,13,68,0.25)}
+  .btn-register:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(71,13,68,0.35)}
+  .btn-check{background:var(--coral);color:var(--plum);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+  .btn-check:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(253,180,155,0.5)}
+  .action-btn.disabled{opacity:0.5;cursor:not-allowed;pointer-events:none}
+  /* NATIONAL LINK */
+  .national-banner{background:var(--plum);padding:2.5rem 1.5rem;text-align:center}
+  .national-banner-inner{max-width:800px;margin:0 auto}
+  .national-banner h2{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.1em;color:var(--white);margin-bottom:0.5rem}
+  .national-banner p{color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.7;margin-bottom:1.25rem}
+  .national-banner a{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 2rem;background:var(--coral);color:var(--plum);border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;transition:all 0.3s ease}
+  .national-banner a:hover{background:var(--coral-light);transform:translateY(-2px)}
+  /* INFO CARDS */
+  .info-section{padding:5rem 1.5rem;background:var(--white);border-top:1px solid rgba(0,0,0,0.05)}
+  .info-inner{max-width:1000px;margin:0 auto}
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+  .info-card{background:var(--cream);border-radius:20px;padding:2rem 1.75rem;border:1px solid rgba(0,0,0,0.05)}
+  .info-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--plum);margin-bottom:0.75rem}
+  .info-card p,.info-card li{font-size:0.92rem;color:var(--text-light);line-height:1.7}
+  .info-card ul{list-style:none;padding:0}
+  .info-card ul li{padding:0.3rem 0;padding-left:1.2rem;position:relative}
+  .info-card ul li::before{content:'';position:absolute;left:0;top:0.65rem;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+  /* DONATE CTA */
+  .donate-cta{background:linear-gradient(135deg,var(--plum-deep),var(--plum));padding:5rem 1.5rem;text-align:center;color:var(--white)}
+  .donate-cta-inner{max-width:600px;margin:0 auto}
+  .donate-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+  .donate-cta p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;line-height:1.7}
+  .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;transition:all 0.3s ease;text-transform:uppercase}
+  .btn-primary{background:var(--coral);color:var(--plum);box-shadow:0 4px 20px rgba(253,180,155,0.35)}
+  .btn-primary:hover{background:var(--coral-light);transform:translateY(-2px)}
+  .btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+  .btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
+  .btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  /* RESPONSIVE */
+  @media(max-width:767px){
+    .quick-grid{grid-template-columns:1fr !important}
+    .info-grid{grid-template-columns:1fr !important}
+    .quick-card{padding:2rem 1.5rem;border-radius:16px}
+    .action-btn{padding:0.9rem 1.5rem;font-size:0.9rem;min-height:44px}
+    .national-banner{padding:2rem 1.25rem}
+    .national-banner h2{font-size:1.4rem}
+    .quick-actions{padding:4rem 1.25rem}
+    .info-section{padding:4rem 1.25rem}
+  }
+  @media(max-width:480px){
+    .quick-actions{padding:3rem 1rem}
+    .info-section{padding:3rem 1rem}
+    .quick-card{padding:1.75rem 1.25rem}
+    .info-card{padding:1.75rem 1.5rem}
+    .national-banner{padding:1.5rem 1rem}
+    .national-banner h2{font-size:1.2rem}
+    .action-btn{padding:0.85rem 1.25rem;font-size:0.85rem}
+  }
+  @media(min-width:768px) and (max-width:1023px){
+    .quick-actions{padding:5rem 2rem}
+    .info-section{padding:5rem 2rem}
+    .quick-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+    .info-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(min-width:1024px){
+    .quick-actions{padding:7rem 3rem}
+    .info-section{padding:7rem 3rem}
+    .donate-cta{padding:7rem 3rem}
+    .quick-grid{grid-template-columns:1fr 1fr;gap:3rem}
+    .info-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-height:500px) and (orientation:landscape){
+    .national-banner{padding:1.5rem}
+    .quick-actions{padding:2.5rem 1.5rem}
+    .info-section{padding:2.5rem 1.5rem}
+  }
+---
+
+<main id="main-content">
+<!-- HERO DE LA PÁGINA -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Tu Voz Importa</div>
+    <h1>Registro de <em>Votantes</em></h1>
+    <p>La democracia solo funciona cuando la gente participa. Regístrate para votar, verifica tu estado de registro y asegúrate de que tu voz sea escuchada — sin importar en qué estado estés.</p>
+  </div>
+</header>
+
+<!-- ACCIONES RÁPIDAS -->
+<section class="quick-actions" id="register" aria-labelledby="register-heading">
+  <div class="quick-actions-inner">
+    <div class="section-label reveal">Toma Acción</div>
+    <h2 class="section-title reveal" id="register-heading">Regístrate o <em>Verifica</em></h2>
+    <p class="section-intro reveal">Selecciona tu estado abajo para ir directamente al portal oficial de registro de votantes o a la herramienta de verificación de registro de tu estado.</p>
+
+    <div class="quick-grid">
+      <div class="quick-card reveal">
+        <span class="quick-card-icon" aria-hidden="true">📝</span>
+        <h3>Regístrate para Votar</h3>
+        <p>¿Nuevo votante o te mudaste recientemente? Regístrate en línea a través del portal oficial de tu estado. La mayoría de los estados permiten registro en línea — toma solo unos minutos.</p>
+        <select class="state-select" id="registerSelect" aria-label="Selecciona tu estado para registrarte">
+          <option value="">Selecciona tu estado...</option>
+        </select>
+        <a href="#" class="action-btn btn-register disabled" id="registerBtn" target="_blank" rel="noopener noreferrer">Ir al Portal de Registro →</a>
+      </div>
+      <div class="quick-card reveal reveal-delay-1">
+        <span class="quick-card-icon" aria-hidden="true">🔍</span>
+        <h3>Verifica Tu Registro</h3>
+        <p>¿Ya estás registrado? Verifica tu estado, confirma tu lugar de votación y asegúrate de que tu información esté actualizada antes del día de las elecciones.</p>
+        <select class="state-select" id="checkSelect" aria-label="Selecciona tu estado para verificar registro">
+          <option value="">Selecciona tu estado...</option>
+        </select>
+        <a href="#" class="action-btn btn-check disabled" id="checkBtn" target="_blank" rel="noopener noreferrer">Verificar Estado de Registro →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL NACIONAL -->
+<section class="national-banner">
+  <div class="national-banner-inner">
+    <h2>Registro Nacional de Votantes</h2>
+    <p>Vote.gov es el recurso oficial del gobierno de EE. UU. para registro de votantes. Proporciona guía estado por estado y puede ayudarte a registrarte sin importar dónde vivas.</p>
+    <a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Visita Vote.gov →</a>
+  </div>
+</section>
+
+<!-- LO QUE NECESITAS SABER -->
+<section class="info-section">
+  <div class="info-inner">
+    <div class="section-label reveal">Antes de Ir</div>
+    <h2 class="section-title reveal">Lo <em>Esencial</em> del Registro</h2>
+    <p class="section-intro reveal">Cada estado tiene reglas diferentes. Esto es lo que debes saber.</p>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <h3>Requisitos de Elegibilidad</h3>
+        <ul>
+          <li>Debes ser ciudadano de EE. UU.</li>
+          <li>Debes tener 18 años en o antes del Día de las Elecciones (algunos estados permiten registro a los 16 o 17)</li>
+          <li>Debes ser residente del estado donde te registras</li>
+          <li>No debes estar cumpliendo sentencia por una condena por delito grave (las reglas varían por estado)</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <h3>Lo Que Necesitarás</h3>
+        <ul>
+          <li>Tu nombre legal completo y fecha de nacimiento</li>
+          <li>Tu dirección residencial (donde vives, no un apartado postal)</li>
+          <li>Tu número de identificación estatal o licencia de conducir</li>
+          <li>Los últimos 4 dígitos de tu número de Seguro Social</li>
+          <li>Algunos estados requieren prueba de ciudadanía</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <h3>Fechas Límite Importantes</h3>
+        <ul>
+          <li>La mayoría de los estados requieren registro 15–30 días antes de una elección</li>
+          <li>21 estados + D.C. ofrecen registro el mismo día</li>
+          <li>Dakota del Norte no requiere registro de votantes</li>
+          <li>Verifica la fecha límite específica de tu estado — varían significativamente</li>
+          <li>Regístrate temprano para evitar problemas</li>
+        </ul>
+      </div>
+      <div class="info-card reveal">
+        <h3>En Línea vs. Correo vs. En Persona</h3>
+        <ul>
+          <li>41 estados + D.C. ofrecen registro de votantes en línea</li>
+          <li>Todos los estados aceptan registro por correo (usa el Formulario Nacional de Registro de Votantes por Correo)</li>
+          <li>Siempre puedes registrarte en persona en tu oficina electoral del condado o DMV</li>
+          <li>Algunos estados permiten registro en las urnas el Día de las Elecciones</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <h3>¿Te Mudaste Recientemente?</h3>
+        <ul>
+          <li>Si te mudaste dentro de tu estado, actualiza tu registro con tu nueva dirección</li>
+          <li>Si te mudaste a un nuevo estado, debes registrarte en tu nuevo estado</li>
+          <li>Actualiza tu registro lo antes posible — no esperes hasta la temporada electoral</li>
+          <li>También puede que necesites actualizar tu nombre si ha cambiado</li>
+        </ul>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <h3>Votantes Estudiantes</h3>
+        <ul>
+          <li>Puedes registrarte en la dirección de tu hogar o en la dirección de tu universidad</li>
+          <li>Solo puedes estar registrado en un estado a la vez</li>
+          <li>Verifica qué ubicación te da más impacto en las próximas elecciones</li>
+          <li>Tu universidad puede organizar campañas de registro</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA DE DONACIÓN -->
+<section class="donate-cta">
+  <div class="donate-cta-inner">
+    <h2>Tu Voto Es Tu Poder</h2>
+    <p>Registrarte para votar es el primer paso. El siguiente paso es asegurar que candidatas como Cortney — que luchan por la gente trabajadora, no por donantes corporativos — tengan los recursos para ganar.</p>
+    <div class="btn-group">
+      <a href="{{ site.donateUrl }}" class="btn btn-primary">Donar Ahora →</a>
+      <a href="/es/get-involved.html" class="btn btn-outline-white">Participa</a>
+    </div>
+  </div>
+</section>
+
+</main>

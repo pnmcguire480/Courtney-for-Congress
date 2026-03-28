@@ -19,19 +19,13 @@ node_modules/
 # 11ty build output
 _site/
 
-# Environment files (shouldn't exist for static site, but safety net)
+# Environment files
 .env
 .env.local
 .env.production
 
-# Archive / reference files (screenshots, originals, old HTML)
+# Archive (screenshots, originals, old HTML)
 _archive/
-
-# Development docs (project context, not needed in production)
-markdown/
-
-# Holdout evaluation scenarios (never committed)
-scenarios/
 
 # Intake data (contains personal info)
 Campaign-Intake-Results.txt
@@ -41,7 +35,7 @@ Campaign-Intake-Results.txt
 *.draft
 *.old
 
-# Draft review documents (contain client review forms, not for public)
+# Draft review documents (contain client review forms)
 docs/drafts/
 
 # Image originals (full-res before compression)

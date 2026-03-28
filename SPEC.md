@@ -38,7 +38,7 @@
 | Press/media page | press.html | Done |
 | Campaign finance transparency | follow-the-money.html | Done |
 | Donation integration (Anedot) | follow-the-money.html | Done |
-| News/blog articles | news/ | Started (1 article) |
+| News/blog articles | news/ | Done (6 articles) |
 | Signature progress bar | index.html | Done |
 | Dark/light theme toggle | All pages | Done |
 | Mobile hamburger nav | All pages | Done |
@@ -56,4 +56,4 @@
 - Every page is accessible via keyboard navigation
 - Every page has proper SEO metadata (title, description, OG, schema)
 - Site works without JavaScript (forms degrade gracefully)
-- No external tracking, no cookies, no analytics that compromise privacy
+- GA4 analytics active (privacy-friendly, no cookies beyond GA4's own)

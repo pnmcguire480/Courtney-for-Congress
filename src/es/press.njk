@@ -1,0 +1,320 @@
+---
+layout: base
+lang: "es"
+title: "Prensa y Kit de Medios | Cortney Peterson para el Congreso — OH-11"
+description: "Kit de medios para Cortney Peterson, candidata independiente para el Distrito Congresional 11 de Ohio. Descarga fotos, lee su biografía y encuentra información de contacto de prensa."
+ogTitle: "Prensa y Kit de Medios | Cortney Peterson para el Congreso"
+ogDescription: "Kit de medios para Cortney Peterson — biografías, fotos, datos y contacto de prensa para la campaña en el Distrito 11 de Ohio."
+ogUrl: "https://cortneyforcongress.org/es/press.html"
+navActive: "press"
+pageScripts: ["press.js"]
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/press.html
+  - lang: es
+    url: https://cortneyforcongress.org/es/press.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/press.html
+permalink: /es/press.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cortney Peterson For Congress",
+    "url": "https://cortneyforcongress.org/",
+    "description": "Kit de medios e información de prensa para Cortney Peterson, candidata independiente para el Distrito Congresional 11 de Ohio.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Press",
+      "email": "cortneyforcongress@gmail.com",
+      "url": "https://cortneyforcongress.org/es/press.html"
+    },
+    "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+  }
+pageStyle: >
+  /* PRESS CONTACT BANNER */
+  .press-contact-bar{background:var(--plum);padding:1rem 1.5rem;text-align:center}
+  .press-contact-bar p{color:var(--white);font-weight:600;font-size:0.95rem}
+  .press-contact-bar a{color:var(--white);font-weight:700;text-decoration:underline}
+  /* FAST FACTS */
+  .facts-section{background:var(--white)}
+  .facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+  .fact-card{background:var(--cream);border-radius:14px;padding:1.5rem 1.75rem;border-left:4px solid var(--coral)}
+  .fact-label{font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.25em;color:var(--coral);text-transform:uppercase;margin-bottom:0.35rem}
+  .fact-value{font-size:1rem;font-weight:700;color:var(--plum);line-height:1.4}
+  /* BIO */
+  .bio-section{background:var(--cream)}
+  .bio-grid{display:grid;gap:2.5rem;margin-top:2rem}
+  .bio-block{background:var(--white);border-radius:16px;padding:2rem 2.25rem;border-top:4px solid var(--plum)}
+  .bio-block-label{font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.25em;color:var(--text-light);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+  .bio-block-label span{background:var(--cream-dark);border-radius:4px;padding:0.2rem 0.6rem}
+  .bio-block p{font-size:0.98rem;color:var(--text-light);line-height:1.8;margin-bottom:0.9rem}
+  .bio-block p:last-child{margin-bottom:0}
+  .bio-block strong{color:var(--text)}
+  .copy-btn{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;padding:0.55rem 1.25rem;border-radius:8px;border:1.5px solid var(--plum);background:transparent;color:var(--plum);font-size:0.82rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;font-family:'Source Sans 3',sans-serif}
+  .copy-btn:hover{background:var(--plum);color:var(--white)}
+  .copy-btn.copied{background:var(--plum);color:var(--white);border-color:var(--plum)}
+  /* ASSETS */
+  .assets-section{background:var(--white)}
+  .assets-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem}
+  .asset-card{border:1.5px solid var(--cream-dark);border-radius:14px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
+  .asset-card:hover{border-color:var(--coral);box-shadow:0 4px 20px rgba(253,180,155,0.12)}
+  .asset-thumb{background:var(--cream-dark);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .asset-thumb img{width:100%;height:100%;object-fit:cover}
+  .asset-thumb-placeholder{font-size:3rem;opacity:0.4}
+  .asset-info{padding:1.25rem}
+  .asset-name{font-weight:700;color:var(--plum);margin-bottom:0.25rem;font-size:0.95rem}
+  .asset-meta{font-size:0.8rem;color:var(--text-light);margin-bottom:1rem}
+  .asset-dl{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;background:var(--plum);color:var(--white);border-radius:8px;text-decoration:none;font-size:0.82rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.25s}
+  .asset-dl:hover{background:var(--plum-light)}
+  /* BOILERPLATE */
+  .boilerplate-section{background:var(--cream-dark)}
+  .boilerplate-box{background:var(--white);border-radius:16px;padding:2rem 2.25rem;border-left:4px solid var(--coral);margin-top:2rem;position:relative}
+  .boilerplate-box p{font-size:0.98rem;color:var(--text-light);line-height:1.8;font-style:italic}
+  .boilerplate-box p strong{font-style:normal;color:var(--text)}
+  /* IN THE NEWS */
+  .news-section{background:var(--white)}
+  .news-placeholder{margin-top:2rem;border:2px dashed var(--cream-dark);border-radius:16px;padding:3rem;text-align:center}
+  .news-placeholder p{color:var(--text-light);font-size:0.95rem}
+  /* KEY QUOTE */
+  .quote-section{background:linear-gradient(135deg,var(--plum-deep),var(--plum))}
+  .quote-inner{max-width:800px;margin:0 auto;text-align:center}
+  blockquote.press-quote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.9rem);font-style:italic;color:var(--white);line-height:1.6;margin-bottom:1.5rem}
+  blockquote.press-quote::before{content:'\201C';font-size:4rem;color:var(--coral);line-height:0;vertical-align:-1.5rem;margin-right:0.25rem}
+  cite.press-cite{display:block;font-style:normal;font-size:0.85rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-light)}
+  /* CTA */
+  .press-cta{background:var(--cream);padding:5rem 1.5rem;text-align:center}
+  .press-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:900;color:var(--plum);margin-bottom:1rem}
+  .press-cta p{font-size:1rem;color:var(--text-light);max-width:520px;margin:0 auto 2rem;line-height:1.7}
+  /* RESPONSIVE */
+  @media(max-width:767px){
+    .facts-grid{grid-template-columns:1fr !important}
+    .assets-grid{grid-template-columns:1fr !important}
+    .bio-grid{grid-template-columns:1fr !important;gap:2rem}
+    .bio-block{padding:1.75rem 1.5rem;border-radius:16px}
+    .boilerplate-box{padding:1.75rem 1.5rem;border-radius:16px}
+    .section{padding:4rem 1.25rem}
+    .press-cta{padding:4rem 1.25rem}
+    .quote-section{padding:4rem 1.25rem}
+  }
+  @media(max-width:480px){
+    .bio-block{padding:1.5rem 1.25rem}
+    .boilerplate-box{padding:1.5rem 1.25rem}
+    .section{padding:3rem 1rem}
+    .press-cta{padding:3rem 1rem}
+    .quote-section{padding:3rem 1rem}
+    .press-cta h2{font-size:1.6rem}
+  }
+  @media(min-width:768px) and (max-width:1023px){
+    .facts-grid{grid-template-columns:repeat(2,1fr)}
+    .assets-grid{grid-template-columns:repeat(2,1fr)}
+    .bio-grid{grid-template-columns:1fr;gap:2.5rem}
+    .section{padding:5rem 2rem}
+    .press-cta{padding:5rem 2rem}
+    .quote-section{padding:5rem 2rem}
+  }
+  @media(min-width:1024px){
+    .facts-grid{grid-template-columns:repeat(4,1fr)}
+    .bio-grid{grid-template-columns:1fr 1fr;align-items:start}
+    .assets-grid{grid-template-columns:repeat(4,1fr)}
+    .press-cta{padding:7rem 3rem}
+    .quote-section{padding:7rem 3rem}
+  }
+---
+
+<main id="main-content">
+<!-- HERO DE LA PÁGINA -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-label">Recursos para Medios</p>
+    <h1>Para la <em>Prensa</em></h1>
+    <p>Todo lo que los periodistas necesitan para cubrir la campaña de Cortney Peterson para el Distrito Congresional 11 de Ohio — biografías, fotos, datos y una línea directa al equipo de prensa.</p>
+  </div>
+</header>
+
+<!-- BANNER DE CONTACTO DE PRENSA -->
+<div class="press-contact-bar" role="complementary" aria-label="Contacto de prensa">
+  <p>Consultas de prensa: <a href="mailto:cortneyforcongress@gmail.com">cortneyforcongress@gmail.com</a> &nbsp;·&nbsp; Respondemos en 24 horas.</p>
+</div>
+
+<!-- DATOS RÁPIDOS -->
+<section class="section facts-section" aria-labelledby="facts-heading">
+  <div class="section-inner">
+    <p class="section-label">De un Vistazo</p>
+    <h2 class="section-title" id="facts-heading">Datos Clave</h2>
+    <div class="facts-grid">
+      <div class="fact-card reveal">
+        <div class="fact-label">Nombre Completo</div>
+        <div class="fact-value">Cortney Peterson</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Cargo al que Aspira</div>
+        <div class="fact-value">Cámara de Representantes de EE. UU. — Distrito Congresional 11 de Ohio</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Partido / Estatus en la Boleta</div>
+        <div class="fact-value">Independiente — originalmente registrada como Demócrata, recientemente cambió. Puede aparecer aún como Demócrata en Ballotpedia.</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Fecha Límite de Firmas</div>
+        <div class="fact-value">4 de mayo de 2026 — se necesitan 2,200 firmas para aparecer en la boleta de noviembre</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Ciudad Natal</div>
+        <div class="fact-value">Ashtabula, Ohio</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Profesión</div>
+        <div class="fact-value">Enfermera Práctica Licenciada (LPN) — más de 12 años</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Finanzas de Campaña</div>
+        <div class="fact-value">100% popular — sin dinero de PACs corporativos, sin dinero de PACs extranjeros</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">ID de Comité FEC</div>
+        <div class="fact-value">H6OH11186</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-label">Contacto de Prensa</div>
+        <div class="fact-value"><a href="mailto:cortneyforcongress@gmail.com" style="color:var(--coral);font-weight:700">cortneyforcongress@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIOGRAFÍAS -->
+<section class="section bio-section" aria-labelledby="bio-heading">
+  <div class="section-inner">
+    <p class="section-label">Biografía</p>
+    <h2 class="section-title" id="bio-heading"><em>Biografías</em> de la Candidata</h2>
+    <div class="bio-grid">
+
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Biografía Corta <span>~75 palabras</span></div>
+        <p id="short-bio">Solo una mamá harta y enfermera lista para enfrentarse a la corrupción en Washington. Cortney Peterson es enfermera y madre luchando por las familias trabajadoras en el Distrito Congresional 11 de Ohio. NO es política, ni aspira a serlo — quiere ser hacedora de políticas públicas que luche por la justicia y la equidad para la clase trabajadora. Sin dinero de PACs corporativos. Sin dinero de PACs extranjeros. Popular hasta la médula.</p>
+        <button class="copy-btn" onclick="copyBio('short-bio', this)" aria-label="Copiar biografía corta al portapapeles">&#128203; Copiar</button>
+      </div>
+
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Biografía Larga <span>~200 palabras</span></div>
+        <p id="long-bio-1">Cortney Peterson es Enfermera Práctica Licenciada y nativa de Ashtabula, Ohio, que se postula para representar al Distrito Congresional 11 de Ohio en la Cámara de Representantes de EE. UU. como Independiente. Se presenta como independiente contra la titular Shontel Brown en las elecciones generales de 2026.</p>
+        <p id="long-bio-2">Cortney pasó los últimos 12 años trabajando como enfermera. Una condición médica poco común requirió que le colocaran un stent en el cerebro para restaurar la presión y el flujo normal. Después de su procedimiento en octubre de 2025, se recuperó — y despertó, en sus propias palabras, de un "coma político". Se dio cuenta de que los miembros del Congreso votaban no en nombre de sus constituyentes, sino de los cabilderos que llenaban sus bolsillos. Supo que si quería que sus hijos heredaran un futuro sostenible, tendría que luchar por ello ella misma.</p>
+        <p id="long-bio-3">Madre de dos hijos — incluyendo un preescolar con un IEP por trastorno del espectro autista — Cortney entiende lo que enfrentan las familias trabajadoras cada día: el costo imposible de las guarderías, la lucha por una educación equitativa, la brecha entre lo que los políticos prometen y lo que cumplen. También fue respaldada por Citizens' Impeachment — Courage for Democracy como Candidata de Coraje.</p>
+        <p id="long-bio-4">La plataforma de Cortney se centra en Medicare para Todos, impuestos justos a los ricos y corporaciones, fin de la influencia extranjera y corporativa en el Congreso, libertad reproductiva, un Nuevo Pacto Verde, vivienda asequible, salarios dignos y abolir ICE. No acepta dinero de PACs corporativos ni de PACs extranjeros. Su campaña es financiada enteramente por gente trabajadora — y así piensa gobernar.</p>
+        <button class="copy-btn" onclick="copyLongBio(this)" aria-label="Copiar biografía larga al portapapeles">&#128203; Copiar</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECURSOS DESCARGABLES -->
+<section class="section assets-section" aria-labelledby="assets-heading">
+  <div class="section-inner">
+    <p class="section-label">Descargas</p>
+    <h2 class="section-title" id="assets-heading">Fotos y <em>Logos</em></h2>
+    <p style="color:var(--text-light);margin-bottom:0.5rem">Todos los recursos están disponibles para uso de prensa. Por favor acredita "Cortney Peterson for Congress" al publicar fotos.</p>
+    <div class="assets-grid">
+
+      <div class="asset-card reveal">
+        <div class="asset-thumb">
+          <picture>
+            <source srcset="assets/images/cortney-headshot.webp" type="image/webp">
+            <img src="assets/images/cortney-headshot.jpeg" alt="Foto oficial de Cortney Peterson — orientación vertical" width="960" height="1561" loading="lazy">
+          </picture>
+        </div>
+        <div class="asset-info">
+          <div class="asset-name">Foto Oficial</div>
+          <div class="asset-meta">Vertical · JPEG</div>
+          <a href="assets/images/cortney-headshot.jpeg" download class="asset-dl" aria-label="Descargar foto oficial">&#11015; Descargar</a>
+        </div>
+      </div>
+
+      <div class="asset-card reveal">
+        <div class="asset-thumb">
+          <picture>
+            <source srcset="assets/images/cortney-headshot-wide.webp" type="image/webp">
+            <img src="assets/images/cortney-headshot-wide.jpeg" alt="Foto amplia de Cortney Peterson — orientación horizontal" width="1200" height="1952" loading="lazy">
+          </picture>
+        </div>
+        <div class="asset-info">
+          <div class="asset-name">Foto Amplia</div>
+          <div class="asset-meta">Horizontal · JPEG</div>
+          <a href="assets/images/cortney-headshot-wide.jpeg" download class="asset-dl" aria-label="Descargar foto amplia">&#11015; Descargar</a>
+        </div>
+      </div>
+
+      <div class="asset-card reveal">
+        <div class="asset-thumb">
+          <img src="assets/images/campaign-logo.png" alt="Logo de campaña de Cortney Peterson para el Congreso" width="400" height="400" loading="lazy" style="object-fit:contain;padding:1rem;background:var(--cream)">
+        </div>
+        <div class="asset-info">
+          <div class="asset-name">Logo de Campaña</div>
+          <div class="asset-meta">PNG con transparencia</div>
+          <a href="assets/images/campaign-logo.png" download class="asset-dl" aria-label="Descargar logo de campaña">&#11015; Descargar</a>
+        </div>
+      </div>
+
+      <div class="asset-card reveal">
+        <div class="asset-thumb">
+          <div class="asset-thumb-placeholder" aria-hidden="true">📷</div>
+        </div>
+        <div class="asset-info">
+          <div class="asset-name">Fotos de Campaña</div>
+          <div class="asset-meta">Próximamente — contacta al equipo de prensa</div>
+          <a href="mailto:cortneyforcongress@gmail.com" class="asset-dl" aria-label="Enviar correo al equipo de prensa para solicitar fotos">&#9993; Solicitar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CITA DESTACADA -->
+<section class="section quote-section" aria-label="Cita de campaña">
+  <div class="quote-inner">
+    <blockquote class="press-quote reveal">
+      No soy política. Soy hacedora de políticas públicas. Hay una diferencia — una trabaja para los donantes, y la otra trabaja para ti.
+    </blockquote>
+    <cite class="press-cite">— Cortney Peterson, Candidata para el OH-11</cite>
+  </div>
+</section>
+
+<!-- TEXTO ESTÁNDAR -->
+<section class="section boilerplate-section" aria-labelledby="boilerplate-heading">
+  <div class="section-inner">
+    <p class="section-label">Lenguaje Estándar</p>
+    <h2 class="section-title" id="boilerplate-heading">Texto <em>Oficial</em> de Campaña</h2>
+    <p style="color:var(--text-light);margin-bottom:0">Usa este texto al describir la campaña en artículos, resúmenes o paquetes de difusión.</p>
+    <div class="boilerplate-box reveal">
+      <p><strong>Sobre Cortney Peterson para el Congreso:</strong> Cortney Peterson es Enfermera Práctica Licenciada y madre que se postula como independiente para representar al Distrito Congresional 11 de Ohio en las elecciones generales de 2026. Su campaña es 100% popular — financiada por gente trabajadora, no por PACs corporativos ni dinero extranjero. La plataforma de Cortney se centra en Medicare para Todos, impuestos justos a los ricos, libertad reproductiva, vivienda asequible y un Nuevo Pacto Verde. Ella cree que el Congreso debe trabajar para las familias trabajadoras, no para la clase donante.</p>
+      <button class="copy-btn" onclick="copyBoilerplate(this)" aria-label="Copiar texto oficial al portapapeles">&#128203; Copiar</button>
+    </div>
+  </div>
+</section>
+
+<!-- EN LAS NOTICIAS -->
+<section class="section news-section" aria-labelledby="news-heading">
+  <div class="section-inner">
+    <p class="section-label">Cobertura</p>
+    <h2 class="section-title" id="news-heading">En las <em>Noticias</em></h2>
+
+    <div class="news-placeholder reveal" id="news-placeholder">
+      <p>La cobertura se publicará aquí conforme llegue.<br>Para solicitudes de entrevista: <a href="mailto:cortneyforcongress@gmail.com" style="color:var(--coral);font-weight:700">cortneyforcongress@gmail.com</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA DE PRENSA -->
+<section class="press-cta" aria-labelledby="press-cta-heading">
+  <h2 id="press-cta-heading">¿Listo para Cubrir la Campaña?</h2>
+  <p>Te responderemos en 24 horas. Para solicitudes urgentes antes de una fecha límite, dilo — haremos que funcione.</p>
+  <div class="btn-group">
+    <a href="mailto:cortneyforcongress@gmail.com" class="btn btn-primary">Enviar Correo al Equipo de Prensa</a>
+    <a href="/es/issues.html" class="btn" style="border:2px solid currentColor;color:var(--plum);background:transparent">Lee la Plataforma</a>
+  </div>
+</section>
+
+</main>

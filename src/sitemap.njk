@@ -1,0 +1,60 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {%- set today = "" | isoDate %}
+  {%- set pages = [
+    { url: "/", priority: "1.0", changefreq: "weekly" },
+    { url: "/issues.html", priority: "0.9", changefreq: "monthly" },
+    { url: "/get-involved.html", priority: "0.9", changefreq: "weekly" },
+    { url: "/follow-the-money.html", priority: "0.8", changefreq: "monthly" },
+    { url: "/events.html", priority: "0.8", changefreq: "weekly" },
+    { url: "/endorsements.html", priority: "0.7", changefreq: "weekly" },
+    { url: "/press.html", priority: "0.7", changefreq: "monthly" },
+    { url: "/voter-registration.html", priority: "0.7", changefreq: "monthly" },
+    { url: "/gallery.html", priority: "0.5", changefreq: "monthly" },
+    { url: "/district-news.html", priority: "0.6", changefreq: "daily" },
+    { url: "/news/", priority: "0.8", changefreq: "weekly" }
+  ] %}
+  {%- set esPages = [
+    { url: "/es/", enUrl: "/" },
+    { url: "/es/issues.html", enUrl: "/issues.html" },
+    { url: "/es/get-involved.html", enUrl: "/get-involved.html" },
+    { url: "/es/endorsements.html", enUrl: "/endorsements.html" },
+    { url: "/es/events.html", enUrl: "/events.html" },
+    { url: "/es/gallery.html", enUrl: "/gallery.html" },
+    { url: "/es/press.html", enUrl: "/press.html" },
+    { url: "/es/follow-the-money.html", enUrl: "/follow-the-money.html" },
+    { url: "/es/voter-registration.html", enUrl: "/voter-registration.html" },
+    { url: "/es/district-news.html", enUrl: "/district-news.html" }
+  ] %}
+  {%- for page in pages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>{{ page.changefreq }}</changefreq>
+    <priority>{{ page.priority }}</priority>
+  </url>
+  {%- endfor %}
+  {%- for post in collections.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | isoDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {%- endfor %}
+  {%- for page in esPages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.enUrl }}"/>
+  </url>
+  {%- endfor %}
+</urlset>

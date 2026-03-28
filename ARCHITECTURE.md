@@ -8,45 +8,60 @@
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| Markup | HTML5 (semantic) | Zero dependencies, maximum compatibility |
+| Templating | Eleventy (11ty) v3 | Nunjucks + Markdown, zero client-side overhead |
+| Markup | HTML5 (semantic) | Maximum compatibility |
 | Styling | CSS3 (custom properties, grid, flexbox) | No preprocessor needed for this scale |
 | JavaScript | Vanilla ES5/ES6 | No framework overhead, instant load |
 | Fonts | Self-hosted WOFF2 | Privacy (no Google Fonts CDN), performance |
 | Forms | Netlify Forms | Free, no backend needed, built into hosting |
 | Donations | Anedot (iframe) | FEC-compliant political donation processing |
 | Hosting | Netlify (static) | Free tier, automatic SSL, CDN, form handling |
-| Version Control | Git (local + remote) | Standard |
+| Version Control | Git (local + GitHub remote) | Standard |
 
-## Architecture Decision: No Build Step
+## Architecture Decision: 11ty Templating
 
-This is an intentional zero-dependency static site. There is no `package.json`, no `node_modules`, no build process. Files deploy as-is from the root directory. This is a feature, not a limitation.
+The site uses Eleventy for templating (layouts, partials, data files, Markdown news articles) but ships zero client-side JavaScript from 11ty. The build output (`_site/`) is plain HTML/CSS/JS — the same as the original static site, but now with shared components and data-driven content.
 
-**Why:** Campaign sites need to be reliable above all else. No dependency can break. No build can fail. Any developer can open any file and understand it immediately.
+**Why:** Eliminates duplication across 22 pages (nav, footer, head, scripts all shared). News articles are Markdown — easy for anyone to write. Signature count, social links, and site metadata live in one JSON file (`src/_data/site.json`).
+
+**Only dependency:** `@11ty/eleventy` (dev dependency).
 
 ---
 
 ## File Architecture
 
 ```
-/                           Root = deploy directory
-├── *.html                  Pages (11 total)
-├── es/                     Spanish language variant
-├── news/                   Blog/news articles
-├── assets/
-│   ├── css/
-│   │   ├── core.css        Layout, typography, base styles
-│   │   ├── theme.css       Color variables, component theming, dark mode
-│   │   ├── responsive.css  Breakpoints: 320px, 768px, 1024px
-│   │   └── a11y.css        Accessibility: focus, skip-nav, screen reader
-│   ├── js/
-│   │   ├── site.js         Shared: nav, theme toggle, scroll, animations
-│   │   └── [page].js       Per-page logic (signup, voter-reg, etc.)
-│   ├── fonts/              Self-hosted WOFF2 + fonts.css
-│   └── images/             Favicons, OG image, campaign logo
-├── docs/                   Private (blocked by netlify.toml redirect)
-├── netlify.toml            Deploy config, headers, redirects
-├── robots.txt              Search engine directives
-└── sitemap.xml             Page index for crawlers
+src/                          11ty source directory
+├── _data/
+│   └── site.json             Global data (title, socials, sig count, GA ID, etc.)
+├── _includes/
+│   ├── head.njk              Meta tags, stylesheets, analytics, favicon
+│   ├── nav.njk               Navigation bar with mobile hamburger
+│   ├── footer.njk            Footer with social links, contact, email signup
+│   ├── sig-banner.njk        Signature countdown banner
+│   └── scripts.njk           JS includes (theme, page-specific)
+├── _layouts/
+│   ├── base.njk              Master layout (wraps all pages)
+│   ├── post.njk              Blog post layout (extends base)
+│   └── bare.njk              Minimal layout
+├── *.njk                     Page templates (12 main pages)
+├── es/                       Spanish pages (3 pages + es.json)
+├── news/
+│   ├── index.njk             News listing page
+│   ├── news.json             Default front matter for all articles
+│   └── *.md                  Individual articles (6 published)
+└── assets/                   Passed through to _site/ unchanged
+
+_site/                        Build output (deployed to Netlify)
+assets/                       CSS, JS, images, fonts
+eleventy.config.js            11ty config (input/output, filters, collections)
+package.json                  11ty dependency only
+netlify.toml                  Deploy config, headers, redirects
+robots.txt                    Search engine directives
+sitemap.xml                   Page index for crawlers
+
+_archive/                     Historical snapshots (not deployed)
+docs/                         Private documents (not deployed)
 ```
 
 ---
@@ -77,8 +92,8 @@ CSS uses custom properties (`--var`) for theming. Dark mode toggles a `data-them
 
 ```
 git push → Netlify auto-deploys from main branch
-           No build command
-           Publish directory: "." (root)
+           Build command: npx @11ty/eleventy
+           Publish directory: _site
            SSL: automatic via Let's Encrypt
            CDN: Netlify Edge
 ```
@@ -97,7 +112,7 @@ Configured in `netlify.toml`:
 | X-Content-Type-Options | `nosniff` | Prevent MIME sniffing |
 | Permissions-Policy | Deny camera, mic, geo, payment, USB | Minimize API surface |
 
-Private directories blocked via redirect rules: `/docs/*`, `/markdown/*`, `/.claude/*` → 404
+Private directories blocked via redirect rules: `/docs/*`, `/.claude/*` → 404
 
 ---
 
@@ -105,7 +120,8 @@ Private directories blocked via redirect rules: `/docs/*`, `/markdown/*`, `/.cla
 
 | Service | How | Where |
 |---------|-----|-------|
-| Netlify Forms | `<form netlify>` attribute | get-involved.html, es/index.html |
-| Anedot | `<iframe>` embed | follow-the-money.html |
-| Schema.org | JSON-LD in `<head>` | Every page (Organization, WebSite, WebPage) |
+| Netlify Forms | `<form netlify>` attribute | get-involved, es pages, footer signup |
+| Anedot | `<iframe>` embed | follow-the-money |
+| Google Analytics 4 | gtag.js (G-HTBD03VP7E) | All pages via head partial |
+| Schema.org | JSON-LD in `<head>` | Every page (Organization, WebSite, WebPage, Article) |
 | Open Graph | `<meta>` tags | Every page |

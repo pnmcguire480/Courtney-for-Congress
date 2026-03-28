@@ -1,7 +1,7 @@
 ---
 layout: base
 title: "Events | Cortney Peterson for Congress — OH-11"
-description: "Upcoming campaign events for Cortney Peterson for Congress — town halls, canvasses, phone banks, and community gatherings in Ohio's 11th Congressional District."
+description: "Campaign events for Cortney Peterson — town halls, canvasses, phone banks, and community gatherings across OH-11."
 ogTitle: "Events | Cortney Peterson for Congress"
 ogDescription: "Town halls, canvasses, phone banks, and community gatherings for Cortney Peterson's campaign in Ohio's 11th District."
 ogUrl: "https://cortneyforcongress.org/events.html"
@@ -10,6 +10,8 @@ pageScripts: ["events.js"]
 hreflang:
   - lang: en
     url: https://cortneyforcongress.org/events.html
+  - lang: es
+    url: https://cortneyforcongress.org/es/events.html
   - lang: x-default
     url: https://cortneyforcongress.org/events.html
 permalink: /events.html
@@ -99,6 +101,8 @@ pageStyle: >
   .btn-rsvp:hover{background:var(--coral-light);transform:translateY(-1px)}
   .btn-details{display:inline-flex;align-items:center;justify-content:center;padding:0.6rem 1.25rem;background:transparent;color:var(--plum);border:1.5px solid var(--plum);border-radius:8px;text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.25s;white-space:nowrap}
   .btn-details:hover{background:var(--plum);color:var(--white)}
+  .btn-add-cal{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.5rem 1rem;background:var(--cream-dark);color:var(--plum);border:1.5px solid transparent;border-radius:8px;font-family:inherit;font-weight:700;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;white-space:nowrap}
+  .btn-add-cal:hover{border-color:var(--coral);background:var(--coral-light)}
   /* NO EVENTS STATE */
   .no-events{text-align:center;padding:4rem 2rem;background:var(--white);border-radius:16px;border:2px dashed var(--cream-dark);margin-top:2rem}
   .no-events p{color:var(--text-light);font-size:1rem}
@@ -244,7 +248,12 @@ pageStyle: >
            4. Update or remove the RSVP link
            ============================================================ -->
 
-      <article class="event-card reveal" data-type="rally">
+      <article class="event-card reveal" data-type="rally"
+        data-cal-title="No Kings Rally — Cleveland"
+        data-cal-start="20260328T130000"
+        data-cal-end="20260328T160000"
+        data-cal-location="The Free Stamp, Willard Park, Cleveland, OH"
+        data-cal-desc="Stand with us at the No Kings rally. Democracy is not negotiable. cortneyforcongress.org/events.html">
         <div class="event-date-block">
           <span class="event-month">Mar</span>
           <span class="event-day">28</span>
@@ -260,11 +269,20 @@ pageStyle: >
           <p class="event-desc">Stand with us at the No Kings rally. Democracy is not negotiable — show up and make your voice heard.</p>
         </div>
         <div class="event-actions">
+          <button class="btn-add-cal" onclick="addToCal(this)" aria-label="Add to calendar">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Add to Calendar
+          </button>
           <a href="get-involved.html" class="btn-rsvp">Get Involved</a>
         </div>
       </article>
 
-      <article class="event-card reveal" data-type="community">
+      <article class="event-card reveal" data-type="community"
+        data-cal-title="Food Distribution with The People's Distro"
+        data-cal-start="20260326T180000"
+        data-cal-end="20260326T200000"
+        data-cal-location="New Era Clubhouse, 11713 Buckeye Rd, Cleveland, OH 44120"
+        data-cal-desc="Join Cortney and The People's Distro for a community food distribution. cortneyforcongress.org/events.html">
         <div class="event-date-block">
           <span class="event-month">Mar</span>
           <span class="event-day">26</span>
@@ -280,6 +298,10 @@ pageStyle: >
           <p class="event-desc">Join Cortney and The People's Distro for a community food distribution. Come help serve your neighbors and connect with the campaign.</p>
         </div>
         <div class="event-actions">
+          <button class="btn-add-cal" onclick="addToCal(this)" aria-label="Add to calendar">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Add to Calendar
+          </button>
           <a href="get-involved.html" class="btn-rsvp">Get Involved</a>
         </div>
       </article>

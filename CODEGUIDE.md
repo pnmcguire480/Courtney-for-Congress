@@ -6,11 +6,12 @@
 
 ## Stack Rules
 
-- **No npm. No build step. No dependencies.** This is vanilla HTML/CSS/JS.
-- Every page is a standalone `.html` file
+- **11ty for templating.** Pages are Nunjucks (`.njk`), news articles are Markdown (`.md`).
+- **Only dependency:** `@11ty/eleventy`. No other npm packages.
 - CSS uses custom properties (`--var`) — never hardcode colors
 - JavaScript is vanilla ES5/ES6 — no modules, no bundler
 - All fonts self-hosted — no CDN calls
+- Source lives in `src/`, build output in `_site/`
 
 ---
 
@@ -18,7 +19,8 @@
 
 | Type | Convention | Example |
 |------|-----------|---------|
-| Pages | `kebab-case.html` | `voter-registration.html` |
+| Pages | `kebab-case.njk` | `voter-registration.njk` |
+| News | `YYYY-MM-DD-slug.md` | `2026-03-28-no-kings-cleveland.md` |
 | CSS | `purpose.css` | `core.css`, `theme.css`, `responsive.css` |
 | JS | `page-name.js` | `signup.js`, `voter-registration.js` |
 | Shared JS | `site.js` | Loaded on every page |
@@ -95,8 +97,9 @@ observer.observe(element);
 
 ## Git Workflow
 
-- **Branch:** Work on `main` (simple project, single developer)
+- **Branch:** Feature branches, merge to `main` for deploy
 - **Commits:** Descriptive messages, present tense ("Add voter registration page")
+- **Build:** Run `npm run build` before committing to verify output
 - **Push:** After each working session
 - **No force push.** Ever.
 

@@ -1,0 +1,14 @@
+# Cortney Peterson for Congress — robots.txt
+# https://cortneyforcongress.org
+
+User-agent: *
+Allow: /
+
+# Block private/planning files (also 404'd via netlify.toml)
+Disallow: /docs/
+Disallow: /markdown/
+Disallow: /_archive/
+Disallow: /.claude/
+
+# Sitemap
+Sitemap: https://cortneyforcongress.org/sitemap.xml

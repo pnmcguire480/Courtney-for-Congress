@@ -1,0 +1,250 @@
+---
+layout: base
+lang: "es"
+title: "Respaldos | Cortney Peterson para el Congreso — OH-11"
+description: "Mira quién apoya a Cortney Peterson — enfermeras, maestros, trabajadores sindicalizados y líderes comunitarios en el Distrito Congresional 11 de Ohio."
+ogTitle: "Respaldos | Cortney Peterson para el Congreso"
+ogDescription: "Mira quién apoya a Cortney Peterson — enfermeras, maestros, trabajadores sindicalizados y líderes comunitarios en el Distrito 11 de Ohio."
+ogUrl: "https://cortneyforcongress.org/es/endorsements.html"
+navActive: "endorsements"
+pageScripts: ["endorsements.js"]
+hreflang:
+  - lang: en
+    url: https://cortneyforcongress.org/endorsements.html
+  - lang: es
+    url: https://cortneyforcongress.org/es/endorsements.html
+  - lang: x-default
+    url: https://cortneyforcongress.org/endorsements.html
+permalink: /es/endorsements.html
+ldJson: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cortney Peterson For Congress",
+    "url": "https://cortneyforcongress.org/",
+    "description": "Respaldos para Cortney Peterson, candidata independiente para el Distrito Congresional 11 de Ohio.",
+    "areaServed": "OH-11",
+    "image": "https://cortneyforcongress.org/assets/images/og-image.png"
+  }
+pageStyle: >
+  /* HERO */
+  .hero-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--coral-light);margin-bottom:1rem;text-transform:uppercase}
+  .page-hero h1{font-size:clamp(2.4rem,6vw,4rem)}
+  .page-hero p{font-size:1.15rem;max-width:640px;color:rgba(255,255,255,0.85)}
+  /* SECTIONS */
+  .section{padding:5rem 1.5rem}
+  .container{max-width:1100px;margin:0 auto}
+  /* CATEGORY LABEL */
+  .category-label{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.3em;color:#8a4d3a;text-transform:uppercase;margin-bottom:0.5rem}
+  .section-heading{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;color:var(--plum);margin-bottom:0.75rem}
+  .section-sub{color:var(--text-light);max-width:600px;font-size:1.05rem;line-height:1.7}
+  /* ENDORSEMENT GRID */
+  .endorsement-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:2.5rem}
+  .endorsement-card{background:var(--white);border-radius:14px;padding:2rem;box-shadow:0 2px 12px rgba(71,13,68,0.07);border-left:4px solid var(--coral);transition:transform 0.3s ease,box-shadow 0.3s ease}
+  .endorsement-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(71,13,68,0.12)}
+  .endorser-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--plum);margin-bottom:0.2rem}
+  .endorser-title{font-size:0.85rem;font-weight:600;color:var(--coral);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1rem}
+  .endorser-quote{font-size:0.97rem;color:var(--text-light);line-height:1.7;font-style:italic}
+  .endorser-quote::before{content:'"';font-size:1.8rem;color:var(--coral-light);line-height:0;vertical-align:-0.5rem;margin-right:0.2rem}
+  .endorser-quote::after{content:'"';font-size:1.8rem;color:var(--coral-light);line-height:0;vertical-align:-0.5rem;margin-left:0.2rem}
+  /* ORG ENDORSEMENTS */
+  .org-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-top:2rem}
+  .org-card{background:var(--white);border-radius:12px;padding:1.5rem 1.75rem;box-shadow:0 2px 10px rgba(71,13,68,0.06);display:flex;align-items:flex-start;gap:1rem;border-top:3px solid var(--plum-light)}
+  .org-featured{grid-column:1/-1;display:grid;grid-template-columns:280px 1fr;gap:2rem;padding:0;overflow:hidden;border-top:none;border:2px solid var(--plum);align-items:stretch}
+  .org-featured-img{width:100%;height:100%;object-fit:cover;display:block}
+  .org-featured-body{padding:2rem 2rem 2rem 0;display:flex;flex-direction:column;justify-content:center}
+  @media(max-width:767px){.org-featured{grid-template-columns:1fr}.org-featured-body{padding:1.5rem}}
+  .org-icon{font-size:2rem;flex-shrink:0;line-height:1}
+  .org-name{font-weight:700;color:var(--plum);font-size:1rem;line-height:1.3;margin-bottom:0.2rem}
+  .org-type{font-size:0.8rem;color:var(--text-light);letter-spacing:0.05em;text-transform:uppercase;font-weight:600}
+  /* DIVIDER */
+  .section-divider{border:none;border-top:2px solid var(--cream-dark);margin:0}
+  /* ENDORSE CTA */
+  .endorse-cta{background:var(--cream);color:var(--text);padding:5rem 1.5rem;text-align:center}
+  .endorse-cta-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;text-align:left}
+  .endorse-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:1rem;color:var(--plum)}
+  .endorse-cta p{font-size:1.1rem;color:var(--text-light);max-width:560px;margin-bottom:1.5rem}
+  .endorse-cta-text{margin-bottom:2rem}
+  .endorse-pull{font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;color:var(--text);border-left:4px solid var(--coral);padding:1.25rem 0 1.25rem 1.5rem;margin-top:2rem;line-height:1.6;text-align:left;display:block}
+  .endorse-pull cite{display:block;font-style:normal;font-size:0.85rem;color:var(--plum-light);margin-top:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+  .endorse-form-wrap{max-width:540px;margin:0 auto;border:1px solid rgba(71,13,68,0.1);border-radius:16px;padding:2.5rem;background:var(--white)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+  .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+  .form-group label{font-size:0.85rem;font-weight:600;letter-spacing:0.05em;color:var(--plum);text-transform:uppercase}
+  .form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border-radius:8px;border:1.5px solid rgba(71,13,68,0.15);background:var(--cream);color:var(--text);font-size:1rem;font-family:'Source Sans 3',sans-serif;transition:border-color 0.3s}
+  .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-light)}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--plum)}
+  .form-group select option{color:var(--text);background:var(--cream)}
+  .form-group textarea{resize:vertical;min-height:110px}
+  .btn-submit{width:100%;padding:1rem;background:var(--plum);color:var(--cream);font-size:1.05rem;font-weight:700;letter-spacing:0.06em;border:none;border-radius:10px;cursor:pointer;transition:background 0.3s,transform 0.2s;font-family:'Source Sans 3',sans-serif;margin-top:0.5rem}
+  .btn-submit:hover{background:var(--plum-light);transform:translateY(-1px)}
+  .endorse-success{display:none;text-align:center;padding:2rem}
+  .endorse-success .check{font-size:3rem;margin-bottom:1rem}
+  .endorse-success h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:0.75rem;color:var(--plum)}
+  .endorse-success p{color:var(--text)}
+  /* RESPONSIVE */
+  @media(max-width:767px){
+    .endorsement-grid{grid-template-columns:1fr !important}
+    .org-grid{grid-template-columns:1fr !important}
+    .form-row{grid-template-columns:1fr !important}
+    .endorse-cta-inner{grid-template-columns:1fr !important;gap:2rem}
+    .org-featured{grid-template-columns:1fr !important}
+    .org-featured-body{padding:1.5rem !important}
+    .section{padding:4rem 1.25rem}
+    .endorse-form-wrap{padding:2rem 1.5rem;border-radius:12px}
+    .endorse-cta{padding:4rem 1.25rem;text-align:center}
+    .endorse-cta h2{font-size:clamp(1.6rem,5vw,2.2rem)}
+    .endorse-pull{text-align:center;border-left:none;padding-left:0}
+  }
+  @media(max-width:480px){
+    .section{padding:3rem 1rem}
+    .endorsement-card{padding:1.75rem 1.5rem}
+    .org-card{padding:1.25rem 1.5rem}
+    .endorse-form-wrap{padding:1.75rem 1.25rem}
+    .endorse-cta{padding:3rem 1rem}
+    .endorse-pull{padding:1rem 0 1rem 1.25rem;font-size:1.1rem}
+  }
+  @media(min-width:768px) and (max-width:1023px){
+    .section{padding:5rem 2rem}
+    .endorsement-grid{grid-template-columns:repeat(2,1fr)}
+    .org-grid{grid-template-columns:repeat(2,1fr)}
+    .endorse-cta{padding:5rem 2rem}
+    .form-row{grid-template-columns:1fr 1fr}
+  }
+  @media(min-width:1024px){
+    .section{padding:6.5rem 3rem}
+    .endorsement-grid{grid-template-columns:repeat(3,1fr)}
+    .org-grid{grid-template-columns:repeat(3,1fr)}
+    .endorse-cta{padding:7rem 3rem;text-align:left}
+    .endorse-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .endorse-cta h2{font-size:3rem}
+    .endorse-cta p{margin:0 0 0;text-align:left;max-width:none}
+    .endorse-pull{display:block}
+    .endorse-form-wrap{max-width:none;margin:0}
+  }
+  @media(max-height:500px) and (orientation:landscape){
+    .endorse-cta{padding:2.5rem 1.5rem}
+  }
+---
+
+<main id="main-content">
+<!-- HERO -->
+<header class="page-hero">
+  <div class="hero-eyebrow">Quiénes Apoyan a Cortney</div>
+  <h1>Respaldada por<br>la Gente Trabajadora</h1>
+  <p>Enfermeras, maestros, miembros de sindicatos, líderes de fe y vecinos de todo el OH-11 que saben que este distrito merece una representante de verdad — no un puesto de partido.</p>
+</header>
+
+<!-- RESPALDOS INDIVIDUALES -->
+<section class="section" aria-labelledby="individual-heading">
+  <div class="container">
+    <div class="reveal">
+      <p class="category-label">Respaldos Individuales</p>
+      <h2 class="section-heading" id="individual-heading">Voces del Distrito</h2>
+      <p class="section-sub">Personas reales. Intereses reales. No son políticos — son tus vecinos.</p>
+    </div>
+
+    <div class="endorsement-grid">
+
+      <article class="endorsement-card reveal">
+        <p class="endorser-name">Patrick McGuire</p>
+        <p class="endorser-title">McGuire Digital Design &amp; Development, Lead Sign Tech Image360 South Tampa — Nativo del Condado de Jefferson</p>
+        <p class="endorser-quote">No soy votante del Distrito 11 de Ohio, estoy a estados de distancia ahora... pero Ohio es mi estado natal, y cuando una mujer de Ohio dice que va a luchar, mejor créelo que va a ser una batalla épica. He trabajado con Cortney por poco tiempo, pero eso es todo lo que se necesita para ver quién es: una mujer que sabe exactamente lo que defiende, lo dice claramente y no retrocede. Es valiente de una manera que la mayoría solo habla. Se necesita verdadero coraje para levantarse y destacar... especialmente cuando luchas por los marginados, los olvidados y los trabajadores que han sido ignorados por demasiado tiempo. No hace esto por una carrera. Lo hace porque alguien tenía que hacerlo... y ella decidió que iba a ser ella.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- RESPALDOS DE ORGANIZACIONES -->
+<section class="section" aria-labelledby="org-heading">
+  <div class="container">
+    <div class="reveal">
+      <p class="category-label">Respaldos de Organizaciones</p>
+      <h2 class="section-heading" id="org-heading">Organizaciones que Nos Apoyan</h2>
+      <p class="section-sub">Grupos comunitarios, organizaciones locales y coaliciones de defensa que creen que el OH-11 merece representación real.</p>
+    </div>
+
+    <div class="org-grid">
+      <div class="org-card org-featured reveal">
+        <picture>
+          <source srcset="assets/images/CI-CC-1080x1080-Peterson-OH11.webp" type="image/webp">
+          <img src="assets/images/CI-CC-1080x1080-Peterson-OH11.jpeg" alt="Cortney Peterson — Candidata de Coraje, Citizens' Impeachment — Courage for Democracy" class="org-featured-img" width="1080" height="1080" loading="lazy">
+        </picture>
+        <div class="org-featured-body">
+          <div class="org-name" style="font-size:1.2rem;margin-bottom:0.4rem"><a href="https://couragefordemocracy.com/candidate/cortney-peterson/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1.5px solid var(--coral)">Citizens' Impeachment — Courage for Democracy</a></div>
+          <div class="org-type" style="margin-bottom:1rem">Democracia y Anticorrupción — Candidata de Coraje</div>
+          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.7">Cortney Peterson ha sido reconocida como <strong style="color:var(--plum)">Candidata de Coraje</strong> por Citizens' Impeachment — Courage for Democracy por su compromiso con la anticorrupción, la rendición de cuentas y devolver la democracia a las manos de la gente trabajadora.</p>
+          <a href="https://couragefordemocracy.com/candidate/cortney-peterson/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-weight:700;font-size:0.85rem;color:var(--plum);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase">Ver Perfil Completo →</a>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem;font-size:0.9rem;color:var(--text-light);font-style:italic">* Los respaldos organizacionales reflejan las opiniones del liderazgo de cada organización y no necesariamente de todos sus miembros. Próximamente más anuncios.</p>
+  </div>
+</section>
+
+<!-- RESPALDA A CORTNEY CTA -->
+<section class="endorse-cta" aria-labelledby="endorse-heading">
+  <div class="endorse-cta-inner">
+  <div class="endorse-cta-text">
+  <h2 id="endorse-heading">Agrega Tu Nombre</h2>
+  <p>¿Eres una persona, líder comunitario u organización que quiere apoyar públicamente a Cortney? Déjanos saber — tu nombre ayuda a otros votantes a saber que no están solos.</p>
+  <blockquote class="endorse-pull">
+    "Cuando una enfermera de Ashtabula dice que va a luchar por ti — créele. Esta es la campaña más popular y genuina de la que he sido parte en treinta años."
+    <cite>— Organizador sindical jubilado, Condado de Cuyahoga</cite>
+  </blockquote>
+  </div>
+
+  <div class="endorse-form-wrap">
+    <div id="endorseSuccess" class="endorse-success" role="alert">
+      <div class="check" aria-hidden="true">✅</div>
+      <h3>¡Gracias por tu apoyo!</h3>
+      <p>Nos comunicaremos contigo para confirmar tu respaldo. Tu nombre importa — y ayuda a otros votantes a saber que no están solos.</p>
+    </div>
+    <form id="endorseForm" name="endorsement" method="POST" action="/es/success.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="endorsement">
+      <p hidden><label>No llenes esto: <input name="bot-field"></label></p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">Nombre</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Nombre" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Apellido</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Apellido" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@ejemplo.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="city">Ciudad / Vecindario</label>
+        <input type="text" id="city" name="city" placeholder="ej. Cleveland Heights" autocomplete="address-level2">
+      </div>
+      <div class="form-group">
+        <label for="endorserType">Estoy respaldando como...</label>
+        <select id="endorserType" name="endorserType" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="individual">Individuo / Votante</option>
+          <option value="organization">Organización o Grupo</option>
+          <option value="faith">Líder de Fe</option>
+          <option value="labor">Líder Sindical / Laboral</option>
+          <option value="elected">Funcionario Electo Actual o Anterior</option>
+          <option value="other">Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="statement">Tu Declaración de Respaldo (opcional)</label>
+        <textarea id="statement" name="statement" placeholder="¿Por qué apoyas a Cortney? Podríamos citarte en el sitio con tu permiso."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Enviar Respaldo</button>
+    </form>
+  </div><!-- end endorse-form-wrap -->
+  </div><!-- end endorse-cta-inner -->
+</section>
+
+</main>

@@ -4,7 +4,6 @@ module.exports = function(eleventyConfig) {
   // Assets stay exactly as-is — no processing
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
 
   // ===== COLLECTIONS =====
   // Blog posts sorted newest-first
@@ -15,6 +14,11 @@ module.exports = function(eleventyConfig) {
   });
 
   // ===== FILTERS =====
+  // Strip HTML tags (for RSS feed titles)
+  eleventyConfig.addFilter("stripHtml", function(str) {
+    return str ? str.replace(/<[^>]+>/g, '') : '';
+  });
+
   // Format date as "March 8, 2026"
   eleventyConfig.addFilter("readableDate", function(dateObj) {
     return new Intl.DateTimeFormat('en-US', {
@@ -33,8 +37,9 @@ module.exports = function(eleventyConfig) {
     }).format(dateObj).toUpperCase();
   });
 
-  // Format date as "YYYY-MM-DD" (for LD+JSON)
+  // Format date as "YYYY-MM-DD" (for LD+JSON and sitemap)
   eleventyConfig.addFilter("isoDate", function(dateObj) {
+    if (!dateObj || dateObj === '') return new Date().toISOString().split('T')[0];
     return dateObj.toISOString().split('T')[0];
   });
 

@@ -14,9 +14,15 @@
   --text-light: #a89bb3;
   --slate: #ece4f2;
   --plum-light: #c98ec6;
+  --coral: #ffb89e;          /* slightly brighter than default #fdb49b */
+  --coral-light: #ffd4c5;    /* slightly brighter for dark mode vibrancy */
   --green: #5aad82;
   --green-light: #1a3a28;
   --text-accent: #d4957e;
+  /* Dark elevation tokens — heavier shadows for dark surfaces */
+  --shadow-raised: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-floating: 0 8px 32px rgba(0,0,0,0.3);
+  --shadow-lifted: 0 16px 48px rgba(0,0,0,0.4);
   color-scheme: dark;
 }
 
@@ -30,9 +36,14 @@
     --text-light: #a89bb3;
     --slate: #ece4f2;
     --plum-light: #c98ec6;
+    --coral: #ffb89e;
+    --coral-light: #ffd4c5;
     --green: #5aad82;
     --green-light: #1a3a28;
     --text-accent: #d4957e;
+    --shadow-raised: 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-floating: 0 8px 32px rgba(0,0,0,0.3);
+    --shadow-lifted: 0 16px 48px rgba(0,0,0,0.4);
     color-scheme: dark;
   }
 }
@@ -300,6 +311,57 @@ html .post-date {
   }
 }
 
+/* ===== DARK MODE GLASSMORPHISM CARDS ===== */
+
+/* Inner glow ring adds subtle luxury depth on dark surfaces */
+[data-theme="dark"] .acc-card,
+[data-theme="dark"] .post-card,
+[data-theme="dark"] .fact-card,
+[data-theme="dark"] .bio-block,
+[data-theme="dark"] .asset-card {
+  background: rgba(30, 21, 40, 0.5);
+  border-color: rgba(201, 142, 198, 0.08);
+  box-shadow:
+    var(--shadow-raised),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    inset 0 0 0 1px rgba(201, 142, 198, 0.06);
+}
+[data-theme="dark"] .acc-card:hover,
+[data-theme="dark"] .post-card:hover,
+[data-theme="dark"] .fact-card:hover,
+[data-theme="dark"] .bio-block:hover,
+[data-theme="dark"] .asset-card:hover {
+  box-shadow:
+    var(--shadow-floating),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    inset 0 0 0 1px rgba(201, 142, 198, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .acc-card,
+  html:not([data-theme="light"]) .post-card,
+  html:not([data-theme="light"]) .fact-card,
+  html:not([data-theme="light"]) .bio-block,
+  html:not([data-theme="light"]) .asset-card {
+    background: rgba(30, 21, 40, 0.5);
+    border-color: rgba(201, 142, 198, 0.08);
+    box-shadow:
+      var(--shadow-raised),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03),
+      inset 0 0 0 1px rgba(201, 142, 198, 0.06);
+  }
+  html:not([data-theme="light"]) .acc-card:hover,
+  html:not([data-theme="light"]) .post-card:hover,
+  html:not([data-theme="light"]) .fact-card:hover,
+  html:not([data-theme="light"]) .bio-block:hover,
+  html:not([data-theme="light"]) .asset-card:hover {
+    box-shadow:
+      var(--shadow-floating),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03),
+      inset 0 0 0 1px rgba(201, 142, 198, 0.06);
+  }
+}
+
 /* ===== CARD & SURFACE BORDERS ===== */
 
 [data-theme="dark"] .event-card,
@@ -547,5 +609,39 @@ html .post-date {
   html:not([data-theme="light"]) .donor-list li,
   html:not([data-theme="light"]) .filter-bar {
     border-color: rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* ===== DEEPER GRADIENTS ON PLUM SECTIONS (dark mode) ===== */
+
+[data-theme="dark"] .page-hero,
+[data-theme="dark"] .post-header,
+[data-theme="dark"] .post-cta {
+  background:
+    radial-gradient(ellipse 60% 40% at 30% 40%, rgba(253,180,155,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 80% at 50% 100%, rgba(0,0,0,0.3) 0%, transparent 50%),
+    linear-gradient(165deg, #0a0510 0%, var(--plum-deep) 40%, var(--plum) 100%);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .page-hero,
+  html:not([data-theme="light"]) .post-header,
+  html:not([data-theme="light"]) .post-cta {
+    background:
+      radial-gradient(ellipse 60% 40% at 30% 40%, rgba(253,180,155,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 80% at 50% 100%, rgba(0,0,0,0.3) 0%, transparent 50%),
+      linear-gradient(165deg, #0a0510 0%, var(--plum-deep) 40%, var(--plum) 100%);
+  }
+}
+
+/* ===== SVG WAVE DIVIDER — DARK MODE FILL ===== */
+
+[data-theme="dark"] .page-hero::after,
+[data-theme="dark"] .post-header::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%230f0a14' d='M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z'/%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .page-hero::after,
+  html:not([data-theme="light"]) .post-header::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%230f0a14' d='M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z'/%3E%3C/svg%3E");
   }
 }

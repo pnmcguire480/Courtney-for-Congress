@@ -65,13 +65,6 @@
   status = 404
   force = true
 
-# Block access to markdown planning files
-[[redirects]]
-  from = "/markdown/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
 # Block access to Claude Code project files
 [[redirects]]
   from = "/.claude/*"
