@@ -56,7 +56,7 @@ filterBtns.forEach(function(btn) {
         noEvents = document.createElement('div');
         noEvents.id = 'noEventsMsg';
         noEvents.className = 'no-events';
-        noEvents.innerHTML = '<p>No upcoming events in this category right now.<br>Check back soon or <a href="get-involved.html" style="color:var(--coral);font-weight:700">sign up to host one</a>.</p>';
+        noEvents.innerHTML = '<p>No upcoming events in this category right now.<br>Check back soon or <a href="/get-involved.html" style="color:var(--coral);font-weight:700">sign up to host one</a>.</p>';
         document.getElementById('eventsGrid').appendChild(noEvents);
       }
     } else if (noEvents) {
