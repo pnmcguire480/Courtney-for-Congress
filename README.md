@@ -17,6 +17,7 @@
 - **Project Fee:** $900 total, paid in $325/month installments
 - **Maintenance:** $75/month after the project fee is fully paid
 - **Cancellation:** Client may cancel at any time with no penalty
+- **Pro-Bono Pricing:** Client was NO PAC donations, small donations only
 
 ## Signing Process
 
